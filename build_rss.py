@@ -297,6 +297,10 @@ def build_tables_html(style_hrefs, fragment_html) -> str:
       body{margin:16px;background:#fff;color:#000;font:14px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
       .wrap{max-width:1100px;margin:0 auto}
       .wrap .day{margin:0 0 16px 0}
+      /* Force visible table borders */
+      table{border-collapse:collapse}
+      th,td{border:1px solid #d1d5db;padding:6px 8px}
+      thead th{background:#f3f4f6}
     """
     links = "\n".join(f"<link rel='stylesheet' href='{h}' crossorigin>" for h in style_hrefs)
     return f"""<!doctype html>
@@ -312,6 +316,7 @@ def build_tables_html(style_hrefs, fragment_html) -> str:
   </div>
 </body>
 </html>"""
+
 
 # ----- grouping for RSS from the clean mirror -----
 def iter_rows_grouped_by_date_from_mirror(mirror: BeautifulSoup):
