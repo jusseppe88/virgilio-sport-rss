@@ -2,7 +2,7 @@ name: Build RSS
 
 on:
   schedule:
-    # 06:00 Europe/Rome in winter, 07:00 in summer (GitHub uses UTC)
+    # 06:00 Europe/Rome (standard time), 07:00 in summer — GitHub uses UTC
     - cron: "0 5 * * *"
   workflow_dispatch:
 
@@ -23,22 +23,24 @@ jobs:
         with:
           python-version: "3.11"
 
-      # Install system libraries that Chromium needs
-      - name: Install Playwright system deps
-        run: |
-          sudo npx --yes playwright@latest install-deps chromium
+      # Install Playwright browsers + all required system dependencies.
+      - name: Install Playwright (browsers & deps)
+        uses: microsoft/playwright-github-action@v1
+        with:
+          # chromium is enough for this project
+          browsers: 'chromium'
 
       - name: Install Python deps
         run: |
           python -m pip install --upgrade pip
           pip install beautifulsoup4 playwright
 
-      - name: Install Playwright browser
-        run: |
-          python -m playwright install chromium
-
       - name: Build site & feeds
-        run: python build_rss.py
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: |
+          set -euo pipefail
+          python build_rss.py
 
       - name: Commit site files (if changed)
         run: |
@@ -46,20 +48,23 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add index.html rss_tables.xml rss.xml || true
           git commit -m "update site & feeds" || echo "No changes"
-          git push
+          git push || true
 
       - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
 
-      # Helpful if it fails again: you’ll get the rendered HTML for inspection
-      - name: Upload debug.html (if present)
+      # Always upload debug artifacts so we can inspect page content if something goes wrong
+      - name: Upload debug artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: debug
-          path: debug.html
+          path: |
+            debug.html
+            debug.png
+            playwright_console.log
           if-no-files-found: ignore
 
   deploy:
