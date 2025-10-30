@@ -5,31 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Guida TV Sport — Homepage</title>
   <style>
-    :root{--bg:#0b0c0f;--fg:#f3f4f6;--muted:#cbd5e1;--card:#111827;--accent:#60a5fa}
-    [data-theme="light"]{--bg:#f7f7f8;--fg:#0b0c0f;--muted:#4b5563;--card:#ffffff;--accent:#2563eb}
+    /* ==== High-contrast dark defaults ==== */
+    :root{
+      --bg:#0a0a0b;          /* darker background */
+      --fg:#ffffff;          /* pure white text */
+      --muted:#d1d5db;       /* light grey for notes */
+      --card:#0d1117;        /* card background (GitHub dark style) */
+      --border:#334155;      /* slate border */
+      --accent:#60a5fa;      /* sky blue */
+      --thead:#0b1220;       /* table header bg */
+      --thead-fg:#e5e7eb;    /* table header text */
+    }
+    [data-theme="light"]{
+      --bg:#f7f7f8; --fg:#0b0c0f; --muted:#4b5563; --card:#ffffff; --border:#e5e7eb; --accent:#2563eb;
+      --thead:#f3f4f6; --thead-fg:#0b0c0f;
+    }
+
     *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-    header,footer{background:var(--card);border-bottom:1px solid #1f2937}
+    body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    header,footer{background:var(--card);border-bottom:1px solid var(--border)}
     header{position:sticky;top:0;z-index:10;padding:10px 14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-    h1{font-size:16px;margin:0 8px 0 0;white-space:nowrap}
+    h1{font-size:18px;margin:0 8px 0 0;white-space:nowrap}
     .spacer{flex:1 1 auto}
-    .btn{border:1px solid #374151;background:transparent;color:var(--fg);padding:7px 10px;border-radius:10px;cursor:pointer;font-weight:600}
-    .btn:hover{border-color:#4b5563}
+    .btn{border:1px solid var(--border);background:transparent;color:var(--fg);padding:8px 11px;border-radius:10px;cursor:pointer;font-weight:600}
+    .btn:hover{border-color:#64748b}
     .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-    input[type="date"]{background:var(--card);color:var(--fg);border:1px solid #374151;padding:7px 8px;border-radius:10px}
+    input[type="date"]{background:var(--card);color:var(--fg);border:1px solid var(--border);padding:8px 10px;border-radius:10px}
     label{color:var(--muted)}
     main{padding:16px}
-    #content > .day{background:var(--card);border:1px solid #1f2937;border-radius:12px;padding:12px;margin:0 auto 16px;max-width:1100px}
-    .note{color:var(--muted);font-size:12px;margin:4px 0 8px}
+    #content > .day{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px;margin:0 auto 16px;max-width:1100px}
+    .note{color:var(--muted);font-size:13px;margin:4px 0 8px}
     .link{color:var(--accent);text-decoration:none}
     .link:hover{text-decoration:underline}
-    footer{padding:8px 14px;color:var(--muted);font-size:12px;border-top:1px solid #1f2937}
+    footer{padding:8px 14px;color:var(--muted);font-size:12px;border-top:1px solid var(--border)}
 
-    /* Safety net: visible borders even if remote CSS is blocked */
-    .day table{border-collapse:collapse}
-    .day th,.day td{border:1px solid #374151;padding:8px 10px}
-    .day thead th{background:#0f172a;color:#e5e7eb}
-    /* Hide inner H2 from mirrored section to avoid double headings */
+    /* ===== Stronger table readability (cannot be overridden by remote CSS) ===== */
+    .day table{border-collapse:collapse;width:100%}
+    .day th,.day td{border:1px solid var(--border);padding:10px 12px}
+    .day thead th{background:var(--thead);color:var(--thead-fg);text-align:left}
+    .day td, .day th{color:#f9fafb}      /* force brighter text in cells */
+    .day a{color:var(--accent)}
+    .day a:hover{text-decoration:underline}
+
+    /* Avoid double headings when we clone <section.day> */
     .day section.day > h2 { display:none }
   </style>
 </head>
@@ -95,75 +113,13 @@
       return await res.text();
     }
 
-    // Also copy <link rel="stylesheet"> from tables.html into home.html so tables look identical
+    // Also copy <link rel="stylesheet"> from tables.html into home.html
+    // Add a cache-buster so old CSS doesn't stick.
     function copyRemoteStyles(dom){
       const existing = new Set(Array.from(document.querySelectorAll('link[rel="stylesheet"][data-mirror]')).map(l=>l.href));
       dom.querySelectorAll('link[rel="stylesheet"]').forEach(link=>{
-        if(!existing.has(link.href)){
+        const href = link.href + (link.href.includes('?') ? '&' : '?') + 'v=' + Date.now();
+        if(!existing.has(href)){
           const l=document.createElement('link');
-          l.rel='stylesheet'; l.href=link.href; l.setAttribute('data-mirror','');
-          document.head.appendChild(l);
-        }
-      });
-    }
-
-    function cloneDay(dom, ymd){
-      const sec = dom.querySelector(`section.day#${CSS.escape(ymd)}`);
-      if(!sec) return null;
-      return sec.cloneNode(true); // we keep section; inner h2 hidden via CSS
-    }
-
-    function labelIT(ymd){
-      return new Date(ymd).toLocaleDateString('it-IT',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
-    }
-
-    async function render(ymd, alsoTomorrow){
-      content.innerHTML = '<div class="note">Caricamento…</div>';
-      try{
-        const html = await fetchTables();
-        const dom = new DOMParser().parseFromString(html, 'text/html');
-
-        // bring over external CSS refs
-        copyRemoteStyles(dom);
-
-        const frag = document.createDocumentFragment();
-
-        const addBox = (dstr) => {
-          const sec = cloneDay(dom, dstr);
-          const box = document.createElement('div'); box.className='day';
-          const h = document.createElement('h2'); h.textContent = labelIT(dstr); h.style.margin='4px 0 8px';
-          box.appendChild(h);
-          if (sec) box.appendChild(sec); else box.innerHTML += '<div class="note">Nessun dato disponibile.</div>';
-          frag.appendChild(box);
-        };
-
-        addBox(ymd);
-        if(alsoTomorrow) addBox(addDays(ymd,1));
-
-        content.innerHTML=''; content.appendChild(frag);
-      }catch(err){
-        content.innerHTML = `<div class="day"><div class="note">Errore: ${String(err)}</div><div class="note">Apri: <a class="link" href="${BASE}" target="_blank" rel="noopener">${BASE}</a></div></div>`;
-      }
-    }
-
-    function setDate(ymd){
-      datePick.value = ymd;
-      document.getElementById('mirrorLink').href = `${BASE}#${ymd}`;
-      render(ymd, tomorrowToggle.checked);
-      localStorage.setItem('sportsHomeDate', ymd);
-    }
-
-    const todayYMD = fmtYMD(new Date());
-    const savedDate = localStorage.getItem('sportsHomeDate');
-    setDate(savedDate || todayYMD);
-
-    // Controls
-    prevBtn.addEventListener('click',()=> setDate(addDays(datePick.value,-1)));
-    nextBtn.addEventListener('click',()=> setDate(addDays(datePick.value,1)));
-    todayBtn.addEventListener('click',()=> setDate(fmtYMD(new Date())));
-    refreshBtn.addEventListener('click',()=> setDate(datePick.value));
-    datePick.addEventListener('change',()=> setDate(datePick.value));
-    tomorrowToggle.addEventListener('change',()=> setDate(datePick.value));
-  </script>
-</body>
-</html>
+          l.rel='stylesheet'; l.href=href; l.setAttribute('data-mirror','');
+          document.head.appendChil
