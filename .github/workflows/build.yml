@@ -2,8 +2,7 @@ name: Build RSS
 
 on:
   schedule:
-    # GitHub cron is UTC. 05:00 UTC ≙ 06:00 in Europe/Rome (standard time).
-    # In summer (CEST), this runs at 07:00 local.
+    # 06:00 Europe/Rome in winter, 07:00 in summer (GitHub uses UTC)
     - cron: "0 5 * * *"
   workflow_dispatch:
 
@@ -24,20 +23,28 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install deps
+      # Install system libraries that Chromium needs
+      - name: Install Playwright system deps
+        run: |
+          sudo npx --yes playwright@latest install-deps chromium
+
+      - name: Install Python deps
         run: |
           python -m pip install --upgrade pip
           pip install beautifulsoup4 playwright
-          playwright install chromium
 
-      - name: Build RSS
+      - name: Install Playwright browser
+        run: |
+          python -m playwright install chromium
+
+      - name: Build site & feeds
         run: python build_rss.py
 
       - name: Commit site files (if changed)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html rss_tables.xml rss.xml
+          git add index.html rss_tables.xml rss.xml || true
           git commit -m "update site & feeds" || echo "No changes"
           git push
 
@@ -46,10 +53,21 @@ jobs:
         with:
           path: .
 
+      # Helpful if it fails again: you’ll get the rendered HTML for inspection
+      - name: Upload debug.html (if present)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug
+          path: debug.html
+          if-no-files-found: ignore
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
