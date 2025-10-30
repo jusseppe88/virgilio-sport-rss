@@ -24,6 +24,150 @@
     .link{color:#93c5fd;text-decoration:none}
     .link:hover{text-decoration:underline}
     footer{padding:8px 14px;color:var(--muted);font-size:12px;border-top:1px solid #1f2937}
+
+    /* Local safety net: always show borders even if remote CSS is blocked */
+    .day table{border-collapse:collapse}
+    .day th,.day td{border:1px solid #d1d5db;padding:6px 8px}
+    .day thead th{background:#f3f4f6}
+    /* Hide inner H2 from mirrored section to avoid double headings */
+    .day section.day > h2 { display:none }
+    iframe.fallback{width:100%;height:70vh;border:0;border-radius:12px;background:#fff}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Guida TV Sport</h1>
+    <div class="row">
+      <button class="btn" id="prevBtn">◀︎</button>
+      <input type="date" id="datePick" />
+      <button class="btn" id="todayBtn">Oggi</button>
+      <button class="btn" id="nextBtn">▶︎</button>
+      <button class="btn" id="refreshBtn">↻</button>
+    </div>
+    <div class="spacer"></div>
+    <div class="row">
+      <label><input type="checkbox" id="tomorrowToggle"/> Domani</label>
+      <label><input type="checkbox" id="themeToggle"/> Tema chiaro</label>
+    </div>
+  </header>
+
+  <main>
+    <div class="note">Mirror: <a id="mirrorLink" class="link" href="./tables.html" target="_blank" rel="noopener">tables.html</a></div>
+    <div id="content"></div>
+  </main>
+
+  <footer>Consiglio: aggiungi questa pagina ai preferiti o impostala come pagina iniziale.</footer>
+
+  <script>
+    const BASE = "./tables.html"; // same origin (GitHub Pages)
+    const TZ = "Europe/Rome";
+
+    const fmtYMD = d => new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).format(d);
+    const parseYMD = s => {const [y,m,d]=s.split('-').map(Number); return new Date(Date.UTC(y,m-1,d));};
+    const addDays = (ymd,n)=>{const d=parseYMD(ymd); d.setUTCDate(d.getUTCDate()+n); return fmtYMD(d);};
+
+    const datePick=document.getElementById('datePick');
+    const prevBtn=document.getElementById('prevBtn');
+    const nextBtn=document.getElementById('nextBtn');
+    const todayBtn=document.getElementById('todayBtn');
+    const refreshBtn=document.getElementById('refreshBtn');
+    const tomorrowToggle=document.getElementById('tomorrowToggle');
+    const content=document.getElementById('content');
+    const mirrorLink=document.getElementById('mirrorLink');
+    const themeToggle=document.getElementById('themeToggle');
+
+    // Theme
+    const savedTheme = localStorage.getItem('sportsHomeTheme')||'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    themeToggle.checked = savedTheme==='light';
+    themeToggle.addEventListener('change',()=> {
+      const t=themeToggle.checked?'light':'dark';
+      document.documentElement.setAttribute('data-theme',t);
+      localStorage.setItem('sportsHomeTheme',t);
+    });
+
+    async function fetchTables(){
+      const bust = Date.now(); // cache-busting for Brave
+      const res = await fetch(`${BASE}?v=${bust}`, {mode:'cors', credentials:'omit', cache:'no-store'});
+      if(!res.ok) throw new Error('Fetch failed '+res.status);
+      return await res.text();
+    }
+
+    // Copy <link rel="stylesheet"> from tables.html to this page (once)
+    function copyRemoteStyles(dom){
+      const existing = Array.from(document.querySelectorAll('link[rel="stylesheet"][data-mirror]')).map(l=>l.href);
+      dom.querySelectorAll('link[rel="stylesheet"]').forEach(link=>{
+        if(!existing.includes(link.href)){
+          const l=document.createElement('link');
+          l.rel='stylesheet'; l.href=link.href; l.setAttribute('data-mirror','');
+          document.head.appendChild(l);
+        }
+      });
+    }
+
+    function cloneDay(dom, ymd){
+      const sec = dom.querySelector(`section.day#${CSS.escape(ymd)}`);
+      if(!sec) return null;
+      const node = sec.cloneNode(true);
+      const innerH = node.querySelector('h2'); if(innerH) innerH.remove();
+      return node;
+    }
+
+    function labelIT(ymd){
+      return new Date(ymd).toLocaleDateString('it-IT',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+    }
+
+    function addFallbackIframe(ymd){
+      const box = document.createElement('div'); box.className='day';
+      const h = document.createElement('h2'); h.textContent = labelIT(ymd); h.style.margin='4px 0 8px';
+      box.appendChild(h);
+      const ifr = document.createElement('iframe');
+      ifr.className='fallback';
+      ifr.src = `${BASE}#${encodeURIComponent(ymd)}`;
+      box.appendChild(ifr);
+      content.appendChild(box);
+    }
+
+    async function render(ymd, alsoTomorrow){
+      content.innerHTML = '<div class="note">Caricamento…</div>';
+      try{
+        const html = await fetchTables();
+        const dom = new DOMParser().parseFromString(html, 'text/html');
+
+        // bring over external CSS refs
+        copyRemoteStyles(dom);
+
+        // build boxes
+        const frag = document.createDocumentFragment();
+        const makeBox = (dstr) => {
+          const box = document.createElement('div'); box.className='day';
+          const h = document.createElement('h2'); h.textContent
+<!doctype html>
+<html lang="it" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guida TV Sport — Homepage</title>
+  <style>
+    :root{--bg:#0b0c0f;--fg:#e7e9ea;--muted:#9aa1a9;--card:#14171a;--accent:#4f46e5}
+    [data-theme="light"]{--bg:#f7f7f8;--fg:#0b0c0f;--muted:#4b5563;--card:#ffffff;--accent:#2563eb}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    header,footer{background:var(--card);border-bottom:1px solid #1f2937}
+    header{position:sticky;top:0;z-index:10;padding:10px 14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    h1{font-size:16px;margin:0 8px 0 0;white-space:nowrap}
+    .spacer{flex:1 1 auto}
+    .btn{border:1px solid #374151;background:transparent;color:var(--fg);padding:7px 10px;border-radius:10px;cursor:pointer;font-weight:600}
+    .btn:hover{border-color:#4b5563}
+    .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    input[type="date"]{background:var(--card);color:var(--fg);border:1px solid #374151;padding:7px 8px;border-radius:10px}
+    label{color:var(--muted)}
+    main{padding:16px}
+    #content > .day{background:var(--card);border:1px solid #1f2937;border-radius:12px;padding:12px;margin:0 auto 16px;max-width:1100px}
+    .note{color:var(--muted);font-size:12px;margin:4px 0 8px}
+    .link{color:#93c5fd;text-decoration:none}
+    .link:hover{text-decoration:underline}
+    footer{padding:8px 14px;color:var(--muted);font-size:12px;border-top:1px solid #1f2937}
   </style>
 </head>
 <body>
