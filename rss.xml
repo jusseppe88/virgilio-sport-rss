@@ -1,70 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
-<channel>
+<rss version="2.0"><channel>
 <title>Virgilio Sport – Guida TV (per giorno)</title>
-<link>https://jusseppe88.github.io/virgilio-sport-rss/index.html</link>
-<description>Un item per ogni giorno; il contenuto è una tabella HTML con gli eventi (formattazione preservata nella pagina mirror).</description>
-<lastBuildDate>Thu, 30 Oct 2025 15:26:00 +0000</lastBuildDate>
-<ttl>60</ttl>
+<link>https://jusseppe88.github.io/virgilio-sport-rss/tables.html</link>
+<description>Un item per ogni giorno; il contenuto è una tabella HTML con gli eventi.</description>
+<lastBuildDate>Thu, 30 Oct 2025 15:47:12 +0000</lastBuildDate><ttl>60</ttl>
 <item>
-<title>Guida Tv – Thursday 30 October 2025</title>
-<link>https://jusseppe88.github.io/virgilio-sport-rss/index.html#2025-10-30</link>
-<guid isPermaLink="false">9e2b023a888ee36f4dd0b57594bc8f066cd2c484</guid>
-<pubDate>Thu, 30 Oct 2025 00:00:00 +0100</pubDate>
+<title>Guida Tv – Thursday 30 October 2025</title><link>https://jusseppe88.github.io/virgilio-sport-rss/tables.html#2025-10-30</link>
+<guid isPermaLink="false">9e2b023a888ee36f4dd0b57594bc8f066cd2c484</guid><pubDate>Thu, 30 Oct 2025 00:00:00 +0100</pubDate>
 <description><![CDATA[
 <style>table{border-collapse:collapse;width:100%;max-width:980px}th,td{border:1px solid #ddd;padding:6px 8px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial}th{background:#f5f5f5;text-align:left}.time{white-space:nowrap;width:1%}</style><a id='2025-10-30'></a><h2>Thursday 30 October 2025</h2><table><thead><tr><th class='time'>Ora</th><th>Sport</th><th>Competizione</th><th>Evento</th><th>Canali</th></tr></thead><tbody></tbody></table>
 ]]></description>
 </item>
 <item>
-<title>Guida Tv – Friday 31 October 2025</title>
-<link>https://jusseppe88.github.io/virgilio-sport-rss/index.html#2025-10-31</link>
-<guid isPermaLink="false">3568349458e6a4512b1ea6d9f8ac505a63a0b36e</guid>
-<pubDate>Fri, 31 Oct 2025 00:00:00 +0100</pubDate>
+<title>Guida Tv – Friday 31 October 2025</title><link>https://jusseppe88.github.io/virgilio-sport-rss/tables.html#2025-10-31</link>
+<guid isPermaLink="false">3568349458e6a4512b1ea6d9f8ac505a63a0b36e</guid><pubDate>Fri, 31 Oct 2025 00:00:00 +0100</pubDate>
 <description><![CDATA[
 <style>table{border-collapse:collapse;width:100%;max-width:980px}th,td{border:1px solid #ddd;padding:6px 8px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial}th{background:#f5f5f5;text-align:left}.time{white-space:nowrap;width:1%}</style><a id='2025-10-31'></a><h2>Friday 31 October 2025</h2><table><thead><tr><th class='time'>Ora</th><th>Sport</th><th>Competizione</th><th>Evento</th><th>Canali</th></tr></thead><tbody></tbody></table>
 ]]></description>
 </item>
 <item>
-<title>Guida Tv – Saturday 01 November 2025</title>
-<link>https://jusseppe88.github.io/virgilio-sport-rss/index.html#2025-11-01</link>
-<guid isPermaLink="false">3b825a75f740c835baf2ae3884d378dbc71304cd</guid>
-<pubDate>Sat, 01 Nov 2025 00:00:00 +0100</pubDate>
+<title>Guida Tv – Saturday 01 November 2025</title><link>https://jusseppe88.github.io/virgilio-sport-rss/tables.html#2025-11-01</link>
+<guid isPermaLink="false">3b825a75f740c835baf2ae3884d378dbc71304cd</guid><pubDate>Sat, 01 Nov 2025 00:00:00 +0100</pubDate>
 <description><![CDATA[
 <style>table{border-collapse:collapse;width:100%;max-width:980px}th,td{border:1px solid #ddd;padding:6px 8px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial}th{background:#f5f5f5;text-align:left}.time{white-space:nowrap;width:1%}</style><a id='2025-11-01'></a><h2>Saturday 01 November 2025</h2><table><thead><tr><th class='time'>Ora</th><th>Sport</th><th>Competizione</th><th>Evento</th><th>Canali</th></tr></thead><tbody></tbody></table>
 ]]></description>
 </item>
 <item>
-<title>Guida Tv – Sunday 02 November 2025</title>
-<link>https://jusseppe88.github.io/virgilio-sport-rss/index.html#2025-11-02</link>
-<guid isPermaLink="false">88bd665b6352e448670d72616516c8ada9e9cead</guid>
-<pubDate>Sun, 02 Nov 2025 00:00:00 +0100</pubDate>
+<title>Guida Tv – Sunday 02 November 2025</title><link>https://jusseppe88.github.io/virgilio-sport-rss/tables.html#2025-11-02</link>
+<guid isPermaLink="false">88bd665b6352e448670d72616516c8ada9e9cead</guid><pubDate>Sun, 02 Nov 2025 00:00:00 +0100</pubDate>
 <description><![CDATA[
 <style>table{border-collapse:collapse;width:100%;max-width:980px}th,td{border:1px solid #ddd;padding:6px 8px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial}th{background:#f5f5f5;text-align:left}.time{white-space:nowrap;width:1%}</style><a id='2025-11-02'></a><h2>Sunday 02 November 2025</h2><table><thead><tr><th class='time'>Ora</th><th>Sport</th><th>Competizione</th><th>Evento</th><th>Canali</th></tr></thead><tbody></tbody></table>
 ]]></description>
 </item>
 <item>
-<title>Guida Tv – Monday 03 November 2025</title>
-<link>https://jusseppe88.github.io/virgilio-sport-rss/index.html#2025-11-03</link>
-<guid isPermaLink="false">aacc61016790a7ac44fc90f0ed23e8a38b94b14a</guid>
-<pubDate>Mon, 03 Nov 2025 00:00:00 +0100</pubDate>
+<title>Guida Tv – Monday 03 November 2025</title><link>https://jusseppe88.github.io/virgilio-sport-rss/tables.html#2025-11-03</link>
+<guid isPermaLink="false">aacc61016790a7ac44fc90f0ed23e8a38b94b14a</guid><pubDate>Mon, 03 Nov 2025 00:00:00 +0100</pubDate>
 <description><![CDATA[
 <style>table{border-collapse:collapse;width:100%;max-width:980px}th,td{border:1px solid #ddd;padding:6px 8px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial}th{background:#f5f5f5;text-align:left}.time{white-space:nowrap;width:1%}</style><a id='2025-11-03'></a><h2>Monday 03 November 2025</h2><table><thead><tr><th class='time'>Ora</th><th>Sport</th><th>Competizione</th><th>Evento</th><th>Canali</th></tr></thead><tbody></tbody></table>
 ]]></description>
 </item>
 <item>
-<title>Guida Tv – Tuesday 04 November 2025</title>
-<link>https://jusseppe88.github.io/virgilio-sport-rss/index.html#2025-11-04</link>
-<guid isPermaLink="false">238b62c28f8daefb1386807483c62db871d29014</guid>
-<pubDate>Tue, 04 Nov 2025 00:00:00 +0100</pubDate>
+<title>Guida Tv – Tuesday 04 November 2025</title><link>https://jusseppe88.github.io/virgilio-sport-rss/tables.html#2025-11-04</link>
+<guid isPermaLink="false">238b62c28f8daefb1386807483c62db871d29014</guid><pubDate>Tue, 04 Nov 2025 00:00:00 +0100</pubDate>
 <description><![CDATA[
 <style>table{border-collapse:collapse;width:100%;max-width:980px}th,td{border:1px solid #ddd;padding:6px 8px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial}th{background:#f5f5f5;text-align:left}.time{white-space:nowrap;width:1%}</style><a id='2025-11-04'></a><h2>Tuesday 04 November 2025</h2><table><thead><tr><th class='time'>Ora</th><th>Sport</th><th>Competizione</th><th>Evento</th><th>Canali</th></tr></thead><tbody></tbody></table>
 ]]></description>
 </item>
 <item>
-<title>Guida Tv – Wednesday 05 November 2025</title>
-<link>https://jusseppe88.github.io/virgilio-sport-rss/index.html#2025-11-05</link>
-<guid isPermaLink="false">90c702512520867553c888e879505f2f78e0b309</guid>
-<pubDate>Wed, 05 Nov 2025 00:00:00 +0100</pubDate>
+<title>Guida Tv – Wednesday 05 November 2025</title><link>https://jusseppe88.github.io/virgilio-sport-rss/tables.html#2025-11-05</link>
+<guid isPermaLink="false">90c702512520867553c888e879505f2f78e0b309</guid><pubDate>Wed, 05 Nov 2025 00:00:00 +0100</pubDate>
 <description><![CDATA[
 <style>table{border-collapse:collapse;width:100%;max-width:980px}th,td{border:1px solid #ddd;padding:6px 8px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial}th{background:#f5f5f5;text-align:left}.time{white-space:nowrap;width:1%}</style><a id='2025-11-05'></a><h2>Wednesday 05 November 2025</h2><table><thead><tr><th class='time'>Ora</th><th>Sport</th><th>Competizione</th><th>Evento</th><th>Canali</th></tr></thead><tbody></tbody></table>
 ]]></description>
