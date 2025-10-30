@@ -17,14 +17,61 @@ IT_MONTHS = {
 TIME_RE = re.compile(r"^\s*(\d{1,2}:\d{2})\s*$")
 
 def fetch_html() -> str:
-    with sync_playwright() as p:
-        browser = p.chromium.launch()
-        page = browser.new_page()
-        page.goto(URL, timeout=90_000, wait_until="networkidle")
-        page.wait_for_selector("table, h2", timeout=60_000)
-        html = page.content()
-        browser.close()
-        return html
+    """
+    Render the page (JS included) and return the final HTML.
+    Saves debug artifacts (debug.html + debug.png + playwright_console.log).
+    """
+    console_lines = []
+    try:
+        with sync_playwright() as p:
+            # Robust flags for CI
+            launch_args = [
+                "--no-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-gpu",
+                "--disable-setuid-sandbox",
+            ]
+            browser = p.chromium.launch(headless=True, args=launch_args)
+            page = browser.new_page()
+            page.on("console", lambda msg: console_lines.append(f"[{msg.type()}] {msg.text()}"))
+
+            page.goto(URL, timeout=90_000, wait_until="networkidle")
+
+            # Try to wait for tables; if slow, also wait for any h2 headings
+            try:
+                page.wait_for_selector("table", timeout=60_000)
+            except Exception:
+                page.wait_for_selector("h2", timeout=30_000)
+
+            html = page.content()
+
+            # Write debug artifacts to help diagnose future issues
+            with open("debug.html", "w", encoding="utf-8") as f:
+                f.write(html)
+            try:
+                page.screenshot(path="debug.png", full_page=True)
+            except Exception:
+                pass
+
+            browser.close()
+    except Exception as e:
+        # If something fails, still try to dump what we can
+        try:
+            with open("playwright_console.log", "w", encoding="utf-8") as f:
+                f.write("\n".join(console_lines))
+        except Exception:
+            pass
+        print("Playwright fetch_html error:", e)
+        raise
+
+    # Flush console log even on success
+    try:
+        with open("playwright_console.log", "w", encoding="utf-8") as f:
+            f.write("\n".join(console_lines))
+    except Exception:
+        pass
+
+    return html
 
 def parse_date_heading(text: str, today: datetime.date | None = None) -> datetime.date | None:
     text = re.sub(r"\s+", " ", text).strip()
@@ -115,7 +162,6 @@ def make_guid(key: str) -> str:
     return hashlib.sha1(key.encode("utf-8")).hexdigest()
 
 def render_table_html(date_obj: datetime.date, rows: list[dict]) -> str:
-    # Minimal CSS for readability; keeps it email-safe
     css = (
         "table{border-collapse:collapse;width:100%;max-width:980px}"
         "th,td{border:1px solid #ddd;padding:6px 8px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial}"
@@ -155,11 +201,4 @@ def build_index_html(grouped: list[tuple[datetime.date, list[dict]]]) -> str:
     return "".join(parts)
 
 def build_rss_tables(grouped: list[tuple[datetime.date, list[dict]]],
-                     site_base: str, now_utc: datetime.datetime | None = None) -> str:
-    """RSS with one item per date; description includes the HTML table; link points to index.html#YYYY-MM-DD."""
-    if now_utc is None:
-        now_utc = datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc)
-    now_rfc822 = now_utc.strftime("%a, %d %b %Y %H:%M:%S %z")
-
-    out = []
-    out.append('<?xml version="1.0" enc
+                     site_base: str, now_utc: date
