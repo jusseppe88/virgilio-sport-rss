@@ -37,10 +37,13 @@ def parse_date_heading(text, today=None, tz_offset="+0100"):
         return today + datetime.timedelta(days=1)
     return None
 
+from requests_html import HTMLSession
+
 def fetch_html():
-    r = requests.get(URL, headers=HEADERS, timeout=30)
-    r.raise_for_status()
-    return r.text
+    session = HTMLSession()
+    r = session.get("https://sport.virgilio.it/guida-tv/")
+    r.html.render(timeout=60, sleep=3)
+    return r.html.html
 
 def iter_events(soup):
     # Grab all H2 (date section headers), then walk siblings until next H2
@@ -203,3 +206,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
