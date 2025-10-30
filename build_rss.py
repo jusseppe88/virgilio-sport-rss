@@ -31,7 +31,10 @@ def fetch_html() -> str:
                 "--disable-gpu",
                 "--disable-setuid-sandbox",
             ]
-            browser = p.chromium.launch(headless=True, args=launch_args)
+            browser = p.chromium.launch(
+                headless=True,
+                args=["--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--disable-setuid-sandbox"]
+            )
             page = browser.new_page()
             page.on("console", lambda msg: console_lines.append(f"[{msg.type()}] {msg.text()}"))
 
