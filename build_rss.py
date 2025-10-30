@@ -40,37 +40,18 @@ def parse_date_heading(text, today=None, tz_offset="+0100"):
     return None
 
 
+from playwright.sync_api import sync_playwright
+
 def fetch_html():
-    """Fetch the page. Try JS render via requests-html, but fall back to r.text on any error.
-    Always write debug_fetch.html for CI debugging and print status lines to logs.
-    """
-    session = HTMLSession()
-    try:
-        r = session.get(URL)
-    except Exception as e:
-        print("fetch_html: session.get failed:", repr(e))
-        raise
-
-    html = None
-    try:
-        # try rendering JS-generated content (may fail on CI)
-        r.html.render(timeout=60, sleep=3)
-        html = r.html.html
-        print("fetch_html: render() succeeded, length =", len(html))
-    except Exception as e:
-        # fallback to plain HTML and surface the error in logs
-        html = r.text
-        print("fetch_html: render() failed, falling back to r.text; error:", repr(e))
-        print("fetch_html: fetched length =", len(html))
-
-    # save a copy for debugging in CI logs/artifacts
-    try:
-        with open("debug_fetch.html", "w", encoding="utf-8") as fh:
-            fh.write(html)
-        print("fetch_html: wrote debug_fetch.html")
-    except Exception as e:
-        print("fetch_html: failed to write debug file:", e)
-    return html
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page()
+        page.goto("https://sport.virgilio.it/guida-tv/", timeout=60000)
+        # wait for the schedule tables to load (adjust selector if needed)
+        page.wait_for_selector("table, .guida-tv, h2")  # be lenient
+        html = page.content()
+        browser.close()
+        return html
 
 
 def iter_events(soup):
