@@ -21,8 +21,11 @@ jobs:
         with:
           python-version: "3.11"
 
-      - run: pip install beautifulsoup4 requests
-      - run: python build_rss.py
+      - name: Install dependencies
+        run: pip install -q beautifulsoup4 requests
+
+      - name: Build RSS
+        run: python build_rss.py
 
       - name: Prepare Pages artifact
         run: |
@@ -32,7 +35,7 @@ jobs:
             echo "Prepared public/rss.xml:"
             ls -l public/rss.xml
           else
-            echo "rss.xml not found; failing intentionally."
+            echo "rss.xml not found; failing."
             exit 1
           fi
 
@@ -43,11 +46,11 @@ jobs:
 
   deploy:
     needs: build
+    runs-on: ubuntu-latest
     permissions:
       pages: write
       contents: read
       id-token: write
-    runs-on: ubuntu-latest
     steps:
       - id: deploy
         uses: actions/deploy-pages@v4
