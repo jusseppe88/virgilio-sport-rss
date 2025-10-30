@@ -13,6 +13,8 @@ IT_MONTHS = {
     "luglio": 7, "agosto": 8, "settembre": 9, "ottobre": 10, "novembre": 11, "dicembre": 12
 }
 TIME_RE = re.compile(r"\b(\d{1,2}:\d{2})\b")
+BROADCASTER_KWS = ("Sky", "Dazn", "DAZN", "Rai", "Eurosport", "NOW", "Mediaset",
+                   "Sportitalia", "Amazon", "Prime", "Infinity", "La7", "Nove")
 
 # ----- robust tz fallback -----
 try:
@@ -120,37 +122,17 @@ def parse_date_heading(text: str, today: datetime.date | None = None) -> datetim
     return None
 
 # ----- parsing helpers -----
-def normalize_header(s: str) -> str:
-    s = (s or "").strip().lower()
-    s = s.replace("dove vederla", "canali").replace("dove vedere", "canali").replace("canale", "canali")
-    s = s.replace("ora inizio", "ora")
-    return s
-
-def header_index_map(table: BeautifulSoup) -> dict:
-    headers = []
-    thead = table.find("thead")
-    if thead:
-        ths = thead.find_all("th")
-        headers = [normalize_header(th.get_text(" ", strip=True)) for th in ths]
-    else:
-        first_tr = table.find("tr")
-        if first_tr:
-            ths = first_tr.find_all(["th","td"])
-            headers = [normalize_header(th.get_text(" ", strip=True)) for th in ths]
-    wanted = ["ora", "sport", "competizione", "evento", "canali"]
-    idx = {}
-    for w in wanted:
-        for i,h in enumerate(headers):
-            if w == h or w in h:
-                idx[w] = i; break
-    return idx
-
 def parse_sport_comp_event(block: str):
     """
-    Parse e.g. 'Calcio, Serie A: Pisa-Lazio'
+    Parse variants like:
+      'Calcio, Serie A: Pisa-Lazio'
+      'Basket, Eurolega: Bayern-Virtus'
+      'Tennis, ATP & WTA:'
     Returns (sport, competition, title)
     """
     s = (block or "").replace("\xa0", " ").strip()
+    # some sources use '<br>' inside middle cell; collapse multiple spaces/commas
+    s = re.sub(r"\s+", " ", s)
     if ":" in s:
         left, right = s.split(":", 1)
         title = right.strip()
@@ -162,59 +144,71 @@ def parse_sport_comp_event(block: str):
         sport, competition = left.strip(), ""
     return sport, competition, title
 
+def _looks_like_channels(text: str) -> bool:
+    if not text: return False
+    # if any broadcaster keyword is present, treat this cell as channels-ish
+    return any(k.lower() in text.lower() for k in BROADCASTER_KWS)
+
 def extract_rows_from_table(table: BeautifulSoup):
-    idx = header_index_map(table)
-    body = table.find("tbody") or table
+    """
+    Robust row parser that IGNORES any site-provided headers.
+    Strategy:
+      - Find the first cell with HH:MM => time_idx
+      - Pick channels_idx:
+          * rightmost cell that 'looks like channels' OR
+          * else the last cell
+      - middle = all cells except time_idx and channels_idx
+      - parse middle => sport, competition, title
+    """
     out = []
+    body = table.find("tbody") or table
     for tr in body.find_all("tr"):
         tds = tr.find_all(["td","th"])
         if not tds:
             continue
-        def cell(i): return tds[i].get_text(" ", strip=True) if 0 <= i < len(tds) else ""
-
-        if idx:
-            time_val   = cell(idx.get("ora", 0)).strip()
-            sport      = cell(idx.get("sport", 1)).strip()
-            competition= cell(idx.get("competizione", 2)).strip()
-            event      = cell(idx.get("evento", 3)).strip()
-            channels   = cell(idx.get("canali", len(tds)-1)).strip()
-        else:
-            # Heuristic layout: [time] | [middle cells...] | [channels]
-            texts = [c.get_text(" ", strip=True) for c in tds]
-
-            # find time (first with HH:MM)
-            time_val = ""
-            time_idx = None
-            for i, tx in enumerate(texts):
-                m = TIME_RE.search(tx)
-                if m:
-                    time_val = m.group(1)
-                    time_idx = i
-                    break
-            if not time_val:
-                continue  # header/separator row
-
-            # last cell = channels
-            channels = (texts[-1] if texts else "").strip()
-
-            # middle = between time cell and last cell
-            middle_cells = []
-            for i, tx in enumerate(texts):
-                if i == time_idx or i == len(texts) - 1:
-                    continue
-                if tx:
-                    middle_cells.append(tx)
-            middle = " ".join(middle_cells).strip()
-            sport, competition, event = parse_sport_comp_event(middle)
-
-        if not TIME_RE.fullmatch((time_val or "").strip()):
+        texts = [c.get_text(" ", strip=True) for c in tds]
+        if not any(texts):
             continue
+
+        # 1) time
+        time_idx, time_val = None, ""
+        for i, tx in enumerate(texts):
+            m = TIME_RE.search(tx)
+            if m:
+                time_idx, time_val = i, m.group(1)
+                break
+        if not time_val:
+            # skip header/separator-like rows
+            continue
+
+        # 2) channels index = rightmost channel-ish cell; fallback: last cell
+        channels_idx = None
+        for i in range(len(texts)-1, -1, -1):
+            if i == time_idx: 
+                continue
+            if _looks_like_channels(texts[i]):
+                channels_idx = i
+                break
+        if channels_idx is None:
+            channels_idx = len(texts) - 1 if len(texts) > 1 else 0
+
+        channels = texts[channels_idx].strip()
+
+        # 3) middle cells = everything except time/channels
+        middle_parts = []
+        for i, tx in enumerate(texts):
+            if i in (time_idx, channels_idx): 
+                continue
+            if tx:
+                middle_parts.append(tx)
+        middle = " ".join(middle_parts).strip()
+        sport, competition, title = parse_sport_comp_event(middle)
 
         out.append({
             "time": time_val,
             "sport": sport,
             "competition": competition,
-            "title": event,
+            "title": title,
             "channels": channels
         })
     return out
@@ -234,12 +228,11 @@ def split_free_text(line: str):
             sport, competition = [x.strip() for x in left.split(",", 1)]
         else:
             sport = left
-        kws = ("Sky", "Dazn", "Rai", "Eurosport", "NOW", "Mediaset", "Sportitalia", "Amazon", "Prime", "Infinity", "La7", "Nove")
         title = right
         parts = [p.strip() for p in right.split(",")]
-        if any(any(k.lower() in p.lower() for k in kws) for p in parts):
+        if any(any(k.lower() in p.lower() for k in BROADCASTER_KWS) for p in parts):
             idx = len(parts)-1
-            while idx >= 0 and not any(k.lower() in parts[idx].lower() for k in kws):
+            while idx >= 0 and not any(k.lower() in parts[idx].lower() for k in BROADCASTER_KWS):
                 idx -= 1
             if idx >= 0:
                 channels = ", ".join(parts[idx:]).strip()
@@ -269,23 +262,17 @@ def collect_styles(html: str):
     return hrefs
 
 def pick_container(soup: BeautifulSoup):
-    return soup.select_one(".guida-tv") or soup.select_one("article") or soup.select_one("main") or soup.select_one("#main") or soup.body or soup
+    return (soup.select_one(".guida-tv") or soup.select_one("article") or
+            soup.select_one("main") or soup.select_one("#main") or soup.body or soup)
 
 def build_clean_mirror(html: str):
-    """
-    Wrap each date as:
-      <section class="day" id="YYYY-MM-DD">
-        <h2>...</h2>
-        <!-- only blocks that contain events: a table OR text with HH:MM lines -->
-      </section>
-    """
     soup = BeautifulSoup(html, "html.parser")
     src = pick_container(soup)
     h2s = src.find_all(["h2","h3"])
     mirror = soup.new_tag("div", **{"class": "guide-mirror"})
     today = datetime.date.today()
 
-    for i, h in enumerate(h2s):
+    for h in h2s:
         d = parse_date_heading(h.get_text(" ", strip=True), today=today)
         if not d:
             continue
@@ -362,7 +349,6 @@ def iter_rows_grouped_fallback_fullpage(html: str):
     today = datetime.date.today()
     groups = {}
 
-    # Headings anywhere
     candidates = soup.find_all(["h2","h3"])
     day_blocks = []
     for h in candidates:
@@ -530,13 +516,15 @@ def render_table_html_for_rss(date_obj: datetime.date, rows, channel_map=None, i
 
 def build_tables_html_from_grouped(style_hrefs, grouped, channel_map) -> str:
     base_css = """
-      body{margin:16px;background:#fff;color:#000;font:14px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+      body{margin:16px;background:#0b0c0f;color:#f3f4f6;font:15px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
       .wrap{max-width:1100px;margin:0 auto}
       .wrap .day{margin:0 0 16px 0}
       table{border-collapse:collapse;width:100%}
-      th,td{border:1px solid #d1d5db;padding:6px 8px}
-      thead th{background:#f3f4f6;text-align:left}
+      th,td{border:1px solid #d1d5db;padding:8px 10px}
+      thead th{background:#111827;color:#e5e7eb;text-align:left}
       .time{white-space:nowrap;width:1%}
+      a{color:#93c5fd}
+      a:hover{text-decoration:underline}
     """
     links = "\n".join(f"<link rel='stylesheet' href='{h}' crossorigin>" for h in style_hrefs)
 
