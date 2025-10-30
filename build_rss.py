@@ -293,4 +293,15 @@ def main():
     _write_file("index.html", tables_html)
 
     # Build RSS (one item per day) from the same container
-    if contain
+    if container is None: container = soup
+    grouped = list(iter_rows_grouped_by_date_from_container(container))
+
+    site_base = "https://jusseppe88.github.io/virgilio-sport-rss"
+    rss = build_rss_tables(grouped, site_base=site_base)
+    _write_file("rss_tables.xml", rss)
+    _write_file("rss.xml", rss)
+
+    print(f"Wrote tables.html & index.html with {len(grouped)} tables and rss_tables.xml")
+
+if __name__ == "__main__":
+    main()
