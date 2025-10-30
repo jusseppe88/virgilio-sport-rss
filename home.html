@@ -15,7 +15,6 @@
     .spacer{flex:1 1 auto}
     .btn{border:1px solid #374151;background:transparent;color:var(--fg);padding:7px 10px;border-radius:10px;cursor:pointer;font-weight:600}
     .btn:hover{border-color:#4b5563}
-    .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
     .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
     input[type="date"]{background:var(--card);color:var(--fg);border:1px solid #374151;padding:7px 8px;border-radius:10px}
     label{color:var(--muted)}
@@ -45,17 +44,14 @@
   </header>
 
   <main>
-    <div class="note">Mirror: <a id="mirrorLink" class="link" href="#" target="_blank" rel="noopener">tables.html</a> · Originale: <a class="link" href="https://sport.virgilio.it/guida-tv/" target="_blank" rel="noopener">Virgilio</a></div>
+    <div class="note">Mirror: <a id="mirrorLink" class="link" href="./tables.html" target="_blank" rel="noopener">tables.html</a></div>
     <div id="content"></div>
   </main>
 
-  <footer>
-    Suggerimento: aggiungi questa pagina ai preferiti o impostala come pagina iniziale.
-  </footer>
+  <footer>Consiglio: aggiungi questa pagina ai preferiti o impostala come pagina iniziale.</footer>
 
   <script>
-    // Same-origin URLs (host this file on GitHub Pages in the same repo)
-    const BASE = "./tables.html";
+    const BASE = "./tables.html"; // same origin
     const TZ = "Europe/Rome";
 
     const fmtYMD = (d) => new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).format(d);
@@ -87,19 +83,15 @@
       return await res.text();
     }
 
-    function extractDay(doc, ymd){
-      const anchor = doc.getElementById(ymd);
-      if(!anchor) return null;
-      const out = document.createElement('div');
-      // collect nodes after the anchor up to (but not including) next H2
-      let node = anchor.nextElementSibling;
-      while(node){
-        if(node.tagName === 'H2') break;
-        // only keep H2/TABLE blocks and their wrappers
-        out.appendChild(node.cloneNode(true));
-        node = node.nextElementSibling;
-      }
-      return out.childNodes.length ? out : null;
+    function cloneDay(doc, ymd){
+      // pick <section class="day" id="YYYY-MM-DD">
+      const sec = doc.querySelector(`section.day#${CSS.escape(ymd)}`);
+      if(!sec) return null;
+      return sec.cloneNode(true);
+    }
+
+    function labelIT(ymd){
+      return new Date(ymd).toLocaleDateString('it-IT',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
     }
 
     async function render(ymd, alsoTomorrow){
@@ -109,32 +101,24 @@
         const dom = new DOMParser().parseFromString(html, 'text/html');
         const frag = document.createDocumentFragment();
 
-        const wrap = (label, block) => {
-          const box = document.createElement('div');
-          box.className = 'day';
-          const h = document.createElement('h2');
-          h.textContent = label;
-          h.style.margin = '4px 0 8px';
-          box.appendChild(h);
-          if(block) box.appendChild(block); else box.innerHTML += '<div class="note">Nessun dato disponibile.</div>';
-          return box;
-        };
-
-        const itLabel = (dstr) => new Date(dstr).toLocaleDateString('it-IT',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
-
-        const todayBlock = extractDay(dom, ymd);
-        frag.appendChild(wrap(itLabel(ymd), todayBlock));
+        const day1 = cloneDay(dom, ymd);
+        const box1 = document.createElement('div'); box1.className='day';
+        const h1 = document.createElement('h2'); h1.textContent = labelIT(ymd); h1.style.margin='4px 0 8px';
+        box1.appendChild(h1); if(day1) { box1.appendChild(day1); } else { box1.innerHTML += '<div class="note">Nessun dato disponibile.</div>'; }
+        frag.appendChild(box1);
 
         if(alsoTomorrow){
-          const tm = addDays(ymd, 1);
-          const tmBlock = extractDay(dom, tm);
-          frag.appendChild(wrap(itLabel(tm), tmBlock));
+          const tm = addDays(ymd,1);
+          const day2 = cloneDay(dom, tm);
+          const box2 = document.createElement('div'); box2.className='day';
+          const h2 = document.createElement('h2'); h2.textContent = labelIT(tm); h2.style.margin='4px 0 8px';
+          box2.appendChild(h2); if(day2) { box2.appendChild(day2); } else { box2.innerHTML += '<div class="note">Nessun dato disponibile.</div>'; }
+          frag.appendChild(box2);
         }
 
-        content.innerHTML = '';
-        content.appendChild(frag);
+        content.innerHTML=''; content.appendChild(frag);
       }catch(err){
-        content.innerHTML = `<div class="day"><div class="note">Errore caricamento: ${String(err)}</div><div class="note">Apri direttamente: <a class="link" href="${BASE}" target="_blank" rel="noopener">${BASE}</a></div></div>`;
+        content.innerHTML = `<div class="day"><div class="note">Errore: ${String(err)}</div><div class="note">Apri: <a class="link" href="${BASE}" target="_blank" rel="noopener">${BASE}</a></div></div>`;
       }
     }
 
