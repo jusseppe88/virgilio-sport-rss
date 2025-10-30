@@ -4,6 +4,1056 @@
 <title>Virgilio Sport – Guida TV (events only)</title>
 <link>https://sport.virgilio.it/guida-tv/</link>
 <description>Parsed schedule of sports events only (times, titles, competitions)</description>
-<lastBuildDate>Thu, 30 Oct 2025 11:14:37 +0000</lastBuildDate>
+<lastBuildDate>Thu, 30 Oct 2025 13:23:31 +0000</lastBuildDate>
 <ttl>60</ttl>
+<item>
+<title>01:00 — Basket · NBA — Milwaukee Bucks-Golden State Warriors Sky Sport Basket</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">04371d8b655a63d287d91f0eee0dfcc7a00d3d60</guid>
+<pubDate>Thu, 30 Oct 2025 01:00:00 +0100</pubDate>
+<description>Data: 2025-10-30 01:00 (Europe/Rome) | Sport: Basket | Competizione: NBA</description>
+</item>
+<item>
+<title>04:00 — Tennis · ATP &amp; WTA — Sky Sport Tennis, Sky Sport Max</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">6e3beb1ba9f6600c003e2c8c71db01f1a8c331ce</guid>
+<pubDate>Thu, 30 Oct 2025 04:00:00 +0100</pubDate>
+<description>Data: 2025-10-30 04:00 (Europe/Rome) | Sport: Tennis | Competizione: ATP &amp; WTA</description>
+</item>
+<item>
+<title>06:00 — Tennis · ATP &amp; WTA — Sky Sport Tennis, Sky Sport Max</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">11b1471a455c03106783ba02848cc9477e8d3ecd</guid>
+<pubDate>Thu, 30 Oct 2025 06:00:00 +0100</pubDate>
+<description>Data: 2025-10-30 06:00 (Europe/Rome) | Sport: Tennis | Competizione: ATP &amp; WTA</description>
+</item>
+<item>
+<title>11:00 — Tennis · ATP Masters 1000 Parigi-Bercy — Ottavi Di Finale Sky Sport Tennis, Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">b5d9e5dd2e789bfacb0145f8a3517d8371f37e70</guid>
+<pubDate>Thu, 30 Oct 2025 11:00:00 +0100</pubDate>
+<description>Data: 2025-10-30 11:00 (Europe/Rome) | Sport: Tennis | Competizione: ATP Masters 1000 Parigi-Bercy</description>
+</item>
+<item>
+<title>11:00 — Tennis · ATP Masters 1000 Parigi-Bercy — Ottavi di Finale Sky Sport Mix</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">eed8fc02a7a2887d7923816a2836784ecf884ddd</guid>
+<pubDate>Thu, 30 Oct 2025 11:00:00 +0100</pubDate>
+<description>Data: 2025-10-30 11:00 (Europe/Rome) | Sport: Tennis | Competizione: ATP Masters 1000 Parigi-Bercy</description>
+</item>
+<item>
+<title>18:30 — Calcio · Saudi League — Al Ahli-Al Riyad Sportitalia</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">547b4b1b6348e456a1778d7021ccc011bb5a2c9d</guid>
+<pubDate>Thu, 30 Oct 2025 18:30:00 +0100</pubDate>
+<description>Data: 2025-10-30 18:30 (Europe/Rome) | Sport: Calcio | Competizione: Saudi League</description>
+</item>
+<item>
+<title>18:30 — Calcio · Serie A — Cagliari-Sassuolo Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">90d413df07e6bcbffd1a51436f30bfc07842a117</guid>
+<pubDate>Thu, 30 Oct 2025 18:30:00 +0100</pubDate>
+<description>Data: 2025-10-30 18:30 (Europe/Rome) | Sport: Calcio | Competizione: Serie A</description>
+</item>
+<item>
+<title>20:30 — Basket · Eurolega — Bayern Monaco-Virtus Bologna Sky Sport Basket</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">c20877ec7c44b7014b8cdbd15594b7a6cdde27ff</guid>
+<pubDate>Thu, 30 Oct 2025 20:30:00 +0100</pubDate>
+<description>Data: 2025-10-30 20:30 (Europe/Rome) | Sport: Basket | Competizione: Eurolega</description>
+</item>
+<item>
+<title>20:30 — Basket · Eurolega — Olimpia Milano-Paris Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">af18ba843080c3c524c16a1ce3970960dff3c9c1</guid>
+<pubDate>Thu, 30 Oct 2025 20:30:00 +0100</pubDate>
+<description>Data: 2025-10-30 20:30 (Europe/Rome) | Sport: Basket | Competizione: Eurolega</description>
+</item>
+<item>
+<title>20:30 — Pallavolo maschile · SuperLega — Verona-Milano Rai Sport</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">251011f2396fdebc0c32e26269810bd186328838</guid>
+<pubDate>Thu, 30 Oct 2025 20:30:00 +0100</pubDate>
+<description>Data: 2025-10-30 20:30 (Europe/Rome) | Sport: Pallavolo maschile | Competizione: SuperLega</description>
+</item>
+<item>
+<title>20:45 — Calcio · Serie A — Pisa-Lazio Sky, Dazn, Sky Sport Calcio</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">a3ff7162ae0e28bce3527eb3b934e7d60965bf1a</guid>
+<pubDate>Thu, 30 Oct 2025 20:45:00 +0100</pubDate>
+<description>Data: 2025-10-30 20:45 (Europe/Rome) | Sport: Calcio | Competizione: Serie A</description>
+</item>
+<item>
+<title>01:15 — Calcio · Liga Profesional — Instituto-Rosario Central Sportitalia</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">dd85a3b876c5b2564da49419ec8b9bf13a3c9f70</guid>
+<pubDate>Fri, 31 Oct 2025 01:15:00 +0100</pubDate>
+<description>Data: 2025-10-31 01:15 (Europe/Rome) | Sport: Calcio | Competizione: Liga Profesional</description>
+</item>
+<item>
+<title>06:00 — Tennis · ATP &amp; WTA — Sky Sport Tennis, Sky Sport Max</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">8aa8e85cce28af31ef07a41d51d119a3e063394b</guid>
+<pubDate>Fri, 31 Oct 2025 06:00:00 +0100</pubDate>
+<description>Data: 2025-10-31 06:00 (Europe/Rome) | Sport: Tennis | Competizione: ATP &amp; WTA</description>
+</item>
+<item>
+<title>14:00 — Tennis · ATP Masters 1000 Parigi-Bercy — 1^ Quarto di Finale Sky Sport Tennis, Sky Sport Mix, Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">5244bf24ceab8222ad4cefeb359b88fbd5f3e1a3</guid>
+<pubDate>Fri, 31 Oct 2025 14:00:00 +0100</pubDate>
+<description>Data: 2025-10-31 14:00 (Europe/Rome) | Sport: Tennis | Competizione: ATP Masters 1000 Parigi-Bercy</description>
+</item>
+<item>
+<title>15:50 — Calcio · Saudi League — Al Hilal-Al Shabab Sportitalia</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">b8482cd7ba152e02dd85ee0d17a4383bedda058e</guid>
+<pubDate>Fri, 31 Oct 2025 15:50:00 +0100</pubDate>
+<description>Data: 2025-10-31 15:50 (Europe/Rome) | Sport: Calcio | Competizione: Saudi League</description>
+</item>
+<item>
+<title>16:00 — Tennis · ATP Masters 1000 Parigi-Bercy — 2^ Quarto di Finale Sky Sport Tennis, Sky Sport Mix, Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">cfb0d540a2ea5756e9dc8e2e787431718d75018c</guid>
+<pubDate>Fri, 31 Oct 2025 16:00:00 +0100</pubDate>
+<description>Data: 2025-10-31 16:00 (Europe/Rome) | Sport: Tennis | Competizione: ATP Masters 1000 Parigi-Bercy</description>
+</item>
+<item>
+<title>18:30 — Calcio · Bundesliga 2 — Elverrsberg-Hannover Sky Sport Calcio</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">5c6014b8ce367701e83617c36a0bbd13af541261</guid>
+<pubDate>Fri, 31 Oct 2025 18:30:00 +0100</pubDate>
+<description>Data: 2025-10-31 18:30 (Europe/Rome) | Sport: Calcio | Competizione: Bundesliga 2</description>
+</item>
+<item>
+<title>19:00 — Basket · Eurolega — Monaco-Panathinaikos Aktor Sky Sport Basket</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">9ba54459825d22fc0d192b56b4075035deffea84</guid>
+<pubDate>Fri, 31 Oct 2025 19:00:00 +0100</pubDate>
+<description>Data: 2025-10-31 19:00 (Europe/Rome) | Sport: Basket | Competizione: Eurolega</description>
+</item>
+<item>
+<title>19:00 — Tennis · ATP Masters 1000 Parigi-Bercy — 3^ Quarto di Finale Sky Sport Tennis, Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">260ef221d25bc5f9218280d18195121ec4cb2c2c</guid>
+<pubDate>Fri, 31 Oct 2025 19:00:00 +0100</pubDate>
+<description>Data: 2025-10-31 19:00 (Europe/Rome) | Sport: Tennis | Competizione: ATP Masters 1000 Parigi-Bercy</description>
+</item>
+<item>
+<title>19:30 — Pallanuoto maschile · Serie A1 — Rai Sport</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">0940fef4612eb397e9c99f209d36c774392eca99</guid>
+<pubDate>Fri, 31 Oct 2025 19:30:00 +0100</pubDate>
+<description>Data: 2025-10-31 19:30 (Europe/Rome) | Sport: Pallanuoto maschile | Competizione: Serie A1</description>
+</item>
+<item>
+<title>20:30 — Basket · Eurolega — Partizan-Barcellona Sky Sport Max</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">1c246fa00f24e8b89d3faa9e39cc958dfd44ab97</guid>
+<pubDate>Fri, 31 Oct 2025 20:30:00 +0100</pubDate>
+<description>Data: 2025-10-31 20:30 (Europe/Rome) | Sport: Basket | Competizione: Eurolega</description>
+</item>
+<item>
+<title>20:30 — Calcio · Bundesliga — Augsburg-Borussia Dortmund Sky Sport Calcio</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">a44d7c32716fda9cd81e74436e9864cf12282810</guid>
+<pubDate>Fri, 31 Oct 2025 20:30:00 +0100</pubDate>
+<description>Data: 2025-10-31 20:30 (Europe/Rome) | Sport: Calcio | Competizione: Bundesliga</description>
+</item>
+<item>
+<title>20:30 — Calcio · Serie C — Calcio Serie C 12ga Girone C Casertana/ Catania 31/10/2025 Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">45c420bb6f7bd7b57447d0f90058b2666d14ae75</guid>
+<pubDate>Fri, 31 Oct 2025 20:30:00 +0100</pubDate>
+<description>Data: 2025-10-31 20:30 (Europe/Rome) | Sport: Calcio | Competizione: Serie C</description>
+</item>
+<item>
+<title>20:30 — Calcio a 5 maschile · Serie A Futsal — Napoli Futsal-Sandro Abate Sky Sport Mix</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">eeda06f34c5109fb8ad8689e94f051639c22fa53</guid>
+<pubDate>Fri, 31 Oct 2025 20:30:00 +0100</pubDate>
+<description>Data: 2025-10-31 20:30 (Europe/Rome) | Sport: Calcio a 5 maschile | Competizione: Serie A Futsal</description>
+</item>
+<item>
+<title>20:30 — Tennis · ATP Masters 1000 Parigi-Bercy — 4^ Quarto di Finale Sky Sport Tennis</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">2ba50b0a4fc90fa6f16f566dbff993498205874b</guid>
+<pubDate>Fri, 31 Oct 2025 20:30:00 +0100</pubDate>
+<description>Data: 2025-10-31 20:30 (Europe/Rome) | Sport: Tennis | Competizione: ATP Masters 1000 Parigi-Bercy</description>
+</item>
+<item>
+<title>03:00 — Basket · NBA — Dallas Mavericks-Detroit Pistons Sky Sport Basket</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">0ff0e046f63c7ae68775bbb5a29c804f17551c2f</guid>
+<pubDate>Sat, 01 Nov 2025 03:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 03:00 (Europe/Rome) | Sport: Basket | Competizione: NBA</description>
+</item>
+<item>
+<title>07:00 — Tennis · ATP Masters 1000 Parigi-Bercy — 1a Semifinale Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">447bb07fda0486e66e20edac19ac68e194fd3a39</guid>
+<pubDate>Sat, 01 Nov 2025 07:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 07:00 (Europe/Rome) | Sport: Tennis | Competizione: ATP Masters 1000 Parigi-Bercy</description>
+</item>
+<item>
+<title>07:00 — Tennis · WTA 250 Jiangxi — 1a Semfinale Sky Sport Max</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">bebcd55a2e9ff3cae4a55b8f2bfb3d9ac0be6628</guid>
+<pubDate>Sat, 01 Nov 2025 07:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 07:00 (Europe/Rome) | Sport: Tennis | Competizione: WTA 250 Jiangxi</description>
+</item>
+<item>
+<title>07:00 — Tennis · WTA 250 Jiangxi — 1a Semifinale Sky Sport Tennis</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">7e3e91e4bafaca7420dcbdc2de02128a0eb8f10d</guid>
+<pubDate>Sat, 01 Nov 2025 07:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 07:00 (Europe/Rome) | Sport: Tennis | Competizione: WTA 250 Jiangxi</description>
+</item>
+<item>
+<title>09:00 — Tennis · ATP Masters 1000 Parigi-Bercy — 2a Semfinale Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">48b5a9e7bd9b74e222900f36f3e719a6d7744b36</guid>
+<pubDate>Sat, 01 Nov 2025 09:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 09:00 (Europe/Rome) | Sport: Tennis | Competizione: ATP Masters 1000 Parigi-Bercy</description>
+</item>
+<item>
+<title>09:00 — Tennis · WTA 250 Jiangxi — 2a Semfinale Sky Sport Max</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">a9f0b65fadaed81c35ed1905c9defc997e29a8f7</guid>
+<pubDate>Sat, 01 Nov 2025 09:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 09:00 (Europe/Rome) | Sport: Tennis | Competizione: WTA 250 Jiangxi</description>
+</item>
+<item>
+<title>09:00 — Tennis · WTA 250 Jiangxi — 2a Semifinale Sky Sport Tennis</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">9e6f83db60797a3649167ea165b65bdca9a84586</guid>
+<pubDate>Sat, 01 Nov 2025 09:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 09:00 (Europe/Rome) | Sport: Tennis | Competizione: WTA 250 Jiangxi</description>
+</item>
+<item>
+<title>11:00 — Calcio · Primavera 1 — Napoli-Juventus Sportitalia</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">d56ee0a1dad6e190fa2ca79a8c5a0124ee6716c0</guid>
+<pubDate>Sat, 01 Nov 2025 11:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 11:00 (Europe/Rome) | Sport: Calcio | Competizione: Primavera 1</description>
+</item>
+<item>
+<title>12:30 — Calcio · Serie B — Avellino-Reggiana Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">4a3277a1968758ffa0c064a584407c210fe77bd8</guid>
+<pubDate>Sat, 01 Nov 2025 12:30:00 +0100</pubDate>
+<description>Data: 2025-11-01 12:30 (Europe/Rome) | Sport: Calcio | Competizione: Serie B</description>
+</item>
+<item>
+<title>12:30 — Tennis · ATP Masters 1000 Parigi-Bercy — 1a Semifinale Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">94bb3a6573e0de6812b9a4b5ad9a351ed1958c50</guid>
+<pubDate>Sat, 01 Nov 2025 12:30:00 +0100</pubDate>
+<description>Data: 2025-11-01 12:30 (Europe/Rome) | Sport: Tennis | Competizione: ATP Masters 1000 Parigi-Bercy</description>
+</item>
+<item>
+<title>13:00 — Calcio · Bundesliga 2 — Karlsruhe-Schalke Sky Sport Calcio</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">6ee2d063dfb8af1daacf46f6ae6e9879c76adeb4</guid>
+<pubDate>Sat, 01 Nov 2025 13:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 13:00 (Europe/Rome) | Sport: Calcio | Competizione: Bundesliga 2</description>
+</item>
+<item>
+<title>13:00 — Calcio · Primavera 1 — Inter-Frosinone Sportitalia</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">e5c310e7131a29a094c103518fd2e969101b0b9f</guid>
+<pubDate>Sat, 01 Nov 2025 13:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 13:00 (Europe/Rome) | Sport: Calcio | Competizione: Primavera 1</description>
+</item>
+<item>
+<title>13:30 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 1 Doppio Sky Sport Tennis</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">cfe7ae195af874ebc4946aa6693f54d8d2efa7a1</guid>
+<pubDate>Sat, 01 Nov 2025 13:30:00 +0100</pubDate>
+<description>Data: 2025-11-01 13:30 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>14:30 — Rugby · Serie A Elite — Rai Sport</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">7caad17613bd48a910f4eb6be4292af91989e38c</guid>
+<pubDate>Sat, 01 Nov 2025 14:30:00 +0100</pubDate>
+<description>Data: 2025-11-01 14:30 (Europe/Rome) | Sport: Rugby | Competizione: Serie A Elite</description>
+</item>
+<item>
+<title>14:30 — Tennis · ATP Masters 1000 Parigi-Bercy — 1a Semifinale Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">89e21d09fbba65fccdb1afd258abcfe2043115b6</guid>
+<pubDate>Sat, 01 Nov 2025 14:30:00 +0100</pubDate>
+<description>Data: 2025-11-01 14:30 (Europe/Rome) | Sport: Tennis | Competizione: ATP Masters 1000 Parigi-Bercy</description>
+</item>
+<item>
+<title>15:00 — Calcio · Primavera 1 — Fiorentina-Parma Sportitalia</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">cdcd3af5d5f78c764c3ed616e91cd41f794eb5cc</guid>
+<pubDate>Sat, 01 Nov 2025 15:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 15:00 (Europe/Rome) | Sport: Calcio | Competizione: Primavera 1</description>
+</item>
+<item>
+<title>15:00 — Calcio · Serie A — Udinese-Atalanta Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">dce71bf3547913d222e0dfa6e7b3cc552a4edbd5</guid>
+<pubDate>Sat, 01 Nov 2025 15:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 15:00 (Europe/Rome) | Sport: Calcio | Competizione: Serie A</description>
+</item>
+<item>
+<title>15:00 — Calcio · Serie B — Carrarese-Frosinone Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">ee7c2e47768d7ee270aa89c3c40015562356bbce</guid>
+<pubDate>Sat, 01 Nov 2025 15:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 15:00 (Europe/Rome) | Sport: Calcio | Competizione: Serie B</description>
+</item>
+<item>
+<title>15:00 — Calcio · Serie B — Padova-Sudtirol Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">3eabc44fa25f09f2bca2a63051cbc513e09c240c</guid>
+<pubDate>Sat, 01 Nov 2025 15:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 15:00 (Europe/Rome) | Sport: Calcio | Competizione: Serie B</description>
+</item>
+<item>
+<title>15:45 — Tennis · WTA Finals Riyadh 2025 — Cerimonia Inaugurale Sky Sport Tennis</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">963baf5893d4d097127bee4f3021952914af9868</guid>
+<pubDate>Sat, 01 Nov 2025 15:45:00 +0100</pubDate>
+<description>Data: 2025-11-01 15:45 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>16:00 — Calcio · Premier League — Burnley-Arsenal Sky Sport Calcio</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">5706608fb11350dcc330de0c9d4ccccbe846dc8c</guid>
+<pubDate>Sat, 01 Nov 2025 16:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 16:00 (Europe/Rome) | Sport: Calcio | Competizione: Premier League</description>
+</item>
+<item>
+<title>16:00 — Calcio · Premier League — Nottingham Forest-Manchester United Sky Sport Max</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">430d67db62f75f7a66d6c11b130a4d3cb89f2c58</guid>
+<pubDate>Sat, 01 Nov 2025 16:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 16:00 (Europe/Rome) | Sport: Calcio | Competizione: Premier League</description>
+</item>
+<item>
+<title>16:00 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 1 Singolare Sky Sport Tennis</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">5db6e916bad26dc94ec19d196891f47780cabe28</guid>
+<pubDate>Sat, 01 Nov 2025 16:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 16:00 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>16:10 — Rugby · Test Match — Inghilterra-Australia Sky Sport Arena</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">ab6f053444cf90daa5c64174a51421480fdd99fc</guid>
+<pubDate>Sat, 01 Nov 2025 16:10:00 +0100</pubDate>
+<description>Data: 2025-11-01 16:10 (Europe/Rome) | Sport: Rugby | Competizione: Test Match</description>
+</item>
+<item>
+<title>17:00 — Tennis · ATP Masters 1000 Parigi-Bercy — 2a Semifinale Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">cd4d5b4bc9bb342cd60be9caceed7d09c7d80407</guid>
+<pubDate>Sat, 01 Nov 2025 17:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 17:00 (Europe/Rome) | Sport: Tennis | Competizione: ATP Masters 1000 Parigi-Bercy</description>
+</item>
+<item>
+<title>17:15 — Calcio · Serie B — Virtus Entella-Empoli Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">403c53af1f333e5aab936a6f544350bfdb8f0aba</guid>
+<pubDate>Sat, 01 Nov 2025 17:15:00 +0100</pubDate>
+<description>Data: 2025-11-01 17:15 (Europe/Rome) | Sport: Calcio | Competizione: Serie B</description>
+</item>
+<item>
+<title>18:00 — Calcio · Serie A — Napoli-Como Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">ccacb2a0bde575597a91cc112d14b974bd2ca8ff</guid>
+<pubDate>Sat, 01 Nov 2025 18:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 18:00 (Europe/Rome) | Sport: Calcio | Competizione: Serie A</description>
+</item>
+<item>
+<title>18:00 — Pallavolo maschile · SuperLega — Rai Sport</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">25dec8809aaad32fdaed639ca286a4b1e2ffbd7b</guid>
+<pubDate>Sat, 01 Nov 2025 18:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 18:00 (Europe/Rome) | Sport: Pallavolo maschile | Competizione: SuperLega</description>
+</item>
+<item>
+<title>18:00 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 2 Singolare Sky Sport Tennis</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">3b8b9cfc572d5317ceacc6b6c9d963b3aa514ceb</guid>
+<pubDate>Sat, 01 Nov 2025 18:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 18:00 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>18:15 — Basket · Serie A — Dinamo Sassari-Udine Sky Sport Basket</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">6c42ad4715803384dd3db6db23e123224f13bde2</guid>
+<pubDate>Sat, 01 Nov 2025 18:15:00 +0100</pubDate>
+<description>Data: 2025-11-01 18:15 (Europe/Rome) | Sport: Basket | Competizione: Serie A</description>
+</item>
+<item>
+<title>18:30 — Calcio · Bundesliga — Bayern Monaco-Bayer Leverkusen Sky Sport Max</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">fc2651b488bd136dc1c498c2fca0bb40862741f3</guid>
+<pubDate>Sat, 01 Nov 2025 18:30:00 +0100</pubDate>
+<description>Data: 2025-11-01 18:30 (Europe/Rome) | Sport: Calcio | Competizione: Bundesliga</description>
+</item>
+<item>
+<title>18:30 — Calcio · Premier League — Tottenham-Chelsea Sky Sport Calcio</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">bde57dc5c0d6e3088e6b5947529aca6afd2bff83</guid>
+<pubDate>Sat, 01 Nov 2025 18:30:00 +0100</pubDate>
+<description>Data: 2025-11-01 18:30 (Europe/Rome) | Sport: Calcio | Competizione: Premier League</description>
+</item>
+<item>
+<title>18:40 — Rugby · Test Match — Scozia-Stati Uniti Sky Sport Arena</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">b9dabf1e65c6912498526c67b7d44f6a7c12c23d</guid>
+<pubDate>Sat, 01 Nov 2025 18:40:00 +0100</pubDate>
+<description>Data: 2025-11-01 18:40 (Europe/Rome) | Sport: Rugby | Competizione: Test Match</description>
+</item>
+<item>
+<title>19:30 — Calcio · Serie B — Palermo-Pescara Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">43e266f2a139073f8d66e1b7ca112da239ae434d</guid>
+<pubDate>Sat, 01 Nov 2025 19:30:00 +0100</pubDate>
+<description>Data: 2025-11-01 19:30 (Europe/Rome) | Sport: Calcio | Competizione: Serie B</description>
+</item>
+<item>
+<title>20:15 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 2 Doppio Sky Sport Tennis</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">265cf32380a4a2948233eb2cf6796bdbffe8ca2b</guid>
+<pubDate>Sat, 01 Nov 2025 20:15:00 +0100</pubDate>
+<description>Data: 2025-11-01 20:15 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>20:30 — Pallavolo femminile · Serie A1 — Rai Sport</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">38064f734cd48ff3fb974285a08822d49aecdb45</guid>
+<pubDate>Sat, 01 Nov 2025 20:30:00 +0100</pubDate>
+<description>Data: 2025-11-01 20:30 (Europe/Rome) | Sport: Pallavolo femminile | Competizione: Serie A1</description>
+</item>
+<item>
+<title>20:45 — Calcio · Serie A — Cremonese-Juventus Sky, Sky Sport 1, Dazn, Sky Sport Calcio</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">1273272ba4a99e660dc5dfbc081d72c72dc044fa</guid>
+<pubDate>Sat, 01 Nov 2025 20:45:00 +0100</pubDate>
+<description>Data: 2025-11-01 20:45 (Europe/Rome) | Sport: Calcio | Competizione: Serie A</description>
+</item>
+<item>
+<title>21:00 — Calcio · Premier League — Liverpool-Aston Villa Sky Sport Arena</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">4919787c5a1eca63c23343120f3f976be955985e</guid>
+<pubDate>Sat, 01 Nov 2025 21:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 21:00 (Europe/Rome) | Sport: Calcio | Competizione: Premier League</description>
+</item>
+<item>
+<title>21:05 — Calcio · Ligue 1 — Auxerre-Marsiglia Sky Sport Max</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">68ddd8abd4f5df6fd5bbd6b07ad7d6629881f2d2</guid>
+<pubDate>Sat, 01 Nov 2025 21:05:00 +0100</pubDate>
+<description>Data: 2025-11-01 21:05 (Europe/Rome) | Sport: Calcio | Competizione: Ligue 1</description>
+</item>
+<item>
+<title>22:00 — Basket · NBA — Milwaukee Bucks-Sacramento Kings Sky Sport Basket</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">5a4d6ce89685f07b0ce8f5a2d1d20a4aa6c0bcc3</guid>
+<pubDate>Sat, 01 Nov 2025 22:00:00 +0100</pubDate>
+<description>Data: 2025-11-01 22:00 (Europe/Rome) | Sport: Basket | Competizione: NBA</description>
+</item>
+<item>
+<title>08:30 — Tennis · WTA 250 Jiangxi — Finale Sky Sport Tennis, Sky Sport Max</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">6f1584da5e5d98dfea3955a4e6c24cce04e0d412</guid>
+<pubDate>Sun, 02 Nov 2025 08:30:00 +0100</pubDate>
+<description>Data: 2025-11-02 08:30 (Europe/Rome) | Sport: Tennis | Competizione: WTA 250 Jiangxi</description>
+</item>
+<item>
+<title>09:00 — Tennis · ATP Masters 1000 Parigi-Bercy — Finale Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">60b8cbaf4956a1e5e43fd86c2786170fe8fd343f</guid>
+<pubDate>Sun, 02 Nov 2025 09:00:00 +0100</pubDate>
+<description>Data: 2025-11-02 09:00 (Europe/Rome) | Sport: Tennis | Competizione: ATP Masters 1000 Parigi-Bercy</description>
+</item>
+<item>
+<title>11:00 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 1 Doppio Sky Sport Tennis</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">2f207ef93d1b9b5ca99df01e461ad5043dab304f</guid>
+<pubDate>Sun, 02 Nov 2025 11:00:00 +0100</pubDate>
+<description>Data: 2025-11-02 11:00 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>12:30 — Calcio · Serie A — Verona-Inter Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">4003a96262eb54cbb15903e570a4ba815ce5780e</guid>
+<pubDate>Sun, 02 Nov 2025 12:30:00 +0100</pubDate>
+<description>Data: 2025-11-02 12:30 (Europe/Rome) | Sport: Calcio | Competizione: Serie A</description>
+</item>
+<item>
+<title>12:30 — Calcio · Serie C — Livorno-Forlà ¬ Sky Sport Arena</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">9a90cf8da515d26adba793358fb4a6ced1544713</guid>
+<pubDate>Sun, 02 Nov 2025 12:30:00 +0100</pubDate>
+<description>Data: 2025-11-02 12:30 (Europe/Rome) | Sport: Calcio | Competizione: Serie C</description>
+</item>
+<item>
+<title>12:30 — Calcio · Serie C — Triestina-Union Brescia Sky Sport Calcio</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">9e5d613aa850d61611ff8d2cd6db624d80cc843d</guid>
+<pubDate>Sun, 02 Nov 2025 12:30:00 +0100</pubDate>
+<description>Data: 2025-11-02 12:30 (Europe/Rome) | Sport: Calcio | Competizione: Serie C</description>
+</item>
+<item>
+<title>13:30 — Tennis · WTA 250 Chennai — Finale Sky Sport Mix, Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">c8fb7c7756c5c5ff45ecccf82d76fb4baeb13577</guid>
+<pubDate>Sun, 02 Nov 2025 13:30:00 +0100</pubDate>
+<description>Data: 2025-11-02 13:30 (Europe/Rome) | Sport: Tennis | Competizione: WTA 250 Chennai</description>
+</item>
+<item>
+<title>13:30 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 1 Singolare Sky Sport Tennis</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">a8443c7c0c552c3879bf88762f79c5c0a5679345</guid>
+<pubDate>Sun, 02 Nov 2025 13:30:00 +0100</pubDate>
+<description>Data: 2025-11-02 13:30 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>14:30 — Atletica leggera · Maratona di New York — . Eurosport</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">c516cdebf99d7f5a4d61baab6baf91e3a4f7bd98</guid>
+<pubDate>Sun, 02 Nov 2025 14:30:00 +0100</pubDate>
+<description>Data: 2025-11-02 14:30 (Europe/Rome) | Sport: Atletica leggera | Competizione: Maratona di New York</description>
+</item>
+<item>
+<title>14:30 — Calcio · Serie C — Gubbio-Ternana Sky Sport Arena</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">31a4e1fc21b2e522eae5482d01288d149c776999</guid>
+<pubDate>Sun, 02 Nov 2025 14:30:00 +0100</pubDate>
+<description>Data: 2025-11-02 14:30 (Europe/Rome) | Sport: Calcio | Competizione: Serie C</description>
+</item>
+<item>
+<title>15:00 — Calcio · Premier League — West Ham-Newcastle Sky Sport Calcio</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">78bc5ed221cf8b92025e4315acef25b959e9b053</guid>
+<pubDate>Sun, 02 Nov 2025 15:00:00 +0100</pubDate>
+<description>Data: 2025-11-02 15:00 (Europe/Rome) | Sport: Calcio | Competizione: Premier League</description>
+</item>
+<item>
+<title>15:00 — Calcio · Serie A — Fiorentina-Lecce Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">0e2f5d091589d5fd5b332c2300a221cde30f4823</guid>
+<pubDate>Sun, 02 Nov 2025 15:00:00 +0100</pubDate>
+<description>Data: 2025-11-02 15:00 (Europe/Rome) | Sport: Calcio | Competizione: Serie A</description>
+</item>
+<item>
+<title>15:00 — Calcio · Serie A — Torino-Pisa Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">e3eca3984f8654906e4a11701f2670c14d8f16c0</guid>
+<pubDate>Sun, 02 Nov 2025 15:00:00 +0100</pubDate>
+<description>Data: 2025-11-02 15:00 (Europe/Rome) | Sport: Calcio | Competizione: Serie A</description>
+</item>
+<item>
+<title>15:00 — Calcio · Serie B — Bari-Cesena Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">4e18f59ef9dc853d1fe2b8108a17b195bd3c649e</guid>
+<pubDate>Sun, 02 Nov 2025 15:00:00 +0100</pubDate>
+<description>Data: 2025-11-02 15:00 (Europe/Rome) | Sport: Calcio | Competizione: Serie B</description>
+</item>
+<item>
+<title>15:00 — Calcio · Serie B — Catanzaro-Venezia Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">b7aca8130356f9bc2ff2bce2e69466710ea69938</guid>
+<pubDate>Sun, 02 Nov 2025 15:00:00 +0100</pubDate>
+<description>Data: 2025-11-02 15:00 (Europe/Rome) | Sport: Calcio | Competizione: Serie B</description>
+</item>
+<item>
+<title>15:00 — Calcio · Serie B — Modena-Juve Stabia Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">e66a1cec6a9d6b9fb3c4b020af6c54b675e0c850</guid>
+<pubDate>Sun, 02 Nov 2025 15:00:00 +0100</pubDate>
+<description>Data: 2025-11-02 15:00 (Europe/Rome) | Sport: Calcio | Competizione: Serie B</description>
+</item>
+<item>
+<title>15:00 — Pallavolo femminile · Serie A1 — Milano-Pinerolo Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">64243c7727a67cb6527ec096f4ca8b1f2c15e73b</guid>
+<pubDate>Sun, 02 Nov 2025 15:00:00 +0100</pubDate>
+<description>Data: 2025-11-02 15:00 (Europe/Rome) | Sport: Pallavolo femminile | Competizione: Serie A1</description>
+</item>
+<item>
+<title>15:00 — Tennis · ATP Masters 1000 Parigi-Bercy — Finale Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">cbdeba84c17565e7f5e6428385510935ed555765</guid>
+<pubDate>Sun, 02 Nov 2025 15:00:00 +0100</pubDate>
+<description>Data: 2025-11-02 15:00 (Europe/Rome) | Sport: Tennis | Competizione: ATP Masters 1000 Parigi-Bercy</description>
+</item>
+<item>
+<title>15:30 — Calcio · Bundesliga — Colonia-Amburgo Sky Sport Max</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">1e4afac99268f96a12d377e6538c524753b37f5a</guid>
+<pubDate>Sun, 02 Nov 2025 15:30:00 +0100</pubDate>
+<description>Data: 2025-11-02 15:30 (Europe/Rome) | Sport: Calcio | Competizione: Bundesliga</description>
+</item>
+<item>
+<title>16:00 — Basket · Serie A — Acqua S.Bernardo Cantu’-Vanoli Basket Cremona Sky Sport Basket</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">5d2213ee3b0fd168de68563047c19fad74904526</guid>
+<pubDate>Sun, 02 Nov 2025 16:00:00 +0100</pubDate>
+<description>Data: 2025-11-02 16:00 (Europe/Rome) | Sport: Basket | Competizione: Serie A</description>
+</item>
+<item>
+<title>16:00 — Pallavolo femminile · Serie A1 — Novara-Scandicci Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">2e483a512aabde4f24b68fb0d6dba69fab7985fb</guid>
+<pubDate>Sun, 02 Nov 2025 16:00:00 +0100</pubDate>
+<description>Data: 2025-11-02 16:00 (Europe/Rome) | Sport: Pallavolo femminile | Competizione: Serie A1</description>
+</item>
+<item>
+<title>16:00 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 2 Singolare Sky Sport Tennis</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">2711fb44a880c6a80c6d93a2de21f679cdbf58e0</guid>
+<pubDate>Sun, 02 Nov 2025 16:00:00 +0100</pubDate>
+<description>Data: 2025-11-02 16:00 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>17:15 — Calcio · Serie B — Monza-Spezia Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">53c6c3fdc99556092063faf400b524749aa327d0</guid>
+<pubDate>Sun, 02 Nov 2025 17:15:00 +0100</pubDate>
+<description>Data: 2025-11-02 17:15 (Europe/Rome) | Sport: Calcio | Competizione: Serie B</description>
+</item>
+<item>
+<title>17:30 — Calcio · Bundesliga — Wolfsburg-Hoffenheim Sky Sport Mix</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">77d5ab7ff0d6cc4d7396d57000015fbf6095a18b</guid>
+<pubDate>Sun, 02 Nov 2025 17:30:00 +0100</pubDate>
+<description>Data: 2025-11-02 17:30 (Europe/Rome) | Sport: Calcio | Competizione: Bundesliga</description>
+</item>
+<item>
+<title>17:30 — Calcio · Premier League — Manchester City-Bournemouth Sky Sport Arena</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">5d536b1a338815decd3a36f6f6684940bf2715e7</guid>
+<pubDate>Sun, 02 Nov 2025 17:30:00 +0100</pubDate>
+<description>Data: 2025-11-02 17:30 (Europe/Rome) | Sport: Calcio | Competizione: Premier League</description>
+</item>
+<item>
+<title>17:30 — Calcio · Serie C — Calcio Serie C 12ga Girone B Ravenna/ Ascoli 02/11/2025 Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">974dfed8f03b902c5e23bc2a12f80f6377bb17a0</guid>
+<pubDate>Sun, 02 Nov 2025 17:30:00 +0100</pubDate>
+<description>Data: 2025-11-02 17:30 (Europe/Rome) | Sport: Calcio | Competizione: Serie C</description>
+</item>
+<item>
+<title>17:30 — Calcio · Serie C — Latina-Salernitana Sky Sport Max</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">2b7ba51da3e7b90bf505fd8fb7ae139c6a94b50a</guid>
+<pubDate>Sun, 02 Nov 2025 17:30:00 +0100</pubDate>
+<description>Data: 2025-11-02 17:30 (Europe/Rome) | Sport: Calcio | Competizione: Serie C</description>
+</item>
+<item>
+<title>18:00 — Calcio · Serie A — Parma-Bologna Sky, Dazn, Sky Sport Calcio</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">433c30c13c0fd9d3a1865927ac3aa22de3d7828f</guid>
+<pubDate>Sun, 02 Nov 2025 18:00:00 +0100</pubDate>
+<description>Data: 2025-11-02 18:00 (Europe/Rome) | Sport: Calcio | Competizione: Serie A</description>
+</item>
+<item>
+<title>18:15 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 2 Doppio Sky Sport Tennis</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">2dd38a1378906d4c192140a6e053d69f32f0349d</guid>
+<pubDate>Sun, 02 Nov 2025 18:15:00 +0100</pubDate>
+<description>Data: 2025-11-02 18:15 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>19:00 — Pallavolo maschile · SuperLega — Verona-Trento Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">fc81c8ab305d5748684486a0a68010608deb6ade</guid>
+<pubDate>Sun, 02 Nov 2025 19:00:00 +0100</pubDate>
+<description>Data: 2025-11-02 19:00 (Europe/Rome) | Sport: Pallavolo maschile | Competizione: SuperLega</description>
+</item>
+<item>
+<title>19:30 — Calcio · Serie B — Sampdoria-Mantova Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">ec388b46c7b11b8a1a336c18d933baff86db9400</guid>
+<pubDate>Sun, 02 Nov 2025 19:30:00 +0100</pubDate>
+<description>Data: 2025-11-02 19:30 (Europe/Rome) | Sport: Calcio | Competizione: Serie B</description>
+</item>
+<item>
+<title>19:30 — Pallavolo maschile · SuperLega — Milano-Monza Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">59109f350cee8bd7519de03b730613cb736c7c13</guid>
+<pubDate>Sun, 02 Nov 2025 19:30:00 +0100</pubDate>
+<description>Data: 2025-11-02 19:30 (Europe/Rome) | Sport: Pallavolo maschile | Competizione: SuperLega</description>
+</item>
+<item>
+<title>20:30 — Calcio · Serie C — Calcio Serie C 12ga Girone C Benevento/ Sorrento 02/11/2025 Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">be2e32d817c8cd3062bcf90df508badf7f296e2c</guid>
+<pubDate>Sun, 02 Nov 2025 20:30:00 +0100</pubDate>
+<description>Data: 2025-11-02 20:30 (Europe/Rome) | Sport: Calcio | Competizione: Serie C</description>
+</item>
+<item>
+<title>20:30 — Calcio · Serie C — Lecco-Arzignano V. Sky Sport Max</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">767818a984f9a9ff861afda149adba5856c7df1c</guid>
+<pubDate>Sun, 02 Nov 2025 20:30:00 +0100</pubDate>
+<description>Data: 2025-11-02 20:30 (Europe/Rome) | Sport: Calcio | Competizione: Serie C</description>
+</item>
+<item>
+<title>20:30 — Calcio · Serie C — Lumezzane-Renate Sky Sport Mix</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">6be4b326f91872f157be2f191d5105dfe6e88099</guid>
+<pubDate>Sun, 02 Nov 2025 20:30:00 +0100</pubDate>
+<description>Data: 2025-11-02 20:30 (Europe/Rome) | Sport: Calcio | Competizione: Serie C</description>
+</item>
+<item>
+<title>20:45 — Calcio · Ligue 1 — Brest-Lione Sky Sport Calcio</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">f319423f6de1ebb102c751eeb0817fd0822a2a0d</guid>
+<pubDate>Sun, 02 Nov 2025 20:45:00 +0100</pubDate>
+<description>Data: 2025-11-02 20:45 (Europe/Rome) | Sport: Calcio | Competizione: Ligue 1</description>
+</item>
+<item>
+<title>20:45 — Calcio · Serie A — Milan-Roma Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">7ba4c346247a33fb418183c1674d261f60cf8a7e</guid>
+<pubDate>Sun, 02 Nov 2025 20:45:00 +0100</pubDate>
+<description>Data: 2025-11-02 20:45 (Europe/Rome) | Sport: Calcio | Competizione: Serie A</description>
+</item>
+<item>
+<title>21:05 — Rugby · Top 14 — Rochelle-Racing 92 Sky Sport Arena</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">f72fc513a8b673366c0d337f6f19b13b928b7a7d</guid>
+<pubDate>Sun, 02 Nov 2025 21:05:00 +0100</pubDate>
+<description>Data: 2025-11-02 21:05 (Europe/Rome) | Sport: Rugby | Competizione: Top 14</description>
+</item>
+<item>
+<title>01:00 — Basket · NBA — Brooklyn-Minnesota Sky Sport Basket</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">ef0d02408320b97342adcb2f95eb513d47d46982</guid>
+<pubDate>Mon, 03 Nov 2025 01:00:00 +0100</pubDate>
+<description>Data: 2025-11-03 01:00 (Europe/Rome) | Sport: Basket | Competizione: NBA</description>
+</item>
+<item>
+<title>11:00 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 1 Doppio Sky Sport Tennis, Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">cb27f1f9cf8a84030fe9e51b29aa73940e2639db</guid>
+<pubDate>Mon, 03 Nov 2025 11:00:00 +0100</pubDate>
+<description>Data: 2025-11-03 11:00 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>13:30 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 1 Singolare Sky Sport Tennis, Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">7a89d300c09dbe03baba5d0535e9c2eb9c22952b</guid>
+<pubDate>Mon, 03 Nov 2025 13:30:00 +0100</pubDate>
+<description>Data: 2025-11-03 13:30 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>16:00 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 2 Singolare Sky Sport Tennis, Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">c4eb8d0eb373ae109602b8a35cb657f3e99e7c38</guid>
+<pubDate>Mon, 03 Nov 2025 16:00:00 +0100</pubDate>
+<description>Data: 2025-11-03 16:00 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>18:00 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 2 Doppio Sky Sport Tennis</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">97249b261d370428633d739b3b3fc0567c7fc45b</guid>
+<pubDate>Mon, 03 Nov 2025 18:00:00 +0100</pubDate>
+<description>Data: 2025-11-03 18:00 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>18:30 — Calcio · Serie A — Sassuolo-Genoa Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">5a86b57ce7a0db52604585188cab999c5b7c0c15</guid>
+<pubDate>Mon, 03 Nov 2025 18:30:00 +0100</pubDate>
+<description>Data: 2025-11-03 18:30 (Europe/Rome) | Sport: Calcio | Competizione: Serie A</description>
+</item>
+<item>
+<title>20:00 — Tennis · ATP &amp; WTA — Sky Sport Tennis</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">c4dde4beb25d6e527037bcbfe9cb0d423bdbdbdc</guid>
+<pubDate>Mon, 03 Nov 2025 20:00:00 +0100</pubDate>
+<description>Data: 2025-11-03 20:00 (Europe/Rome) | Sport: Tennis | Competizione: ATP &amp; WTA</description>
+</item>
+<item>
+<title>20:30 — Calcio · Serie C — Calcio Serie C 12ga Girone A Albinoleffe/ Inter U23 03/11/2025 Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">772b01c8439fbd6edbbb456d11453a89ccdaa978</guid>
+<pubDate>Mon, 03 Nov 2025 20:30:00 +0100</pubDate>
+<description>Data: 2025-11-03 20:30 (Europe/Rome) | Sport: Calcio | Competizione: Serie C</description>
+</item>
+<item>
+<title>20:45 — Calcio · Serie A — Lazio-Cagliari Sky, Dazn</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">d77e078d92250c02d15f3e95dbd3ff957da94a19</guid>
+<pubDate>Mon, 03 Nov 2025 20:45:00 +0100</pubDate>
+<description>Data: 2025-11-03 20:45 (Europe/Rome) | Sport: Calcio | Competizione: Serie A</description>
+</item>
+<item>
+<title>21:00 — Calcio · Premier League — Sunderland-Everton Sky Sport Arena</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">f2283899c6a318277afed2708d007e28c8a9ad2d</guid>
+<pubDate>Mon, 03 Nov 2025 21:00:00 +0100</pubDate>
+<description>Data: 2025-11-03 21:00 (Europe/Rome) | Sport: Calcio | Competizione: Premier League</description>
+</item>
+<item>
+<title>02:00 — Basket · NBA — Atlanta-Orlando Sky Sport Basket</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">6fb72986e052f4d32998bf6a3d1793ed8ecee781</guid>
+<pubDate>Tue, 04 Nov 2025 02:00:00 +0100</pubDate>
+<description>Data: 2025-11-04 02:00 (Europe/Rome) | Sport: Basket | Competizione: NBA</description>
+</item>
+<item>
+<title>05:00 — Basket · NBA — LA Clippers-Oklahoma City Sky Sport Basket</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">be75a74d7f8d27e0143d017f6220e2f15d09a096</guid>
+<pubDate>Tue, 04 Nov 2025 05:00:00 +0100</pubDate>
+<description>Data: 2025-11-04 05:00 (Europe/Rome) | Sport: Basket | Competizione: NBA</description>
+</item>
+<item>
+<title>11:00 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 1 Doppio Sky Sport Tennis, Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">c1620d042a7352b323516f1ab87e5a54d9b9fbb0</guid>
+<pubDate>Tue, 04 Nov 2025 11:00:00 +0100</pubDate>
+<description>Data: 2025-11-04 11:00 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>13:30 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 1 Singolare Sky Sport Tennis, Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">85d270664e85f83b6da1564dfa095ca909459d35</guid>
+<pubDate>Tue, 04 Nov 2025 13:30:00 +0100</pubDate>
+<description>Data: 2025-11-04 13:30 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>16:00 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 2 Singolare Sky Sport Tennis, Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">ff7cb93179bdb7120e399d4ef9d7e3551e59efbe</guid>
+<pubDate>Tue, 04 Nov 2025 16:00:00 +0100</pubDate>
+<description>Data: 2025-11-04 16:00 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>18:00 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 2 Doppio Sky Sport Tennis</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">b059b254743abc10b07ee9fd0ddbad4239c6015d</guid>
+<pubDate>Tue, 04 Nov 2025 18:00:00 +0100</pubDate>
+<description>Data: 2025-11-04 18:00 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>18:45 — Calcio · UEFA Champions League — Calcio Ucl 4ga Napoli/ Eintracht 04/11/2025 Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">51fd0e0cf8582e54988c4c3e949e0e63695ab78b</guid>
+<pubDate>Tue, 04 Nov 2025 18:45:00 +0100</pubDate>
+<description>Data: 2025-11-04 18:45 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
+<item>
+<title>18:45 — Calcio · UEFA Champions League — Napoli-Eintracht Francoforte Sky</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">37c1f84884c7690edc0db23544dedf2577f4e83e</guid>
+<pubDate>Tue, 04 Nov 2025 18:45:00 +0100</pubDate>
+<description>Data: 2025-11-04 18:45 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
+<item>
+<title>18:45 — Calcio · UEFA Champions League — Slavia Praga-Arsenal Sky, Sky Sport Arena</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">3bf2acb1b15cc082cdf8d407b0acd10d62060e65</guid>
+<pubDate>Tue, 04 Nov 2025 18:45:00 +0100</pubDate>
+<description>Data: 2025-11-04 18:45 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
+<item>
+<title>20:00 — Basket · Eurocup — Aquila Trento-Lietkabelis Sky Sport Basket</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">b1c23d2c4576cf89b78446664c0999b55c0ca99b</guid>
+<pubDate>Tue, 04 Nov 2025 20:00:00 +0100</pubDate>
+<description>Data: 2025-11-04 20:00 (Europe/Rome) | Sport: Basket | Competizione: Eurocup</description>
+</item>
+<item>
+<title>20:00 — Tennis · ATP &amp; WTA — Sky Sport Tennis</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">d970d95f31e7d4e1267b4e920d198c0b7d3f786a</guid>
+<pubDate>Tue, 04 Nov 2025 20:00:00 +0100</pubDate>
+<description>Data: 2025-11-04 20:00 (Europe/Rome) | Sport: Tennis | Competizione: ATP &amp; WTA</description>
+</item>
+<item>
+<title>21:00 — Calcio · UEFA Champions League — Atletico Madrid-Union Saint Gilloise Sky</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">0e0ba3e6fa852f6ca94ee0d023ade353831aaf2a</guid>
+<pubDate>Tue, 04 Nov 2025 21:00:00 +0100</pubDate>
+<description>Data: 2025-11-04 21:00 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
+<item>
+<title>21:00 — Calcio · UEFA Champions League — Bodo Glimt-Monaco Sky</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">6c8f153e7f213a01ce081bd5d665957ab8f04536</guid>
+<pubDate>Tue, 04 Nov 2025 21:00:00 +0100</pubDate>
+<description>Data: 2025-11-04 21:00 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
+<item>
+<title>21:00 — Calcio · UEFA Champions League — Calcio Ucl 4ga Juventus/ Sporting Cp 04/11/2025 Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">6b66e391184d1c56a364c91bfc20d47663eaf900</guid>
+<pubDate>Tue, 04 Nov 2025 21:00:00 +0100</pubDate>
+<description>Data: 2025-11-04 21:00 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
+<item>
+<title>21:00 — Calcio · UEFA Champions League — Juventus-Sporting Lisbona Sky</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">f15ee4e2b98cf2581189ca9723600188406db3c1</guid>
+<pubDate>Tue, 04 Nov 2025 21:00:00 +0100</pubDate>
+<description>Data: 2025-11-04 21:00 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
+<item>
+<title>21:00 — Calcio · UEFA Champions League — Liverpool-Real Madrid Sky, Sky Sport Arena</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">50a095d72dba83ce69f8102bac8c40f53e7026a5</guid>
+<pubDate>Tue, 04 Nov 2025 21:00:00 +0100</pubDate>
+<description>Data: 2025-11-04 21:00 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
+<item>
+<title>21:00 — Calcio · UEFA Champions League — Olympiacos-PSV Sky</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">10daa854d4924983a773442862ffd8670cfe7654</guid>
+<pubDate>Tue, 04 Nov 2025 21:00:00 +0100</pubDate>
+<description>Data: 2025-11-04 21:00 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
+<item>
+<title>21:00 — Calcio · UEFA Champions League — PSG-Bayern Monaco Sky</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">db1122611c7fcae8ff90c5cd04f5357c710eeaf7</guid>
+<pubDate>Tue, 04 Nov 2025 21:00:00 +0100</pubDate>
+<description>Data: 2025-11-04 21:00 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
+<item>
+<title>21:00 — Calcio · UEFA Champions League — Tottenham-Copenaghen Sky</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">b3c382ab7f85fa5fc4fd4edeed6810be0347c984</guid>
+<pubDate>Tue, 04 Nov 2025 21:00:00 +0100</pubDate>
+<description>Data: 2025-11-04 21:00 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
+<item>
+<title>04:00 — Basket · NBA — Los Angeles-San Antonio Sky Sport Basket</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">5aec703f928805616e3e6bc6aee771b93e700d59</guid>
+<pubDate>Wed, 05 Nov 2025 04:00:00 +0100</pubDate>
+<description>Data: 2025-11-05 04:00 (Europe/Rome) | Sport: Basket | Competizione: NBA</description>
+</item>
+<item>
+<title>11:00 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 1 Doppio Sky Sport Tennis, Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">a84cc2d8d402be60f9bc11f708e2ee48bbb9faf5</guid>
+<pubDate>Wed, 05 Nov 2025 11:00:00 +0100</pubDate>
+<description>Data: 2025-11-05 11:00 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>13:30 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 1 Singolare Sky Sport Tennis, Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">1f2dd55324301afc6a8e14d23386ace69a9e260b</guid>
+<pubDate>Wed, 05 Nov 2025 13:30:00 +0100</pubDate>
+<description>Data: 2025-11-05 13:30 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>16:00 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 2 Singolare Sky Sport Tennis, Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">538f1e55eae9049c98c2749f0079f400e4eda9d1</guid>
+<pubDate>Wed, 05 Nov 2025 16:00:00 +0100</pubDate>
+<description>Data: 2025-11-05 16:00 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>18:00 — Tennis · WTA Finals Riyadh 2025 — Round Robin Match 2 Doppio Sky Sport Tennis</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">be96b420f0121a0895e6daedb32cd8d209e298dd</guid>
+<pubDate>Wed, 05 Nov 2025 18:00:00 +0100</pubDate>
+<description>Data: 2025-11-05 18:00 (Europe/Rome) | Sport: Tennis | Competizione: WTA Finals Riyadh 2025</description>
+</item>
+<item>
+<title>18:30 — Basket · Serie A — Brescia-Olimpia Milano Sky Sport Basket</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">0b5ff5ccfba7d47b9cf0c4ba7edc4026161bd720</guid>
+<pubDate>Wed, 05 Nov 2025 18:30:00 +0100</pubDate>
+<description>Data: 2025-11-05 18:30 (Europe/Rome) | Sport: Basket | Competizione: Serie A</description>
+</item>
+<item>
+<title>18:45 — Calcio · Diretta Gol Champions League — Diretta Gol Ucl 05/11/2025 Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">36560c570f187779afbe5468540af3f3be0ffa25</guid>
+<pubDate>Wed, 05 Nov 2025 18:45:00 +0100</pubDate>
+<description>Data: 2025-11-05 18:45 (Europe/Rome) | Sport: Calcio | Competizione: Diretta Gol Champions League</description>
+</item>
+<item>
+<title>18:45 — Calcio · UEFA Champions League — Pafos-Villarreal Sky, Sky Sport Arena</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">98027ea8414c34a4405c113b53afc361b99ca10d</guid>
+<pubDate>Wed, 05 Nov 2025 18:45:00 +0100</pubDate>
+<description>Data: 2025-11-05 18:45 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
+<item>
+<title>18:45 — Calcio · UEFA Champions League — Qarabag-Chelsea Sky</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">70c1253cdb43fd1053385987228225b4e96a2f23</guid>
+<pubDate>Wed, 05 Nov 2025 18:45:00 +0100</pubDate>
+<description>Data: 2025-11-05 18:45 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
+<item>
+<title>20:00 — Tennis · ATP &amp; WTA — Sky Sport Tennis</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">2ca35b53cce028a700b3e5885f60fe1dbbd1fcc5</guid>
+<pubDate>Wed, 05 Nov 2025 20:00:00 +0100</pubDate>
+<description>Data: 2025-11-05 20:00 (Europe/Rome) | Sport: Tennis | Competizione: ATP &amp; WTA</description>
+</item>
+<item>
+<title>20:45 — Basket · Eurocup — Reyer Venezia-Towers Hamburg Sky Sport Basket</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">ad0304f8b0719634aadc4f6470f61349e4d14188</guid>
+<pubDate>Wed, 05 Nov 2025 20:45:00 +0100</pubDate>
+<description>Data: 2025-11-05 20:45 (Europe/Rome) | Sport: Basket | Competizione: Eurocup</description>
+</item>
+<item>
+<title>21:00 — Calcio · UEFA Champions League — Ajax-Galatasaray Sky</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">52eaf9fd774dabec0b7fdcb3e5fad46c701acd85</guid>
+<pubDate>Wed, 05 Nov 2025 21:00:00 +0100</pubDate>
+<description>Data: 2025-11-05 21:00 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
+<item>
+<title>21:00 — Calcio · UEFA Champions League — Benfica-Bayer Leverkusen Sky</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">8a35d1d308155a9e1f6c42d107a878062ac66ef8</guid>
+<pubDate>Wed, 05 Nov 2025 21:00:00 +0100</pubDate>
+<description>Data: 2025-11-05 21:00 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
+<item>
+<title>21:00 — Calcio · UEFA Champions League — Club Bruges-Barcellona Sky</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">b55edda410c24892f88d1b55acdd9efc27763ea8</guid>
+<pubDate>Wed, 05 Nov 2025 21:00:00 +0100</pubDate>
+<description>Data: 2025-11-05 21:00 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
+<item>
+<title>21:00 — Calcio · UEFA Champions League — Inter-Kairat Almaty Amazon Prime Video</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">924291de7b2cec102c9e968977b2a3dfe5a30bab</guid>
+<pubDate>Wed, 05 Nov 2025 21:00:00 +0100</pubDate>
+<description>Data: 2025-11-05 21:00 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
+<item>
+<title>21:00 — Calcio · UEFA Champions League — Manchester City-Borussia Dortmund TV8, Sky, Sky Sport Arena</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">5ab5a806fadec1075be5593b081b15221ef61848</guid>
+<pubDate>Wed, 05 Nov 2025 21:00:00 +0100</pubDate>
+<description>Data: 2025-11-05 21:00 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
+<item>
+<title>21:00 — Calcio · UEFA Champions League — Newcastle-Athletic Bilbao Sky</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">abd5722b78098d4762291b923ce405743af76242</guid>
+<pubDate>Wed, 05 Nov 2025 21:00:00 +0100</pubDate>
+<description>Data: 2025-11-05 21:00 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
+<item>
+<title>21:00 — Calcio · UEFA Champions League — Olympique Marsiglia-Atalanta Sky, Sky Sport 1</title>
+<link>https://sport.virgilio.it/guida-tv/</link>
+<guid isPermaLink="false">4ada653030a02c5769f2ba51b5d651f72c3a5890</guid>
+<pubDate>Wed, 05 Nov 2025 21:00:00 +0100</pubDate>
+<description>Data: 2025-11-05 21:00 (Europe/Rome) | Sport: Calcio | Competizione: UEFA Champions League</description>
+</item>
 </channel></rss>
