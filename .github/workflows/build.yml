@@ -22,7 +22,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install -q beautifulsoup4 requests
+        run: pip install -q beautifulsoup4 requests requests-html
 
       - name: Build RSS
         run: python build_rss.py
