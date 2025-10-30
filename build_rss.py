@@ -2,6 +2,7 @@
 import re, sys, time, datetime
 import requests
 from bs4 import BeautifulSoup
+from requests_html import HTMLSession
 
 URL = "https://sport.virgilio.it/guida-tv/"
 
@@ -17,6 +18,7 @@ IT_MONTHS = {
 }
 
 # Convert "Oggi – 30 ottobre 2025 – ..." / "Domani – 31 ottobre 2025 – ..." / "– 01 novembre 2025 – ..."
+
 def parse_date_heading(text, today=None, tz_offset="+0100"):
     text = re.sub(r"\s+", " ", text).strip()
     if today is None:
@@ -37,13 +39,39 @@ def parse_date_heading(text, today=None, tz_offset="+0100"):
         return today + datetime.timedelta(days=1)
     return None
 
-from requests_html import HTMLSession
 
 def fetch_html():
+    """Fetch the page. Try JS render via requests-html, but fall back to r.text on any error.
+    Always write debug_fetch.html for CI debugging and print status lines to logs.
+    """
     session = HTMLSession()
-    r = session.get("https://sport.virgilio.it/guida-tv/")
-    r.html.render(timeout=60, sleep=3)
-    return r.html.html
+    try:
+        r = session.get(URL)
+    except Exception as e:
+        print("fetch_html: session.get failed:", repr(e))
+        raise
+
+    html = None
+    try:
+        # try rendering JS-generated content (may fail on CI)
+        r.html.render(timeout=60, sleep=3)
+        html = r.html.html
+        print("fetch_html: render() succeeded, length =", len(html))
+    except Exception as e:
+        # fallback to plain HTML and surface the error in logs
+        html = r.text
+        print("fetch_html: render() failed, falling back to r.text; error:", repr(e))
+        print("fetch_html: fetched length =", len(html))
+
+    # save a copy for debugging in CI logs/artifacts
+    try:
+        with open("debug_fetch.html", "w", encoding="utf-8") as fh:
+            fh.write(html)
+        print("fetch_html: wrote debug_fetch.html")
+    except Exception as e:
+        print("fetch_html: failed to write debug file:", e)
+    return html
+
 
 def iter_events(soup):
     # Grab all H2 (date section headers), then walk siblings until next H2
@@ -65,6 +93,7 @@ def iter_events(soup):
                 if re.match(r"^\d{1,2}:\d{2}", line):
                     yield section_date, line
 
+
 def split_event_line(line):
     # Examples:
     # "20:45 Calcio, Serie A: Milan-Roma Dazn"
@@ -81,8 +110,6 @@ def split_event_line(line):
     # First split on ":" for title/channels
     if ":" in rest:
         left, right = rest.split(":", 1)
-        # left like "Calcio, Serie A" or "Tennis, ATP Masters 1000 Parigi-Bercy"
-        # right like " Milan-Roma Dazn"
         left = left.strip()
         right = right.strip()
 
@@ -94,19 +121,14 @@ def split_event_line(line):
         else:
             sport = left.strip()
 
-        # Try to extract channels as last token(s). Often they're proper nouns; we keep all.
         title = right
         channels = None
-        # Heuristic: last token chunk is channels if it doesn’t contain commas and has spaces → keep as is
-        # Safer: leave full right as title; channels can be extracted by recognizing known broadcaster words,
-        # but to avoid hardcoding, we expose 'channels' == trailing words after two spaces from end if present.
-        # Minimal approach: channels = words after last two spaces if they look like broadcaster names.
-        # For feed readers, having title = full right is fine. We'll keep channels None.
     else:
         # No ":" — rare; just keep entire rest as title
         title = rest.strip()
 
     return time_str, sport, competition, title, channels
+
 
 def iso_zoned(dt):
     # RFC822 for RSS pubDate; we’ll also add ISO in description
@@ -115,6 +137,7 @@ def iso_zoned(dt):
     month = dt.month
     offset = "+0200" if 4 <= month <= 10 else "+0100"
     return dt.strftime("%a, %d %b %Y %H:%M:00 ") + offset
+
 
 def build_rss(items, now=None):
     if now is None:
@@ -145,15 +168,22 @@ def build_rss(items, now=None):
     out.append("</channel></rss>")
     return "\n".join(out)
 
+
 def escape_xml(s):
     return (s or "").replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
+
 
 def main():
     html = fetch_html()
     soup = BeautifulSoup(html, "html.parser")
+    print("Parsed soup; title:", (soup.title.string if soup.title else "NO TITLE"))
 
     events = []
     today = datetime.date.today()
+
+    # count H2 headers (date sections)
+    h2_count = len(soup.select("h2"))
+    print("Found h2 headers:", h2_count)
 
     for section_date, line in iter_events(soup):
         parsed = split_event_line(line)
@@ -189,10 +219,8 @@ def main():
             "description": description
         })
 
-    # Sort by datetime ascending (use pubDate string -> rough, but okay; better to store dt)
-    # For accuracy, rebuild using a key we stored; quick parse back:
+    # Sort by datetime ascending
     def key_from_pub(pub):
-        # Example: "Thu, 30 Oct 2025 20:45:00 +0100"
         try:
             return time.mktime(time.strptime(pub[:-6], "%a, %d %b %Y %H:%M:%S "))
         except Exception:
@@ -200,10 +228,13 @@ def main():
     events.sort(key=lambda e: key_from_pub(e["pubDate"]))
 
     rss = build_rss(events)
-    with open("rss.xml", "w", encoding="utf-8") as f:
-        f.write(rss)
-    print("Wrote rss.xml with", len(events), "items.")
+    try:
+        with open("rss.xml", "w", encoding="utf-8") as f:
+            f.write(rss)
+        print("Wrote rss.xml with", len(events), "items.")
+    except Exception as e:
+        print("Failed to write rss.xml:", e)
+        raise
 
 if __name__ == "__main__":
     main()
-
