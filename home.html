@@ -159,3 +159,11 @@
 
     // Controls
     prevBtn.addEventListener('click',()=> setDate(addDays(datePick.value,-1)));
+    nextBtn.addEventListener('click',()=> setDate(addDays(datePick.value,1)));
+    todayBtn.addEventListener('click',()=> setDate(fmtYMD(new Date())));
+    refreshBtn.addEventListener('click',()=> setDate(datePick.value));
+    datePick.addEventListener('change',()=> setDate(datePick.value));
+    tomorrowToggle.addEventListener('change',()=> setDate(datePick.value));
+  </script>
+</body>
+</html>
