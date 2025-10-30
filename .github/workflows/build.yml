@@ -2,8 +2,7 @@ name: Build RSS
 
 on:
   schedule:
-    # 06:00 Europe/Rome in winter (UTC+1), 07:00 in summer (UTC+2). GitHub uses UTC.
-    - cron: "0 5 * * *"
+    - cron: "0 5 * * *"   # ~06:00 Europe/Rome (winter), 07:00 (summer)
   workflow_dispatch:
 
 permissions:
@@ -26,17 +25,28 @@ jobs:
       - name: Install Python deps
         run: |
           python -m pip install --upgrade pip
-          pip install beautifulsoup4 playwright
+          pip install beautifulsoup4 playwright tzdata
 
-      # Install OS dependencies required by Chromium (needs sudo on GitHub runners)
+      # Install OS libs that Chromium needs
       - name: Install Playwright system deps (Chromium)
         run: |
           sudo npx --yes playwright@latest install-deps chromium
 
-      # Install the Chromium binary for the **Python** Playwright runtime
+      # Install Chromium for the Python Playwright runtime
       - name: Install Playwright browsers (Python)
         run: |
           python -m playwright install chromium
+
+      # Quick smoke test: can Chromium launch?
+      - name: Verify Playwright launch
+        run: |
+          python - <<'PY'
+          from playwright.sync_api import sync_playwright
+          with sync_playwright() as p:
+              b = p.chromium.launch(headless=True, args=["--no-sandbox","--disable-dev-shm-usage","--disable-gpu","--disable-setuid-sandbox"])
+              print("Chromium OK:", b.version)
+              b.close()
+          PY
 
       - name: Build site & feeds
         env:
@@ -58,7 +68,7 @@ jobs:
         with:
           path: .
 
-      # Always upload debug artifacts to diagnose issues if any
+      # Always upload any debug we produced
       - name: Upload debug artifacts
         if: always()
         uses: actions/upload-artifact@v4
@@ -68,6 +78,8 @@ jobs:
             debug.html
             debug.png
             playwright_console.log
+            debug_error.txt
+            debug_stage.txt
           if-no-files-found: ignore
 
   deploy:
