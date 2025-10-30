@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Guida TV Sport — Homepage personale (inline)</title>
+  <title>Guida TV Sport — Homepage</title>
   <style>
     :root{--bg:#0b0c0f;--fg:#e7e9ea;--muted:#9aa1a9;--card:#14171a;--accent:#4f46e5}
     [data-theme="light"]{--bg:#f7f7f8;--fg:#0b0c0f;--muted:#4b5563;--card:#ffffff;--accent:#2563eb}
@@ -31,11 +31,11 @@
   <header>
     <h1>Guida TV Sport</h1>
     <div class="row">
-      <button class="btn" id="prevBtn" title="Giorno precedente">◀︎</button>
+      <button class="btn" id="prevBtn">◀︎</button>
       <input type="date" id="datePick" />
-      <button class="btn" id="todayBtn" title="Oggi (Europe/Rome)">Oggi</button>
-      <button class="btn" id="nextBtn" title="Giorno successivo">▶︎</button>
-      <button class="btn" id="refreshBtn" title="Ricarica">↻</button>
+      <button class="btn" id="todayBtn">Oggi</button>
+      <button class="btn" id="nextBtn">▶︎</button>
+      <button class="btn" id="refreshBtn">↻</button>
     </div>
     <div class="spacer"></div>
     <div class="row">
@@ -45,36 +45,33 @@
   </header>
 
   <main>
-    <div class="note">Fonte mirror: <a id="mirrorLink" class="link" href="#" target="_blank" rel="noopener">GitHub Pages</a> · Fonte originale: <a class="link" href="https://sport.virgilio.it/guida-tv/" target="_blank" rel="noopener">Virgilio Sport – Guida TV</a></div>
+    <div class="note">Mirror: <a id="mirrorLink" class="link" href="#" target="_blank" rel="noopener">tables.html</a> · Originale: <a class="link" href="https://sport.virgilio.it/guida-tv/" target="_blank" rel="noopener">Virgilio</a></div>
     <div id="content"></div>
   </main>
 
   <footer>
-    Suggerimento: aggiungi questa pagina ai preferiti o impostala come pagina iniziale del browser.
+    Suggerimento: aggiungi questa pagina ai preferiti o impostala come pagina iniziale.
   </footer>
 
   <script>
-    // ====== CONFIG ======
-    const BASE = "https://jusseppe88.github.io/virgilio-sport-rss/index.html"; // mirror built by your action
+    // Same-origin URLs (host this file on GitHub Pages in the same repo)
+    const BASE = "./tables.html";
     const TZ = "Europe/Rome";
 
-    // ====== Helpers ======
-    const fmtYMD = (d) => new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).format(d); // YYYY-MM-DD
-    const parseYMD = (s) => { const [y,m,d]=s.split('-').map(Number); return new Date(Date.UTC(y,m-1,d)); };
+    const fmtYMD = (d) => new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).format(d);
+    const parseYMD = (s)=>{ const [y,m,d]=s.split('-').map(Number); return new Date(Date.UTC(y,m-1,d)); };
     const addDays = (ymd,n)=>{ const d=parseYMD(ymd); d.setUTCDate(d.getUTCDate()+n); return fmtYMD(d); };
 
-    // Theme
     const themeToggle = document.getElementById('themeToggle');
     const savedTheme = localStorage.getItem('sportsHomeTheme')||'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
     themeToggle.checked = savedTheme==='light';
-    themeToggle.addEventListener('change',()=>{
+    themeToggle.addEventListener('change',()=> {
       const t=themeToggle.checked?'light':'dark';
       document.documentElement.setAttribute('data-theme',t);
       localStorage.setItem('sportsHomeTheme',t);
     });
 
-    // UI elements
     const datePick=document.getElementById('datePick');
     const prevBtn=document.getElementById('prevBtn');
     const nextBtn=document.getElementById('nextBtn');
@@ -84,69 +81,60 @@
     const content=document.getElementById('content');
     const mirrorLink=document.getElementById('mirrorLink');
 
-    async function fetchMirror(){
-      const res = await fetch(BASE,{mode:'cors',credentials:'omit'});
-      if(!res.ok) throw new Error('Fetch mirror failed: '+res.status);
+    async function fetchTables(){
+      const res = await fetch(BASE, {mode:'cors', credentials:'omit'});
+      if(!res.ok) throw new Error('Fetch failed '+res.status);
       return await res.text();
     }
 
-    function extractDayFragment(doc, ymd){
-      // Anchors are injected in the mirror as <a id="YYYY-MM-DD">
+    function extractDay(doc, ymd){
       const anchor = doc.getElementById(ymd);
-      if(!anchor){
-        return null;
-      }
-      const frag = document.createElement('div');
-      frag.className = 'day';
-      // collect nodes from after the anchor up to (but not including) next H2
+      if(!anchor) return null;
+      const out = document.createElement('div');
+      // collect nodes after the anchor up to (but not including) next H2
       let node = anchor.nextElementSibling;
       while(node){
-        if(node.tagName === 'H2'){ break; }
-        frag.appendChild(node.cloneNode(true));
+        if(node.tagName === 'H2') break;
+        // only keep H2/TABLE blocks and their wrappers
+        out.appendChild(node.cloneNode(true));
         node = node.nextElementSibling;
       }
-      return frag;
+      return out.childNodes.length ? out : null;
     }
 
     async function render(ymd, alsoTomorrow){
       content.innerHTML = '<div class="note">Caricamento…</div>';
       try{
-        const html = await fetchMirror();
-        const dom = new DOMParser().parseFromString(html,'text/html');
-        const out = document.createDocumentFragment();
-        const todayBlock = extractDayFragment(dom, ymd);
-        if(todayBlock){
+        const html = await fetchTables();
+        const dom = new DOMParser().parseFromString(html, 'text/html');
+        const frag = document.createDocumentFragment();
+
+        const wrap = (label, block) => {
+          const box = document.createElement('div');
+          box.className = 'day';
           const h = document.createElement('h2');
-          h.textContent = new Date(ymd).toLocaleDateString('it-IT',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+          h.textContent = label;
           h.style.margin = '4px 0 8px';
-          const wrap = document.createElement('div');
-          wrap.className='day';
-          wrap.appendChild(h);
-          wrap.appendChild(todayBlock);
-          out.appendChild(wrap);
-        } else {
-          const miss = document.createElement('div');
-          miss.className='day';
-          miss.innerHTML = `<h2>${ymd}</h2><div class="note">Nessun dato per questa data (ancora).</div>`;
-          out.appendChild(miss);
-        }
+          box.appendChild(h);
+          if(block) box.appendChild(block); else box.innerHTML += '<div class="note">Nessun dato disponibile.</div>';
+          return box;
+        };
+
+        const itLabel = (dstr) => new Date(dstr).toLocaleDateString('it-IT',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+
+        const todayBlock = extractDay(dom, ymd);
+        frag.appendChild(wrap(itLabel(ymd), todayBlock));
+
         if(alsoTomorrow){
-          const tm = addDays(ymd,1);
-          const tmBlock = extractDayFragment(dom, tm);
-          const wrap2 = document.createElement('div');
-          wrap2.className='day';
-          const h2 = document.createElement('h2');
-          h2.textContent = new Date(tm).toLocaleDateString('it-IT',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
-          h2.style.margin = '4px 0 8px';
-          wrap2.appendChild(h2);
-          if(tmBlock){ wrap2.appendChild(tmBlock); }
-          else { wrap2.innerHTML += '<div class="note">Nessun dato per domani (ancora).</div>'; }
-          out.appendChild(wrap2);
+          const tm = addDays(ymd, 1);
+          const tmBlock = extractDay(dom, tm);
+          frag.appendChild(wrap(itLabel(tm), tmBlock));
         }
-        content.innerHTML='';
-        content.appendChild(out);
+
+        content.innerHTML = '';
+        content.appendChild(frag);
       }catch(err){
-        content.innerHTML = `<div class="day"><div class="note">Errore nel caricamento della pagina mirror: ${String(err)}</div><div class="note">Apri direttamente: <a class="link" href="${BASE}" target="_blank" rel="noopener">${BASE}</a></div></div>`;
+        content.innerHTML = `<div class="day"><div class="note">Errore caricamento: ${String(err)}</div><div class="note">Apri direttamente: <a class="link" href="${BASE}" target="_blank" rel="noopener">${BASE}</a></div></div>`;
       }
     }
 
@@ -157,12 +145,10 @@
       localStorage.setItem('sportsHomeDate', ymd);
     }
 
-    // init
     const todayYMD = fmtYMD(new Date());
     const savedDate = localStorage.getItem('sportsHomeDate');
     setDate(savedDate || todayYMD);
 
-    // controls
     prevBtn.addEventListener('click',()=> setDate(addDays(datePick.value,-1)));
     nextBtn.addEventListener('click',()=> setDate(addDays(datePick.value,1)));
     todayBtn.addEventListener('click',()=> setDate(fmtYMD(new Date())));
