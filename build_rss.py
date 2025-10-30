@@ -39,37 +39,75 @@ def make_guid(key: str) -> str:
     return hashlib.sha1(key.encode("utf-8")).hexdigest()
 
 # ---------- fetch ----------
+from playwright.sync_api import sync_playwright
+
 def fetch_html() -> str:
+    """
+    Render the page (with retries) and return final HTML.
+    Always writes debug files when possible.
+    """
     _write_file("debug_stage.txt", "starting playwright...\n")
-    console_lines = []
-    page = None
-    try:
-        with sync_playwright() as p:
-            launch_args = ["--no-sandbox","--disable-dev-shm-usage","--disable-gpu","--disable-setuid-sandbox"]
-            browser = p.chromium.launch(headless=True, args=launch_args)
-            page = browser.new_page()
-            page.on("console", lambda msg: console_lines.append(f"[{msg.type()}] {msg.text()}"))
-            _write_file("debug_stage.txt", "navigating...\n")
-            page.goto(URL, timeout=90_000, wait_until="networkidle")
-            _write_file("debug_stage.txt", "waiting selectors...\n", mode="a")
-            try:
-                page.wait_for_selector("table", timeout=60_000)
-            except Exception:
-                page.wait_for_selector("h2", timeout=30_000)
-            html = page.content()
-            _write_file("debug.html", html)
-            try: page.screenshot(path="debug.png", full_page=True)
-            except Exception: pass
-            browser.close()
-            _write_file("playwright_console.log", "\n".join(console_lines))
-            return html
-    except Exception as e:
-        _write_file("playwright_console.log", "\n".join(console_lines))
-        _write_file("debug_error.txt", f"{e}\n\n{traceback.format_exc()}")
+    attempts = 3
+    last_err = None
+    for attempt in range(1, attempts + 1):
+        console_lines = []
+        page = None
         try:
-            if page: _write_file("debug.html", page.content())
-        except Exception: pass
-        raise
+            with sync_playwright() as p:
+                launch_args = ["--no-sandbox","--disable-dev-shm-usage","--disable-gpu","--disable-setuid-sandbox"]
+                browser = p.chromium.launch(headless=True, args=launch_args)
+                # Set a desktop UA + Italian Accept-Language to avoid any edge CDNs behaving oddly
+                context = browser.new_context(
+                    user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                               "(KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+                    locale="it-IT",
+                    extra_http_headers={"Accept-Language": "it-IT,it;q=0.9,en;q=0.8"}
+                )
+                page = context.new_page()
+                page.on("console", lambda msg: console_lines.append(f"[{msg.type()}] {msg.text()}"))
+
+                _write_file("debug_stage.txt", f"attempt {attempt}: navigating...\n", mode="a")
+                page.goto(URL, timeout=120_000, wait_until="domcontentloaded")
+
+                # Let the network settle, then wait for tables or at least headings
+                page.wait_for_load_state("networkidle", timeout=60_000)
+                _write_file("debug_stage.txt", f"attempt {attempt}: waiting for selectors...\n", mode="a")
+                try:
+                    page.wait_for_selector("table", timeout=90_000)
+                except Exception:
+                    page.wait_for_selector("h2", timeout=60_000)
+
+                html = page.content()
+                _write_file("debug.html", html)
+                try:
+                    page.screenshot(path="debug.png", full_page=True)
+                except Exception:
+                    pass
+
+                # Flush console
+                _write_file("playwright_console.log", "\n".join(console_lines))
+                browser.close()
+
+                return html  # SUCCESS
+
+        except Exception as e:
+            last_err = e
+            _write_file("debug_stage.txt", f"attempt {attempt}: ERROR {e}\n", mode="a")
+            # capture what we can
+            try:
+                _write_file("playwright_console.log", "\n".join(console_lines))
+                if page:
+                    _write_file("debug.html", page.content())
+            except Exception:
+                pass
+            # brief backoff between attempts
+            import time as _t
+            _t.sleep(3)
+
+    # after retries, raise
+    _write_file("debug_error.txt", f"Failed after {attempts} attempts: {last_err}\n")
+    raise last_err
+
 
 # ---------- dates ----------
 def parse_date_heading(text: str, today: datetime.date | None = None) -> datetime.date | None:
