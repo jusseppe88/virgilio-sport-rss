@@ -3,7 +3,6 @@
 
 import re, sys, traceback, hashlib, datetime, time
 from urllib.parse import urljoin
-
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 
@@ -15,14 +14,13 @@ IT_MONTHS = {
 }
 TIME_RE = re.compile(r"^\s*(\d{1,2}:\d{2})\s*$")
 
-# ---------- tz helper (survives missing tzdata) ----------
+# ----- robust tz fallback (works even if tzdata not present) -----
 try:
-    from zoneinfo import ZoneInfo  # Python 3.9+
+    from zoneinfo import ZoneInfo
     def _rome_dt(y, m, d, hh=0, mm=0):
         try:
             return datetime.datetime(y, m, d, hh, mm, tzinfo=ZoneInfo("Europe/Rome"))
         except Exception:
-            # Fallback: +0200 for Apr–Oct, +0100 otherwise
             off = 2 if 4 <= m <= 10 else 1
             return datetime.datetime(y, m, d, hh, mm, tzinfo=datetime.timezone(datetime.timedelta(hours=off)))
 except Exception:
@@ -38,7 +36,7 @@ def to_rfc822_europe_rome(date_obj: datetime.date, time_str: str | None = None) 
     dt = _rome_dt(date_obj.year, date_obj.month, date_obj.day, hh, mm)
     return dt.strftime("%a, %d %b %Y %H:%M:%S %z")
 
-# ---------- misc utils ----------
+# ----- small utils -----
 def _write_file(path: str, content: str, mode="w", enc="utf-8"):
     try:
         with open(path, mode, encoding=enc) as f:
@@ -52,7 +50,7 @@ def esc(s: str) -> str:
 def make_guid(key: str) -> str:
     return hashlib.sha1(key.encode("utf-8")).hexdigest()
 
-# ---------- fetch with retries ----------
+# ----- fetch page (with retries) -----
 def fetch_html() -> str:
     _write_file("debug_stage.txt", "starting playwright...\n")
     attempts = 3
@@ -76,6 +74,7 @@ def fetch_html() -> str:
                 _write_file("debug_stage.txt", f"attempt {attempt}: navigating...\n", mode="a")
                 page.goto(URL, timeout=120_000, wait_until="domcontentloaded")
                 page.wait_for_load_state("networkidle", timeout=60_000)
+
                 _write_file("debug_stage.txt", f"attempt {attempt}: waiting tables/h2...\n", mode="a")
                 try:
                     page.wait_for_selector("table", timeout=90_000)
@@ -107,7 +106,7 @@ def fetch_html() -> str:
     _write_file("debug_error.txt", f"Failed after {attempts} attempts: {last_err}\n")
     raise last_err
 
-# ---------- dates ----------
+# ----- dates -----
 def parse_date_heading(text: str, today: datetime.date | None = None) -> datetime.date | None:
     text = re.sub(r"\s+", " ", text).strip()
     if today is None: today = datetime.date.today()
@@ -120,7 +119,7 @@ def parse_date_heading(text: str, today: datetime.date | None = None) -> datetim
     if re.search(r"\bDomani\b", text, re.IGNORECASE): return today + datetime.timedelta(days=1)
     return None
 
-# ---------- structural parsing ----------
+# ----- structural parsing -----
 def normalize_header(s: str) -> str:
     s = (s or "").strip().lower()
     s = s.replace("dove vederla", "canali").replace("dove vedere", "canali").replace("canale", "canali")
@@ -161,7 +160,7 @@ def extract_rows_from_table(table: BeautifulSoup):
             event      = cell(idx.get("evento", 3)).strip()
             channels   = cell(idx.get("canali", len(tds)-1)).strip()
         else:
-            # very defensive fallback (rare)
+            # defensive fallback
             texts = [c.get_text(" ", strip=True) for c in tds]
             time_val = texts[0] if texts and TIME_RE.match(texts[0]) else ""
             if not time_val:
@@ -176,67 +175,68 @@ def extract_rows_from_table(table: BeautifulSoup):
         out.append({"time": time_val, "sport": sport, "competition": competition, "title": event, "channels": channels})
     return out
 
-# ---------- cleaning / mirroring ----------
-def strip_non_tables(container: BeautifulSoup) -> BeautifulSoup:
-    # 1) Remove obvious junk by snapshotting nodes first (avoid mutating while iterating)
-    junk_tags = []
-    for tag in list(container.find_all(True)):
-        name = (tag.name or "").lower()
-        if name in ("script","style","noscript","iframe"):
-            junk_tags.append(tag); continue
-        classes = " ".join(tag.get("class", [])).lower()
-        idv = (tag.get("id") or "").lower()
-        data_attrs = " ".join([k for k in tag.attrs.keys() if isinstance(k, str)]).lower()
-        if any(x in classes for x in ["adv","ads","ad-", "banner", "pubblicit", "social"]):
-            junk_tags.append(tag); continue
-        if any(x in idv for x in ["adv","ads","ad-", "banner", "pubblicit", "social"]):
-            junk_tags.append(tag); continue
-        if "data-ad" in data_attrs or "data-adv" in data_attrs:
-            junk_tags.append(tag); continue
-    for t in junk_tags:
-        t.decompose()
-
-    # 2) Keep only sections that contain h2/tables; drop large wrappers that don't
-    for tag in list(container.find_all(True)):
-        if tag.name and tag.find(["table","h2"]):
-            continue
-        # allow minimal layout wrappers
-        if tag.name in ("table","thead","tbody","tr","th","td","h2","section","article","div","p","a"):
-            continue
-        tag.decompose()
-    return container
-
-def collect_styles_and_clean_fragment(html: str):
+# ----- build a clean, predictable mirror -----
+def collect_styles(html: str):
     soup = BeautifulSoup(html, "html.parser")
-
-    # CSS links (absolute)
     hrefs = []
     for link in soup.select("link[rel=stylesheet]"):
         href = link.get("href")
         if href: hrefs.append(urljoin(URL, href))
+    return hrefs
 
-    # main container
-    container = soup.select_one(".guida-tv") or soup.select_one("main") or soup.select_one("#main") or soup.body
-    if not container:
-        return hrefs, (soup.body.decode() if soup.body else html), None
+def pick_container(soup: BeautifulSoup):
+    return soup.select_one(".guida-tv") or soup.select_one("main") or soup.select_one("#main") or soup.body or soup
 
-    container = strip_non_tables(container)
+def build_clean_mirror(html: str):
+    """
+    Create a brand-new minimal container:
+      <div class='guide-mirror'>
+        <section class='day' id='YYYY-MM-DD'>
+          <h2>...</h2>
+          ...only blocks that contain tables...
+        </section>
+        ...
+      </div>
+    This prevents accidental loss of content and gives Brave a simple structure to render.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    src = pick_container(soup)
 
-    # inject anchors before each h2
+    # Find all date headings
+    h2s = src.find_all("h2")
+    mirror = soup.new_tag("div", **{"class": "guide-mirror"})
     today = datetime.date.today()
-    for h2 in container.find_all("h2"):
-        d = parse_date_heading(h2.get_text(" "), today=today)
-        if d:
-            anchor = soup.new_tag("a", id=d.isoformat())
-            h2.insert_before(anchor)
 
-    return hrefs, container.decode(), container
+    for i, h2 in enumerate(h2s):
+        d = parse_date_heading(h2.get_text(" "), today=today)
+        if not d:
+            continue
+
+        # new section wrapper
+        section = soup.new_tag("section", **{"class": "day", "id": d.isoformat()})
+        # clone the heading into the section (keep original text)
+        new_h2 = soup.new_tag("h2")
+        new_h2.string = h2.get_text(" ", strip=True)
+        section.append(new_h2)
+
+        # collect siblings until next h2; include only nodes that have at least one <table> descendant
+        sib = h2.next_sibling
+        while sib and not (getattr(sib, "name", None) == "h2"):
+            if getattr(sib, "name", None):
+                # Keep only blocks that contain tables
+                if getattr(sib, "find", None) and sib.find("table"):
+                    section.append(sib.clone()) if hasattr(sib, "clone") else section.append(BeautifulSoup(str(sib), "html.parser"))
+            sib = sib.next_sibling
+
+        mirror.append(section)
+
+    return mirror
 
 def build_tables_html(style_hrefs, fragment_html) -> str:
     base_css = """
       body{margin:16px;background:#fff;color:#000;font:14px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-      .source-note{margin:8px 0 16px;font-size:12px;color:#444}
       .wrap{max-width:1100px;margin:0 auto}
+      .wrap .day{margin:0 0 16px 0}
     """
     links = "\n".join(f"<link rel='stylesheet' href='{h}' crossorigin>" for h in style_hrefs)
     return f"""<!doctype html>
@@ -248,26 +248,32 @@ def build_tables_html(style_hrefs, fragment_html) -> str:
 <style>{base_css}</style>
 <body>
   <div class="wrap">
-    <div class="source-note">Fonte originale: <a href="{URL}" target="_blank" rel="noopener">{URL}</a></div>
     {fragment_html}
   </div>
 </body>
 </html>"""
 
-# ---------- grouping for RSS ----------
-def iter_rows_grouped_by_date_from_container(container: BeautifulSoup):
+# ----- group for RSS using the clean mirror -----
+def iter_rows_grouped_by_date_from_mirror(mirror: BeautifulSoup):
     groups = {}
-    for h2 in container.find_all("h2"):
-        d = parse_date_heading(h2.get_text(" "))
-        if not d: continue
+    for section in mirror.select("section.day"):
+        id_attr = section.get("id")
+        # derive date from id if possible, else from the H2
+        d = None
+        try:
+            d = datetime.date.fromisoformat(id_attr) if id_attr else None
+        except Exception:
+            d = None
+        if not d:
+            h2 = section.find("h2")
+            d = parse_date_heading(h2.get_text(" ")) if h2 else None
+        if not d:
+            continue
+
         rows = groups.setdefault(d, [])
-        for sib in h2.next_siblings:
-            if getattr(sib, "name", None) == "h2":
-                break
-            if getattr(sib, "name", None) in (None, "script", "style"):
-                continue
-            for table in getattr(sib, "find_all", lambda *_: [])("table"):
-                rows.extend(extract_rows_from_table(table))
+        for table in section.find_all("table"):
+            rows.extend(extract_rows_from_table(table))
+
     for d, lst in groups.items():
         lst.sort(key=lambda r: r["time"])
     for d in sorted(groups.keys()):
@@ -320,7 +326,7 @@ def build_rss_tables(grouped, site_base: str, now_utc: datetime.datetime | None 
     out.append("</channel></rss>")
     return "\n".join(out)
 
-# ---------- main ----------
+# ----- main -----
 def main():
     try:
         html = fetch_html()
@@ -328,18 +334,20 @@ def main():
         print("FATAL: fetch_html failed; see debug artifacts.")
         sys.exit(1)
 
-    soup = BeautifulSoup(html, "html.parser")
+    # 1) keep site CSS
+    style_hrefs = collect_styles(html)
 
-    # Clean tables page (no ads), preserve CSS, add anchors
-    style_hrefs, fragment_html, container = collect_styles_and_clean_fragment(html)
+    # 2) build a predictable, clean mirror
+    mirror = build_clean_mirror(html)
+    fragment_html = str(mirror)
+
+    # 3) write tables page (and index)
     tables_html = build_tables_html(style_hrefs, fragment_html)
     _write_file("tables.html", tables_html)
-    _write_file("index.html", tables_html)  # convenience
+    _write_file("index.html", tables_html)
 
-    # Build RSS (one item per day)
-    if container is None:
-        container = soup
-    grouped = list(iter_rows_grouped_by_date_from_container(container))
+    # 4) build RSS by reading from the same clean mirror
+    grouped = list(iter_rows_grouped_by_date_from_mirror(BeautifulSoup(fragment_html, "html.parser")))
 
     site_base = "https://jusseppe88.github.io/virgilio-sport-rss"
     rss = build_rss_tables(grouped, site_base=site_base)
