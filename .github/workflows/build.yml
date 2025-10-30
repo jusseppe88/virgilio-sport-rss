@@ -25,50 +25,59 @@ jobs:
       - name: Install Python deps
         run: |
           python -m pip install --upgrade pip
-          pip install beautifulsoup4 playwright tzdata
+          pip install beautifulsoup4 playwright tzdata lxml
 
-      # Install OS libs that Chromium needs
       - name: Install Playwright system deps (Chromium)
         run: |
           sudo npx --yes playwright@latest install-deps chromium
 
-      # Install Chromium for the Python Playwright runtime
       - name: Install Playwright browsers (Python)
         run: |
           python -m playwright install chromium
 
-      # Quick smoke test: can Chromium launch?
-      - name: Verify Playwright launch
+      - name: Env sanity
         run: |
-          python - <<'PY'
-          from playwright.sync_api import sync_playwright
-          with sync_playwright() as p:
-              b = p.chromium.launch(headless=True, args=["--no-sandbox","--disable-dev-shm-usage","--disable-gpu","--disable-setuid-sandbox"])
-              print("Chromium OK:", b.version)
-              b.close()
-          PY
+          python -V
+          python -c "import sys; print('platform:', sys.platform)"
+          python -c "import bs4, playwright; print('bs4 OK, playwright OK')"
 
+      # Run the scraper with full bash tracing + never swallow errors
       - name: Build site & feeds
+        id: build
         env:
           PYTHONUNBUFFERED: "1"
         run: |
-          set -euo pipefail
+          set -euxo pipefail
           python build_rss.py
 
-      - name: Commit site files (if changed)
+      # Always print first lines of debug files to the log, even if the previous step failed
+      - name: Print debug to logs
+        if: always()
         run: |
+          for f in debug_stage.txt debug_error.txt playwright_console.log; do
+            if [ -f "$f" ]; then
+              echo "---- $f (head) ----"; sed -n '1,200p' "$f" || true; echo
+            fi
+          done
+
+      # Only commit when build succeeded and files exist
+      - name: Commit site files (if changed)
+        if: ${{ success() }}
+        run: |
+          ls -l index.html tables.html rss.xml rss_tables.xml || true
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html rss_tables.xml rss.xml || true
+          git add index.html tables.html rss.xml rss_tables.xml || true
           git commit -m "update site & feeds" || echo "No changes"
           git push || true
 
       - name: Upload artifact for Pages
+        if: ${{ success() }}
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
 
-      # Always upload any debug we produced
+      # Always upload debug artifacts for inspection
       - name: Upload debug artifacts
         if: always()
         uses: actions/upload-artifact@v4
