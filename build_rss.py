@@ -365,35 +365,22 @@ def iter_rows_grouped_by_date_from_mirror(mirror: BeautifulSoup):
         yield d, groups[d]
 
 def render_table_html_for_rss(date_obj: datetime.date, rows):
-    table_style = (
-        "border-collapse:collapse;width:100%;max-width:980px;"
-        "border:1px solid #ddd;"
-        "font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial"
+    css = (
+        "table{border-collapse:collapse;width:100%;max-width:980px}"
+        "th,td{border:1px solid #ddd;padding:6px 8px;font:14px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial}"
+        "th{background:#f5f5f5;text-align:left}.time{white-space:nowrap;width:1%}"
     )
-    th_td_style = "border:1px solid #ddd;padding:6px 8px;"
-    th_style = th_td_style + "background:#f5f5f5;text-align:left;"
-    time_th_style = th_style + "white-space:nowrap;width:1%;"
-
-    head = (
-        f"<a id='{date_obj.isoformat()}'></a>"
-        f"<h2>{date_obj.strftime('%A %d %B %Y').title()}</h2>"
-    )
-
-    body = [f"<table style=\"{table_style}\"><thead><tr>"
-            f"<th style=\"{time_th_style}\">Ora</th>"
-            f"<th style=\"{th_style}\">Sport</th>"
-            f"<th style=\"{th_style}\">Competizione</th>"
-            f"<th style=\"{th_style}\">Evento</th>"
-            f"<th style=\"{th_style}\">Canali</th>"
-            f"</tr></thead><tbody>"]
-
+    head = (f"<style>{css}</style>"
+            f"<a id='{date_obj.isoformat()}'></a>"
+            f"<h2>{date_obj.strftime('%A %d %B %Y').title()}</h2>")
+    body = ["<table><thead><tr><th class='time'>Ora</th><th>Sport</th><th>Competizione</th><th>Evento</th><th>Canali</th></tr></thead><tbody>"]
     for r in rows:
         body.append("<tr>"
-                    f"<td style=\"{th_td_style}white-space:nowrap;width:1%\">{esc(r.get('time') or '')}</td>"
-                    f"<td style=\"{th_td_style}\">{esc(r.get('sport') or '')}</td>"
-                    f"<td style=\"{th_td_style}\">{esc(r.get('competition') or '')}</td>"
-                    f"<td style=\"{th_td_style}\">{esc(r.get('title') or '')}</td>"
-                    f"<td style=\"{th_td_style}\">{esc(r.get('channels') or '')}</td>"
+                    f"<td class='time'>{esc(r.get('time') or '')}</td>"
+                    f"<td>{esc(r.get('sport') or '')}</td>"
+                    f"<td>{esc(r.get('competition') or '')}</td>"
+                    f"<td>{esc(r.get('title') or '')}</td>"
+                    f"<td>{esc(r.get('channels') or '')}</td>"
                     "</tr>")
     body.append("</tbody></table>")
     return head + "".join(body)
