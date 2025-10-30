@@ -4,21 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Guida TV Sport — Homepage</title>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <style>
     /* ==== High-contrast dark defaults ==== */
     :root{
-      --bg:#0a0a0b;          /* darker background */
-      --fg:#ffffff;          /* pure white text */
-      --muted:#d1d5db;       /* light grey for notes */
-      --card:#0d1117;        /* card background (GitHub dark style) */
-      --border:#334155;      /* slate border */
-      --accent:#60a5fa;      /* sky blue */
-      --thead:#0b1220;       /* table header bg */
-      --thead-fg:#e5e7eb;    /* table header text */
+      --bg:#0a0a0b;          /* page background */
+      --fg:#ffffff;          /* body text */
+      --muted:#d1d5db;       /* secondary text */
+      --card:#0d1117;        /* containers */
+      --border:#334155;      /* borders */
+      --accent:#60a5fa;      /* links/buttons */
     }
     [data-theme="light"]{
       --bg:#f7f7f8; --fg:#0b0c0f; --muted:#4b5563; --card:#ffffff; --border:#e5e7eb; --accent:#2563eb;
-      --thead:#f3f4f6; --thead-fg:#0b0c0f;
     }
 
     *{box-sizing:border-box}
@@ -39,16 +39,10 @@
     .link:hover{text-decoration:underline}
     footer{padding:8px 14px;color:var(--muted);font-size:12px;border-top:1px solid var(--border)}
 
-    /* ===== Strong table readability ===== */
-    .day table{border-collapse:collapse;width:100%}
-    .day th,.day td{border:1px solid var(--border);padding:10px 12px}
-    .day thead th{background:var(--thead);color:var(--thead-fg);text-align:left}
-    .day td, .day th{color:#f9fafb}      /* force brighter text in cells */
-    .day a{color:var(--accent)}
-    .day a:hover{text-decoration:underline}
-
-    /* Avoid double headings when we clone <section.day> */
-    .day section.day > h2 { display:none }
+    /* The shadow host wrapper (we'll put the table inside a shadow root) */
+    .shadow-box{display:block}
+    /* Avoid double headings if source has an inner <h2> */
+    .shadow-box section.day > h2 { display:none }
   </style>
 </head>
 <body>
@@ -76,8 +70,9 @@
   <footer>Consiglio: aggiungi questa pagina ai preferiti o impostala come pagina iniziale.</footer>
 
   <script>
-    const BASE = "./tables.html";
-    const TZ = "Europe/Rome";
+    const BASE = "./tables.html";       // must live next to home.html on Pages
+    const TZ   = "Europe/Rome";
+    const V    = String(Date.now());    // cache-buster for fetch
 
     // Date helpers
     const fmtYMD = d => new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).format(d);
@@ -93,87 +88,3 @@
     const tomorrowToggle=document.getElementById('tomorrowToggle');
     const content=document.getElementById('content');
     const mirrorLink=document.getElementById('mirrorLink');
-    const themeToggle=document.getElementById('themeToggle');
-
-    // Theme
-    const savedTheme = localStorage.getItem('sportsHomeTheme')||'dark';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    themeToggle.checked = savedTheme==='light';
-    themeToggle.addEventListener('change',()=> {
-      const t=themeToggle.checked?'light':'dark';
-      document.documentElement.setAttribute('data-theme',t);
-      localStorage.setItem('sportsHomeTheme',t);
-    });
-
-    // Fetch tables.html with cache-busting (helps Brave)
-    async function fetchTables(){
-      const bust = Date.now();
-      const res = await fetch(`${BASE}?v=${bust}`, {mode:'cors', credentials:'omit', cache:'no-store'});
-      if(!res.ok) throw new Error('Fetch failed '+res.status);
-      return await res.text();
-    }
-
-    function cloneDay(dom, ymd){
-      // pick <section class="day" id="YYYY-MM-DD">
-      const sec = dom.querySelector(`section.day#${CSS.escape(ymd)}`);
-      if(!sec) return null;
-      return sec.cloneNode(true); // keep section; inner h2 hidden via CSS
-    }
-
-    function labelIT(ymd){
-      return new Date(ymd).toLocaleDateString('it-IT',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
-    }
-
-    async function render(ymd, alsoTomorrow){
-      content.innerHTML = '<div class="note">Caricamento…</div>';
-      try{
-        const html = await fetchTables();
-        const dom = new DOMParser().parseFromString(html, 'text/html');
-
-        const frag = document.createDocumentFragment();
-
-        const addBox = (dstr) => {
-          const sec = cloneDay(dom, dstr);
-          const box = document.createElement('div'); box.className='day';
-          const h = document.createElement('h2'); h.textContent = labelIT(dstr); h.style.margin='4px 0 8px';
-          box.appendChild(h);
-          if (sec) {
-            // optional: scrub any inline styles that might sneak through
-            sec.querySelectorAll('[style]').forEach(el => el.removeAttribute('style'));
-            box.appendChild(sec);
-          } else {
-            box.innerHTML += '<div class="note">Nessun dato disponibile.</div>';
-          }
-          frag.appendChild(box);
-        };
-
-        addBox(ymd);
-        if(alsoTomorrow) addBox(addDays(ymd,1));
-
-        content.innerHTML=''; content.appendChild(frag);
-      }catch(err){
-        content.innerHTML = `<div class="day"><div class="note">Errore: ${String(err)}</div><div class="note">Apri: <a class="link" href="${BASE}" target="_blank" rel="noopener">${BASE}</a></div></div>`;
-      }
-    }
-
-    function setDate(ymd){
-      datePick.value = ymd;
-      document.getElementById('mirrorLink').href = `${BASE}#${ymd}`;
-      render(ymd, tomorrowToggle.checked);
-      localStorage.setItem('sportsHomeDate', ymd);
-    }
-
-    const todayYMD = fmtYMD(new Date());
-    const savedDate = localStorage.getItem('sportsHomeDate');
-    setDate(savedDate || todayYMD);
-
-    // Controls
-    prevBtn.addEventListener('click',()=> setDate(addDays(datePick.value,-1)));
-    nextBtn.addEventListener('click',()=> setDate(addDays(datePick.value,1)));
-    todayBtn.addEventListener('click',()=> setDate(fmtYMD(new Date())));
-    refreshBtn.addEventListener('click',()=> setDate(datePick.value));
-    datePick.addEventListener('change',()=> setDate(datePick.value));
-    tomorrowToggle.addEventListener('change',()=> setDate(datePick.value));
-  </script>
-</body>
-</html>
