@@ -12,9 +12,9 @@ IT_MONTHS = {
     "gennaio": 1, "febbraio": 2, "marzo": 3, "aprile": 4, "maggio": 5, "giugno": 6,
     "luglio": 7, "agosto": 8, "settembre": 9, "ottobre": 10, "novembre": 11, "dicembre": 12
 }
-TIME_RE = re.compile(r"^\s*(\d{1,2}:\d{2})\s*$")
+TIME_RE = re.compile(r"\b(\d{1,2}:\d{2})\b")
 
-# ----- robust tz fallback (works even if tzdata not present) -----
+# ----- robust tz fallback -----
 try:
     from zoneinfo import ZoneInfo
     def _rome_dt(y, m, d, hh=0, mm=0):
@@ -75,11 +75,12 @@ def fetch_html() -> str:
                 page.goto(URL, timeout=120_000, wait_until="domcontentloaded")
                 page.wait_for_load_state("networkidle", timeout=60_000)
 
-                _write_file("debug_stage.txt", f"attempt {attempt}: waiting tables/h2...\n", mode="a")
+                _write_file("debug_stage.txt", f"attempt {attempt}: waiting content...\n", mode="a")
+                # Wait for either obvious structured content or just the main article text to appear
                 try:
-                    page.wait_for_selector("table", timeout=90_000)
+                    page.wait_for_selector("h2", timeout=90_000)
                 except Exception:
-                    page.wait_for_selector("h2", timeout=60_000)
+                    page.wait_for_selector("article, main, #main, .guida-tv", timeout=60_000)
 
                 html = page.content()
                 _write_file("debug.html", html)
@@ -108,6 +109,7 @@ def fetch_html() -> str:
 
 # ----- dates -----
 def parse_date_heading(text: str, today: datetime.date | None = None) -> datetime.date | None:
+    # Accept both “Oggi – 30 ottobre 2025 – …” and “– 01 novembre 2025 – …”
     text = re.sub(r"\s+", " ", text).strip()
     if today is None: today = datetime.date.today()
     m = re.search(r"(\d{1,2})\s+([A-Za-zàéìòù]+)\s+(\d{4})", text, re.IGNORECASE)
@@ -119,7 +121,7 @@ def parse_date_heading(text: str, today: datetime.date | None = None) -> datetim
     if re.search(r"\bDomani\b", text, re.IGNORECASE): return today + datetime.timedelta(days=1)
     return None
 
-# ----- structural parsing -----
+# ----- parsing helpers -----
 def normalize_header(s: str) -> str:
     s = (s or "").strip().lower()
     s = s.replace("dove vederla", "canali").replace("dove vedere", "canali").replace("canale", "canali")
@@ -160,20 +162,83 @@ def extract_rows_from_table(table: BeautifulSoup):
             event      = cell(idx.get("evento", 3)).strip()
             channels   = cell(idx.get("canali", len(tds)-1)).strip()
         else:
-            # defensive fallback
             texts = [c.get_text(" ", strip=True) for c in tds]
-            time_val = texts[0] if texts and TIME_RE.match(texts[0]) else ""
+            m = TIME_RE.search(texts[0]) if texts else None
+            time_val = m.group(1) if m else ""
             if not time_val:
-                for i,tx in enumerate(texts):
-                    if TIME_RE.match(tx): time_val = tx; texts = texts[:i]+texts[i+1:]; break
+                # try any cell
+                for i, tx in enumerate(texts):
+                    m = TIME_RE.search(tx)
+                    if m:
+                        time_val = m.group(1)
+                        texts = texts[:i] + texts[i+1:]
+                        break
             if not time_val: continue
             sport = texts[0] if len(texts)>0 else ""
             competition = texts[1] if len(texts)>1 else ""
             channels = texts[-1] if len(texts)>2 else ""
             event = " ".join(texts[2:-1]) if len(texts)>3 else (texts[2] if len(texts)>2 else "")
-        if TIME_RE.match(channels): channels, event = event, channels
         out.append({"time": time_val, "sport": sport, "competition": competition, "title": event, "channels": channels})
     return out
+
+LINE_RE = re.compile(
+    r"^\s*(?P<time>\d{1,2}:\d{2})\s+(?P<body>.+?)\s*$"
+)
+def split_free_text(line: str):
+    """
+    Parse lines like:
+      20:45 Calcio, Serie A: Pisa-Lazio Sky, Dazn, Sky Sport Calcio
+      11:00 Tennis, ATP Masters 1000 Parigi-Bercy: Ottavi Di Finale Sky Sport Tennis, Sky Sport 1
+    Return dict with time, sport, competition, title, channels.
+    """
+    m = LINE_RE.match(line)
+    if not m: return None
+    time_str = m.group("time")
+    rest = m.group("body")
+
+    sport = competition = title = channels = ""
+
+    # Split "left: right"
+    if ":" in rest:
+        left, right = [x.strip() for x in rest.split(":", 1)]
+        # left may be "Calcio, Serie A" or "Tennis, ATP Masters 1000 Parigi-Bercy"
+        if "," in left:
+            sport, competition = [x.strip() for x in left.split(",", 1)]
+        else:
+            sport = left
+        # right often ends with channels list
+        # Heuristic: last comma-separated chunk(s) containing words like Sky, Dazn, Rai, Eurosport, NOW...
+        # Try to detect channels by keywords; else take last tokens after two spaces groups
+        kws = ("Sky", "Dazn", "Rai", "Eurosport", "NOW", "Mediaset", "Sportitalia", "Amazon", "Prime", "Infinity", "La7", "Nove")
+        # Split by spaces, but better: try last '  ' (double space) separation first
+        title = right
+        # If there are multiple broadcasters separated by commas, keep them together
+        parts = [p.strip() for p in right.split(",")]
+        if any(any(k.lower() in p.lower() for k in kws) for p in parts):
+            # find from the end the first part that contains a broadcaster keyword
+            idx = len(parts)-1
+            while idx >= 0 and not any(k.lower() in parts[idx].lower() for k in kws):
+                idx -= 1
+            if idx >= 0:
+                channels = ", ".join(parts[idx:]).strip()
+                title = ", ".join(parts[:idx]).strip()
+        # Cleanup: if still no channels but last word is uppercase-ish, take it as channel
+        if not channels:
+            tokens = right.split()
+            if tokens and tokens[-1].isalpha() and tokens[-1][0].isupper():
+                channels = tokens[-1]
+                title = " ".join(tokens[:-1]).strip()
+    else:
+        # No colon case — rare; treat whole rest as title
+        title = rest
+
+    return {"time": time_str, "sport": sport, "competition": competition, "title": title, "channels": channels}
+
+def block_has_events_text(node: BeautifulSoup) -> bool:
+    # True if the node contains any line with HH:MM
+    if not getattr(node, "get_text", None): return False
+    txt = node.get_text("\n", strip=True)
+    return bool(TIME_RE.search(txt))
 
 # ----- build a clean, predictable mirror -----
 def collect_styles(html: str):
@@ -185,47 +250,42 @@ def collect_styles(html: str):
     return hrefs
 
 def pick_container(soup: BeautifulSoup):
-    return soup.select_one(".guida-tv") or soup.select_one("main") or soup.select_one("#main") or soup.body or soup
+    return soup.select_one(".guida-tv") or soup.select_one("article") or soup.select_one("main") or soup.select_one("#main") or soup.body or soup
 
 def build_clean_mirror(html: str):
     """
-    Create a brand-new minimal container:
-      <div class='guide-mirror'>
-        <section class='day' id='YYYY-MM-DD'>
-          <h2>...</h2>
-          ...only blocks that contain tables...
-        </section>
-        ...
-      </div>
-    This prevents accidental loss of content and gives Brave a simple structure to render.
+    Wrap each date as:
+      <section class="day" id="YYYY-MM-DD">
+        <h2>...</h2>
+        <!-- only blocks that contain events: a table OR text with HH:MM lines -->
+      </section>
     """
     soup = BeautifulSoup(html, "html.parser")
     src = pick_container(soup)
-
-    # Find all date headings
-    h2s = src.find_all("h2")
+    h2s = src.find_all(["h2","h3"])  # be lenient
     mirror = soup.new_tag("div", **{"class": "guide-mirror"})
     today = datetime.date.today()
 
-    for i, h2 in enumerate(h2s):
-        d = parse_date_heading(h2.get_text(" "), today=today)
+    for i, h in enumerate(h2s):
+        d = parse_date_heading(h.get_text(" ", strip=True), today=today)
         if not d:
             continue
 
-        # new section wrapper
         section = soup.new_tag("section", **{"class": "day", "id": d.isoformat()})
-        # clone the heading into the section (keep original text)
-        new_h2 = soup.new_tag("h2")
-        new_h2.string = h2.get_text(" ", strip=True)
-        section.append(new_h2)
+        new_h = soup.new_tag("h2"); new_h.string = h.get_text(" ", strip=True)
+        section.append(new_h)
 
-        # collect siblings until next h2; include only nodes that have at least one <table> descendant
-        sib = h2.next_sibling
-        while sib and not (getattr(sib, "name", None) == "h2"):
+        sib = h.next_sibling
+        while sib and not (getattr(sib, "name", None) in ("h2","h3")):
             if getattr(sib, "name", None):
-                # Keep only blocks that contain tables
-                if getattr(sib, "find", None) and sib.find("table"):
-                    section.append(sib.clone()) if hasattr(sib, "clone") else section.append(BeautifulSoup(str(sib), "html.parser"))
+                keep = False
+                if getattr(sib, "find", None):
+                    if sib.find("table"):
+                        keep = True
+                    elif block_has_events_text(sib):
+                        keep = True
+                if keep:
+                    section.append(BeautifulSoup(str(sib), "html.parser"))
             sib = sib.next_sibling
 
         mirror.append(section)
@@ -253,26 +313,46 @@ def build_tables_html(style_hrefs, fragment_html) -> str:
 </body>
 </html>"""
 
-# ----- group for RSS using the clean mirror -----
+# ----- grouping for RSS from the clean mirror -----
 def iter_rows_grouped_by_date_from_mirror(mirror: BeautifulSoup):
     groups = {}
     for section in mirror.select("section.day"):
-        id_attr = section.get("id")
-        # derive date from id if possible, else from the H2
+        # date
         d = None
-        try:
-            d = datetime.date.fromisoformat(id_attr) if id_attr else None
-        except Exception:
-            d = None
+        id_attr = section.get("id")
+        if id_attr:
+            try: d = datetime.date.fromisoformat(id_attr)
+            except Exception: d = None
         if not d:
-            h2 = section.find("h2")
-            d = parse_date_heading(h2.get_text(" ")) if h2 else None
-        if not d:
-            continue
+            h2 = section.find(["h2","h3"])
+            if h2: d = parse_date_heading(h2.get_text(" ", strip=True))
+        if not d: continue
 
         rows = groups.setdefault(d, [])
+
+        # 1) tables
         for table in section.find_all("table"):
             rows.extend(extract_rows_from_table(table))
+
+        # 2) free text blocks with HH:MM lines
+        for blk in section.find_all(["p","div","li","span","section","article"]):
+            if not block_has_events_text(blk): continue
+            txt = blk.get_text("\n", strip=True)
+            for ln in txt.splitlines():
+                ln = ln.strip()
+                if not TIME_RE.search(ln): continue
+                parsed = split_free_text(ln)
+                if parsed:
+                    rows.append(parsed)
+
+        # Deduplicate by time+title to avoid double grabs if the site wraps lines twice
+        seen = set()
+        uniq = []
+        for r in rows:
+            key = (r.get("time",""), r.get("title",""), r.get("channels",""))
+            if key in seen: continue
+            seen.add(key); uniq.append(r)
+        groups[d] = uniq
 
     for d, lst in groups.items():
         lst.sort(key=lambda r: r["time"])
@@ -291,11 +371,11 @@ def render_table_html_for_rss(date_obj: datetime.date, rows):
     body = ["<table><thead><tr><th class='time'>Ora</th><th>Sport</th><th>Competizione</th><th>Evento</th><th>Canali</th></tr></thead><tbody>"]
     for r in rows:
         body.append("<tr>"
-                    f"<td class='time'>{esc(r['time'])}</td>"
-                    f"<td>{esc(r['sport'] or '')}</td>"
-                    f"<td>{esc(r['competition'] or '')}</td>"
-                    f"<td>{esc(r['title'] or '')}</td>"
-                    f"<td>{esc(r['channels'] or '')}</td>"
+                    f"<td class='time'>{esc(r.get('time') or '')}</td>"
+                    f"<td>{esc(r.get('sport') or '')}</td>"
+                    f"<td>{esc(r.get('competition') or '')}</td>"
+                    f"<td>{esc(r.get('title') or '')}</td>"
+                    f"<td>{esc(r.get('channels') or '')}</td>"
                     "</tr>")
     body.append("</tbody></table>")
     return head + "".join(body)
@@ -337,7 +417,7 @@ def main():
     # 1) keep site CSS
     style_hrefs = collect_styles(html)
 
-    # 2) build a predictable, clean mirror
+    # 2) build a predictable, clean mirror (tables or time-based text)
     mirror = build_clean_mirror(html)
     fragment_html = str(mirror)
 
@@ -355,6 +435,15 @@ def main():
     _write_file("rss.xml", rss)
 
     print(f"Wrote tables.html & index.html with {len(grouped)} tables and rss_tables.xml")
+
+# helpers used in main but defined later
+def collect_styles(html: str):
+    soup = BeautifulSoup(html, "html.parser")
+    hrefs = []
+    for link in soup.select("link[rel=stylesheet]"):
+        href = link.get("href")
+        if href: hrefs.append(urljoin(URL, href))
+    return hrefs
 
 if __name__ == "__main__":
     main()
