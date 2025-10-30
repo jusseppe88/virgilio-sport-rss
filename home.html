@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Guida TV Sport — Homepage</title>
   <style>
-    :root{--bg:#0b0c0f;--fg:#e7e9ea;--muted:#9aa1a9;--card:#14171a;--accent:#4f46e5}
+    :root{--bg:#0b0c0f;--fg:#f3f4f6;--muted:#cbd5e1;--card:#111827;--accent:#60a5fa}
     [data-theme="light"]{--bg:#f7f7f8;--fg:#0b0c0f;--muted:#4b5563;--card:#ffffff;--accent:#2563eb}
     *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
     header,footer{background:var(--card);border-bottom:1px solid #1f2937}
     header{position:sticky;top:0;z-index:10;padding:10px 14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
     h1{font-size:16px;margin:0 8px 0 0;white-space:nowrap}
@@ -21,14 +21,14 @@
     main{padding:16px}
     #content > .day{background:var(--card);border:1px solid #1f2937;border-radius:12px;padding:12px;margin:0 auto 16px;max-width:1100px}
     .note{color:var(--muted);font-size:12px;margin:4px 0 8px}
-    .link{color:#93c5fd;text-decoration:none}
+    .link{color:var(--accent);text-decoration:none}
     .link:hover{text-decoration:underline}
     footer{padding:8px 14px;color:var(--muted);font-size:12px;border-top:1px solid #1f2937}
 
     /* Safety net: visible borders even if remote CSS is blocked */
     .day table{border-collapse:collapse}
-    .day th,.day td{border:1px solid #d1d5db;padding:6px 8px}
-    .day thead th{background:#f3f4f6}
+    .day th,.day td{border:1px solid #374151;padding:8px 10px}
+    .day thead th{background:#0f172a;color:#e5e7eb}
     /* Hide inner H2 from mirrored section to avoid double headings */
     .day section.day > h2 { display:none }
   </style>
@@ -110,8 +110,7 @@
     function cloneDay(dom, ymd){
       const sec = dom.querySelector(`section.day#${CSS.escape(ymd)}`);
       if(!sec) return null;
-      // we keep the section so internal anchors work; hide its inner h2 via CSS
-      return sec.cloneNode(true);
+      return sec.cloneNode(true); // we keep section; inner h2 hidden via CSS
     }
 
     function labelIT(ymd){
@@ -127,7 +126,6 @@
         // bring over external CSS refs
         copyRemoteStyles(dom);
 
-        // Build boxes
         const frag = document.createDocumentFragment();
 
         const addBox = (dstr) => {
@@ -161,11 +159,3 @@
 
     // Controls
     prevBtn.addEventListener('click',()=> setDate(addDays(datePick.value,-1)));
-    nextBtn.addEventListener('click',()=> setDate(addDays(datePick.value,1)));
-    todayBtn.addEventListener('click',()=> setDate(fmtYMD(new Date())));
-    refreshBtn.addEventListener('click',()=> setDate(datePick.value));
-    datePick.addEventListener('change',()=> setDate(datePick.value));
-    tomorrowToggle.addEventListener('change',()=> setDate(datePick.value));
-  </script>
-</body>
-</html>
