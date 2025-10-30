@@ -69,15 +69,13 @@
   <footer>Consiglio: aggiungi questa pagina ai preferiti o impostala come pagina iniziale.</footer>
 
   <script>
-    const BASE = "./tables.html";  // must be alongside home.html
+    const BASE = "./tables.html";
     const TZ   = "Europe/Rome";
 
-    // Date helpers
     const fmtYMD = d => new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).format(d);
     const parseYMD = s => {const [y,m,d]=s.split('-').map(Number); return new Date(Date.UTC(y,m-1,d));};
     const addDays = (ymd,n)=>{const d=parseYMD(ymd); d.setUTCDate(d.getUTCDate()+n); return fmtYMD(d);};
 
-    // Elements
     const datePick=document.getElementById('datePick');
     const prevBtn=document.getElementById('prevBtn');
     const nextBtn=document.getElementById('nextBtn');
@@ -98,23 +96,14 @@
       localStorage.setItem('sportsHomeTheme',t);
     });
 
-    // Fetch tables.html as text (cache-busted)
     async function fetchTables(){
       const res = await fetch(`${BASE}?v=${Date.now()}`, {mode:'cors', credentials:'omit', cache:'no-store'});
       if(!res.ok) throw new Error('Fetch failed '+res.status);
       return await res.text();
     }
 
-    // Pick a <section class="day" id="YYYY-MM-DD"> from fetched DOM
-    function pickDay(dom, ymd){
-      return dom.querySelector(`section.day#${CSS.escape(ymd)}`) || null;
-    }
-
-    function labelIT(ymd){
-      return new Date(ymd).toLocaleDateString('it-IT',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
-    }
-
-    // Sanitize a cloned section: remove inline styles, <style>, and <link> tags
+    function pickDay(dom, ymd){ return dom.querySelector(`section.day#${CSS.escape(ymd)}`) || null; }
+    function labelIT(ymd){ return new Date(ymd).toLocaleDateString('it-IT',{weekday:'long',year:'numeric',month:'long',day:'numeric'}); }
     function sanitizeSection(sec){
       const clean = sec.cloneNode(true);
       clean.querySelectorAll('style,link').forEach(n => n.remove());
@@ -122,17 +111,12 @@
       return clean;
     }
 
-    // Render a sanitized section inside a Shadow DOM with our own CSS and a scrollable frame
     function renderIntoShadow(container, sectionEl){
-      // Host
       const host = document.createElement('div');
       host.className = 'shadow-host';
       container.appendChild(host);
-
-      // Shadow root
       const root = host.attachShadow({mode:'open'});
 
-      // Our isolated, high-contrast, mobile-friendly table styles
       const style = document.createElement('style');
       style.textContent = `
         :host{display:block}
@@ -140,17 +124,23 @@
           border:1px solid #334155;
           border-radius:12px;
           background:#0d1117;
-          overflow:auto;              /* horizontal scroll on small screens */
+          overflow:auto;
           -webkit-overflow-scrolling: touch;
         }
-        .inner{min-width:720px; padding:0}  /* ensure columns fit; can scroll if smaller viewport */
+        .inner{min-width:720px; padding:0}
         table{border-collapse:collapse;width:100%;table-layout:fixed}
-        th,td{border:1px solid #334155;padding:10px 12px;vertical-align:top;word-break:break-word}
+        /* 👇 column width tuning */
+        th:nth-child(1), td:nth-child(1){width:60px;white-space:nowrap;text-align:center}
+        th:nth-child(2), td:nth-child(2){width:100px;word-break:break-word}
+        th:nth-child(3), td:nth-child(3){width:25%}
+        th:nth-child(4), td:nth-child(4){width:40%}
+        th:nth-child(5), td:nth-child(5){width:20%}
+        /* 👆 end tuning */
+        th,td{border:1px solid #334155;padding:10px 12px;vertical-align:top}
         thead th{background:#0b1220;color:#e5e7eb;text-align:left;position:sticky;top:0}
         td, th{color:#f9fafb}
         a{color:#60a5fa;text-decoration:none}
         a:hover{text-decoration:underline}
-        /* Hide inner h2 coming from mirrored section */
         section.day > h2 { display:none }
       `;
       root.appendChild(style);
@@ -171,18 +161,15 @@
       try{
         const html = await fetchTables();
         const dom = new DOMParser().parseFromString(html, 'text/html');
-
         const frag = document.createDocumentFragment();
+
         const addBox = (dstr) => {
           const sec = pickDay(dom, dstr);
           const box = document.createElement('div'); box.className='day';
           const h = document.createElement('h2'); h.textContent = labelIT(dstr); h.style.margin='4px 0 8px';
           box.appendChild(h);
-          if (sec) {
-            renderIntoShadow(box, sec);
-          } else {
-            box.innerHTML += '<div class="note">Nessun dato disponibile.</div>';
-          }
+          if (sec) renderIntoShadow(box, sec);
+          else box.innerHTML += '<div class="note">Nessun dato disponibile.</div>';
           frag.appendChild(box);
         };
 
@@ -206,7 +193,6 @@
     const savedDate = localStorage.getItem('sportsHomeDate');
     setDate(savedDate || todayYMD);
 
-    // Controls
     prevBtn.addEventListener('click',()=> setDate(addDays(datePick.value,-1)));
     nextBtn.addEventListener('click',()=> setDate(addDays(datePick.value,1)));
     todayBtn.addEventListener('click',()=> setDate(fmtYMD(new Date())));
