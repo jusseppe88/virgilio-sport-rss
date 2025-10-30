@@ -33,12 +33,12 @@ jobs:
       - name: Build RSS
         run: python build_rss.py
 
-      - name: Commit rss.xml (if changed)
+      - name: Commit site files (if changed)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add rss.xml
-          git commit -m "update rss" || echo "No changes"
+          git add index.html rss_tables.xml rss.xml
+          git commit -m "update site & feeds" || echo "No changes"
           git push
 
       - name: Upload artifact for Pages
