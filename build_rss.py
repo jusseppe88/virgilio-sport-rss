@@ -117,16 +117,32 @@ def iter_rows_grouped_by_date(soup: BeautifulSoup):
         yield d, groups[d]
 
 def split_event_text(rest: str):
+    """
+    Try to split 'Sport, Competition: Title Channel' → sport, competition, title, channels.
+    Uses the last word(s) (capitalized / all-caps) as channel names.
+    """
     sport = competition = title = channels = None
+
     if ":" in rest:
         left, right = [x.strip() for x in rest.split(":", 1)]
         if "," in left:
             sport, competition = [x.strip() for x in left.split(",", 1)]
         else:
             sport = left
-        title = right
+        # right part often ends with broadcaster name(s)
+        # Example: "Milan-Roma DAZN" → title="Milan-Roma", channels="DAZN"
+        parts = right.split()
+        if len(parts) > 1 and parts[-1].isupper():
+            channels = parts[-1]
+            title = " ".join(parts[:-1])
+        elif len(parts) > 2 and all(p[0].isupper() for p in parts[-2:]):
+            channels = " ".join(parts[-2:])
+            title = " ".join(parts[:-2])
+        else:
+            title = right
     else:
         title = rest
+
     return sport, competition, title, channels
 
 def esc(s: str) -> str:
