@@ -39,7 +39,7 @@
     .link:hover{text-decoration:underline}
     footer{padding:8px 14px;color:var(--muted);font-size:12px;border-top:1px solid var(--border)}
 
-    /* ===== Stronger table readability (cannot be overridden by remote CSS) ===== */
+    /* ===== Strong table readability ===== */
     .day table{border-collapse:collapse;width:100%}
     .day th,.day td{border:1px solid var(--border);padding:10px 12px}
     .day thead th{background:var(--thead);color:var(--thead-fg);text-align:left}
@@ -113,13 +113,67 @@
       return await res.text();
     }
 
-    // Also copy <link rel="stylesheet"> from tables.html into home.html
-    // Add a cache-buster so old CSS doesn't stick.
-    function copyRemoteStyles(dom){
-      const existing = new Set(Array.from(document.querySelectorAll('link[rel="stylesheet"][data-mirror]')).map(l=>l.href));
-      dom.querySelectorAll('link[rel="stylesheet"]').forEach(link=>{
-        const href = link.href + (link.href.includes('?') ? '&' : '?') + 'v=' + Date.now();
-        if(!existing.has(href)){
-          const l=document.createElement('link');
-          l.rel='stylesheet'; l.href=href; l.setAttribute('data-mirror','');
-          document.head.appendChil
+    function cloneDay(dom, ymd){
+      // pick <section class="day" id="YYYY-MM-DD">
+      const sec = dom.querySelector(`section.day#${CSS.escape(ymd)}`);
+      if(!sec) return null;
+      return sec.cloneNode(true); // keep section; inner h2 hidden via CSS
+    }
+
+    function labelIT(ymd){
+      return new Date(ymd).toLocaleDateString('it-IT',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+    }
+
+    async function render(ymd, alsoTomorrow){
+      content.innerHTML = '<div class="note">Caricamento…</div>';
+      try{
+        const html = await fetchTables();
+        const dom = new DOMParser().parseFromString(html, 'text/html');
+
+        const frag = document.createDocumentFragment();
+
+        const addBox = (dstr) => {
+          const sec = cloneDay(dom, dstr);
+          const box = document.createElement('div'); box.className='day';
+          const h = document.createElement('h2'); h.textContent = labelIT(dstr); h.style.margin='4px 0 8px';
+          box.appendChild(h);
+          if (sec) {
+            // optional: scrub any inline styles that might sneak through
+            sec.querySelectorAll('[style]').forEach(el => el.removeAttribute('style'));
+            box.appendChild(sec);
+          } else {
+            box.innerHTML += '<div class="note">Nessun dato disponibile.</div>';
+          }
+          frag.appendChild(box);
+        };
+
+        addBox(ymd);
+        if(alsoTomorrow) addBox(addDays(ymd,1));
+
+        content.innerHTML=''; content.appendChild(frag);
+      }catch(err){
+        content.innerHTML = `<div class="day"><div class="note">Errore: ${String(err)}</div><div class="note">Apri: <a class="link" href="${BASE}" target="_blank" rel="noopener">${BASE}</a></div></div>`;
+      }
+    }
+
+    function setDate(ymd){
+      datePick.value = ymd;
+      document.getElementById('mirrorLink').href = `${BASE}#${ymd}`;
+      render(ymd, tomorrowToggle.checked);
+      localStorage.setItem('sportsHomeDate', ymd);
+    }
+
+    const todayYMD = fmtYMD(new Date());
+    const savedDate = localStorage.getItem('sportsHomeDate');
+    setDate(savedDate || todayYMD);
+
+    // Controls
+    prevBtn.addEventListener('click',()=> setDate(addDays(datePick.value,-1)));
+    nextBtn.addEventListener('click',()=> setDate(addDays(datePick.value,1)));
+    todayBtn.addEventListener('click',()=> setDate(fmtYMD(new Date())));
+    refreshBtn.addEventListener('click',()=> setDate(datePick.value));
+    datePick.addEventListener('change',()=> setDate(datePick.value));
+    tomorrowToggle.addEventListener('change',()=> setDate(datePick.value));
+  </script>
+</body>
+</html>
