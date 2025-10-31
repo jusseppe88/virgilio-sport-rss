@@ -137,16 +137,33 @@
         }
         .inner{padding:0;width:100%}
         table{border-collapse:collapse;width:100%;table-layout:fixed}
+        /* base (mobile-first) widths */
         th:nth-child(1), td:nth-child(1){width:55px;white-space:nowrap;text-align:center}
         th:nth-child(2), td:nth-child(2){width:auto}
         th:nth-child(3), td:nth-child(3){width:90px;word-break:break-word}
-        th,td{border:1px solid var(--border);padding:6px 8px;vertical-align:top;color:var(--text);font-size:14px;line-height:1.35}
+        th,td{
+          border:1px solid var(--border);
+          padding:6px 8px;
+          vertical-align:top;
+          color:var(--text);
+          font-size:14px;
+          line-height:1.35;
+          overflow-wrap:break-word;
+          word-break:break-word;
+          hyphens:auto;
+        }
         thead th{background:var(--thead-bg);color:var(--thead-fg);text-align:left;position:sticky;top:0}
         a{color:var(--link);text-decoration:none}
         a:hover{text-decoration:underline}
         @media (max-width:480px){
           th,td{padding:4px 6px;font-size:13px}
           th:nth-child(3), td:nth-child(3){width:70px}
+        }
+        /* desktop: keep Evento compact, give Canali a fixed readable width */
+        @media (min-width:900px){
+          th:nth-child(1), td:nth-child(1){width:40px}
+          th:nth-child(2), td:nth-child(2){width:52ch; max-width:52ch}
+          th:nth-child(3), td:nth-child(3){width:26ch}
         }
         section.day > h2 { display:none }
       `;
