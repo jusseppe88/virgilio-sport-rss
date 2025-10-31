@@ -1,17 +1,13 @@
 {
-  "Sky Sport Basket": "https://sport.sky.it/",
-  "Sky Sport 1": "https://sport.sky.it/",
-  "Sky Sport Arena": "https://dlhd.dad/embed/stream-462.php",
-  "Sky Sport Calcio": "https://sport.sky.it/",
-  "Sky Sport Tennis": "https://sport.sky.it/",
-  "Sky Sport Max": "https://sport.sky.it/",
-  "DAZN": "https://www.dazn.com/",
-  "Rai Sport": "https://www.rai.it/",
-  "Sportitalia": "https://www.sportitalia.com/",
-  "Amazon Prime": "https://www.primevideo.com/",
-  "Eurosport": "https://www.eurosport.com/",
-  "NOW": "https://www.nowtv.it/",
-  "La7": "https://www.la7.it/",
-  "Nove": "https://nove.tv/"
+  "Sky Sport Basket": "https://dlhd.dad/watch.php?id=875",
+  "Sky Sport 1": "https://dlhd.dad/watch.php?id=461",
+  "Sky Sport Arena": "https://dlhd.dad/watch.php?id=462",
+  "Sky Sport Calcio": "https://dlhd.dad/watch.php?id=870",
+  "Sky Sport Tennis": "https://dlhd.dad/watch.php?id=576",
+  "Sky Sport Max": "https://dlhd.dad/watch.php?id=460",
+  "DAZN": "https://dlhd.dad/watch.php?id=877",
+  "Eurosport": "https://dlhd.dad/watch.php?id=878",
+
 
 }
+
