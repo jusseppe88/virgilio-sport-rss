@@ -6,14 +6,9 @@
   <meta name="color-scheme" content="dark light" />
   <title>Guida TV Sport — Homepage</title>
   <style>
-    /* ==== High-contrast dark page (outside the tables) ==== */
+    /* ==== High-contrast page (outside the Shadow DOM tables) ==== */
     :root{
-      --bg:#0a0a0b;          /* page background */
-      --fg:#ffffff;          /* body text */
-      --muted:#d1d5db;       /* secondary text */
-      --card:#0d1117;        /* containers */
-      --border:#334155;      /* borders */
-      --accent:#60a5fa;      /* links/buttons */
+      --bg:#0a0a0b; --fg:#ffffff; --muted:#d1d5db; --card:#0d1117; --border:#334155; --accent:#60a5fa;
     }
     [data-theme="light"]{
       --bg:#f7f7f8; --fg:#0b0c0f; --muted:#4b5563; --card:#ffffff; --border:#e5e7eb; --accent:#2563eb;
@@ -38,7 +33,7 @@
     .link:hover{text-decoration:underline}
     footer{padding:8px 14px;color:var(--muted);font-size:12px;border-top:1px solid var(--border)}
 
-    /* Host that will contain the Shadow DOM */
+    /* Shadow host that will contain each table */
     .shadow-host{display:block}
     /* Avoid double headings if source has inner <h2> */
     .shadow-host section.day > h2 { display:none }
@@ -69,13 +64,15 @@
   <footer>Consiglio: aggiungi questa pagina ai preferiti o impostala come pagina iniziale.</footer>
 
   <script>
-    const BASE = "./tables.html";
+    const BASE = "./tables.html";  // alongside home.html
     const TZ   = "Europe/Rome";
 
+    // Date helpers
     const fmtYMD = d => new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'}).format(d);
     const parseYMD = s => {const [y,m,d]=s.split('-').map(Number); return new Date(Date.UTC(y,m-1,d));};
     const addDays = (ymd,n)=>{const d=parseYMD(ymd); d.setUTCDate(d.getUTCDate()+n); return fmtYMD(d);};
 
+    // Elements
     const datePick=document.getElementById('datePick');
     const prevBtn=document.getElementById('prevBtn');
     const nextBtn=document.getElementById('nextBtn');
@@ -94,16 +91,29 @@
       const t=themeToggle.checked?'light':'dark';
       document.documentElement.setAttribute('data-theme',t);
       localStorage.setItem('sportsHomeTheme',t);
+      syncShadowThemes(); // keep tables in sync with page theme
     });
 
+    // Keep a list of shadow hosts to live-update theme
+    const shadowHosts = new Set();
+
+    // Fetch tables.html as text (cache-busted)
     async function fetchTables(){
       const res = await fetch(`${BASE}?v=${Date.now()}`, {mode:'cors', credentials:'omit', cache:'no-store'});
       if(!res.ok) throw new Error('Fetch failed '+res.status);
       return await res.text();
     }
 
-    function pickDay(dom, ymd){ return dom.querySelector(`section.day#${CSS.escape(ymd)}`) || null; }
-    function labelIT(ymd){ return new Date(ymd).toLocaleDateString('it-IT',{weekday:'long',year:'numeric',month:'long',day:'numeric'}); }
+    // Pick a <section class="day" id="YYYY-MM-DD"> from fetched DOM
+    function pickDay(dom, ymd){
+      return dom.querySelector(`section.day#${CSS.escape(ymd)}`) || null;
+    }
+
+    function labelIT(ymd){
+      return new Date(ymd).toLocaleDateString('it-IT',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+    }
+
+    // Sanitize a cloned section: remove inline styles, <style>, and <link> tags
     function sanitizeSection(sec){
       const clean = sec.cloneNode(true);
       clean.querySelectorAll('style,link').forEach(n => n.remove());
@@ -111,36 +121,75 @@
       return clean;
     }
 
+    // Combine Sport + Competizione + Evento into one HTML block like the source:
+    // "<strong>Sport</strong>, Competizione:<br> Evento"
+    function buildEventoHTML(sportText, compText, eventoHTML){
+      const s = (sportText||'').trim();
+      const c = (compText||'').trim();
+
+      const wrap = document.createElement('div');
+      const strong = document.createElement('strong');
+      strong.textContent = s;
+      wrap.appendChild(strong);
+
+      const after = document.createTextNode(c ? `, ${c}:` : ':');
+      wrap.appendChild(after);
+
+      wrap.appendChild(document.createElement('br'));
+
+      const evento = document.createElement('span');
+      // eventoHTML may contain links or entities; keep it as HTML
+      evento.innerHTML = eventoHTML || '';
+      wrap.appendChild(evento);
+
+      return wrap.innerHTML;
+    }
+
+    // Render a sanitized section inside a Shadow DOM with theme-aware CSS and a scrollable frame
     function renderIntoShadow(container, sectionEl){
+      // Host mirrors page theme
       const host = document.createElement('div');
       host.className = 'shadow-host';
+      host.setAttribute('data-theme', document.documentElement.getAttribute('data-theme')||'dark');
+      content.appendChild(host);
+      shadowHosts.add(host);
+
+      // Place host inside the "day" box
       container.appendChild(host);
+
       const root = host.attachShadow({mode:'open'});
 
+      // Theme variables inside the shadow (light/dark variants)
       const style = document.createElement('style');
       style.textContent = `
-        :host{display:block}
+        :host{
+          --bg:#0d1117; --text:#f9fafb; --thead-bg:#0b1220; --thead-fg:#e5e7eb; --border:#334155; --link:#60a5fa;
+          display:block;
+        }
+        :host([data-theme="light"]){
+          --bg:#ffffff; --text:#0b0c0f; --thead-bg:#f3f4f6; --thead-fg:#0b0c0f; --border:#d1d5db; --link:#2563eb;
+        }
         .frame{
-          border:1px solid #334155;
+          border:1px solid var(--border);
           border-radius:12px;
-          background:#0d1117;
+          background:var(--bg);
           overflow:auto;
           -webkit-overflow-scrolling: touch;
         }
-        .inner{min-width:720px; padding:0}
+        .inner{min-width:680px; padding:0}
         table{border-collapse:collapse;width:100%;table-layout:fixed}
-        /* 👇 column width tuning */
-        th:nth-child(1), td:nth-child(1){width:40px;white-space:nowrap;text-align:center}
-        th:nth-child(2), td:nth-child(2){width:80px;word-break:break-word}
-        th:nth-child(3), td:nth-child(3){width:25%}
-        th:nth-child(4), td:nth-child(4){width:40%}
-        th:nth-child(5), td:nth-child(5){width:20%}
-        /* 👆 end tuning */
-        th,td{border:1px solid #334155;padding:10px 12px;vertical-align:top}
-        thead th{background:#0b1220;color:#e5e7eb;text-align:left;position:sticky;top:0}
-        td, th{color:#f9fafb}
-        a{color:#60a5fa;text-decoration:none}
+        /* column widths for 3-column layout: Ora | Evento | Canali */
+        th:nth-child(1), td:nth-child(1){width:60px;white-space:nowrap;text-align:center}
+        th:nth-child(2), td:nth-child(2){width:auto}
+        th:nth-child(3), td:nth-child(3){width:28ch;word-break:break-word}
+        @media (max-width: 480px){
+          th:nth-child(3), td:nth-child(3){width:20ch}
+        }
+        th,td{border:1px solid var(--border);padding:10px 12px;vertical-align:top;color:var(--text)}
+        thead th{background:var(--thead-bg);color:var(--thead-fg);text-align:left;position:sticky;top:0}
+        a{color:var(--link);text-decoration:none}
         a:hover{text-decoration:underline}
+        /* Hide inner h2 from mirrored section */
         section.day > h2 { display:none }
       `;
       root.appendChild(style);
@@ -152,17 +201,55 @@
       frame.appendChild(inner);
       root.appendChild(frame);
 
+      // Clean copy & transform table from 5 cols -> 3 cols (Ora | Evento | Canali)
       const clean = sanitizeSection(sectionEl);
+      const table = clean.querySelector('table');
+
+      if (table) {
+        // header
+        const trHead = table.querySelector('thead tr');
+        if (trHead) {
+          trHead.innerHTML = '<th>Ora</th><th>Evento</th><th>Canali</th>';
+        }
+
+        // rows
+        table.querySelectorAll('tbody tr').forEach(tr=>{
+          const tds = Array.from(tr.children);
+          const ora      = tds[0]?.innerHTML || '';              // keep any existing HTML (e.g., spans)
+          const sportTxt = tds[1]?.textContent || '';
+          const compTxt  = tds[2]?.textContent || '';
+          const eventoH  = tds[3]?.innerHTML || '';              // may include entities
+          const canaliH  = tds[4]?.innerHTML || '';              // contains <a> we want to preserve
+
+          const eventoHTML = buildEventoHTML(sportTxt, compTxt, eventoH);
+
+          const ntr = document.createElement('tr');
+          const td1 = document.createElement('td'); td1.innerHTML = ora;
+          const td2 = document.createElement('td'); td2.innerHTML = eventoHTML;
+          const td3 = document.createElement('td'); td3.innerHTML = canaliH;
+
+          ntr.append(td1, td2, td3);
+          tr.replaceWith(ntr);
+        });
+      }
+
       inner.appendChild(clean);
+    }
+
+    function syncShadowThemes(){
+      const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+      shadowHosts.forEach(h => h.setAttribute('data-theme', theme));
     }
 
     async function render(ymd, alsoTomorrow){
       content.innerHTML = '<div class="note">Caricamento…</div>';
+      shadowHosts.clear();
+
       try{
         const html = await fetchTables();
         const dom = new DOMParser().parseFromString(html, 'text/html');
-        const frag = document.createDocumentFragment();
 
+        const frag = document.createDocumentFragment();
         const addBox = (dstr) => {
           const sec = pickDay(dom, dstr);
           const box = document.createElement('div'); box.className='day';
@@ -177,6 +264,7 @@
         if(alsoTomorrow) addBox(addDays(ymd,1));
 
         content.innerHTML=''; content.appendChild(frag);
+        syncShadowThemes(); // ensure shadows match current theme
       }catch(err){
         content.innerHTML = `<div class="day"><div class="note">Errore: ${String(err)}</div><div class="note">Apri: <a class="link" href="${BASE}" target="_blank" rel="noopener">${BASE}</a></div></div>`;
       }
@@ -189,10 +277,12 @@
       localStorage.setItem('sportsHomeDate', ymd);
     }
 
+    // init
     const todayYMD = fmtYMD(new Date());
     const savedDate = localStorage.getItem('sportsHomeDate');
     setDate(savedDate || todayYMD);
 
+    // Controls
     prevBtn.addEventListener('click',()=> setDate(addDays(datePick.value,-1)));
     nextBtn.addEventListener('click',()=> setDate(addDays(datePick.value,1)));
     todayBtn.addEventListener('click',()=> setDate(fmtYMD(new Date())));
