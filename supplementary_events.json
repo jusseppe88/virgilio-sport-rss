@@ -601,7 +601,7 @@
     "sport": "Tennis",
     "competition": "WTA 250 Hong Kong",
     "title": "Finale",
-    "channels": "Sky Sport Tennis , Sky Sport 1",
+    "channels": "Sky Sport Tennis, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -623,7 +623,7 @@
     "sport": "Basket",
     "competition": "Serie A",
     "title": "Trieste-Roma Basketball",
-    "channels": "Sky Sport Basket , Sky Sport 1",
+    "channels": "Sky Sport Basket, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -821,7 +821,7 @@
     "sport": "Calcio",
     "competition": "Serie A",
     "title": "Inter-Como",
-    "channels": "Sky , Dazn , Sky Sport Calcio",
+    "channels": "Sky, Dazn, Sky Sport Calcio",
     "sources": [
       "Virgilio"
     ],
@@ -942,7 +942,7 @@
     "sport": "Basket",
     "competition": "Serie A",
     "title": "Virtus Bologna-Verona",
-    "channels": "Sky Sport Basket , Sky Sport 1",
+    "channels": "Sky Sport Basket, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -1019,7 +1019,7 @@
     "sport": "Tennis",
     "competition": "WTA Finals Indian Wells 2026",
     "title": "Singles R.R. P2",
-    "channels": "Sky Sport 1 , Sky Sport Tennis",
+    "channels": "Sky Sport 1, Sky Sport Tennis",
     "sources": [
       "Virgilio"
     ],
@@ -1096,7 +1096,7 @@
     "sport": "Tennis",
     "competition": "ATP 250 Stoccolma",
     "title": "2a giornata Sessione Serale",
-    "channels": "Sky Sport 1 , Sky Sport Max",
+    "channels": "Sky Sport 1, Sky Sport Max",
     "sources": [
       "Virgilio"
     ],
@@ -1349,7 +1349,7 @@
     "sport": "Tennis",
     "competition": "WTA Finals Indian Wells 2026",
     "title": "Singles R.R. P2",
-    "channels": "Sky Sport Tennis , Sky Sport 1",
+    "channels": "Sky Sport Tennis, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -1393,7 +1393,7 @@
     "sport": "Tennis",
     "competition": "ATP 250 Stoccolma",
     "title": "1^ Quarto di Finale",
-    "channels": "Sky Sport Tennis , Sky Sport 1",
+    "channels": "Sky Sport Tennis, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -1404,7 +1404,7 @@
     "sport": "Tennis",
     "competition": "ATP 250 Stoccolma",
     "title": "2^ Quarto di Finale",
-    "channels": "Sky Sport Tennis , Sky Sport 1",
+    "channels": "Sky Sport Tennis, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -1426,7 +1426,7 @@
     "sport": "Calcio",
     "competition": "UEFA Nations League",
     "title": "Turchia-Belgio",
-    "channels": "Sky Sport 1 , Sky Sport Calcio",
+    "channels": "Sky Sport 1, Sky Sport Calcio",
     "sources": [
       "Virgilio"
     ],
@@ -1547,7 +1547,7 @@
     "sport": "Tennis",
     "competition": "WTA Finals Indian Wells 2026",
     "title": "Singles R.R. P2",
-    "channels": "Sky Sport Tennis , Sky Sport 1",
+    "channels": "Sky Sport Tennis, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -1591,7 +1591,7 @@
     "sport": "Tennis",
     "competition": "ATP 250 Stoccolma",
     "title": "1a Semifinale",
-    "channels": "Sky Sport Tennis , Sky Sport 1",
+    "channels": "Sky Sport Tennis, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -1613,7 +1613,7 @@
     "sport": "Tennis",
     "competition": "ATP 250 Stoccolma",
     "title": "2a Semifinale",
-    "channels": "Sky Sport Tennis , Sky Sport 1",
+    "channels": "Sky Sport Tennis, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -1646,7 +1646,7 @@
     "sport": "Basket",
     "competition": "Eurolega",
     "title": "Anadolu Efes-Virtus Bologna",
-    "channels": "Sky Sport Basket , Sky Sport 1",
+    "channels": "Sky Sport Basket, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -1745,7 +1745,7 @@
     "sport": "Tennis",
     "competition": "WTA Finals Indian Wells 2026",
     "title": "Singles R.R. P2",
-    "channels": "Sky Sport Tennis , Sky Sport 1",
+    "channels": "Sky Sport Tennis, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
