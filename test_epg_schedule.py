@@ -60,6 +60,27 @@ class EPGScheduleTests(unittest.TestCase):
         self.assertEqual(len(rows),2)
         self.assertEqual(sorted(len(r['channels']) for r in rows),[1,2])
 
+    def test_short_torino_slot_merges_with_full_match_and_keeps_competition(self):
+        channels=[channel('МАТЧ! Футбол 1 (RU)',1205,[programme(
+            '⋗ Италия. Торино – Лечче',start='2026-11-07T13:55:00+00:00',
+            stop='2026-11-07T15:55:00+00:00',categories=[])]),
+            channel('DAZN 1',214,[programme('Torino - Lecce',
+                start='2026-11-07T14:00:00+00:00',stop='2026-11-07T14:10:00+00:00')])]
+        extra=[{'date':'2026-11-07','time':'15:00','title':'Torino-Lecce','sport':'Calcio',
+                'competition':'Serie A','channels':'DAZN','sources':['Virgilio']}]
+        rows,_=build_rows(snapshot(channels),extra,NOW)
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]['time'],'14:55')
+        self.assertEqual(rows[0]['competition'],'Serie A')
+        self.assertEqual(set(rows[0]['channels']),{c['name'] for c in channels})
+
+    def test_short_fixture_slots_without_overlap_stay_separate(self):
+        channels=[channel(programmes=[programme(stop='2026-11-07T19:50:00+00:00')]),
+            channel('DAZN 1',214,[programme(start='2026-11-07T19:55:00+00:00',
+                stop='2026-11-07T20:05:00+00:00')])]
+        rows,_=build_rows(snapshot(channels),[],NOW)
+        self.assertEqual(len(rows),2)
+
     def test_women_youth_other_sports_and_later_replays_stay_separate(self):
         programmes=[programme(),programme('Roma Women-Sassuolo Women'),
                     programme('Roma U19-Sassuolo U19'),programme(categories=['Rugby']),

@@ -162,7 +162,11 @@ def unify_rows(rows):
             # later replay, doubleheader or a chain of adjacent sessions.
             delta = abs((parse_time(row['start']) - parse_time(candidate['start'])).total_seconds())
             overlap = min(parse_time(row['stop']), parse_time(candidate['stop'])) - max(parse_time(row['start']), parse_time(candidate['start']))
-            if delta <= 900 and overlap >= dt.timedelta(minutes=15):
+            # Some providers split a match into short EPG slots (DAZN's
+            # Torino–Lecce entry is ten minutes). Identified opponents plus
+            # overlapping coverage suffice; duration must not split simulcasts.
+            enough_overlap = overlap > dt.timedelta(0) if fixture else overlap >= dt.timedelta(minutes=15)
+            if delta <= 900 and enough_overlap:
                 target = candidate
                 break
         if target is None:
