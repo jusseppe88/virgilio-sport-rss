@@ -54,6 +54,7 @@
   <main>
     <div class="note">Mirror: <a id="mirrorLink" class="link" href="./tables.html" target="_blank" rel="noopener">tables.html</a></div>
     <div id="content"></div>
+    <div id="guide-status" class="note"></div>
   </main>
 
   <footer>Consiglio: aggiungi questa pagina ai preferiti o impostala come pagina iniziale.</footer>
@@ -207,6 +208,7 @@
       try{
         const html=await fetchTables();
         const dom=new DOMParser().parseFromString(html,'text/html');
+        document.getElementById('guide-status').textContent=dom.getElementById('guide-status')?.textContent||'';
         const frag=document.createDocumentFragment();
         const addBox=dstr=>{
           const sec=pickDay(dom,dstr);
@@ -226,12 +228,13 @@
     function setDate(ymd){
       datePick.value=ymd; mirrorLink.href=`${BASE}#${ymd}`;
       render(ymd,tomorrowToggle.checked);
-      localStorage.setItem('sportsHomeDate',ymd);
     }
 
     const todayYMD=fmtYMD(new Date());
-    const savedDate=localStorage.getItem('sportsHomeDate');
-    setDate(savedDate||todayYMD);
+    setDate(todayYMD);
+    window.addEventListener('pageshow', event=>{
+      if(event.persisted)setDate(fmtYMD(new Date()));
+    });
 
     prevBtn.addEventListener('click',()=>setDate(addDays(datePick.value,-1)));
     nextBtn.addEventListener('click',()=>setDate(addDays(datePick.value,1)));

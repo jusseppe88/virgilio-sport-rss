@@ -5,6 +5,8 @@ import os, re, sys, json, csv, hashlib, datetime, time
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
+from dispatcharr_match import ChannelResolver
+from sportsdb import load_events, merge_events
 
 URL = "https://sport.virgilio.it/guida-tv/"
 
@@ -411,58 +413,6 @@ def iter_rows_grouped_fallback_fullpage(html: str):
     uniq.sort(key=lambda r: r["time"])
     yield today, uniq
 
-# ----- channels mapping & linkify -----
-def load_channel_map():
-    m = {}
-    if os.path.exists("channels.csv"):
-        try:
-            with open("channels.csv", newline="", encoding="utf-8") as f:
-                rdr = csv.DictReader(f)
-                for row in rdr:
-                    name = (row.get("name") or "").strip()
-                    url = (row.get("url") or "").strip()
-                    if name and url:
-                        m[name.lower()] = url
-        except Exception:
-            pass
-    if os.path.exists("channels.json"):
-        try:
-            with open("channels.json", encoding="utf-8") as f:
-                data = json.load(f)
-            if isinstance(data, dict):
-                for k, v in data.items():
-                    name = (k or "").strip()
-                    url = (v or "").strip()
-                    if name and url:
-                        m[name.lower()] = url
-        except Exception:
-            pass
-    return m
-
-def _lookup_channel_url(display_name: str, cmap: dict) -> str | None:
-    key = (display_name or "").strip().lower()
-    if not key:
-        return None
-    if key in cmap:
-        return cmap[key]
-    for k, url in cmap.items():
-        if key in k or k in key:
-            return url
-    return None
-
-def linkify_channels(ch_str: str, cmap: dict) -> str:
-    if not ch_str:
-        return ""
-    parts = [p.strip() for p in ch_str.split(",") if p.strip()]
-    out = []
-    for p in parts:
-        url = _lookup_channel_url(p, cmap)
-        if url:
-            out.append(f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer">{esc(p)}</a>')
-        else:
-            out.append(esc(p))
-    return ", ".join(out)
-
 # ----- renderers (page & RSS) -----
 def render_table_html_for_rss(date_obj: datetime.date, rows, channel_map=None, inline_styles=True):
     """
@@ -499,16 +449,17 @@ def render_table_html_for_rss(date_obj: datetime.date, rows, channel_map=None, i
             f"<th style=\"{th}\">Canali</th>"
             "</tr></thead><tbody>"]
 
-    cmap = channel_map or {}
     for r in rows:
         if not TIME_RE.fullmatch((r.get('time') or '').strip()):
             continue
-        channels_html = linkify_channels(r.get('channels') or '', cmap)
+        channels_html = r.get('dispatcharr_html')
+        if channels_html is None:
+            channels_html = esc(r.get('channels') or '')
         body.append("<tr>"
                     f"<td style=\"{td_time}\">{esc(r.get('time') or '')}</td>"
                     f"<td style=\"{th_td}\">{esc(r.get('sport') or '')}</td>"
                     f"<td style=\"{th_td}\">{esc(r.get('competition') or '')}</td>"
-                    f"<td style=\"{th_td}\">{esc(r.get('title') or '')}</td>"
+                    f"<td style=\"{th_td}\">{esc(r.get('title') or '')}<br><small>{esc(' + '.join(r.get('sources', ['Virgilio'])))}</small></td>"
                     f"<td style=\"{th_td}\">{channels_html}</td>"
                     "</tr>")
     body.append("</tbody></table>")
@@ -536,6 +487,7 @@ def build_tables_html_from_grouped(style_hrefs, grouped, channel_map) -> str:
             f"</section>"
         )
     fragment_html = "\n".join(sections)
+    status = grouped_status()
 
     return f"""<!doctype html>
 <html lang="it">
@@ -546,6 +498,7 @@ def build_tables_html_from_grouped(style_hrefs, grouped, channel_map) -> str:
 <style>{base_css}</style>
 <body>
   <div class="wrap">
+    {status}
     {fragment_html}
   </div>
 </body>
@@ -555,7 +508,6 @@ def build_rss_tables(grouped, site_base: str, now_utc: datetime.datetime | None 
     if now_utc is None:
         now_utc = datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc)
     now_rfc822 = now_utc.strftime("%a, %d %b %Y %H:%M:%S %z")
-    channel_map = load_channel_map()
 
     out = []
     out.append('<?xml version="1.0" encoding="UTF-8"?>')
@@ -568,7 +520,7 @@ def build_rss_tables(grouped, site_base: str, now_utc: datetime.datetime | None 
         title = d.strftime("Guida TV – %A %d %B %Y").title()
         anchor = d.isoformat()
         link = f"{site_base}/tables.html#{anchor}"
-        table_html = render_table_html_for_rss(d, rows, channel_map=channel_map, inline_styles=True)
+        table_html = grouped_status() + render_table_html_for_rss(d, rows, inline_styles=True)
         guid = make_guid(f"{d.isoformat()}|{len(rows)}")
         pub = to_rfc822_europe_rome(d)
         out.append("<item>")
@@ -580,6 +532,28 @@ def build_rss_tables(grouped, site_base: str, now_utc: datetime.datetime | None 
     return "\n".join(out)
 
 # ----- main -----
+def grouped_status():
+    config = json.loads(open('dispatcharr_channels.json', encoding='utf-8').read())
+    status = json.loads(open('epg_status.json', encoding='utf-8').read())
+    failed = len(status['failed_sources'])
+    note = (f'Canali e numeri Dispatcharr: elenco verificato {config["lineup_checked"]}. '
+            f'Guide controllate: {status["checked_at"]}. '
+            'Fonti eventi: Virgilio + TheSportsDB Italia. Orari Europe/Rome. '
+            'Guida = emittente specifica indicata dalle fonti; EPG = evento corrispondente nel palinsesto. '
+            'La presenza in guida non verifica la riproduzione. '
+            'Le guide incomplete o nomi non riconosciuti possono omettere altri canali.')
+    if failed:
+        note += f' Ricerca parziale: {failed} fonti EPG non disponibili.'
+    return f'<p id="guide-status">{esc(note)}</p>'
+
+
+def resolve_channels(grouped):
+    resolver = ChannelResolver.load(grouped)
+    for date, rows in grouped:
+        for row in rows:
+            row['dispatcharr_html'] = resolver.render(row, date)
+
+
 def main():
     try:
         html = fetch_html()
@@ -598,10 +572,9 @@ def main():
         grouped = list(iter_rows_grouped_fallback_fullpage(html))
         _write_file("debug_stage.txt", f"fallback groups: {len(grouped)}\n", mode="a")
 
-    channel_map = load_channel_map()
-    _write_file("debug_stage.txt", f"channel_map size: {len(channel_map)}\n", mode="a")
-
-    tables_html = build_tables_html_from_grouped(style_hrefs, grouped, channel_map)
+    grouped = merge_events(grouped, load_events())
+    resolve_channels(grouped)
+    tables_html = build_tables_html_from_grouped(style_hrefs, grouped, {})
     _write_file("tables.html", tables_html)
     _write_file("index.html", tables_html)
 

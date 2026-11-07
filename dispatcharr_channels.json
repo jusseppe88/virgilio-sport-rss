@@ -1,0 +1,443 @@
+{
+  "lineup_checked": "2026-11-07",
+  "channels": [
+    {
+      "name": "Rai 1 HD",
+      "number": 1,
+      "epg_id": "Rai.1.HD..101.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Rai 2 HD",
+      "number": 2,
+      "epg_id": "Rai.2.HD..102.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Rai 3 HD",
+      "number": 3,
+      "epg_id": "Rai.3.HD..103.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Rete 4 HD",
+      "number": 4,
+      "epg_id": "Rete.4.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Canale 5 HD",
+      "number": 5,
+      "epg_id": "Canale.5.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Italia 1 HD",
+      "number": 6,
+      "epg_id": "Italia.1.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "La 7 HD",
+      "number": 7,
+      "epg_id": "LA7.HD.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "TV8 HD",
+      "number": 8,
+      "epg_id": "TV8.HD.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Nove",
+      "number": 9,
+      "epg_id": "Nove.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "20 HD",
+      "number": 20,
+      "epg_id": "20.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sky Sport24 (IT)",
+      "number": 200,
+      "epg_id": "Sky.Sport.24.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sky Sport 1 HD",
+      "number": 201,
+      "epg_id": "Sky.Sport.Uno.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sky Sport Calcio",
+      "number": 202,
+      "epg_id": "Sky.Sport.Calcio.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sky Sport Tennis",
+      "number": 203,
+      "epg_id": "Sky.Sport.Tennis.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sky Sport Arena",
+      "number": 204,
+      "epg_id": "Sky.Sport.Arena.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sky Sport Basket",
+      "number": 205,
+      "epg_id": "Sky.Sport.NBA.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sky Sport Max",
+      "number": 206,
+      "epg_id": "Sky.Sport.Max.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sky Sport F1 (IT)",
+      "number": 207,
+      "epg_id": "Sky.Sport.F1.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sky Sport MotoGP (IT)",
+      "number": 208,
+      "epg_id": "Sky.Sport.MotoGP.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sky Sport Mix",
+      "number": 211,
+      "epg_id": "Sky.Sport.Mix.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "SuperTennis (IT)",
+      "number": 212,
+      "epg_id": "SuperTennis.HD.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "DAZN 1",
+      "number": 214,
+      "epg_id": "DAZN.1.it.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "DAZN 2",
+      "number": 215,
+      "epg_id": "DAZN.2.it.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Eurosport 1",
+      "number": 216,
+      "epg_id": "Eurosport.Italia.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Eurosport 2",
+      "number": 217,
+      "epg_id": "Eurosport.2.Italia.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sportitalia HD",
+      "number": 225,
+      "epg_id": "Sportitalia.HD.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Rai Sport HD",
+      "number": 227,
+      "epg_id": "RaiSport.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "ACI Sport TV (IT)",
+      "number": 228,
+      "epg_id": "ACI.Sport.Tv.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sky Sport 251",
+      "number": 251,
+      "epg_id": "Sky.Sport..251.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sky Sport 252",
+      "number": 252,
+      "epg_id": "Sky.Sport..252.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sky Sport 253",
+      "number": 253,
+      "epg_id": "Sky.Sport..253.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sky Sport 254",
+      "number": 254,
+      "epg_id": "Sky.Sport..254.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sky Sport 255",
+      "number": 255,
+      "epg_id": "Sky.Sport..255.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sky Sport 256",
+      "number": 256,
+      "epg_id": "Sky.Sport..256.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sky Sport 257",
+      "number": 257,
+      "epg_id": "Sky.Sport..257.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sky Sport 258",
+      "number": 258,
+      "epg_id": "Sky.Sport..258.it",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
+    },
+    {
+      "name": "Sky Sport 259",
+      "number": 259,
+      "epg_id": "86044",
+      "epg_url": "https://cdn.epg.guru/7daygracenote/Italy.xml"
+    },
+    {
+      "name": "ESPN 2 (ARG)",
+      "number": 300,
+      "epg_id": "88735",
+      "epg_url": "https://cdn.epg.guru/7daygracenote/Argentina.xml"
+    },
+    {
+      "name": "Blue Sport (CH)",
+      "number": 400,
+      "epg_id": "89170",
+      "epg_url": "https://cdn.epg.guru/7daygracenote/Switzerland.xml"
+    },
+    {
+      "name": "DAZN 1 (DE)",
+      "number": 500,
+      "epg_id": "daznbar1",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "DAZN 2 (DE)",
+      "number": 501,
+      "epg_id": "daznbar2",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "DAZN 1 (ES)",
+      "number": 600,
+      "epg_id": "dazn1-es",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "DAZN LaLiga (ES)",
+      "number": 601,
+      "epg_id": "dazn-laliga-es",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "beIN SPORTS 1 (FR)",
+      "number": 700,
+      "epg_id": "bein-sport-1-fr",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "beIN SPORTS 2 (FR)",
+      "number": 701,
+      "epg_id": "bein-sport-2-fr",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "Ziggo Sport 1 (NL)",
+      "number": 800,
+      "epg_id": "ziggo-sport1-nl",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "Ziggo Sport 2 (NL)",
+      "number": 801,
+      "epg_id": "ziggo-sport2-nl",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "Ziggo Sport 3 (NL)",
+      "number": 802,
+      "epg_id": "ziggo-sport3-nl",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "Eleven Sports 1 (PL)",
+      "number": 900,
+      "epg_id": "eleven-sports-1",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "Eleven Sports 2 (PL)",
+      "number": 901,
+      "epg_id": "eleven-sports-2",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "Sport TV 1 (PT)",
+      "number": 1000,
+      "epg_id": "SPORT.TV1.HD.pt",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_PT1.xml.gz"
+    },
+    {
+      "name": "Sport TV 2 (PT)",
+      "number": 1001,
+      "epg_id": "SPORT.TV2.HD.pt",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_PT1.xml.gz"
+    },
+    {
+      "name": "Digi Sport 1 (RO)",
+      "number": 1100,
+      "epg_id": "digisport1",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "Match Premier (RU)",
+      "number": 1200,
+      "epg_id": "match-premier",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "Okko Спорт (RU)",
+      "number": 1201,
+      "epg_id": "OkkoFootball.ru",
+      "epg_url": "https://www.open-epg.com/files/russia.xml.gz"
+    },
+    {
+      "name": "Setanta Sports 1 (RU)",
+      "number": 1202,
+      "epg_id": "setanta-sports",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "Setanta Sports 2 (Baltic, RU audio)",
+      "number": 1203,
+      "epg_id": "SetantaSports2.lt",
+      "epg_url": "https://www.open-epg.com/files/lithuania.xml.gz"
+    },
+    {
+      "name": "Setanta Sports 2 (Eurasia, RU audio)",
+      "number": 1204,
+      "epg_id": "setanta-sports-plus",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "МАТЧ! Футбол 1 (RU)",
+      "number": 1205,
+      "epg_id": "match-football1",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "МАТЧ! Футбол 2 (RU)",
+      "number": 1206,
+      "epg_id": "match-football2",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "МАТЧ! Футбол 3 (RU)",
+      "number": 1207,
+      "epg_id": "match-football3",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "Старт (RU)",
+      "number": 1208,
+      "epg_id": "start",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "Premier Sports 1 (UK)",
+      "number": 1300,
+      "epg_id": "premier-sports-1-uk",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "Premier Sports 2 (UK)",
+      "number": 1301,
+      "epg_id": "premier-sports-2-uk",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "Sky Sports Football (UK)",
+      "number": 1302,
+      "epg_id": "sky-sports-football",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "Sky Sports Main Event (UK)",
+      "number": 1303,
+      "epg_id": "sky-sports-maine",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "TNT Sports 1 (UK)",
+      "number": 1304,
+      "epg_id": "TNT.Sports.1.HD.uk",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz"
+    },
+    {
+      "name": "TNT Sports 2 (UK)",
+      "number": 1305,
+      "epg_id": "TNT.Sports.2.HD.uk",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz"
+    },
+    {
+      "name": "TNT Sports 3 (UK)",
+      "number": 1306,
+      "epg_id": "TNT.Sports.3.HD.uk",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz"
+    },
+    {
+      "name": "TNT Sports 4 (UK)",
+      "number": 1307,
+      "epg_id": "TNT.Sports.4.HD.uk",
+      "epg_url": "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz"
+    },
+    {
+      "name": "CBS Sports Golazo (US)",
+      "number": 1400,
+      "epg_id": "133691",
+      "epg_url": "https://cdn.epg.guru/7daygracenote/USFast.xml"
+    },
+    {
+      "name": "NBA TV (US)",
+      "number": 1401,
+      "epg_id": "nba-tv-us",
+      "epg_url": "https://iptvx.one/EPG"
+    },
+    {
+      "name": "NFL Network (US)",
+      "number": 1402,
+      "epg_id": "nfl-network-us",
+      "epg_url": "https://iptvx.one/EPG"
+    }
+  ]
+}
