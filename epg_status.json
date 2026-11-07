@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T20:42:23.552600+00:00",
+  "generated_at": "2026-11-07T21:27:33.373554+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -116,16 +116,6 @@
       "title": "Juve Stabia-Arezzo",
       "broadcasters": [
         "Dazn"
-      ]
-    },
-    {
-      "date": "2026-11-07",
-      "time": "15:00",
-      "title": "Milan-Inter",
-      "broadcasters": [
-        "Rai Sport",
-        "Rai Sport 1",
-        "DAZN Italy"
       ]
     },
     {
@@ -389,43 +379,10 @@
     },
     {
       "date": "2026-11-09",
-      "time": "20:00",
-      "title": "Virtus Bologna-Verona",
-      "broadcasters": [
-        "Sky Sport Basket",
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-09",
-      "time": "20:30",
-      "title": "Foggia-Barletta",
-      "broadcasters": [
-        "Sky Sport Arena"
-      ]
-    },
-    {
-      "date": "2026-11-09",
-      "time": "20:30",
-      "title": "Pineto-Vis Pesaro",
-      "broadcasters": [
-        "Sky Sport Mix"
-      ]
-    },
-    {
-      "date": "2026-11-09",
       "time": "20:45",
       "title": "AZ Picerno-Bari",
       "broadcasters": [
         "Rai Sport"
-      ]
-    },
-    {
-      "date": "2026-11-09",
-      "time": "20:45",
-      "title": "Picerno-Bari",
-      "broadcasters": [
-        "Sky Sport Calcio"
       ]
     },
     {
@@ -451,14 +408,6 @@
       "broadcasters": [
         "Sky Sport 1",
         "Sky Sport Tennis"
-      ]
-    },
-    {
-      "date": "2026-11-10",
-      "time": "01:00",
-      "title": "Detroit Pistons-Washington Wizards",
-      "broadcasters": [
-        "Sky Sport Basket"
       ]
     },
     {
