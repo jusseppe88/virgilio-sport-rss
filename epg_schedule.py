@@ -1,18 +1,91 @@
 """Build the public guide from imported Dispatcharr programmes (stdlib only)."""
 import datetime as dt
+import functools
 import hashlib
 import html
 import json
 import re
 from pathlib import Path
 from zoneinfo import ZoneInfo
-from dispatcharr_match import canonical, channel_key, CHANNEL_ALIASES, event_matches
+from dispatcharr_match import canonical, normalise, TEAM_ALIASES, channel_key, CHANNEL_ALIASES, event_matches
 
 ROME = ZoneInfo('Europe/Rome')
 SPORT = re.compile(r'\b(sport|sports|calcio|football|soccer|rugby|basket|basketball|tennis|volley|pallavolo|pallamano|handball|motogp|moto2|moto3|formula|f1|hockey|baseball|boxing|boxe|ufc|mma|ciclismo|cycling|футбол|теннис|баскетбол|регби|волейбол)\b', re.I)
 EDITORIAL = re.compile(r'\b(news|notiziario|telegiornale|meteo|highlights|highlights show|magazine|talk show|sport 24|sport24|обзор|новости)\b', re.I)
 REPLAY = re.compile(r'\b(replay|replica|reprise|повтор|differita|classics)\b', re.I)
 PLACEHOLDER = re.compile(r'^(?:sky sport|sky sport \d+|dazn \d*|aci sport tv|no event|nessun evento|programmazione|programmi|off air|to be announced|tba)\W*$', re.I)
+NON_EVENT = re.compile(r'\b(studio|full court|calcio today|sports? non.event|sports? talk|dibattito|rassegna stampa|analysis|analisi|preview|previa|post.match|pre.match|post partita|pre partita|dopo partita|pregame|postgame|documentary|documentario|magazine|talk|highlights|sintesi|resumo|noticias|stirile|compact|champions league today)\b|\bdazn post\b', re.I)
+NON_EVENT = re.compile(NON_EVENT.pattern + r'|\b(hoogtepunten|avant.match|apres.match|travel|тревел|шоу|чеκ.лист|memory|amarcord|show|sekrety|miedzy legenda|między legendą|look back|kick .t met|sailing to the games)\b', re.I)
+SPORT_NAMES = [
+    ('Rugby', r'rugby|регби|six nations|sei nazioni|top 14|nations championship'),
+    ('Basket', r'basket(?:ball)?|basquetebol|baloncesto|koszykowka|баскетбол|nba|wnba|euroleague|eurolega|euroliga'),
+    ('Tennistavolo', r'table tennis|tennistavolo'),
+    ('Tennis', r'tennis|теннис|atp|wta|wimbledon|roland garros'),
+    ('Pallavolo', r'pallavolo|volley(?:ball)?|волейбол'),
+    ('Pallamano', r'pallamano|handball|handbal|andebol|гандбол'),
+    ('Football americano', r'american football|football americano|nfl|ncaa football'),
+    ('Calcio', r'calcio|soccer|football|futebol|futbol|voetbal|pi[łl]ka nozna|футбол|футболу|laliga|la liga|premier league|bundesliga|serie a|serie b|ligue [12]|liga francesa|liga a 2 a|superliga|fa cup|a league|nwsl|champions league|europa league|conference league|eredivisie'),
+    ('Motociclismo', r'motogp|moto[23]|superbike|motociclismo|motorcycling'),
+    ('Automobilismo', r'formula ?[123e]|f1|f2|f3|automobilismo|автоспорт|формула|nascar|indycar|rally|dtm|wec|porsche|supercars'),
+    ('Ciclismo', r'ciclismo|cycling|cyclocross|ciclocross|tour de france|giro d.italia'),
+    ('Hockey', r'hockey|nhl'), ('Baseball', r'baseball|mlb'),
+    ('Golf', r'golf|golfe|pga|dp world tour'), ('Padel', r'padel'),
+    ('Boxe', r'boxe|boxeo|boxing|бокс|bkfc'), ('Arti marziali', r'ufc|mma|oktagon|martial arts|kickboxing'),
+    ('Snooker', r'snooker|billiard|biliardo'), ('Freccette', r'darts|freccette'),
+    ('Sci', r'sci|ski|slalom|biathlon'), ('Nuoto', r'nuoto|swimming'),
+    ('Atletica', r'atletica|athletics|marathon|maratona'),
+    ('Pattinaggio', r'skating|pattinaggio'), ('Cricket', r'cricket'),
+    ('Vela', r'vela|sailing'), ('Surf', r'surf|surfing'),
+    ('Badminton', r'badminton'), ('Pallanuoto', r'pallanuoto|water polo'),
+]
+SESSION = re.compile(r'\b(gp|grand prix|gara|race|rennen|corsa|qualific\w*|practice|prove libere|fp[123]|sprint|final\w*|semifinal\w*|quarti|round|giornata|session\w*|singles|doubles|singolare|doppio|torneo|tournament|championship|campionato|diretta gol|redzone)\b', re.I)
+
+
+def sport_name(c, p):
+    return _sport_name(' '.join(p.get('categories', [])), p['title'] + ' ' + p.get('subtitle', ''), c['name'])
+
+
+@functools.lru_cache(maxsize=16384)
+def _sport_name(categories, title, channel):
+    # Specific imported categories win over a channel's general branding.
+    for text in (categories, title, channel):
+        text = text + ' ' + normalise(text)
+        for name, pattern in SPORT_NAMES:
+            if re.search(r'\b(?:' + pattern + r')\b', text, re.I):
+                return name
+    return 'Altri sport'
+
+
+@functools.lru_cache(maxsize=16384)
+def fixture_identity(title):
+    """Two named opponents, retaining age/gender and session qualifiers."""
+    parts = re.split(r'\s*[–—]\s*|\s*(?:(?<!\d)-|-(?!\d))\s*|\s+(?:vs?\.?|contro|gegen)\s+', title, flags=re.I)
+    if len(parts) < 2:
+        return None
+    # League/season prefixes sometimes use the same dash as the fixture.
+    left, right = parts[-2:]
+    teams = []
+    known = {canonical(group[0]) for group in TEAM_ALIASES}
+    for side in (left, right):
+        side = side.rsplit(':', 1)[-1]
+        side = re.sub(r'^.*?\.\s+(?=[A-ZА-Я])', '', side) if not re.match(r'^\s*St\.', side) else side
+        side = canonical(side)
+        matches = [team for team in known if side == team or side.endswith(' ' + team)]
+        if matches:
+            side = max(matches, key=len)
+        else:
+            side = re.split(r'[:.]\s*', side)[-1]
+            side = re.sub(r'^(?:fc|cf|afc|ac|sc)\s+|\s+(?:fc|cf|afc)$', '', side).strip()
+        # MATCH's short Russian Real label is an exact opponent alias only.
+        if side == 'реал':
+            side = 'real madrid'
+        if len(side) < 3 or not re.search(r'[^\W\d_]', side) or len(side.split()) > 8:
+            return None
+        teams.append(side)
+    if teams[0] == teams[1]:
+        return None
+    qualifiers = tuple(re.findall(r'\bu\s*\d{2}\b|\b(?:women|womens|femminile|feminine|женщины|youth|primavera|reserves|reserve|ii|game \d+|race \d+|gara \d+|singles|doubles)\b', normalise(title)))
+    return tuple(sorted(teams)), tuple(sorted(qualifiers))
 
 
 def parse_time(value):
@@ -52,16 +125,59 @@ def is_sport_channel(c):
 
 def is_event(c, p):
     text = ' '.join([p['title'], p.get('subtitle', '')])
-    if PLACEHOLDER.fullmatch(p['title'].strip()) or EDITORIAL.search(p['title']):
+    categories = ' '.join(p.get('categories', []))
+    if PLACEHOLDER.fullmatch(p['title'].strip()) or EDITORIAL.search(text) or NON_EVENT.search(text + ' ' + categories):
         return False
     if parse_time(p['stop']) - parse_time(p['start']) > dt.timedelta(hours=6):
         return False
-    return is_sport_channel(c) or bool(SPORT.search(' '.join(p.get('categories', [])))) or (p.get('live') is True and bool(SPORT.search(text)))
+    # A channel name alone does not make a programme a sporting event.
+    return sport_name(c, p) != 'Altri sport' and bool(fixture_identity(text)
+        or re.search(r'\bsports event\b', categories, re.I) or SESSION.search(text))
 
 
 def known_broadcaster(name, channels):
     key = CHANNEL_ALIASES.get(channel_key(name), channel_key(name))
     return [c for c in channels if channel_key(c['name']) == key]
+
+
+def programme_key(c, p):
+    return (parse_time(p['start']).astimezone(ROME).isoformat(),
+            canonical(p['title'] + ' ' + p.get('subtitle', '')),
+            bool(p.get('repeat', False) or REPLAY.search(p['title'])), sport_name(c, p))
+
+
+def unify_rows(rows):
+    """Alias source rows to bounded simulcast groups, never chained time windows."""
+    groups = {}
+    for key, row in sorted(rows.items(), key=lambda item: item[1]['start']):
+        fixture = fixture_identity(row['title'])
+        identity = ('fixture', fixture) if fixture else ('title', canonical(row['title']))
+        bucket = groups.setdefault((row['date'], identity, row['repeat']), [])
+        target = None
+        for candidate in bucket:
+            if (row['sport'] != 'Altri sport' and candidate['sport'] != 'Altri sport'
+                    and row['sport'] != candidate['sport']):
+                continue
+            # Fifteen minutes accommodates channel lead-ins without merging a
+            # later replay, doubleheader or a chain of adjacent sessions.
+            delta = abs((parse_time(row['start']) - parse_time(candidate['start'])).total_seconds())
+            overlap = min(parse_time(row['stop']), parse_time(candidate['stop'])) - max(parse_time(row['start']), parse_time(candidate['start']))
+            if delta <= 900 and overlap >= dt.timedelta(minutes=15):
+                target = candidate
+                break
+        if target is None:
+            bucket.append(row)
+            continue
+        target['channels'].update(row['channels'])
+        if target['sport'] == 'Altri sport':
+            target['sport'] = row['sport']
+        if fixture:
+            # Prefer a readable local title over a foreign league prefix.
+            if (not re.search('[а-яА-Я]', row['title']) and
+                    (re.search('[а-яА-Я]', target['title']) or len(row['title']) < len(target['title']))):
+                target['title'] = row['title']
+        rows[key] = target
+    return rows
 
 
 def build_rows(snapshot, supplemental=None, now=None):
@@ -71,6 +187,7 @@ def build_rows(snapshot, supplemental=None, now=None):
     supplemental = supplemental or []
     rows = {}
     coverage = []
+    imported_events = []
     for c in channels:
         future = [p for p in c['programmes'] if parse_time(p['stop']) > now]
         precise = [p for p in future if not PLACEHOLDER.fullmatch(p['title'].strip())
@@ -84,30 +201,32 @@ def build_rows(snapshot, supplemental=None, now=None):
         for p in c['programmes']:
             if not is_event(c, p):
                 continue
+            imported_events.append((c, p, {'start': parse_time(p['start']), 'stop': parse_time(p['stop']),
+                                          'title': p['title'] + ' ' + p.get('subtitle', '')}))
             start = parse_time(p['start']).astimezone(ROME)
             title = p['title']
             subtitle = p.get('subtitle', '')
             repeat = p.get('repeat', False) or bool(REPLAY.search(title))
-            # Exact normalised programme identity groups simulcasts without
-            # joining different sessions or a live broadcast with a replay.
-            key = (start.isoformat(), canonical(title + ' ' + subtitle), bool(repeat))
+            key = programme_key(c, p)
             row = rows.setdefault(key, {'date': start.date().isoformat(), 'time': start.strftime('%H:%M'),
-                'start': p['start'], 'stop': p['stop'], 'sport': 'Sport', 'competition': '',
+                'start': p['start'], 'stop': p['stop'], 'sport': sport_name(c, p), 'competition': '',
                 'title': title + ((' — ' + subtitle) if subtitle else ''), 'repeat': bool(repeat),
                 'channels': {}, 'sources': ['Dispatcharr EPG']})
             row['channels'][c['name']] = c
+    rows = unify_rows(rows)
     missing, unresolved, gaps = {}, set(), []
     # External listings only find gaps and enrich existing imported events;
     # they cannot manufacture a watchable channel or an extra primary row.
     for event in supplemental:
         date = dt.date.fromisoformat(event['date'])
         candidates = []
-        for c in channels:
-            for p in c['programmes']:
-                programme = {'start': parse_time(p['start']), 'stop': parse_time(p['stop']),
-                             'title': p['title'] + ' ' + p.get('subtitle', '')}
-                if not p.get('repeat') and is_event(c, p) and event_matches(event, date, programme):
-                    candidates.append((c, p))
+        expected_sport = sport_name({'name': ''}, {'title': event.get('sport', ''), 'categories': []})
+        for c, p, programme in imported_events:
+            actual_sport = sport_name(c, p)
+            if expected_sport != 'Altri sport' and actual_sport != 'Altri sport' and expected_sport != actual_sport:
+                continue
+            if not p.get('repeat') and event_matches(event, date, programme):
+                candidates.append((c, p))
         broadcasters = [b.strip() for b in event.get('channels', '').split(',') if b.strip()]
         for broadcaster in broadcasters:
             if not known_broadcaster(broadcaster, channels):
@@ -130,24 +249,24 @@ def build_rows(snapshot, supplemental=None, now=None):
         target = None
         keys = []
         for c, p in candidates:
-            start = parse_time(p['start']).astimezone(ROME)
-            key = (start.isoformat(), canonical(p['title'] + ' ' + p.get('subtitle', '')),
-                   bool(p.get('repeat', False) or REPLAY.search(p['title'])))
+            key = programme_key(c, p)
             if key in rows:
                 keys.append(key)
                 if target is None:
                     target = rows[key]
         if target:
             target['title'] = event['title']
-            target['sport'] = event.get('sport', 'Sport')
+            target['sport'] = event.get('sport') or target['sport']
             target['competition'] = event.get('competition', '')
             target['sources'] = ['Dispatcharr EPG'] + event.get('sources', [])
             for key in dict.fromkeys(keys):
                 other = rows[key]
                 target['channels'].update(other['channels'])
                 if other is not target:
-                    del rows[key]
-    result = sorted(rows.values(), key=lambda r: (r['date'], r['time'], r['title']))
+                    for source_key in rows:
+                        if rows[source_key] is other:
+                            rows[source_key] = target
+    result = sorted({id(row): row for row in rows.values()}.values(), key=lambda r: (r['date'], r['time'], r['title']))
     report = {'generated_at': snapshot['generated_at'], 'stale': stale,
               'missing_channels': [{'name': n, 'events': sorted(events)} for n, events in sorted(missing.items())],
               'epg_gaps': coverage, 'unresolved_broadcasters': sorted(unresolved), 'unmatched_events': gaps}
@@ -176,10 +295,10 @@ def render_outputs(snapshot, supplemental=None, now=None):
     for row in rows:
         channels = '<br>'.join(esc(c['name']) + f' · {c["number"]:g}'
                                for c in sorted(row['channels'].values(), key=lambda c: c['number']))
-        label = 'Replica / già trasmesso' if row['repeat'] else 'EPG'
+        label = '<br><small>Replica / già trasmesso</small>' if row['repeat'] else ''
         cells = [row['time'], row['sport'], row['competition'], row['title']]
         tr = '<tr>' + ''.join('<td>' + esc(v) + '</td>' for v in cells[:3])
-        tr += '<td>' + esc(cells[3]) + '<br><small>' + esc(label) + '</small></td><td>' + channels + '</td></tr>'
+        tr += '<td>' + esc(cells[3]) + label + '</td><td>' + channels + '</td></tr>'
         days.setdefault(row['date'], []).append(tr)
     tables = {date: '<h2>' + esc(date) + '</h2><table><thead><tr><th>Ora</th><th>Sport</th><th>Competizione</th><th>Evento</th><th>Canali</th></tr></thead><tbody>' + ''.join(trs) + '</tbody></table>' for date, trs in days.items()}
     sections = ''.join('<section class="day" id="' + date + '">' + table + '</section>' for date, table in tables.items())

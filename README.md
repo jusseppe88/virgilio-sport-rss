@@ -5,10 +5,17 @@
 The main schedule is built from programme records actually imported in Dispatcharr.
 Channels and numbers come from the same live database export. No playback URLs,
 source-feed URLs, credentials or server access are published. The guide does not
-certify stream health. Replays are labelled; news, generic channel placeholders
-and programme windows longer than six hours are excluded from the event list.
+certify stream health. Replays are labelled; news, studio/talk shows, highlights,
+generic channel placeholders and programme windows longer than six hours are
+excluded. A listing needs an identified sport and fixture/session evidence;
+merely appearing on a sports channel is insufficient.
 
-Identical programme titles/start times are grouped with every channel retained.
+Fixture identities normalise known multilingual team aliases, league prefixes
+and club abbreviations. Matching broadcasts within fifteen minutes are grouped
+with every channel retained and the earliest coverage time displayed. The time
+window is anchored rather than chained. Different sports, age/gender qualifiers,
+repeat flags and later broadcasts stay separate. Specific sport names (for
+example Calcio, Basket or Tennis) are shown; the redundant EPG row badge is gone.
 Virgilio and TheSportsDB Italy provide supplementary fixture identities and gap
 checks. A cross-language fixture can combine channels only when matching records
 exist in the imported EPG. An external broadcaster label never supplies a channel

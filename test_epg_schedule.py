@@ -38,6 +38,51 @@ class EPGScheduleTests(unittest.TestCase):
         self.assertEqual(len(rows),1)
         self.assertEqual(len(rows[0]['channels']),2)
 
+    def test_translated_valencia_fixture_unifies_with_all_channels(self):
+        listings = [
+            channel('МАТЧ! Футбол 2 (RU)',1206,[programme('⋗ Испания. Валенсия – Реал', start='2026-11-07T19:50:00+00:00', categories=[])]),
+            channel('DAZN 2 (DE)',501,[programme('LaLiga 26/27 – FC Valencia – Real Madrid', start='2026-11-07T19:55:00+00:00', categories=[])]),
+            channel('Ziggo Sport 1 (NL)',800,[programme('⋗ LaLiga. Valencia CF – Real Madrid', start='2026-11-07T19:55:00+00:00', categories=[])]),
+            channel('DAZN 1',214,[programme('Valencia - Real Madrid', start='2026-11-07T20:00:00+00:00')]),
+        ]
+        rows,_=build_rows(snapshot(listings),[],NOW)
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]['sport'],'Calcio')
+        self.assertEqual(rows[0]['title'],'Valencia - Real Madrid')
+        self.assertEqual(rows[0]['time'],'20:50')
+        self.assertEqual(set(rows[0]['channels']),{c['name'] for c in listings})
+
+    def test_small_start_offsets_do_not_chain_into_later_broadcasts(self):
+        channels=[channel('Sky Sport Calcio',202,[programme()]),
+                  channel('Sky Sport 1',201,[programme(start='2026-11-07T19:55:00+00:00')]),
+                  channel('DAZN 1',214,[programme(start='2026-11-07T20:05:00+00:00')])]
+        rows,_=build_rows(snapshot(channels),[],NOW)
+        self.assertEqual(len(rows),2)
+        self.assertEqual(sorted(len(r['channels']) for r in rows),[1,2])
+
+    def test_women_youth_other_sports_and_later_replays_stay_separate(self):
+        programmes=[programme(),programme('Roma Women-Sassuolo Women'),
+                    programme('Roma U19-Sassuolo U19'),programme(categories=['Rugby']),
+                    programme(start='2026-11-07T22:30:00+00:00',stop='2026-11-08T00:30:00+00:00')]
+        rows,_=build_rows(snapshot([channel(programmes=programmes)]),[],NOW)
+        self.assertEqual(len(rows),5)
+
+    def test_studio_and_generic_sports_programmes_are_not_events(self):
+        programmes=[programme('Calcio today',subtitle='Studio Led'),programme('Full Court'),
+                    programme('DAZN Previa (T26/27): Valencia – Real Madrid',categories=[]),
+                    programme('DAZN Post (T26/27): Valencia – Real Madrid',categories=[]),
+                    programme('Matchday Live',categories=['Sports talk']),
+                    programme('A football programme',categories=['Sports non-event']),
+                    programme('World Of Freesports',categories=['Sport'])]
+        rows,_=build_rows(snapshot([channel(programmes=programmes)]),[],NOW)
+        self.assertFalse(rows)
+
+    def test_named_race_and_tennis_session_survive_without_opponents(self):
+        rows,_=build_rows(snapshot([channel(programmes=[
+            programme('GP Qatar: Gara',categories=['Motociclismo']),
+            programme('ATP Finals: Singles R.R. P1',categories=['Tennis'])])]),[],NOW)
+        self.assertEqual({r['sport'] for r in rows},{'Motociclismo','Tennis'})
+
     def test_external_claim_cannot_add_a_channel_to_event(self):
         extra=[{'date':'2026-11-07','time':'20:45','title':'Roma-Sassuolo','sport':'Calcio',
                 'competition':'Serie A','channels':'Sky Sport 1, Sky Sport 999, DAZN','sources':['Virgilio']}]
@@ -81,6 +126,8 @@ class EPGScheduleTests(unittest.TestCase):
                 page=Path('tables.html').read_text(encoding='utf-8')
                 self.assertIn('&lt;script&gt;',page)
                 self.assertNotIn('<script>',page)
+                self.assertNotIn('<small>EPG</small>',page)
+                self.assertIn('<td>Calcio</td>',page)
                 ET.parse('rss.xml')
                 report=json.loads(Path('epg_status.json').read_text(encoding='utf-8'))
                 self.assertIn('missing_channels',report)

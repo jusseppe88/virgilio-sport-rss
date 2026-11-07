@@ -60,6 +60,8 @@ TEAM_ALIASES = [
     ('francia', 'france', 'frankreich', 'франция'), ('figi', 'fiji', 'fidji', 'фиджи'),
     ('belgio', 'belgium', 'belgique', 'бельгия'),
     ('barcellona', 'barcelona', 'барселона'),
+    ('valencia', 'fc valencia', 'valencia cf', 'валенсия'),
+    ('real madrid', 'реал мадрид'),
 ]
 
 
