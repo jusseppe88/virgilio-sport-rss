@@ -2,11 +2,13 @@
 # -*- coding: utf-8 -*-
 
 import os, re, sys, json, csv, hashlib, datetime, time
+from pathlib import Path
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 from dispatcharr_match import ChannelResolver
 from sportsdb import load_events, merge_events
+from epg_schedule import render_outputs
 
 URL = "https://sport.virgilio.it/guida-tv/"
 
@@ -573,18 +575,10 @@ def main():
         _write_file("debug_stage.txt", f"fallback groups: {len(grouped)}\n", mode="a")
 
     grouped = merge_events(grouped, load_events())
-    resolve_channels(grouped)
-    tables_html = build_tables_html_from_grouped(style_hrefs, grouped, {})
-    _write_file("tables.html", tables_html)
-    _write_file("index.html", tables_html)
-
-    site_base = "https://jusseppe88.github.io/virgilio-sport-rss"
-    rss = build_rss_tables(grouped, site_base=site_base)
-    _write_file("rss_tables.xml", rss)
-    _write_file("rss.xml", rss)
-
-    total_rows = sum(len(rows) for _, rows in grouped)
-    print(f"Wrote tables.html & index.html with {len(grouped)} day sections and {total_rows} rows; also rss_tables.xml")
+    supplementary = [dict(row, date=date.isoformat()) for date, rows in grouped for row in rows]
+    Path('supplementary_events.json').write_text(json.dumps(supplementary, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    snapshot = json.loads(Path('dispatcharr_epg.json').read_text(encoding='utf-8'))
+    print('Rendered imported EPG events:', render_outputs(snapshot, supplementary))
 
 if __name__ == "__main__":
     main()

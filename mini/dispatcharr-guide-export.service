@@ -1,0 +1,14 @@
+[Unit]
+Description=Publish imported Dispatcharr EPG metadata
+After=docker.service network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/srv/docker/dispatcharr/guide-export
+ExecStart=/usr/bin/python3 /srv/docker/dispatcharr/guide-export/publish_epg.py
+TimeoutStartSec=240
+MemoryMax=384M
+Nice=10
+NoNewPrivileges=true
+UMask=0077
+

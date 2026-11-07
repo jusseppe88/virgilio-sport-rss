@@ -55,6 +55,7 @@
     <div class="note">Mirror: <a id="mirrorLink" class="link" href="./tables.html" target="_blank" rel="noopener">tables.html</a></div>
     <div id="content"></div>
     <div id="guide-status" class="note"></div>
+    <div id="guide-gaps" class="note"></div>
   </main>
 
   <footer>Consiglio: aggiungi questa pagina ai preferiti o impostala come pagina iniziale.</footer>
@@ -208,7 +209,15 @@
       try{
         const html=await fetchTables();
         const dom=new DOMParser().parseFromString(html,'text/html');
-        document.getElementById('guide-status').textContent=dom.getElementById('guide-status')?.textContent||'';
+        const guideStatus=dom.getElementById('guide-status');
+        let statusText=guideStatus?.textContent||'';
+        const exported=guideStatus?.getAttribute('data-exported-at');
+        if(exported && Date.now()-Date.parse(exported)>3*60*60*1000 && !statusText.includes('ATTENZIONE')){
+          statusText+=' ATTENZIONE: esportazione EPG non aggiornata da oltre 3 ore.';
+        }
+        document.getElementById('guide-status').textContent=statusText;
+        const guideGaps=dom.getElementById('guide-gaps');
+        document.getElementById('guide-gaps').replaceChildren(...(guideGaps ? [sanitizeSection(guideGaps)] : []));
         const frag=document.createDocumentFragment();
         const addBox=dstr=>{
           const sec=pickDay(dom,dstr);

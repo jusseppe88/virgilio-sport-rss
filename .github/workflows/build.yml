@@ -16,6 +16,10 @@ on:
     - cron: "0 5 * * *"   # ~06:00 Europe/Rome (winter), 07:00 (summer)
   workflow_dispatch:
 
+concurrency:
+  group: sports-guide-pages
+  cancel-in-progress: false
+
 permissions:
   contents: write
   pages: write
@@ -82,9 +86,10 @@ jobs:
           ls -l index.html tables.html rss.xml rss_tables.xml || true
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html tables.html rss.xml rss_tables.xml epg_status.json sportsdb_status.json
+          git add index.html tables.html rss.xml rss_tables.xml epg_status.json sportsdb_status.json supplementary_events.json
           git commit -m "update site & feeds" || echo "No changes"
-          git push || true
+          git pull --rebase origin main
+          git push
 
       - name: Upload artifact for Pages
         if: ${{ success() }}

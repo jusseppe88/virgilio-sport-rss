@@ -1,0 +1,11 @@
+[Unit]
+Description=Refresh public sports guide hourly outside backup window
+
+[Timer]
+OnCalendar=*-*-* 00,02..23:07:00 Europe/Rome
+AccuracySec=30s
+Persistent=false
+Unit=dispatcharr-guide-export.service
+
+[Install]
+WantedBy=timers.target
