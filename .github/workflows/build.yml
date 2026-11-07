@@ -1,6 +1,17 @@
 name: Build RSS
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - build_rss.py
+      - dispatcharr_match.py
+      - sportsdb.py
+      - test_sportsdb.py
+      - dispatcharr_channels.json
+      - home.html
+      - test_dispatcharr_match.py
+      - .github/workflows/build.yml
   schedule:
     - cron: "0 5 * * *"   # ~06:00 Europe/Rome (winter), 07:00 (summer)
   workflow_dispatch:
@@ -13,6 +24,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -42,6 +54,9 @@ jobs:
           python -c "import bs4, playwright; print('bs4 OK, playwright OK')"
 
       # Run the scraper with full bash tracing + never swallow errors
+      - name: Test channel matching
+        run: python -m unittest -v
+
       - name: Build site & feeds
         id: build
         env:
@@ -67,7 +82,7 @@ jobs:
           ls -l index.html tables.html rss.xml rss_tables.xml || true
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html tables.html rss.xml rss_tables.xml || true
+          git add index.html tables.html rss.xml rss_tables.xml epg_status.json sportsdb_status.json
           git commit -m "update site & feeds" || echo "No changes"
           git push || true
 
