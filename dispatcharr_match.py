@@ -62,6 +62,8 @@ TEAM_ALIASES = [
     ('barcellona', 'barcelona', 'барселона'),
     ('valencia', 'fc valencia', 'valencia cf', 'валенсия'),
     ('real madrid', 'реал мадрид'),
+    ('osasuna', 'ca osasuna', 'осасуна'),
+    ('athletic bilbao', 'athletic club', 'атлетик бильбао', 'атлетик'),
 ]
 
 

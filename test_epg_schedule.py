@@ -81,6 +81,26 @@ class EPGScheduleTests(unittest.TestCase):
         rows,_=build_rows(snapshot(channels),[],NOW)
         self.assertEqual(len(rows),2)
 
+    def test_osasuna_athletic_club_bilbao_translations_keep_all_channels(self):
+        titles=[('Premier Sports 2 (UK)',1301,'⋗ LaLiga. CA Osasuna v Athletic Club'),
+                ('DAZN 2 (DE)',501,'⋗ LaLiga. CA Osasuna – Athletic Bilbao'),
+                ('Ziggo Sport 1 (NL)',800,'⋗ LaLiga. CA Osasuna – Athletic Bilbao'),
+                ('Ziggo Sport 2 (NL)',801,'⋗ LaLiga. CA Osasuna – Athletic Bilbao'),
+                ('МАТЧ! Футбол 2 (RU)',1206,'⋗ Испания. Осасуна – Атлетик')]
+        channels=[channel(name,number,[programme(title,start='2026-11-07T17:25:00+00:00',
+            stop='2026-11-07T19:30:00+00:00',categories=[])]) for name,number,title in titles]
+        rows,_=build_rows(snapshot(channels),[],NOW)
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]['time'],'18:25')
+        self.assertEqual(rows[0]['sport'],'Calcio')
+        self.assertEqual(set(rows[0]['channels']),{c['name'] for c in channels})
+
+    def test_athletic_bilbao_is_not_atletico_madrid_or_charlton_athletic(self):
+        channels=[channel(programmes=[programme('Osasuna-Athletic Bilbao'),
+            programme('Osasuna-Atletico Madrid'),programme('Osasuna-Charlton Athletic')])]
+        rows,_=build_rows(snapshot(channels),[],NOW)
+        self.assertEqual(len(rows),3)
+
     def test_women_youth_other_sports_and_later_replays_stay_separate(self):
         programmes=[programme(),programme('Roma Women-Sassuolo Women'),
                     programme('Roma U19-Sassuolo U19'),programme(categories=['Rugby']),
