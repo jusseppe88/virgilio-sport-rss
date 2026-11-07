@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark light" />
+  <meta name="darkreader-lock" />
   <title>Guida TV Sport — Homepage</title>
   <style>
     :root{
@@ -53,6 +54,7 @@
 
   <main>
     <div class="note">Mirror: <a id="mirrorLink" class="link" href="./tables.html" target="_blank" rel="noopener">tables.html</a></div>
+    <div class="note">Sport: icona e colore. Bandiere: paese/lingua indicati dal canale; audio non verificato.</div>
     <div id="content"></div>
     <div id="guide-status" class="note"></div>
     <div id="guide-gaps" class="note"></div>
@@ -101,10 +103,114 @@
       clean.querySelectorAll('[style]').forEach(el => el.removeAttribute('style'));
       return clean;
     }
+    // Presentation only: the imported names and event grouping stay unchanged.
+    const SPORT_VISUALS = [
+      [/football americano|american football|nfl/i, '🏈', 25],
+      [/tennistavolo|table tennis/i, '🏓', 190],
+      [/calcio|soccer|football/i, '⚽', 145],
+      [/basket/i, '🏀', 28],
+      [/tennis/i, '🎾', 75],
+      [/rugby/i, '🏉', 330],
+      [/pallavolo|volley/i, '🏐', 205],
+      [/pallamano|handball/i, '🤾', 275],
+      [/motociclismo|motogp/i, '🏍️', 265],
+      [/automobilismo|formula/i, '🏎️', 0],
+      [/ciclismo/i, '🚴', 175],
+      [/hockey/i, '🏒', 210],
+      [/baseball/i, '⚾', 35],
+      [/golf/i, '⛳', 110],
+      [/padel/i, '🎾', 90],
+      [/boxe|boxing/i, '🥊', 355],
+      [/arti marziali|mma/i, '🥋', 10],
+      [/snooker|biliardo/i, '🎱', 165],
+      [/freccette/i, '🎯', 345],
+      [/sci|ski/i, '⛷️', 200],
+      [/nuoto/i, '🏊', 195],
+      [/atletica/i, '🏃', 45],
+      [/pattinaggio/i, '⛸️', 230],
+      [/cricket/i, '🏏', 55],
+      [/vela/i, '⛵', 220],
+      [/surf/i, '🏄', 185],
+      [/badminton/i, '🏸', 120],
+      [/pallanuoto/i, '🤽', 250],
+    ];
+    function sportVisual(sport){
+      const match = SPORT_VISUALS.find(([pattern])=>pattern.test(sport));
+      return match ? {icon:match[1], hue:match[2]} : {icon:'🏅', hue:240};
+    }
+    const CHANNEL_COUNTRIES = {
+      IT:['🇮🇹', 'Italia · Italiano'],
+      ARG:['🇦🇷', 'Argentina · Spagnolo'], AR:['🇦🇷', 'Argentina · Spagnolo'],
+      CH:['🇨🇭', 'Svizzera · Lingua audio non specificata'],
+      DE:['🇩🇪', 'Germania · Tedesco'], ES:['🇪🇸', 'Spagna · Spagnolo'],
+      FR:['🇫🇷', 'Francia · Francese'], NL:['🇳🇱', 'Paesi Bassi · Olandese'],
+      PL:['🇵🇱', 'Polonia · Polacco'], PT:['🇵🇹', 'Portogallo · Portoghese'],
+      RO:['🇷🇴', 'Romania · Rumeno'], RU:['🇷🇺', 'Russo'],
+      UK:['🇬🇧', 'Regno Unito · Inglese'], GB:['🇬🇧', 'Regno Unito · Inglese'],
+      US:['🇺🇸', 'Stati Uniti · Inglese'],
+    };
+    // These unsuffixed names belong to the guide's Italian lineup. Unknown
+    // names never receive a guessed language, including future new channels.
+    const ITALIAN_CHANNEL = new Set([
+      "20 hd", "27 twentyseven hd", "boing hd", "canale 5 hd",
+      "cartoonito hd", "cielo hd", "cine34 hd", "dazn 1",
+      "dazn 2", "discovery", "discovery turbo", "dmax",
+      "eurosport 1", "eurosport 2", "focus hd", "food network",
+      "frisbee", "giallo", "hgtv", "iris hd",
+      "italia 1 hd", "italiana hd", "k2", "la 5 hd",
+      "la 7 cinema", "la 7 hd", "mediaset extra hd", "mediaset italia 2 hd",
+      "nove", "qvc", "rai 1 hd", "rai 2 hd",
+      "rai 3 hd", "rai 4 hd", "rai 5 hd", "rai gulp hd",
+      "rai movie hd", "rai news 24 hd", "rai premium hd", "rai sport hd",
+      "rai storia hd", "rai yoyo hd", "real time", "rete 4 hd",
+      "sky sport 1 hd", "sky sport 251", "sky sport 252", "sky sport 253",
+      "sky sport 254", "sky sport 255", "sky sport 256", "sky sport 257",
+      "sky sport 258", "sky sport 259", "sky sport arena", "sky sport basket",
+      "sky sport calcio", "sky sport max", "sky sport mix", "sky sport tennis",
+      "sportitalia hd", "super!", "tgcom24 hd", "top crime hd",
+      "tv2000", "tv8 hd",
+    ]);
+    function channelVisual(line){
+      const number = line.match(/\s*·\s*\d+(?:\.\d+)?\s*$/)?.[0] || '';
+      const name = line.slice(0, line.length-number.length).trim();
+      const suffix = name.match(/\s*\(([^()]*)\)$/);
+      const tag = suffix?.[1] || '';
+      const audio = tag.match(/^(.*?),\s*([A-Z]{2,3}) audio$/i);
+      const code = audio ? audio[2].toUpperCase() : tag.toUpperCase();
+      const country = CHANNEL_COUNTRIES[code] || (!suffix && ITALIAN_CHANNEL.has(name.toLowerCase()) ? CHANNEL_COUNTRIES.IT : null);
+      if (!country) return {text:line};
+      const base = suffix ? name.slice(0, suffix.index) : name;
+      const region = audio ? ` (${audio[1]})` : '';
+      return {text:base+region+number, flag:country[0], label:country[1]};
+    }
+    function buildChannels(cell){
+      const wrap = document.createElement('div');
+      // Split on the renderer's BR separators while decoding text through DOM.
+      const parts = (cell?.innerHTML || '').split(/<br\s*\/?\s*>/i);
+      for (const part of parts){
+        const decoded = document.createElement('span'); decoded.innerHTML=part;
+        const original = decoded.textContent.trim();
+        if (!original) continue;
+        const visual = channelVisual(original);
+        const line = document.createElement('div'); line.className='channel';
+        if (visual.flag){
+          const flag = document.createElement('span'); flag.className='channel-flag';
+          flag.textContent=visual.flag; flag.title=visual.label;
+          flag.setAttribute('role','img'); flag.setAttribute('aria-label',visual.label);
+          line.appendChild(flag);
+        }
+        const name = document.createElement('span'); name.textContent=visual.text;
+        line.appendChild(name); wrap.appendChild(line);
+      }
+      return wrap;
+    }
     function buildEventoHTML(sportText, compText, eventoHTML){
       const s = (sportText||'').trim();
       const c = (compText||'').trim();
       const wrap = document.createElement('div');
+      const icon = document.createElement('span'); icon.className='sport-icon';
+      icon.textContent=sportVisual(s).icon; icon.setAttribute('aria-hidden','true');
+      wrap.append(icon, document.createTextNode(' '));
       const strong = document.createElement('strong'); strong.textContent = s; wrap.appendChild(strong);
       wrap.appendChild(document.createTextNode(c ? `, ${c}:` : ':'));
       wrap.appendChild(document.createElement('br'));
@@ -167,6 +273,17 @@
           th:nth-child(2), td:nth-child(2){width:52ch; max-width:52ch}
           th:nth-child(3), td:nth-child(3){width:26ch}
         }
+        tbody tr{--sport-hue:240}
+        tbody td{background:hsl(var(--sport-hue) 30% 14%)}
+        tbody tr:hover td{background:hsl(var(--sport-hue) 34% 19%)}
+        tbody td:first-child{box-shadow:inset 4px 0 hsl(var(--sport-hue) 65% 61%)}
+        :host([data-theme="light"]) tbody td{background:hsl(var(--sport-hue) 65% 95%)}
+        :host([data-theme="light"]) tbody tr:hover td{background:hsl(var(--sport-hue) 65% 90%)}
+        :host([data-theme="light"]) tbody td:first-child{box-shadow:inset 4px 0 hsl(var(--sport-hue) 65% 38%)}
+        .sport-icon{font-size:1.15em}
+        .channel{display:flex;align-items:baseline;gap:5px;margin-bottom:4px}
+        .channel:last-child{margin-bottom:0}
+        .channel-flag{flex:0 0 auto;font-size:1.15em;line-height:1}
         section.day > h2 { display:none }
       `;
       root.appendChild(style);
@@ -186,12 +303,13 @@
         table.querySelectorAll('tbody tr').forEach(tr=>{
           const tds = Array.from(tr.children);
           const ora=tds[0]?.innerHTML||'', sport=tds[1]?.textContent||'', comp=tds[2]?.textContent||'',
-                evento=tds[3]?.innerHTML||'', canali=tds[4]?.innerHTML||'';
+                evento=tds[3]?.innerHTML||'';
           const eventoHTML=buildEventoHTML(sport,comp,evento);
           const ntr=document.createElement('tr');
+          ntr.style.setProperty('--sport-hue',sportVisual(sport).hue);
           const td1=document.createElement('td'); td1.innerHTML=ora;
           const td2=document.createElement('td'); td2.innerHTML=eventoHTML;
-          const td3=document.createElement('td'); td3.innerHTML=canali;
+          const td3=document.createElement('td'); td3.appendChild(buildChannels(tds[4]));
           ntr.append(td1,td2,td3); tr.replaceWith(ntr);
         });
       }

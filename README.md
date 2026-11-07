@@ -25,7 +25,14 @@ The page separates **Channels to add**, **Existing channels with missing/generic
 EPG**, and **External events not found in imported EPG**. The latter is not proof
 that a channel is missing. The snapshot timestamp is visible; opening the home
 page warns when it is older than three hours. The home page always opens on the
-current Europe/Rome date. Date navigation and remembered theme still work.
+current Europe/Rome date. Date navigation and remembered theme still work. Event rows have sport-specific
+background tints and sport icons in both themes. The homepage replaces recognised
+country/audio suffixes with flag badges; hover labels and screen-reader names
+retain the language description. Setanta's Baltic/Eurasia variants stay distinct
+with Russian audio flags. All known unsuffixed Italian lineup channels, including general entertainment
+channels such as Canale 5, Italia 1, Rai and TV8, receive an Italian flag; unknown channels keep their original label. A Swiss flag identifies
+the country without claiming an audio language. These are channel metadata cues,
+not an inspection of the stream's audio.
 
 ## Refresh paths
 
