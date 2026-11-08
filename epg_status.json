@@ -9,7 +9,8 @@
   "unresolved_broadcasters": [
     "DAZN Italy",
     "Dazn",
-    "Eurosport Italia",
+    "Eurosport",
+    "Mediaset Infinity",
     "Sky",
     "Sky Go IT"
   ],
@@ -26,10 +27,34 @@
     {
       "date": "2026-11-08",
       "time": "12:00",
+      "title": "FC Barcelona Basquet-CB Breogan",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-08",
+      "time": "12:00",
       "title": "Trieste-Roma Basketball",
       "broadcasters": [
         "Sky Sport Basket",
         "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-08",
+      "time": "13:00",
+      "title": "CB 1939 Canarias-Joventut Badalona",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-08",
+      "time": "13:30",
+      "title": "Club Brugge-Anderlecht",
+      "broadcasters": [
+        "DAZN Italy"
       ]
     },
     {
@@ -40,6 +65,14 @@
         "Sky Sport MotoGP",
         "TV8",
         "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-08",
+      "time": "15:00",
+      "title": "Brighton and Hove Albion-Brentford",
+      "broadcasters": [
+        "Sky Go IT"
       ]
     },
     {
@@ -70,6 +103,14 @@
     },
     {
       "date": "2026-11-08",
+      "time": "16:10",
+      "title": "England Rugby-Australia Rugby",
+      "broadcasters": [
+        "Sky Sport Arena"
+      ]
+    },
+    {
+      "date": "2026-11-08",
       "time": "17:00",
       "title": "GP Qatar",
       "broadcasters": [
@@ -84,6 +125,38 @@
       "title": "Carrarese-Sampdoria",
       "broadcasters": [
         "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-08",
+      "time": "17:30",
+      "title": "Desenzano-Ospitaletto",
+      "broadcasters": [
+        "Sky Go IT"
+      ]
+    },
+    {
+      "date": "2026-11-08",
+      "time": "17:30",
+      "title": "Folgore Caratese-Carpi",
+      "broadcasters": [
+        "Sky Go IT"
+      ]
+    },
+    {
+      "date": "2026-11-08",
+      "time": "17:30",
+      "title": "Pianese-Perugia",
+      "broadcasters": [
+        "Sky Go IT"
+      ]
+    },
+    {
+      "date": "2026-11-08",
+      "time": "17:30",
+      "title": "Sambenedettese-Guidonia Montecelio",
+      "broadcasters": [
+        "Sky Go IT"
       ]
     },
     {
@@ -701,6 +774,202 @@
       "date": "2026-11-13",
       "time": "23:00",
       "title": "Singles R.R. P2",
+      "broadcasters": [
+        "Sky Sport Tennis",
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "01:00",
+      "title": "Doubles R.R. P1",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "02:30",
+      "title": "Doubles R.R. P2",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "10:00",
+      "title": "Slalom F (1a manche): 1a manche",
+      "broadcasters": [
+        "Eurosport"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "12:30",
+      "title": "Italia-Argentina",
+      "broadcasters": [
+        "TV8"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "12:40",
+      "title": "Italia-Argentina",
+      "broadcasters": [
+        "Sky Sport 1",
+        "Sky Sport Arena"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "13:00",
+      "title": "Finale",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "13:00",
+      "title": "Slalom F (2a manche): 2a manche",
+      "broadcasters": [
+        "Eurosport",
+        "Rai Sport"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "14:30",
+      "title": "Reggiana-Livorno",
+      "broadcasters": [
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "15:00",
+      "title": "Kosovo-Israele",
+      "broadcasters": [
+        "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "15:10",
+      "title": "Galles-Nuova Zelanda",
+      "broadcasters": [
+        "Sky Sport Arena"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "15:30",
+      "title": "Perugia-Trento",
+      "broadcasters": [
+        "Rai Sport"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "17:00",
+      "title": "Uganda-Botswana",
+      "broadcasters": [
+        "Sportitalia"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "17:30",
+      "title": "Bari-Foggia",
+      "broadcasters": [
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "17:40",
+      "title": "Inghilterra-Giappone",
+      "broadcasters": [
+        "Sky Sport Arena"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "18:00",
+      "title": "Austria-Italia",
+      "broadcasters": [
+        "Sky Sport Basket",
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "18:00",
+      "title": "Norvegia-Galles",
+      "broadcasters": [
+        "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "18:00",
+      "title": "Verona-Civitanova",
+      "broadcasters": [
+        "Rai Sport"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "20:00",
+      "title": "Algeria-Togo",
+      "broadcasters": [
+        "Sportitalia"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "20:45",
+      "title": "Diretta Gol",
+      "broadcasters": [
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "20:45",
+      "title": "Portogallo-Danimarca",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "21:00",
+      "title": "Singles 1a Semifinale",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "21:00",
+      "title": "Vallefoglia-Firenze",
+      "broadcasters": [
+        "Rai Sport"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "21:10",
+      "title": "Irlanda-Figi",
+      "broadcasters": [
+        "Sky Sport Arena"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "23:00",
+      "title": "Singles 2a Semifinale",
       "broadcasters": [
         "Sky Sport Tennis",
         "Sky Sport 1"
