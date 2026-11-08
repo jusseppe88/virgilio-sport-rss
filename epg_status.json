@@ -1,9 +1,16 @@
 {
-  "generated_at": "2026-11-08T16:07:26.365583+00:00",
+  "generated_at": "2026-11-08T17:07:21.340183+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
     "Sky Sport 251 · 251: soltanto voci generiche o finestre troppo lunghe",
+    "Sky Sport 252 · 252: soltanto voci generiche o finestre troppo lunghe",
+    "Sky Sport 253 · 253: soltanto voci generiche o finestre troppo lunghe",
+    "Sky Sport 254 · 254: soltanto voci generiche o finestre troppo lunghe",
+    "Sky Sport 255 · 255: nessun programma futuro importato",
+    "Sky Sport 256 · 256: nessun programma futuro importato",
+    "Sky Sport 257 · 257: nessun programma futuro importato",
+    "Sky Sport 258 · 258: nessun programma futuro importato",
     "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe"
   ],
   "unresolved_broadcasters": [
