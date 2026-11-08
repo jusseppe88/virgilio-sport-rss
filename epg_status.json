@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T22:07:26.260283+00:00",
+  "generated_at": "2026-11-08T23:07:21.050579+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -12,6 +12,7 @@
     "Sky Sport 257 · 257: nessun programma futuro importato",
     "Sky Sport 258 · 258: nessun programma futuro importato",
     "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe",
+    "beIN SPORTS 1 (FR) · 700: nessun programma futuro importato",
     "Ziggo Sport 3 (NL) · 802: nessun programma futuro importato",
     "Okko Спорт (RU) · 1201: nessun programma futuro importato"
   ],
@@ -24,167 +25,6 @@
     "Sky Go IT"
   ],
   "unmatched_events": [
-    {
-      "date": "2026-11-08",
-      "time": "09:00",
-      "title": "Finale",
-      "broadcasters": [
-        "Sky Sport Tennis",
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "time": "12:00",
-      "title": "FC Barcelona Basquet-CB Breogan",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "time": "12:00",
-      "title": "Trieste-Roma Basketball",
-      "broadcasters": [
-        "Sky Sport Basket",
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "time": "13:00",
-      "title": "CB 1939 Canarias-Joventut Badalona",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "time": "13:30",
-      "title": "Club Brugge-Anderlecht",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "time": "14:00",
-      "title": "GP Qatar",
-      "broadcasters": [
-        "Sky Sport MotoGP",
-        "TV8",
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "time": "15:00",
-      "title": "Brighton and Hove Albion-Brentford",
-      "broadcasters": [
-        "Sky Go IT"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "time": "15:00",
-      "title": "Finale",
-      "broadcasters": [
-        "Sky Sport Tennis"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "time": "15:00",
-      "title": "Virtus Entella-Modena",
-      "broadcasters": [
-        "Dazn"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "time": "15:15",
-      "title": "GP Qatar",
-      "broadcasters": [
-        "Sky Sport MotoGP",
-        "TV8",
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "time": "16:10",
-      "title": "England Rugby-Australia Rugby",
-      "broadcasters": [
-        "Sky Sport Arena"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "time": "17:00",
-      "title": "GP Qatar",
-      "broadcasters": [
-        "Sky Sport MotoGP",
-        "TV8",
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "time": "17:15",
-      "title": "Carrarese-Sampdoria",
-      "broadcasters": [
-        "Dazn"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "time": "17:30",
-      "title": "Desenzano-Ospitaletto",
-      "broadcasters": [
-        "Sky Go IT"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "time": "17:30",
-      "title": "Folgore Caratese-Carpi",
-      "broadcasters": [
-        "Sky Go IT"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "time": "17:30",
-      "title": "Pianese-Perugia",
-      "broadcasters": [
-        "Sky Go IT"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "time": "17:30",
-      "title": "Sambenedettese-Guidonia Montecelio",
-      "broadcasters": [
-        "Sky Go IT"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "time": "18:00",
-      "title": "GP San Paolo",
-      "broadcasters": [
-        "Sky Sport F1",
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "time": "19:30",
-      "title": "Vicenza-Cremonese",
-      "broadcasters": [
-        "Dazn"
-      ]
-    },
     {
       "date": "2026-11-09",
       "time": "13:00",
