@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T20:07:21.313806+00:00",
+  "generated_at": "2026-11-08T21:07:26.678100+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -11,7 +11,8 @@
     "Sky Sport 256 · 256: nessun programma futuro importato",
     "Sky Sport 257 · 257: nessun programma futuro importato",
     "Sky Sport 258 · 258: nessun programma futuro importato",
-    "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe"
+    "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe",
+    "Ziggo Sport 3 (NL) · 802: nessun programma futuro importato"
   ],
   "unresolved_broadcasters": [
     "DAZN Italy",
