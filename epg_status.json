@@ -1,9 +1,8 @@
 {
-  "generated_at": "2026-11-08T13:07:21.280087+00:00",
+  "generated_at": "2026-11-08T14:07:26.590888+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
-    "ACI Sport TV (IT) · 228: soltanto voci generiche o finestre troppo lunghe",
     "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe"
   ],
   "unresolved_broadcasters": [
@@ -170,26 +169,10 @@
     },
     {
       "date": "2026-11-08",
-      "time": "18:00",
-      "title": "Trento-Perugia",
-      "broadcasters": [
-        "Rai Sport"
-      ]
-    },
-    {
-      "date": "2026-11-08",
       "time": "19:30",
       "title": "Vicenza-Cremonese",
       "broadcasters": [
         "Dazn"
-      ]
-    },
-    {
-      "date": "2026-11-08",
-      "time": "20:45",
-      "title": "Montecatini-Pistoia",
-      "broadcasters": [
-        "Rai Sport"
       ]
     },
     {
@@ -324,14 +307,6 @@
     },
     {
       "date": "2026-11-10",
-      "time": "20:30",
-      "title": "London Lions-Reyer Venezia",
-      "broadcasters": [
-        "Sky Sport Basket"
-      ]
-    },
-    {
-      "date": "2026-11-10",
       "time": "21:00",
       "title": "Doubles R.R. P1",
       "broadcasters": [
@@ -368,14 +343,6 @@
       "title": "Doubles R.R. P1",
       "broadcasters": [
         "Sky Sport Tennis"
-      ]
-    },
-    {
-      "date": "2026-11-11",
-      "time": "02:00",
-      "title": "Philadelphia 76ers-Boston Celtics",
-      "broadcasters": [
-        "Sky Sport Basket"
       ]
     },
     {
