@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T22:07:26.560862+00:00",
+  "generated_at": "2026-11-09T23:07:26.226093+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -19,66 +19,6 @@
     "Eurosport"
   ],
   "unmatched_events": [
-    {
-      "date": "2026-11-09",
-      "time": "13:00",
-      "title": "1a giornata Sess. Diurna",
-      "broadcasters": [
-        "Sky Sport 1",
-        "Sky Sport Tennis"
-      ]
-    },
-    {
-      "date": "2026-11-09",
-      "time": "18:00",
-      "title": "1a giornata Sess. Serale",
-      "broadcasters": [
-        "Sky Sport Max",
-        "Sky Sport Tennis"
-      ]
-    },
-    {
-      "date": "2026-11-09",
-      "time": "20:30",
-      "title": "Sabadell-Real Sociedad B",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-09",
-      "time": "20:45",
-      "title": "AZ Picerno-Bari",
-      "broadcasters": [
-        "Rai Sport",
-        "Sky Sport Calcio"
-      ]
-    },
-    {
-      "date": "2026-11-09",
-      "time": "21:00",
-      "title": "Singles R.R. P1",
-      "broadcasters": [
-        "Sky Sport Tennis"
-      ]
-    },
-    {
-      "date": "2026-11-09",
-      "time": "22:00",
-      "title": "Singles R.R. P1",
-      "broadcasters": [
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-09",
-      "time": "23:00",
-      "title": "Singles R.R. P2",
-      "broadcasters": [
-        "Sky Sport 1",
-        "Sky Sport Tennis"
-      ]
-    },
     {
       "date": "2026-11-10",
       "time": "00:00",
