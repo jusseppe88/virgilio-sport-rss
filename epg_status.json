@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T02:07:26.681331+00:00",
+  "generated_at": "2026-11-09T03:07:26.788307+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -206,14 +206,6 @@
     },
     {
       "date": "2026-11-11",
-      "time": "05:00",
-      "title": "Portland Trail Blazers-Oklahoma City Thunder",
-      "broadcasters": [
-        "Sky Sport Basket"
-      ]
-    },
-    {
-      "date": "2026-11-11",
       "time": "13:00",
       "title": "3a giornata Sess. Diurna",
       "broadcasters": [
@@ -250,22 +242,6 @@
       "title": "3a giornata Sessione Serale",
       "broadcasters": [
         "Sky Sport Max"
-      ]
-    },
-    {
-      "date": "2026-11-11",
-      "time": "19:00",
-      "title": "Niners Chemnitz-Napoli",
-      "broadcasters": [
-        "Sky Sport Basket"
-      ]
-    },
-    {
-      "date": "2026-11-11",
-      "time": "20:00",
-      "title": "BC Roma-Ulm",
-      "broadcasters": [
-        "Sky Sport Arena"
       ]
     },
     {
