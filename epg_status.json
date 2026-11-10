@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-10T02:07:26.587339+00:00",
+  "generated_at": "2026-11-10T03:07:26.716209+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
-    "Sky Sport 251 · 251: nessun programma futuro importato",
+    "Sky Sport 251 · 251: soltanto voci generiche o finestre troppo lunghe",
     "Sky Sport 252 · 252: nessun programma futuro importato",
     "Sky Sport 253 · 253: nessun programma futuro importato",
     "Sky Sport 254 · 254: nessun programma futuro importato",
@@ -251,43 +251,10 @@
     },
     {
       "date": "2026-11-12",
-      "time": "17:00",
-      "title": "Italia-Portogallo",
-      "broadcasters": [
-        "Sportitalia"
-      ]
-    },
-    {
-      "date": "2026-11-12",
-      "time": "18:00",
-      "title": "Turchia-Belgio",
-      "broadcasters": [
-        "Sky Sport 1",
-        "Sky Sport Calcio"
-      ]
-    },
-    {
-      "date": "2026-11-12",
       "time": "18:30",
       "title": "3^ Quarto di Finale",
       "broadcasters": [
         "Sky Sport Tennis"
-      ]
-    },
-    {
-      "date": "2026-11-12",
-      "time": "20:00",
-      "title": "Costa d’Avorio-Gambia",
-      "broadcasters": [
-        "Sportitalia"
-      ]
-    },
-    {
-      "date": "2026-11-12",
-      "time": "20:00",
-      "title": "Skyliners Francoforte-Maxima Roma",
-      "broadcasters": [
-        "Sky Sport Arena"
       ]
     },
     {
@@ -300,42 +267,10 @@
     },
     {
       "date": "2026-11-12",
-      "time": "20:30",
-      "title": "Olimpia Milano-Zalgiris Kaunas",
-      "broadcasters": [
-        "Sky Sport Basket"
-      ]
-    },
-    {
-      "date": "2026-11-12",
       "time": "20:45",
       "title": "Bergamo-Cuneo",
       "broadcasters": [
         "Rai Sport"
-      ]
-    },
-    {
-      "date": "2026-11-12",
-      "time": "20:45",
-      "title": "Diretta Gol",
-      "broadcasters": [
-        "Sky Sport Calcio"
-      ]
-    },
-    {
-      "date": "2026-11-12",
-      "time": "20:45",
-      "title": "Inghilterra-Croazia",
-      "broadcasters": [
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-12",
-      "time": "20:45",
-      "title": "Italia-Francia",
-      "broadcasters": [
-        "Rai 1"
       ]
     },
     {
@@ -361,14 +296,6 @@
       "title": "Doubles R.R. P1",
       "broadcasters": [
         "Sky Sport Tennis"
-      ]
-    },
-    {
-      "date": "2026-11-13",
-      "time": "01:00",
-      "title": "Philadelphia 76ers-Toronto Raptors",
-      "broadcasters": [
-        "Sky Sport Basket"
       ]
     },
     {
