@@ -21,22 +21,6 @@
   "unmatched_events": [
     {
       "date": "2026-11-10",
-      "time": "00:00",
-      "title": "Ohio State-Marshall",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-10",
-      "time": "00:30",
-      "title": "Indiana-Syracuse",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-10",
       "time": "01:00",
       "title": "Doubles R.R. P1",
       "broadcasters": [
@@ -45,10 +29,26 @@
     },
     {
       "date": "2026-11-10",
+      "time": "02:15",
+      "title": "Minnesota Vikings-Buffalo Bills",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-10",
       "time": "02:30",
       "title": "Doubles R.R. P2",
       "broadcasters": [
         "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "time": "02:30",
+      "title": "Purdue-Illinois State",
+      "broadcasters": [
+        "DAZN Italy"
       ]
     },
     {
@@ -79,6 +79,14 @@
     },
     {
       "date": "2026-11-10",
+      "time": "18:30",
+      "title": "Hapoel Holon-Rasta Vechta",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-10",
       "time": "20:00",
       "title": "Aquila Trento-Tofas",
       "broadcasters": [
@@ -88,9 +96,25 @@
     {
       "date": "2026-11-10",
       "time": "20:00",
+      "title": "Bilbao Basket-ALBA Berlin",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "time": "20:00",
       "title": "Italia-Kosovo",
       "broadcasters": [
         "Rai Sport"
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "time": "20:00",
+      "title": "KK Spartak Subotica-Cholet",
+      "broadcasters": [
+        "DAZN Italy"
       ]
     },
     {
@@ -123,6 +147,14 @@
       "title": "Singles R.R. P2",
       "broadcasters": [
         "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "time": "00:00",
+      "title": "Florida State-Florida",
+      "broadcasters": [
+        "DAZN Italy"
       ]
     },
     {
@@ -163,14 +195,7 @@
       "time": "18:00",
       "title": "3a giornata Sess. Serale",
       "broadcasters": [
-        "Sky Sport Tennis"
-      ]
-    },
-    {
-      "date": "2026-11-11",
-      "time": "18:00",
-      "title": "3a giornata Sessione Serale",
-      "broadcasters": [
+        "Sky Sport Tennis",
         "Sky Sport Max"
       ]
     },
@@ -701,6 +726,14 @@
     },
     {
       "date": "2026-11-15",
+      "time": "15:00",
+      "title": "Inter-Juventus",
+      "broadcasters": [
+        "Rai 2"
+      ]
+    },
+    {
+      "date": "2026-11-15",
       "time": "16:00",
       "title": "Treviso-Scafati",
       "broadcasters": [
@@ -742,6 +775,14 @@
     },
     {
       "date": "2026-11-15",
+      "time": "18:00",
+      "title": "Finale",
+      "broadcasters": [
+        "Rai 2"
+      ]
+    },
+    {
+      "date": "2026-11-15",
       "time": "18:15",
       "title": "Udine-Olimpia Milano",
       "broadcasters": [
@@ -755,6 +796,14 @@
       "title": "Singles R.R Sess. Serale",
       "broadcasters": [
         "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-15",
+      "time": "20:45",
+      "title": "Belgio-Italia",
+      "broadcasters": [
+        "Rai 1"
       ]
     },
     {
@@ -793,6 +842,54 @@
       "date": "2026-11-15",
       "time": "23:00",
       "title": "Doubles Finale",
+      "broadcasters": [
+        "Sky Sport Arena"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "11:30",
+      "title": "Doubles R.R Sess. Diurna",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "14:00",
+      "title": "Singles R.R Sess. Diurna",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "18:00",
+      "title": "Doubles R.R Sess. Serale",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "18:15",
+      "title": "Italia-Belgio",
+      "broadcasters": [
+        "Rai 2"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "20:30",
+      "title": "Singles R.R Sess. Serale",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "20:45",
+      "title": "Germania-Olanda",
       "broadcasters": [
         "Sky Sport Arena"
       ]
