@@ -33,14 +33,6 @@
   "unmatched_events": [
     {
       "date": "2026-11-11",
-      "time": "00:00",
-      "title": "Florida State-Florida",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-11",
       "time": "01:00",
       "title": "Doubles R.R. P1",
       "broadcasters": [
@@ -49,10 +41,50 @@
     },
     {
       "date": "2026-11-11",
+      "time": "01:00",
+      "title": "Duke-Michigan State",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "time": "01:00",
+      "title": "Iowa-Virginia Tech",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-11",
       "time": "02:30",
       "title": "Doubles R.R. P2",
       "broadcasters": [
         "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "time": "02:30",
+      "title": "Wisconsin-Fairfield",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "time": "03:00",
+      "title": "Kansas State-Creighton",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "time": "03:55",
+      "title": "Kentucky-Kansas",
+      "broadcasters": [
+        "DAZN Italy"
       ]
     },
     {
@@ -83,10 +115,34 @@
     },
     {
       "date": "2026-11-11",
+      "time": "18:30",
+      "title": "BC Lietuvos rytas-Nanterre",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "time": "18:30",
+      "title": "Peristeri BC-Pallacanestro Varese",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-11",
       "time": "20:00",
       "title": "Italia-Slovenia",
       "broadcasters": [
         "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "time": "20:30",
+      "title": "CB Murcia-Bamberg Baskets",
+      "broadcasters": [
+        "DAZN Italy"
       ]
     },
     {
@@ -772,6 +828,70 @@
       "date": "2026-11-16",
       "time": "20:45",
       "title": "Germania-Olanda",
+      "broadcasters": [
+        "Sky Sport Arena"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "time": "01:00",
+      "title": "Boston Celtics-Orlando Magic",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "time": "11:30",
+      "title": "Doubles R.R Sess. Diurna",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "time": "14:00",
+      "title": "Singles R.R Sess. Diurna",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "time": "18:00",
+      "title": "Doubles R.R Sess. Serale",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "time": "18:00",
+      "title": "Lettonia-Italia",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "time": "20:30",
+      "title": "Olimpia Milano-Stella Rossa Belgrado",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "time": "20:30",
+      "title": "Singles R.R Sess. Serale",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "time": "21:00",
+      "title": "Virtus Bologna-Panathinaikos",
       "broadcasters": [
         "Sky Sport Arena"
       ]
