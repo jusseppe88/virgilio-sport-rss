@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T05:07:16.113273+00:00",
+  "generated_at": "2026-11-11T06:07:26.545389+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -23,7 +23,8 @@
     "Premier Sports 2 (UK) · 1301: nessun programma futuro importato",
     "Sky Sports Football (UK) · 1302: nessun programma futuro importato",
     "Sky Sports Main Event (UK) · 1303: nessun programma futuro importato",
-    "NBA TV (US) · 1401: nessun programma futuro importato"
+    "NBA TV (US) · 1401: nessun programma futuro importato",
+    "NFL Network (US) · 1402: nessun programma futuro importato"
   ],
   "unresolved_broadcasters": [
     "DAZN Italy",
