@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T13:07:21.032075+00:00",
+  "generated_at": "2026-11-11T14:07:26.787792+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -11,20 +11,7 @@
     "Sky Sport 256 · 256: nessun programma futuro importato",
     "Sky Sport 257 · 257: nessun programma futuro importato",
     "Sky Sport 258 · 258: nessun programma futuro importato",
-    "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe",
-    "DAZN 1 (DE) · 500: nessun programma futuro importato",
-    "DAZN 2 (DE) · 501: nessun programma futuro importato",
-    "DAZN 1 (ES) · 600: nessun programma futuro importato",
-    "DAZN LaLiga (ES) · 601: nessun programma futuro importato",
-    "beIN SPORTS 1 (FR) · 700: nessun programma futuro importato",
-    "beIN SPORTS 2 (FR) · 701: nessun programma futuro importato",
-    "Okko Спорт (RU) · 1201: nessun programma futuro importato",
-    "Premier Sports 1 (UK) · 1300: nessun programma futuro importato",
-    "Premier Sports 2 (UK) · 1301: nessun programma futuro importato",
-    "Sky Sports Football (UK) · 1302: nessun programma futuro importato",
-    "Sky Sports Main Event (UK) · 1303: nessun programma futuro importato",
-    "NBA TV (US) · 1401: nessun programma futuro importato",
-    "NFL Network (US) · 1402: nessun programma futuro importato"
+    "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe"
   ],
   "unresolved_broadcasters": [
     "DAZN Italy",
@@ -143,14 +130,6 @@
       "title": "CB Murcia-Bamberg Baskets",
       "broadcasters": [
         "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-11",
-      "time": "20:30",
-      "title": "Novara-Conegliano",
-      "broadcasters": [
-        "Rai Sport"
       ]
     },
     {
@@ -280,43 +259,10 @@
     },
     {
       "date": "2026-11-13",
-      "time": "14:00",
-      "title": "Mozambico-Etiopia",
-      "broadcasters": [
-        "Sportitalia"
-      ]
-    },
-    {
-      "date": "2026-11-13",
       "time": "17:00",
       "title": "2a Semifinale",
       "broadcasters": [
         "Sky Sport Tennis",
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-13",
-      "time": "17:00",
-      "title": "Nigeria-Tanzania",
-      "broadcasters": [
-        "Sportitalia"
-      ]
-    },
-    {
-      "date": "2026-11-13",
-      "time": "18:00",
-      "title": "Moldavia-Kazakistan",
-      "broadcasters": [
-        "Sky Sport Calcio"
-      ]
-    },
-    {
-      "date": "2026-11-13",
-      "time": "18:30",
-      "title": "Anadolu Efes-Virtus Bologna",
-      "broadcasters": [
-        "Sky Sport Basket",
         "Sky Sport 1"
       ]
     },
@@ -330,58 +276,10 @@
     },
     {
       "date": "2026-11-13",
-      "time": "20:30",
-      "title": "Latina-Campobasso",
-      "broadcasters": [
-        "Sky Sport Max"
-      ]
-    },
-    {
-      "date": "2026-11-13",
-      "time": "20:30",
-      "title": "Panathinaikos-Barcellona",
-      "broadcasters": [
-        "Sky Sport Basket"
-      ]
-    },
-    {
-      "date": "2026-11-13",
-      "time": "20:45",
-      "title": "Diretta Gol",
-      "broadcasters": [
-        "Sky Sport Calcio"
-      ]
-    },
-    {
-      "date": "2026-11-13",
-      "time": "20:45",
-      "title": "Serbia-Germania",
-      "broadcasters": [
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-13",
-      "time": "21:00",
-      "title": "Marocco-Niger",
-      "broadcasters": [
-        "Sportitalia"
-      ]
-    },
-    {
-      "date": "2026-11-13",
       "time": "21:00",
       "title": "Singles R.R. P1",
       "broadcasters": [
         "Sky Sport Tennis"
-      ]
-    },
-    {
-      "date": "2026-11-13",
-      "time": "21:10",
-      "title": "Francia-Sudafrica",
-      "broadcasters": [
-        "Sky Sport Arena"
       ]
     },
     {
@@ -766,14 +664,6 @@
       "title": "Singles Finale",
       "broadcasters": [
         "Sky Sport Arena"
-      ]
-    },
-    {
-      "date": "2026-11-15",
-      "time": "22:00",
-      "title": "Phoenix Suns-Los Angeles Lakers",
-      "broadcasters": [
-        "Sky Sport Basket"
       ]
     },
     {
