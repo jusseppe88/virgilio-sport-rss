@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T01:07:26.792499+00:00",
+  "generated_at": "2026-11-11T02:07:26.738179+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -14,9 +14,11 @@
     "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe",
     "DAZN 1 (DE) · 500: nessun programma futuro importato",
     "DAZN 2 (DE) · 501: nessun programma futuro importato",
+    "DAZN 1 (ES) · 600: nessun programma futuro importato",
     "beIN SPORTS 1 (FR) · 700: nessun programma futuro importato",
     "beIN SPORTS 2 (FR) · 701: nessun programma futuro importato",
     "Okko Спорт (RU) · 1201: nessun programma futuro importato",
+    "Premier Sports 1 (UK) · 1300: nessun programma futuro importato",
     "Premier Sports 2 (UK) · 1301: nessun programma futuro importato",
     "Sky Sports Main Event (UK) · 1303: nessun programma futuro importato"
   ],
