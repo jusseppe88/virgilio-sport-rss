@@ -23,6 +23,14 @@
     },
     {
       "date": "2026-11-12",
+      "time": "02:00",
+      "title": "Arkansas-Robert Morris",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-12",
       "time": "02:30",
       "title": "Doubles R.R. P2",
       "broadcasters": [
@@ -49,6 +57,15 @@
     },
     {
       "date": "2026-11-12",
+      "time": "18:00",
+      "title": "Turkey-Belgium",
+      "broadcasters": [
+        "Sky Sport Calcio",
+        "Sky Sport Uno"
+      ]
+    },
+    {
+      "date": "2026-11-12",
       "time": "18:30",
       "title": "3^ Quarto di Finale",
       "broadcasters": [
@@ -61,6 +78,14 @@
       "title": "4^ Quarto di Finale",
       "broadcasters": [
         "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-12",
+      "time": "20:45",
+      "title": "England-Croatia",
+      "broadcasters": [
+        "Sky Sport Uno"
       ]
     },
     {
@@ -78,6 +103,22 @@
       "broadcasters": [
         "Sky Sport Tennis",
         "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-13",
+      "time": "00:30",
+      "title": "Indiana-Tennessee Tech",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-13",
+      "time": "00:30",
+      "title": "Jhon Orobio-Hendri Cedeno",
+      "broadcasters": [
+        "DAZN Italy"
       ]
     },
     {
@@ -410,6 +451,14 @@
     },
     {
       "date": "2026-11-15",
+      "time": "20:45",
+      "title": "Spagna-Inghilterra",
+      "broadcasters": [
+        "Sky Sport Mix"
+      ]
+    },
+    {
+      "date": "2026-11-15",
       "time": "21:00",
       "title": "Singles Finale",
       "broadcasters": [
@@ -466,6 +515,14 @@
     },
     {
       "date": "2026-11-16",
+      "time": "20:30",
+      "title": "Sorrento-Monopoli",
+      "broadcasters": [
+        "Sky Sport Mix"
+      ]
+    },
+    {
+      "date": "2026-11-16",
       "time": "20:45",
       "title": "Germania-Olanda",
       "broadcasters": [
@@ -514,6 +571,14 @@
     },
     {
       "date": "2026-11-17",
+      "time": "20:00",
+      "title": "Roma Basketball-Bahcesehir",
+      "broadcasters": [
+        "Sky Sport Mix"
+      ]
+    },
+    {
+      "date": "2026-11-17",
       "time": "20:30",
       "title": "Olimpia Milano-Stella Rossa Belgrado",
       "broadcasters": [
@@ -534,6 +599,86 @@
       "title": "Virtus Bologna-Panathinaikos",
       "broadcasters": [
         "Sky Sport Arena"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "time": "02:00",
+      "title": "San Antonio Spurs-Detroit Pistons",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "time": "05:00",
+      "title": "LA Clippers-Utah Jazz",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "time": "11:30",
+      "title": "Doubles R.R Sess. Diurna",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "time": "14:00",
+      "title": "Singles R.R Sess. Diurna",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "time": "18:00",
+      "title": "Besiktas-Real Madrid",
+      "broadcasters": [
+        "Sky Sport Arena"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "time": "18:00",
+      "title": "Cluj Napoca-Maxima Roma",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "time": "18:00",
+      "title": "Doubles R.R Sess. Serale",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "time": "19:30",
+      "title": "Frankfurt-Reyer Venezia",
+      "broadcasters": [
+        "Sky Sport Mix"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "time": "20:00",
+      "title": "Trento-Neptunas Klaipeda",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "time": "20:30",
+      "title": "Singles R.R Sess. Serale",
+      "broadcasters": [
+        "Sky Sport 1"
       ]
     }
   ]
