@@ -11,31 +11,24 @@
   ],
   "unresolved_broadcasters": [
     "DAZN Italy",
-    "Eurosport"
+    "Eurosport",
+    "Sky Go IT"
   ],
   "unmatched_events": [
-    {
-      "date": "2026-11-13",
-      "time": "00:30",
-      "title": "Indiana-Tennessee Tech",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-13",
-      "time": "00:30",
-      "title": "Jhon Orobio-Hendri Cedeno",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
     {
       "date": "2026-11-13",
       "time": "01:00",
       "title": "Doubles R.R. P1",
       "broadcasters": [
         "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-13",
+      "time": "02:15",
+      "title": "New York Giants-Washington Commanders",
+      "broadcasters": [
+        "DAZN Italy"
       ]
     },
     {
@@ -66,10 +59,34 @@
     },
     {
       "date": "2026-11-13",
+      "time": "18:00",
+      "title": "Moldova-Kazakhstan",
+      "broadcasters": [
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-13",
       "time": "18:30",
       "title": "Francia-Italia",
       "broadcasters": [
         "Rai 2"
+      ]
+    },
+    {
+      "date": "2026-11-13",
+      "time": "20:30",
+      "title": "Ospitaletto-Dolomiti Bellunesi",
+      "broadcasters": [
+        "Sky Go IT"
+      ]
+    },
+    {
+      "date": "2026-11-13",
+      "time": "20:45",
+      "title": "Serbia-Germany",
+      "broadcasters": [
+        "Sky Sport Uno"
       ]
     },
     {
@@ -111,6 +128,14 @@
       "title": "Slalom F (1a manche): 1a manche",
       "broadcasters": [
         "Eurosport"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "11:00",
+      "title": "Lazio-Mgarr United",
+      "broadcasters": [
+        "Sportitalia"
       ]
     },
     {
@@ -588,6 +613,62 @@
       "title": "Singles R.R Sess. Serale",
       "broadcasters": [
         "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-19",
+      "time": "01:00",
+      "title": "Miami Heat-Milwaukee Bucks",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-19",
+      "time": "11:30",
+      "title": "Doubles R.R Sess. Diurna",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-19",
+      "time": "14:00",
+      "title": "Singles R.R Sess. Diurna",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-19",
+      "time": "18:00",
+      "title": "Doubles R.R Sess. Serale",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-19",
+      "time": "20:30",
+      "title": "Olimpia Milano-Fenerbahce",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-19",
+      "time": "20:30",
+      "title": "Singles R.R Sess. Serale",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-19",
+      "time": "21:00",
+      "title": "Valencia-Virtus Bologna",
+      "broadcasters": [
+        "Sky Sport Arena"
       ]
     }
   ]
