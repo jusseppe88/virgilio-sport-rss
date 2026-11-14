@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-11-14T04:07:18.668253+00:00",
+  "generated_at": "2026-11-14T05:07:18.190044+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
-    "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe"
+    "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe",
+    "Digi Sport 1 (RO) · 1100: nessun programma futuro importato"
   ],
   "unresolved_broadcasters": [
     "DAZN Italy",
