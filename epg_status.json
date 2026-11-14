@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T21:07:18.244264+00:00",
+  "generated_at": "2026-11-14T22:07:18.420078+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -34,14 +34,6 @@
       "broadcasters": [
         "Eurosport",
         "Rai 2"
-      ]
-    },
-    {
-      "date": "2026-11-14",
-      "time": "11:00",
-      "title": "Lazio-Mgarr United",
-      "broadcasters": [
-        "Sportitalia"
       ]
     },
     {
@@ -340,14 +332,6 @@
     },
     {
       "date": "2026-11-15",
-      "time": "16:30",
-      "title": "Vallefoglia-Firenze",
-      "broadcasters": [
-        "Rai Sport"
-      ]
-    },
-    {
-      "date": "2026-11-15",
       "time": "18:00",
       "title": "Doubles R.R Sess. Serale",
       "broadcasters": [
@@ -510,14 +494,6 @@
     },
     {
       "date": "2026-11-16",
-      "time": "20:30",
-      "title": "Sorrento-Monopoli",
-      "broadcasters": [
-        "Sky Sport Mix"
-      ]
-    },
-    {
-      "date": "2026-11-16",
       "time": "20:45",
       "title": "Diretta Gol",
       "broadcasters": [
@@ -526,36 +502,10 @@
     },
     {
       "date": "2026-11-16",
-      "time": "20:45",
-      "title": "Germania-Olanda",
-      "broadcasters": [
-        "20",
-        "Sky Sport Arena"
-      ]
-    },
-    {
-      "date": "2026-11-16",
-      "time": "20:45",
-      "title": "Perugia-Torres",
-      "broadcasters": [
-        "Rai Sport",
-        "Sky Sport Max"
-      ]
-    },
-    {
-      "date": "2026-11-16",
       "time": "21:00",
       "title": "Somalia-Ghana",
       "broadcasters": [
         "Sportitalia"
-      ]
-    },
-    {
-      "date": "2026-11-17",
-      "time": "01:00",
-      "title": "Boston Celtics-Orlando Magic",
-      "broadcasters": [
-        "Sky Sport Basket"
       ]
     },
     {
