@@ -32,7 +32,8 @@
       "time": "10:00",
       "title": "Slalom F (1a manche): 1a manche",
       "broadcasters": [
-        "Eurosport"
+        "Eurosport",
+        "Rai 2"
       ]
     },
     {
@@ -41,6 +42,14 @@
       "title": "Lazio-Mgarr United",
       "broadcasters": [
         "Sportitalia"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "12:30",
+      "title": "Napoli Women-AC Milan Women",
+      "broadcasters": [
+        "DAZN Italy"
       ]
     },
     {
@@ -62,6 +71,135 @@
     },
     {
       "date": "2026-11-14",
+      "time": "13:40",
+      "title": "Italy Rugby-Argentina Rugby",
+      "broadcasters": [
+        "Sky Sport Arena",
+        "Sky Sport Uno"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "14:30",
+      "title": "Arzignano Valchiampo-Alcione Milano",
+      "broadcasters": [
+        "Sky Go IT"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "14:30",
+      "title": "Renate-Desenzano",
+      "broadcasters": [
+        "Sky Go IT"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "16:00",
+      "title": "Carlisle United-Boston United",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "16:00",
+      "title": "Eastleigh-AFC Fylde",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "16:00",
+      "title": "Gateshead-Barrow",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "16:00",
+      "title": "Harrogate Town-Altrincham",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "16:00",
+      "title": "Hornchurch-Tamworth",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "16:00",
+      "title": "Kidderminster Harriers-Halifax Town",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "16:00",
+      "title": "Scunthorpe United-Worthing",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "16:00",
+      "title": "Sutton United-Solihull Moors",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "16:00",
+      "title": "Yeovil Town-Boreham Wood",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "17:30",
+      "title": "Carpi-Giana Erminio",
+      "broadcasters": [
+        "Sky Go IT"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "17:30",
+      "title": "Gubbio-Grosseto",
+      "broadcasters": [
+        "Sky Go IT"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "17:30",
+      "title": "Lumezzane-Trento",
+      "broadcasters": [
+        "Sky Go IT"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "17:40",
+      "title": "England Rugby-Japan Rugby",
+      "broadcasters": [
+        "Sky Sport Arena"
+      ]
+    },
+    {
+      "date": "2026-11-14",
       "time": "18:00",
       "title": "Austria-Italia",
       "broadcasters": [
@@ -71,10 +209,35 @@
     },
     {
       "date": "2026-11-14",
+      "time": "18:00",
+      "title": "Norway-Wales",
+      "broadcasters": [
+        "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "20:45",
+      "title": "Portugal-Denmark",
+      "broadcasters": [
+        "Sky Sport Uno",
+        "TV8"
+      ]
+    },
+    {
+      "date": "2026-11-14",
       "time": "21:00",
       "title": "Singles 1a Semifinale",
       "broadcasters": [
         "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "time": "21:10",
+      "title": "Ireland Rugby-Fiji Rugby",
+      "broadcasters": [
+        "Sky Sport Arena"
       ]
     },
     {
@@ -107,7 +270,16 @@
       "time": "10:00",
       "title": "Slalom M (1a manche): 1a manche",
       "broadcasters": [
-        "Eurosport"
+        "Eurosport",
+        "Rai 2"
+      ]
+    },
+    {
+      "date": "2026-11-15",
+      "time": "10:30",
+      "title": "Cantù-Giulianova",
+      "broadcasters": [
+        "Rai Sport"
       ]
     },
     {
@@ -116,6 +288,14 @@
       "title": "Doubles Finale",
       "broadcasters": [
         "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-15",
+      "time": "13:00",
+      "title": "Slalom F (2a manche): 2a manche",
+      "broadcasters": [
+        "Rai Sport"
       ]
     },
     {
@@ -136,10 +316,34 @@
     },
     {
       "date": "2026-11-15",
+      "time": "14:00",
+      "title": "Zverev-Jodar: Zverev-Jodar",
+      "broadcasters": [
+        "Canale 5"
+      ]
+    },
+    {
+      "date": "2026-11-15",
+      "time": "14:15",
+      "title": "Padova-Rovigo",
+      "broadcasters": [
+        "Rai Sport"
+      ]
+    },
+    {
+      "date": "2026-11-15",
       "time": "15:00",
       "title": "Inter-Juventus",
       "broadcasters": [
         "Rai 2"
+      ]
+    },
+    {
+      "date": "2026-11-15",
+      "time": "16:30",
+      "title": "Vallefoglia-Firenze",
+      "broadcasters": [
+        "Rai Sport"
       ]
     },
     {
@@ -164,6 +368,7 @@
       "title": "Udine-Olimpia Milano",
       "broadcasters": [
         "Sky Sport Basket",
+        "Cielo",
         "Sky Sport 1"
       ]
     },
@@ -194,6 +399,14 @@
     {
       "date": "2026-11-16",
       "time": "11:30",
+      "title": "Doppio: Sessione Diurna",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "11:30",
       "title": "Doubles R.R Sess. Diurna",
       "broadcasters": [
         "Sky Sport 1"
@@ -209,10 +422,58 @@
     },
     {
       "date": "2026-11-16",
+      "time": "14:00",
+      "title": "Singolare: Sessione Diurna",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "15:00",
+      "title": "Italia-Svizzera",
+      "broadcasters": [
+        "Sportitalia"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "16:00",
+      "title": "Diretta Gol",
+      "broadcasters": [
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "18:00",
+      "title": "Diretta Gol",
+      "broadcasters": [
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "18:00",
+      "title": "Doppio: Sessione Serale",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-16",
       "time": "18:00",
       "title": "Doubles R.R Sess. Serale",
       "broadcasters": [
         "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "18:00",
+      "title": "Sudan-Senegal",
+      "broadcasters": [
+        "Sportitalia"
       ]
     },
     {
@@ -226,9 +487,25 @@
     {
       "date": "2026-11-16",
       "time": "20:30",
+      "title": "Cobolli-Medvedev: Cobolli-Medvedev",
+      "broadcasters": [
+        "Italia 1"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "20:30",
       "title": "Singles R.R Sess. Serale",
       "broadcasters": [
         "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "20:30",
+      "title": "Singolare: Sessione Serale",
+      "broadcasters": [
+        "Sky Sport Tennis"
       ]
     },
     {
@@ -242,9 +519,35 @@
     {
       "date": "2026-11-16",
       "time": "20:45",
+      "title": "Diretta Gol",
+      "broadcasters": [
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "20:45",
       "title": "Germania-Olanda",
       "broadcasters": [
+        "20",
         "Sky Sport Arena"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "20:45",
+      "title": "Perugia-Torres",
+      "broadcasters": [
+        "Rai Sport",
+        "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "21:00",
+      "title": "Somalia-Ghana",
+      "broadcasters": [
+        "Sportitalia"
       ]
     },
     {
@@ -258,6 +561,14 @@
     {
       "date": "2026-11-17",
       "time": "11:30",
+      "title": "Doppio: Sessione Diurna",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "time": "11:30",
       "title": "Doubles R.R Sess. Diurna",
       "broadcasters": [
         "Sky Sport 1"
@@ -266,9 +577,41 @@
     {
       "date": "2026-11-17",
       "time": "14:00",
+      "title": "Malawi-Egitto",
+      "broadcasters": [
+        "Sportitalia"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "time": "14:00",
       "title": "Singles R.R Sess. Diurna",
       "broadcasters": [
         "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "time": "14:00",
+      "title": "Singolare: Sessione Diurna",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "time": "17:00",
+      "title": "Gambia-Costa d’Avorio",
+      "broadcasters": [
+        "Sportitalia"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "time": "18:00",
+      "title": "Doppio: Sessione Serale",
+      "broadcasters": [
+        "Sky Sport Tennis"
       ]
     },
     {
@@ -313,6 +656,39 @@
     },
     {
       "date": "2026-11-17",
+      "time": "20:30",
+      "title": "Singolare: Sessione Serale",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "time": "20:45",
+      "title": "Danimarca-Norvegia",
+      "broadcasters": [
+        "Cielo",
+        "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "time": "20:45",
+      "title": "Diretta Gol",
+      "broadcasters": [
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "time": "21:00",
+      "title": "Niger-Marocco",
+      "broadcasters": [
+        "Sportitalia"
+      ]
+    },
+    {
+      "date": "2026-11-17",
       "time": "21:00",
       "title": "Virtus Bologna-Panathinaikos",
       "broadcasters": [
@@ -338,6 +714,14 @@
     {
       "date": "2026-11-18",
       "time": "11:30",
+      "title": "Doppio: Sessione Diurna",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "time": "11:30",
       "title": "Doubles R.R Sess. Diurna",
       "broadcasters": [
         "Sky Sport 1"
@@ -349,6 +733,14 @@
       "title": "Singles R.R Sess. Diurna",
       "broadcasters": [
         "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "time": "14:00",
+      "title": "Singolare: Sessione Diurna",
+      "broadcasters": [
+        "Sky Sport Tennis"
       ]
     },
     {
@@ -370,9 +762,25 @@
     {
       "date": "2026-11-18",
       "time": "18:00",
+      "title": "Doppio: Sessione Serale",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "time": "18:00",
       "title": "Doubles R.R Sess. Serale",
       "broadcasters": [
         "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "time": "19:30",
+      "title": "Bourg en Bresse-Napoli",
+      "broadcasters": [
+        "Sky Sport Max"
       ]
     },
     {
@@ -400,6 +808,22 @@
       ]
     },
     {
+      "date": "2026-11-18",
+      "time": "20:30",
+      "title": "Singolare: Sessione Serale",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-19",
+      "time": "11:30",
+      "title": "Doppio: Sessione Diurna",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
       "date": "2026-11-19",
       "time": "11:30",
       "title": "Doubles R.R Sess. Diurna",
@@ -413,6 +837,22 @@
       "title": "Singles R.R Sess. Diurna",
       "broadcasters": [
         "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-19",
+      "time": "14:00",
+      "title": "Singolare: Sessione Diurna",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-19",
+      "time": "18:00",
+      "title": "Doppio: Sessione Serale",
+      "broadcasters": [
+        "Sky Sport Tennis"
       ]
     },
     {
@@ -441,10 +881,130 @@
     },
     {
       "date": "2026-11-19",
+      "time": "20:30",
+      "title": "Singolare: Sessione Serale",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-19",
       "time": "21:00",
       "title": "Valencia-Virtus Bologna",
       "broadcasters": [
         "Sky Sport Arena"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "time": "11:30",
+      "title": "Doppio: Sessione Diurna",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "time": "14:00",
+      "title": "Singles R.R Sess. Serale",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "time": "14:00",
+      "title": "Singolare: Sessione Diurna",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "time": "18:00",
+      "title": "Doppio: Sessione Serale",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "time": "18:00",
+      "title": "Doubles R.R Sess. Serale",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "time": "18:30",
+      "title": "Al Ahli-Al Nassr",
+      "broadcasters": [
+        "Sportitalia"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "time": "18:30",
+      "title": "Arminia Bielefeld-FC Magdeburg",
+      "broadcasters": [
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "time": "20:15",
+      "title": "Olympiacos-Real Madrid",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "time": "20:30",
+      "title": "Bayern Monaco-Colonia",
+      "broadcasters": [
+        "Sky Sport Arena"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "time": "20:30",
+      "title": "Casertana-Salernitana",
+      "broadcasters": [
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "time": "20:30",
+      "title": "Sandro Abate-Global Work Capurso",
+      "broadcasters": [
+        "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "time": "20:30",
+      "title": "Singles R.R Sess. Serale",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "time": "20:30",
+      "title": "Singolare: Sessione Serale",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "time": "20:30",
+      "title": "Trento-Cittadella",
+      "broadcasters": [
+        "Sky Sport Mix"
       ]
     }
   ]

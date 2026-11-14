@@ -8,251 +8,6 @@
     "sources": [
       "Virgilio"
     ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "01:00",
-    "sport": "Basket",
-    "competition": "NBA",
-    "title": "Philadelphia 76ers-Toronto Raptors",
-    "channels": "Sky Sport Basket, Sky Sport NBA",
-    "sources": [
-      "Virgilio",
-      "TheSportsDB"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "02:15",
-    "channels": "DAZN Italy",
-    "sport": "American Football",
-    "competition": "NFL",
-    "title": "New York Giants-Washington Commanders",
-    "sources": [
-      "TheSportsDB"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "02:30",
-    "sport": "Tennis",
-    "competition": "WTA Finals Indian Wells 2026",
-    "title": "Doubles R.R. P2",
-    "channels": "Sky Sport Tennis",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "14:00",
-    "sport": "Tennis",
-    "competition": "ATP 250 Stoccolma",
-    "title": "1a Semifinale",
-    "channels": "Sky Sport Tennis, Sky Sport 1",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "14:00",
-    "sport": "Calcio",
-    "competition": "Qualificazioni Coppa d’Africa",
-    "title": "Mozambico-Etiopia",
-    "channels": "Sportitalia",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "17:00",
-    "sport": "Tennis",
-    "competition": "ATP 250 Stoccolma",
-    "title": "2a Semifinale",
-    "channels": "Sky Sport Tennis, Sky Sport 1",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "17:00",
-    "sport": "Calcio",
-    "competition": "Qualificazioni Coppa d’Africa",
-    "title": "Nigeria-Tanzania",
-    "channels": "Sportitalia",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "18:00",
-    "sport": "Calcio",
-    "competition": "UEFA Nations League",
-    "title": "Moldavia-Kazakistan",
-    "channels": "Sky Sport Calcio",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "18:00",
-    "channels": "Sky Sport Calcio",
-    "sport": "Calcio",
-    "competition": "UEFA Nations League",
-    "title": "Moldova-Kazakhstan",
-    "sources": [
-      "TheSportsDB"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "18:30",
-    "sport": "Basket",
-    "competition": "Eurolega",
-    "title": "Anadolu Efes-Virtus Bologna",
-    "channels": "Sky Sport Basket, Sky Sport 1",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "18:30",
-    "sport": "Calcio",
-    "competition": "Amichevole U21",
-    "title": "Francia-Italia",
-    "channels": "Rai 2",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "20:30",
-    "sport": "Calcio",
-    "competition": "Serie C",
-    "title": "Latina-Campobasso",
-    "channels": "Sky Sport Max, Sky Go IT",
-    "sources": [
-      "Virgilio",
-      "TheSportsDB"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "20:30",
-    "channels": "Sky Go IT",
-    "sport": "Calcio",
-    "competition": "Italian Serie C Girone A",
-    "title": "Ospitaletto-Dolomiti Bellunesi",
-    "sources": [
-      "TheSportsDB"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "20:30",
-    "sport": "Basket",
-    "competition": "Eurolega",
-    "title": "Panathinaikos-Barcellona",
-    "channels": "Sky Sport Basket",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "20:45",
-    "sport": "Calcio",
-    "competition": "UEFA Nations League",
-    "title": "Diretta Gol",
-    "channels": "Sky Sport Calcio",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "20:45",
-    "sport": "Calcio",
-    "competition": "UEFA Nations League",
-    "title": "Serbia-Germania",
-    "channels": "Sky Sport 1, 20",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "20:45",
-    "channels": "Sky Sport Uno",
-    "sport": "Calcio",
-    "competition": "UEFA Nations League",
-    "title": "Serbia-Germany",
-    "sources": [
-      "TheSportsDB"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "Qualificazioni Coppa d’Africa",
-    "title": "Marocco-Niger",
-    "channels": "Sportitalia",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "21:00",
-    "sport": "Tennis",
-    "competition": "WTA Finals Indian Wells 2026",
-    "title": "Singles R.R. P1",
-    "channels": "Sky Sport Tennis",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "21:10",
-    "sport": "Rugby",
-    "competition": "Nations Championship",
-    "title": "Francia-Sudafrica",
-    "channels": "Sky Sport Arena",
-    "sources": [
-      "Virgilio",
-      "TheSportsDB"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "23:00",
-    "sport": "Tennis",
-    "competition": "WTA Finals Indian Wells 2026",
-    "title": "Singles R.R. P2",
-    "channels": "Sky Sport Tennis, Sky Sport 1",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-13"
-  },
-  {
-    "time": "01:00",
-    "sport": "Tennis",
-    "competition": "WTA Finals Indian Wells 2026",
-    "title": "Doubles R.R. P1",
-    "channels": "Sky Sport Tennis",
-    "sources": [
-      "Virgilio"
-    ],
     "date": "2026-11-14"
   },
   {
@@ -271,7 +26,7 @@
     "sport": "Sci alpino",
     "competition": "Coppa del Mondo – Levi",
     "title": "Slalom F (1a manche): 1a manche",
-    "channels": "Eurosport",
+    "channels": "Eurosport, Rai 2",
     "sources": [
       "Virgilio"
     ],
@@ -289,11 +44,22 @@
     "date": "2026-11-14"
   },
   {
+    "time": "12:30",
+    "channels": "DAZN Italy",
+    "sport": "Calcio femminile",
+    "competition": "Italy Serie A Women",
+    "title": "Napoli Women-AC Milan Women",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
     "time": "12:40",
     "sport": "Rugby",
     "competition": "Nations Championship",
     "title": "Italia-Argentina",
-    "channels": "Sky Sport 1, Sky Sport Arena, TV8",
+    "channels": "TV8, Sky Sport 1, Sky Sport Arena",
     "sources": [
       "Virgilio"
     ],
@@ -322,13 +88,91 @@
     "date": "2026-11-14"
   },
   {
+    "time": "13:40",
+    "channels": "Sky Sport Arena, Sky Sport Uno",
+    "sport": "Rugby",
+    "competition": "Nations Championship",
+    "title": "Italy Rugby-Argentina Rugby",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "14:30",
+    "channels": "Sky Go IT",
+    "sport": "Calcio",
+    "competition": "Italian Serie C Girone A",
+    "title": "AlbinoLeffe-Union Brescia",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "14:30",
+    "channels": "Sky Go IT",
+    "sport": "Calcio",
+    "competition": "Italian Serie C Girone A",
+    "title": "Arzignano Valchiampo-Alcione Milano",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "14:30",
+    "channels": "Sky Go IT",
+    "sport": "Calcio",
+    "competition": "Italian Serie C Girone C",
+    "title": "Casarano-Picerno",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
     "time": "14:30",
     "sport": "Calcio",
     "competition": "Serie C",
     "title": "Reggiana-Livorno",
-    "channels": "Sky Sport Calcio",
+    "channels": "Sky Sport Calcio, Sky Go IT",
     "sources": [
-      "Virgilio"
+      "Virgilio",
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "14:30",
+    "channels": "Sky Go IT",
+    "sport": "Calcio",
+    "competition": "Italian Serie C Girone A",
+    "title": "Renate-Desenzano",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "14:30",
+    "channels": "Sky Go IT",
+    "sport": "Calcio",
+    "competition": "Italian Serie C Girone B",
+    "title": "Vis Pesaro-Pianese",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "15:00",
+    "channels": "Sky Sport Max, Sky Go IT",
+    "sport": "Calcio",
+    "competition": "UEFA Nations League",
+    "title": "Kosovo-Israel",
+    "sources": [
+      "TheSportsDB"
     ],
     "date": "2026-11-14"
   },
@@ -348,9 +192,10 @@
     "sport": "Rugby",
     "competition": "Nations Championship",
     "title": "Galles-Nuova Zelanda",
-    "channels": "Sky Sport Arena",
+    "channels": "Sky Sport Arena, Sky Sport Uno",
     "sources": [
-      "Virgilio"
+      "Virgilio",
+      "TheSportsDB"
     ],
     "date": "2026-11-14"
   },
@@ -362,6 +207,105 @@
     "channels": "Rai Sport",
     "sources": [
       "Virgilio"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "16:00",
+    "channels": "DAZN Italy",
+    "sport": "Calcio",
+    "competition": "English National League",
+    "title": "Carlisle United-Boston United",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "16:00",
+    "channels": "DAZN Italy",
+    "sport": "Calcio",
+    "competition": "English National League",
+    "title": "Eastleigh-AFC Fylde",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "16:00",
+    "channels": "DAZN Italy",
+    "sport": "Calcio",
+    "competition": "English National League",
+    "title": "Gateshead-Barrow",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "16:00",
+    "channels": "DAZN Italy",
+    "sport": "Calcio",
+    "competition": "English National League",
+    "title": "Harrogate Town-Altrincham",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "16:00",
+    "channels": "DAZN Italy",
+    "sport": "Calcio",
+    "competition": "English National League",
+    "title": "Hornchurch-Tamworth",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "16:00",
+    "channels": "DAZN Italy",
+    "sport": "Calcio",
+    "competition": "English National League",
+    "title": "Kidderminster Harriers-Halifax Town",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "16:00",
+    "channels": "DAZN Italy",
+    "sport": "Calcio",
+    "competition": "English National League",
+    "title": "Scunthorpe United-Worthing",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "16:00",
+    "channels": "DAZN Italy",
+    "sport": "Calcio",
+    "competition": "English National League",
+    "title": "Sutton United-Solihull Moors",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "16:00",
+    "channels": "DAZN Italy",
+    "sport": "Calcio",
+    "competition": "English National League",
+    "title": "Yeovil Town-Boreham Wood",
+    "sources": [
+      "TheSportsDB"
     ],
     "date": "2026-11-14"
   },
@@ -381,9 +325,54 @@
     "sport": "Calcio",
     "competition": "Serie C",
     "title": "Bari-Foggia",
-    "channels": "Sky Sport Calcio",
+    "channels": "Sky Sport Calcio, Sky Go IT",
     "sources": [
-      "Virgilio"
+      "Virgilio",
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "17:30",
+    "channels": "Sky Go IT",
+    "sport": "Calcio",
+    "competition": "Italian Serie C Girone A",
+    "title": "Carpi-Giana Erminio",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "17:30",
+    "channels": "Sky Go IT",
+    "sport": "Calcio",
+    "competition": "Italian Serie C Girone B",
+    "title": "Gubbio-Grosseto",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "17:30",
+    "channels": "Sky Go IT",
+    "sport": "Calcio",
+    "competition": "Italian Serie C Girone A",
+    "title": "Lumezzane-Trento",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "17:40",
+    "channels": "Sky Sport Arena",
+    "sport": "Rugby",
+    "competition": "Nations Championship",
+    "title": "England Rugby-Japan Rugby",
+    "sources": [
+      "TheSportsDB"
     ],
     "date": "2026-11-14"
   },
@@ -417,6 +406,17 @@
     "channels": "Sky Sport Max",
     "sources": [
       "Virgilio"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "18:00",
+    "channels": "Sky Sport Max",
+    "sport": "Calcio",
+    "competition": "UEFA Nations League",
+    "title": "Norway-Wales",
+    "sources": [
+      "TheSportsDB"
     ],
     "date": "2026-11-14"
   },
@@ -458,9 +458,20 @@
     "sport": "Calcio",
     "competition": "UEFA Nations League",
     "title": "Portogallo-Danimarca",
-    "channels": "Sky Sport 1",
+    "channels": "TV8, Sky Sport 1",
     "sources": [
       "Virgilio"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "20:45",
+    "channels": "Sky Sport Uno, TV8",
+    "sport": "Calcio",
+    "competition": "UEFA Nations League",
+    "title": "Portugal-Denmark",
+    "sources": [
+      "TheSportsDB"
     ],
     "date": "2026-11-14"
   },
@@ -483,6 +494,17 @@
     "channels": "Rai Sport",
     "sources": [
       "Virgilio"
+    ],
+    "date": "2026-11-14"
+  },
+  {
+    "time": "21:10",
+    "channels": "Sky Sport Arena",
+    "sport": "Rugby",
+    "competition": "Nations Championship",
+    "title": "Ireland Rugby-Fiji Rugby",
+    "sources": [
+      "TheSportsDB"
     ],
     "date": "2026-11-14"
   },
@@ -535,7 +557,18 @@
     "sport": "Sci alpino",
     "competition": "Coppa del Mondo – Levi",
     "title": "Slalom M (1a manche): 1a manche",
-    "channels": "Eurosport",
+    "channels": "Eurosport, Rai 2",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-15"
+  },
+  {
+    "time": "10:30",
+    "sport": "Basket in carrozzina",
+    "competition": "Supercoppa Italiana",
+    "title": "Cantù-Giulianova",
+    "channels": "Rai Sport",
     "sources": [
       "Virgilio"
     ],
@@ -578,6 +611,17 @@
     "time": "13:00",
     "sport": "Sci alpino",
     "competition": "Coppa del Mondo – Levi",
+    "title": "Slalom F (2a manche): 2a manche",
+    "channels": "Rai Sport",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-15"
+  },
+  {
+    "time": "13:00",
+    "sport": "Sci alpino",
+    "competition": "Coppa del Mondo – Levi",
     "title": "Slalom M (2a manche): 2a manche",
     "channels": "Eurosport",
     "sources": [
@@ -591,6 +635,28 @@
     "competition": "WTA Finals Indian Wells 2026",
     "title": "Singles Finale",
     "channels": "Sky Sport Tennis",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-15"
+  },
+  {
+    "time": "14:00",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026 – 1a giornata (Gruppo McEnroe)",
+    "title": "Zverev-Jodar: Zverev-Jodar",
+    "channels": "Canale 5",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-15"
+  },
+  {
+    "time": "14:15",
+    "sport": "Rugby",
+    "competition": "Serie A Elite",
+    "title": "Padova-Rovigo",
+    "channels": "Rai Sport",
     "sources": [
       "Virgilio"
     ],
@@ -652,6 +718,17 @@
     "date": "2026-11-15"
   },
   {
+    "time": "16:30",
+    "sport": "Pallavolo femminile",
+    "competition": "Serie A1",
+    "title": "Vallefoglia-Firenze",
+    "channels": "Rai Sport",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-15"
+  },
+  {
     "time": "17:30",
     "sport": "Calcio",
     "competition": "Serie C",
@@ -700,7 +777,7 @@
     "sport": "Basket",
     "competition": "Serie A",
     "title": "Udine-Olimpia Milano",
-    "channels": "Sky Sport Basket, Sky Sport 1",
+    "channels": "Sky Sport Basket, Cielo, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -798,6 +875,17 @@
     "time": "11:30",
     "sport": "Tennis",
     "competition": "ATP Finals Torino 2026",
+    "title": "Doppio: Sessione Diurna",
+    "channels": "Sky Sport Tennis",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-16"
+  },
+  {
+    "time": "11:30",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
     "title": "Doubles R.R Sess. Diurna",
     "channels": "Sky Sport 1",
     "sources": [
@@ -817,11 +905,77 @@
     "date": "2026-11-16"
   },
   {
+    "time": "14:00",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Singolare: Sessione Diurna",
+    "channels": "Sky Sport Tennis",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-16"
+  },
+  {
+    "time": "15:00",
+    "sport": "Calcio",
+    "competition": "U20 Elite League",
+    "title": "Italia-Svizzera",
+    "channels": "Sportitalia",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-16"
+  },
+  {
+    "time": "16:00",
+    "sport": "Calcio",
+    "competition": "Diretta Gol UEFA Nations League",
+    "title": "Diretta Gol",
+    "channels": "Sky Sport Calcio",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-16"
+  },
+  {
+    "time": "18:00",
+    "sport": "Calcio",
+    "competition": "Diretta Gol UEFA Nations League",
+    "title": "Diretta Gol",
+    "channels": "Sky Sport Calcio",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-16"
+  },
+  {
+    "time": "18:00",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Doppio: Sessione Serale",
+    "channels": "Sky Sport Tennis",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-16"
+  },
+  {
     "time": "18:00",
     "sport": "Tennis",
     "competition": "ATP Finals Torino 2026",
     "title": "Doubles R.R Sess. Serale",
     "channels": "Sky Sport 1",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-16"
+  },
+  {
+    "time": "18:00",
+    "sport": "Calcio",
+    "competition": "Qualificazioni Coppa d’Africa",
+    "title": "Sudan-Senegal",
+    "channels": "Sportitalia",
     "sources": [
       "Virgilio"
     ],
@@ -841,9 +995,31 @@
   {
     "time": "20:30",
     "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026 – 1a giornata (Gruppo Lendl)",
+    "title": "Cobolli-Medvedev: Cobolli-Medvedev",
+    "channels": "Italia 1",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-16"
+  },
+  {
+    "time": "20:30",
+    "sport": "Tennis",
     "competition": "ATP Finals Torino 2026",
     "title": "Singles R.R Sess. Serale",
     "channels": "Sky Sport 1",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-16"
+  },
+  {
+    "time": "20:30",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Singolare: Sessione Serale",
+    "channels": "Sky Sport Tennis",
     "sources": [
       "Virgilio"
     ],
@@ -863,9 +1039,42 @@
   {
     "time": "20:45",
     "sport": "Calcio",
+    "competition": "Diretta Gol UEFA Nations League",
+    "title": "Diretta Gol",
+    "channels": "Sky Sport Calcio",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-16"
+  },
+  {
+    "time": "20:45",
+    "sport": "Calcio",
     "competition": "UEFA Nations League",
     "title": "Germania-Olanda",
-    "channels": "Sky Sport Arena",
+    "channels": "20, Sky Sport Arena",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-16"
+  },
+  {
+    "time": "20:45",
+    "sport": "Calcio",
+    "competition": "Serie C",
+    "title": "Perugia-Torres",
+    "channels": "Rai Sport, Sky Sport Max",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-16"
+  },
+  {
+    "time": "21:00",
+    "sport": "Calcio",
+    "competition": "Qualificazioni Coppa d’Africa",
+    "title": "Somalia-Ghana",
+    "channels": "Sportitalia",
     "sources": [
       "Virgilio"
     ],
@@ -886,8 +1095,30 @@
     "time": "11:30",
     "sport": "Tennis",
     "competition": "ATP Finals Torino 2026",
+    "title": "Doppio: Sessione Diurna",
+    "channels": "Sky Sport Tennis",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-17"
+  },
+  {
+    "time": "11:30",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
     "title": "Doubles R.R Sess. Diurna",
     "channels": "Sky Sport 1",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-17"
+  },
+  {
+    "time": "14:00",
+    "sport": "Calcio",
+    "competition": "Qualificazioni Coppa d’Africa",
+    "title": "Malawi-Egitto",
+    "channels": "Sportitalia",
     "sources": [
       "Virgilio"
     ],
@@ -899,6 +1130,39 @@
     "competition": "ATP Finals Torino 2026",
     "title": "Singles R.R Sess. Diurna",
     "channels": "Sky Sport 1",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-17"
+  },
+  {
+    "time": "14:00",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Singolare: Sessione Diurna",
+    "channels": "Sky Sport Tennis",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-17"
+  },
+  {
+    "time": "17:00",
+    "sport": "Calcio",
+    "competition": "Qualificazioni Coppa d’Africa",
+    "title": "Gambia-Costa d’Avorio",
+    "channels": "Sportitalia",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-17"
+  },
+  {
+    "time": "18:00",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Doppio: Sessione Serale",
+    "channels": "Sky Sport Tennis",
     "sources": [
       "Virgilio"
     ],
@@ -960,6 +1224,50 @@
     "date": "2026-11-17"
   },
   {
+    "time": "20:30",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Singolare: Sessione Serale",
+    "channels": "Sky Sport Tennis",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-17"
+  },
+  {
+    "time": "20:45",
+    "sport": "Calcio",
+    "competition": "UEFA Nations League",
+    "title": "Danimarca-Norvegia",
+    "channels": "Cielo, Sky Sport Max",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-17"
+  },
+  {
+    "time": "20:45",
+    "sport": "Calcio",
+    "competition": "Diretta Gol UEFA Nations League",
+    "title": "Diretta Gol",
+    "channels": "Sky Sport Calcio",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-17"
+  },
+  {
+    "time": "21:00",
+    "sport": "Calcio",
+    "competition": "Qualificazioni Coppa d’Africa",
+    "title": "Niger-Marocco",
+    "channels": "Sportitalia",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-17"
+  },
+  {
     "time": "21:00",
     "sport": "Basket",
     "competition": "Eurolega",
@@ -996,6 +1304,17 @@
     "time": "11:30",
     "sport": "Tennis",
     "competition": "ATP Finals Torino 2026",
+    "title": "Doppio: Sessione Diurna",
+    "channels": "Sky Sport Tennis",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-18"
+  },
+  {
+    "time": "11:30",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
     "title": "Doubles R.R Sess. Diurna",
     "channels": "Sky Sport 1",
     "sources": [
@@ -1009,6 +1328,17 @@
     "competition": "ATP Finals Torino 2026",
     "title": "Singles R.R Sess. Diurna",
     "channels": "Sky Sport 1",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-18"
+  },
+  {
+    "time": "14:00",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Singolare: Sessione Diurna",
+    "channels": "Sky Sport Tennis",
     "sources": [
       "Virgilio"
     ],
@@ -1040,8 +1370,30 @@
     "time": "18:00",
     "sport": "Tennis",
     "competition": "ATP Finals Torino 2026",
+    "title": "Doppio: Sessione Serale",
+    "channels": "Sky Sport Tennis",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-18"
+  },
+  {
+    "time": "18:00",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
     "title": "Doubles R.R Sess. Serale",
     "channels": "Sky Sport 1",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-18"
+  },
+  {
+    "time": "19:30",
+    "sport": "Basket",
+    "competition": "Eurocup",
+    "title": "Bourg en Bresse-Napoli",
+    "channels": "Sky Sport Max",
     "sources": [
       "Virgilio"
     ],
@@ -1081,11 +1433,33 @@
     "date": "2026-11-18"
   },
   {
+    "time": "20:30",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Singolare: Sessione Serale",
+    "channels": "Sky Sport Tennis",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-18"
+  },
+  {
     "time": "01:00",
     "sport": "Basket",
     "competition": "NBA",
     "title": "Miami Heat-Milwaukee Bucks",
     "channels": "Sky Sport Basket",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-19"
+  },
+  {
+    "time": "11:30",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Doppio: Sessione Diurna",
+    "channels": "Sky Sport Tennis",
     "sources": [
       "Virgilio"
     ],
@@ -1108,6 +1482,28 @@
     "competition": "ATP Finals Torino 2026",
     "title": "Singles R.R Sess. Diurna",
     "channels": "Sky Sport 1",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-19"
+  },
+  {
+    "time": "14:00",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Singolare: Sessione Diurna",
+    "channels": "Sky Sport Tennis",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-19"
+  },
+  {
+    "time": "18:00",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Doppio: Sessione Serale",
+    "channels": "Sky Sport Tennis",
     "sources": [
       "Virgilio"
     ],
@@ -1147,6 +1543,17 @@
     "date": "2026-11-19"
   },
   {
+    "time": "20:30",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Singolare: Sessione Serale",
+    "channels": "Sky Sport Tennis",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-19"
+  },
+  {
     "time": "21:00",
     "sport": "Basket",
     "competition": "Eurolega",
@@ -1156,5 +1563,159 @@
       "Virgilio"
     ],
     "date": "2026-11-19"
+  },
+  {
+    "time": "11:30",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Doppio: Sessione Diurna",
+    "channels": "Sky Sport Tennis",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-20"
+  },
+  {
+    "time": "14:00",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Singles R.R Sess. Serale",
+    "channels": "Sky Sport 1",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-20"
+  },
+  {
+    "time": "14:00",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Singolare: Sessione Diurna",
+    "channels": "Sky Sport Tennis",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-20"
+  },
+  {
+    "time": "18:00",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Doppio: Sessione Serale",
+    "channels": "Sky Sport Tennis",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-20"
+  },
+  {
+    "time": "18:00",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Doubles R.R Sess. Serale",
+    "channels": "Sky Sport 1",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-20"
+  },
+  {
+    "time": "18:30",
+    "sport": "Calcio",
+    "competition": "Saudi League",
+    "title": "Al Ahli-Al Nassr",
+    "channels": "Sportitalia",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-20"
+  },
+  {
+    "time": "18:30",
+    "sport": "Calcio",
+    "competition": "Bundesliga 2",
+    "title": "Arminia Bielefeld-FC Magdeburg",
+    "channels": "Sky Sport Calcio",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-20"
+  },
+  {
+    "time": "20:15",
+    "sport": "Basket",
+    "competition": "Eurolega",
+    "title": "Olympiacos-Real Madrid",
+    "channels": "Sky Sport Basket",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-20"
+  },
+  {
+    "time": "20:30",
+    "sport": "Calcio",
+    "competition": "Bundesliga",
+    "title": "Bayern Monaco-Colonia",
+    "channels": "Sky Sport Arena",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-20"
+  },
+  {
+    "time": "20:30",
+    "sport": "Calcio",
+    "competition": "Serie C",
+    "title": "Casertana-Salernitana",
+    "channels": "Sky Sport Calcio",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-20"
+  },
+  {
+    "time": "20:30",
+    "sport": "Calcio a 5 maschile",
+    "competition": "Serie A Futsal",
+    "title": "Sandro Abate-Global Work Capurso",
+    "channels": "Sky Sport Max",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-20"
+  },
+  {
+    "time": "20:30",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Singles R.R Sess. Serale",
+    "channels": "Sky Sport 1",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-20"
+  },
+  {
+    "time": "20:30",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Singolare: Sessione Serale",
+    "channels": "Sky Sport Tennis",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-20"
+  },
+  {
+    "time": "20:30",
+    "sport": "Calcio",
+    "competition": "Serie C",
+    "title": "Trento-Cittadella",
+    "channels": "Sky Sport Mix",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-20"
   }
 ]
