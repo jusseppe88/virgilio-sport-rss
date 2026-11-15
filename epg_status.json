@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-11-15T05:07:18.520103+00:00",
+  "generated_at": "2026-11-15T06:07:12.825029+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
     "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe",
+    "Eleven Sports 1 (PL) · 900: nessun programma futuro importato",
     "Eleven Sports 2 (PL) · 901: nessun programma futuro importato"
   ],
   "unresolved_broadcasters": [
