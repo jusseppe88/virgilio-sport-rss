@@ -1,11 +1,9 @@
 {
-  "generated_at": "2026-11-15T13:07:18.227188+00:00",
+  "generated_at": "2026-11-15T14:07:18.620624+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
-    "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe",
-    "Eleven Sports 1 (PL) · 900: nessun programma futuro importato",
-    "Eleven Sports 2 (PL) · 901: nessun programma futuro importato"
+    "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe"
   ],
   "unresolved_broadcasters": [
     "DAZN Italy",
