@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-11-16T07:07:18.519873+00:00",
-  "stale": false,
+  "stale": true,
   "missing_channels": [],
   "epg_gaps": [
     "Sky Sport 251 · 251: soltanto voci generiche o finestre troppo lunghe",
@@ -12,14 +12,22 @@
     "Sky Sport 257 · 257: nessun programma futuro importato",
     "Sky Sport 258 · 258: nessun programma futuro importato",
     "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe",
-    "Okko Спорт (RU) · 1201: nessun programma futuro importato"
+    "beIN SPORTS 1 (FR) · 700: nessun programma futuro importato",
+    "beIN SPORTS 2 (FR) · 701: nessun programma futuro importato",
+    "Match Premier (RU) · 1200: nessun programma futuro importato",
+    "Okko Спорт (RU) · 1201: nessun programma futuro importato",
+    "Setanta Sports 1 (RU) · 1202: soltanto voci generiche o finestre troppo lunghe",
+    "Setanta Sports 2 (Eurasia, RU audio) · 1204: soltanto voci generiche o finestre troppo lunghe",
+    "МАТЧ! Футбол 1 (RU) · 1205: nessun programma futuro importato",
+    "МАТЧ! Футбол 2 (RU) · 1206: nessun programma futuro importato",
+    "МАТЧ! Футбол 3 (RU) · 1207: nessun programma futuro importato",
+    "Старт (RU) · 1208: soltanto voci generiche o finestre troppo lunghe"
   ],
   "unresolved_broadcasters": [
     "DAZN Italy",
     "Dazn",
     "Eurosport",
-    "Sky",
-    "Sky Go IT"
+    "Sky"
   ],
   "unmatched_events": [
     {
@@ -105,6 +113,14 @@
     {
       "date": "2026-11-16",
       "time": "20:30",
+      "title": "Albacete-Celta Fortuna",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "20:30",
       "title": "Cobolli-Medvedev: Cobolli-Medvedev",
       "broadcasters": [
         "Italia 1"
@@ -130,6 +146,22 @@
       "date": "2026-11-16",
       "time": "20:45",
       "title": "Diretta Gol",
+      "broadcasters": [
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "20:45",
+      "title": "Germany-Netherlands",
+      "broadcasters": [
+        "Sky Sport Arena"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "time": "20:45",
+      "title": "Greece-Serbia",
       "broadcasters": [
         "Sky Sport Calcio"
       ]
@@ -706,6 +738,215 @@
       "title": "Galles-Australia",
       "broadcasters": [
         "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "00:00",
+      "title": "Miami Heat-Oklahoma City Thunder",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "05:00",
+      "title": "GP Las Vegas",
+      "broadcasters": [
+        "Sky Sport F1",
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "10:30",
+      "title": "Slalom M (1a manche): 1a manche",
+      "broadcasters": [
+        "Eurosport"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "12:15",
+      "title": "GP Portogallo",
+      "broadcasters": [
+        "Sky Sport MotoGP",
+        "TV8",
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "12:30",
+      "title": "Sassuolo-Genoa",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "12:30",
+      "title": "Scafatese-Foggia",
+      "broadcasters": [
+        "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "12:30",
+      "title": "Union Brescia-Renate",
+      "broadcasters": [
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "13:30",
+      "title": "1. FC Kaiserslautern-Dynamo Dresden",
+      "broadcasters": [
+        "Sky Sport Mix"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "13:30",
+      "title": "Slalom M (2a manche): 2a manche",
+      "broadcasters": [
+        "Eurosport"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "14:00",
+      "title": "GP Portogallo",
+      "broadcasters": [
+        "Sky Sport MotoGP",
+        "TV8",
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "15:00",
+      "title": "Catania-Bari",
+      "broadcasters": [
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "15:00",
+      "title": "Doubles Finale",
+      "broadcasters": [
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "15:00",
+      "title": "Hull City-Brighton",
+      "broadcasters": [
+        "Sky Sport Arena"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "15:00",
+      "title": "Milan-Frosinone",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "15:30",
+      "title": "Augsburg-Mainz",
+      "broadcasters": [
+        "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "15:30",
+      "title": "GP Portogallo",
+      "broadcasters": [
+        "Sky Sport MotoGP",
+        "TV8",
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "16:00",
+      "title": "Derthona Tortona-Olimpia Milano",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "17:30",
+      "title": "Liverpool-Manchester Utd",
+      "broadcasters": [
+        "Sky Sport Arena"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "17:30",
+      "title": "Sambenedettese-Perugia",
+      "broadcasters": [
+        "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "17:30",
+      "title": "Werder Brema-Amburgo SV",
+      "broadcasters": [
+        "Sky Sport Mix"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "18:00",
+      "title": "Bologna-Udinese",
+      "broadcasters": [
+        "Sky",
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "18:00",
+      "title": "Milan-Frosinone",
+      "broadcasters": [
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "18:00",
+      "title": "Singles Finale",
+      "broadcasters": [
+        "Sky Sport Tennis",
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "18:15",
+      "title": "Verona-Udine",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "20:45",
+      "title": "Atalanta-Inter",
+      "broadcasters": [
+        "Dazn"
       ]
     }
   ]
