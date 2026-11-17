@@ -1,266 +1,24 @@
 [
   {
-    "time": "11:30",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
-    "title": "Doppio: Sessione Diurna",
-    "channels": "Sky Sport Tennis",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "11:30",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
-    "title": "Doubles R.R Sess. Diurna",
-    "channels": "Sky Sport 1",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "14:00",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
-    "title": "Singles R.R Sess. Diurna",
-    "channels": "Sky Sport 1",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "14:00",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
-    "title": "Singolare: Sessione Diurna",
-    "channels": "Sky Sport Tennis",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "15:00",
-    "sport": "Calcio",
-    "competition": "U20 Elite League",
-    "title": "Italia-Svizzera",
-    "channels": "Sportitalia",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "16:00",
-    "sport": "Calcio",
-    "competition": "Diretta Gol UEFA Nations League",
-    "title": "Diretta Gol",
-    "channels": "Sky Sport Calcio",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "18:00",
-    "sport": "Calcio",
-    "competition": "Diretta Gol UEFA Nations League",
-    "title": "Diretta Gol",
-    "channels": "Sky Sport Calcio",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "18:00",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
-    "title": "Doppio: Sessione Serale",
-    "channels": "Sky Sport Tennis",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "18:00",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
-    "title": "Doubles R.R Sess. Serale",
-    "channels": "Sky Sport 1",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "18:00",
-    "channels": "Sky Sport Calcio",
-    "sport": "Calcio",
-    "competition": "UEFA Nations League",
-    "title": "Estonia-Bulgaria",
-    "sources": [
-      "TheSportsDB"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "18:00",
-    "sport": "Calcio",
-    "competition": "Qualificazioni Coppa d’Africa",
-    "title": "Sudan-Senegal",
-    "channels": "Sportitalia",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "18:15",
-    "sport": "Calcio",
-    "competition": "Amichevole U21",
-    "title": "Italia-Belgio",
-    "channels": "Rai 2",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "20:30",
-    "channels": "DAZN Italy",
-    "sport": "Calcio",
-    "competition": "Spanish La Liga 2",
-    "title": "Albacete-Celta Fortuna",
-    "sources": [
-      "TheSportsDB"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "20:30",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026 – 1a giornata (Gruppo Lendl)",
-    "title": "Cobolli-Medvedev: Cobolli-Medvedev",
-    "channels": "Italia 1",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "20:30",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
-    "title": "Singles R.R Sess. Serale",
-    "channels": "Sky Sport 1",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "20:30",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
-    "title": "Singolare: Sessione Serale",
-    "channels": "Sky Sport Tennis",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "20:30",
-    "sport": "Calcio",
-    "competition": "Serie C",
-    "title": "Sorrento-Monopoli",
-    "channels": "Sky Sport Mix",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "20:45",
-    "sport": "Calcio",
-    "competition": "Diretta Gol UEFA Nations League",
-    "title": "Diretta Gol",
-    "channels": "Sky Sport Calcio",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "20:45",
-    "sport": "Calcio",
-    "competition": "UEFA Nations League",
-    "title": "Germania-Olanda",
-    "channels": "20, Sky Sport Arena",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "20:45",
-    "channels": "Sky Sport Arena",
-    "sport": "Calcio",
-    "competition": "UEFA Nations League",
-    "title": "Germany-Netherlands",
-    "sources": [
-      "TheSportsDB"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "20:45",
-    "channels": "Sky Sport Calcio",
-    "sport": "Calcio",
-    "competition": "UEFA Nations League",
-    "title": "Greece-Serbia",
-    "sources": [
-      "TheSportsDB"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "20:45",
-    "sport": "Calcio",
-    "competition": "Serie C",
-    "title": "Perugia-Torres",
-    "channels": "Rai Sport, Sky Sport Max, Rai Sport 1",
-    "sources": [
-      "Virgilio",
-      "TheSportsDB"
-    ],
-    "date": "2026-11-16"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "Qualificazioni Coppa d’Africa",
-    "title": "Somalia-Ghana",
-    "channels": "Sportitalia",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-16"
-  },
-  {
     "time": "01:00",
     "sport": "Basket",
     "competition": "NBA",
     "title": "Boston Celtics-Orlando Magic",
-    "channels": "Sky Sport Basket",
+    "channels": "Sky Sport Basket, Sky Sport NBA",
     "sources": [
-      "Virgilio"
+      "Virgilio",
+      "TheSportsDB"
+    ],
+    "date": "2026-11-17"
+  },
+  {
+    "time": "02:15",
+    "channels": "DAZN Italy",
+    "sport": "American Football",
+    "competition": "NFL",
+    "title": "Baltimore Ravens-Los Angeles Chargers",
+    "sources": [
+      "TheSportsDB"
     ],
     "date": "2026-11-17"
   },
@@ -281,6 +39,17 @@
     "competition": "ATP Finals Torino 2026",
     "title": "Doubles R.R Sess. Diurna",
     "channels": "Sky Sport 1",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-17"
+  },
+  {
+    "time": "13:00",
+    "sport": "Calcio",
+    "competition": "Qualificazioni Europei U19 Cechia 2027",
+    "title": "Israele-Italia",
+    "channels": "Rai Sport",
     "sources": [
       "Virgilio"
     ],
@@ -364,6 +133,17 @@
     "date": "2026-11-17"
   },
   {
+    "time": "19:00",
+    "channels": "DAZN Italy",
+    "sport": "Basket",
+    "competition": "Basketball Champions League",
+    "title": "BC Juventus-Pallacanestro Reggiana",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-17"
+  },
+  {
     "time": "20:00",
     "sport": "Basket",
     "competition": "Eurocup",
@@ -371,6 +151,17 @@
     "channels": "Sky Sport Mix",
     "sources": [
       "Virgilio"
+    ],
+    "date": "2026-11-17"
+  },
+  {
+    "time": "20:30",
+    "channels": "DAZN Italy",
+    "sport": "Basket",
+    "competition": "Basketball Champions League",
+    "title": "Joventut Badalona-FC Porto Basketball",
+    "sources": [
+      "TheSportsDB"
     ],
     "date": "2026-11-17"
   },
@@ -408,6 +199,28 @@
     "date": "2026-11-17"
   },
   {
+    "time": "20:30",
+    "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026 – 2a giornata (Gruppo McEnroe)",
+    "title": "Zverev-Shelton: Zverev-Shelton",
+    "channels": "Italia 1",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-17"
+  },
+  {
+    "time": "20:45",
+    "channels": "Sky Go IT",
+    "sport": "Calcio",
+    "competition": "UEFA Nations League",
+    "title": "Bosnia-Herzegovina-Romania",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-17"
+  },
+  {
     "time": "20:45",
     "sport": "Calcio",
     "competition": "UEFA Nations League",
@@ -420,12 +233,89 @@
   },
   {
     "time": "20:45",
+    "channels": "Sky Sport Max, Sky Go IT",
+    "sport": "Calcio",
+    "competition": "UEFA Nations League",
+    "title": "Denmark-Norway",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-17"
+  },
+  {
+    "time": "20:45",
     "sport": "Calcio",
     "competition": "Diretta Gol UEFA Nations League",
     "title": "Diretta Gol",
     "channels": "Sky Sport Calcio",
     "sources": [
       "Virgilio"
+    ],
+    "date": "2026-11-17"
+  },
+  {
+    "time": "20:45",
+    "channels": "Sky Go IT",
+    "sport": "Calcio",
+    "competition": "UEFA Nations League",
+    "title": "Hungary-N.Ireland",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-17"
+  },
+  {
+    "time": "20:45",
+    "channels": "Sky Go IT",
+    "sport": "Calcio",
+    "competition": "UEFA Nations League",
+    "title": "Ireland-Kosovo",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-17"
+  },
+  {
+    "time": "20:45",
+    "channels": "Sky Go IT",
+    "sport": "Calcio",
+    "competition": "UEFA Nations League",
+    "title": "Israel-Austria",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-17"
+  },
+  {
+    "time": "20:45",
+    "channels": "Sky Go IT",
+    "sport": "Calcio",
+    "competition": "UEFA Nations League",
+    "title": "Poland-Sweden",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-17"
+  },
+  {
+    "time": "20:45",
+    "channels": "Sky Go IT",
+    "sport": "Calcio",
+    "competition": "UEFA Nations League",
+    "title": "Ukraine-Georgia",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-17"
+  },
+  {
+    "time": "20:45",
+    "channels": "Sky Go IT",
+    "sport": "Calcio",
+    "competition": "UEFA Nations League",
+    "title": "Wales-Portugal",
+    "sources": [
+      "TheSportsDB"
     ],
     "date": "2026-11-17"
   },
@@ -1451,5 +1341,60 @@
       "Virgilio"
     ],
     "date": "2026-11-22"
+  },
+  {
+    "time": "00:00",
+    "sport": "Basket",
+    "competition": "NBA",
+    "title": "Miami Heat-Oklahoma City Thunder",
+    "channels": "Sky Sport Basket",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-23"
+  },
+  {
+    "time": "18:30",
+    "sport": "Calcio",
+    "competition": "Serie A",
+    "title": "Monza-Fiorentina",
+    "channels": "Dazn",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-23"
+  },
+  {
+    "time": "20:45",
+    "sport": "Calcio",
+    "competition": "Serie A",
+    "title": "Juventus-Venezia",
+    "channels": "Sky, Dazn",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-23"
+  },
+  {
+    "time": "20:45",
+    "sport": "Calcio",
+    "competition": "Serie C",
+    "title": "Lecco-Lumezzane",
+    "channels": "Sky Sport Max",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-23"
+  },
+  {
+    "time": "20:45",
+    "sport": "Calcio",
+    "competition": "Serie A",
+    "title": "Monza-Fiorentina",
+    "channels": "Sky Sport Calcio",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-23"
   }
 ]
