@@ -38,29 +38,7 @@
     "sport": "Tennis",
     "competition": "ATP Finals Torino 2026",
     "title": "Doppio: Sessione Diurna",
-    "channels": "Sky Sport Tennis",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-18"
-  },
-  {
-    "time": "11:30",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
-    "title": "Doubles R.R Sess. Diurna",
-    "channels": "Sky Sport 1",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-18"
-  },
-  {
-    "time": "14:00",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
-    "title": "Singles R.R Sess. Diurna",
-    "channels": "Sky Sport 1",
+    "channels": "Sky Sport Tennis, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -71,7 +49,7 @@
     "sport": "Tennis",
     "competition": "ATP Finals Torino 2026",
     "title": "Singolare: Sessione Diurna",
-    "channels": "Sky Sport Tennis",
+    "channels": "Sky Sport Tennis, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -115,18 +93,7 @@
     "sport": "Tennis",
     "competition": "ATP Finals Torino 2026",
     "title": "Doppio: Sessione Serale",
-    "channels": "Sky Sport Tennis",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-18"
-  },
-  {
-    "time": "18:00",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
-    "title": "Doubles R.R Sess. Serale",
-    "channels": "Sky Sport 1",
+    "channels": "Sky Sport Tennis, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -179,6 +146,17 @@
   {
     "time": "20:30",
     "sport": "Tennis",
+    "competition": "ATP Finals Torino 2026",
+    "title": "Cobolli-Tiafoe",
+    "channels": "Sky Sport Tennis, Sky Sport 1",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-18"
+  },
+  {
+    "time": "20:30",
+    "sport": "Tennis",
     "competition": "ATP Finals Torino 2026 – 2a giornata (Gruppo Lendl)",
     "title": "Cobolli-Tiafoe: Cobolli-Tiafoe",
     "channels": "Italia 1",
@@ -188,26 +166,15 @@
     "date": "2026-11-18"
   },
   {
-    "time": "20:30",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
-    "title": "Singles R.R Sess. Serale",
-    "channels": "Sky Sport 1",
+    "time": "00:30",
+    "channels": "DAZN Italy",
+    "sport": "Basket",
+    "competition": "NCAA Division I Basketball Mens",
+    "title": "Penn State-IUPUI",
     "sources": [
-      "Virgilio"
+      "TheSportsDB"
     ],
-    "date": "2026-11-18"
-  },
-  {
-    "time": "20:30",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
-    "title": "Singolare: Sessione Serale",
-    "channels": "Sky Sport Tennis",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-18"
+    "date": "2026-11-19"
   },
   {
     "time": "01:00",
@@ -225,29 +192,7 @@
     "sport": "Tennis",
     "competition": "ATP Finals Torino 2026",
     "title": "Doppio: Sessione Diurna",
-    "channels": "Sky Sport Tennis",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-19"
-  },
-  {
-    "time": "11:30",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
-    "title": "Doubles R.R Sess. Diurna",
-    "channels": "Sky Sport 1",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-19"
-  },
-  {
-    "time": "14:00",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
-    "title": "Singles R.R Sess. Diurna",
-    "channels": "Sky Sport 1",
+    "channels": "Sky Sport Tennis, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -258,7 +203,7 @@
     "sport": "Tennis",
     "competition": "ATP Finals Torino 2026",
     "title": "Singolare: Sessione Diurna",
-    "channels": "Sky Sport Tennis",
+    "channels": "Sky Sport Tennis, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -269,18 +214,7 @@
     "sport": "Tennis",
     "competition": "ATP Finals Torino 2026",
     "title": "Doppio: Sessione Serale",
-    "channels": "Sky Sport Tennis",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-19"
-  },
-  {
-    "time": "18:00",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
-    "title": "Doubles R.R Sess. Serale",
-    "channels": "Sky Sport 1",
+    "channels": "Sky Sport Tennis, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -301,19 +235,8 @@
     "time": "20:30",
     "sport": "Tennis",
     "competition": "ATP Finals Torino 2026",
-    "title": "Singles R.R Sess. Serale",
-    "channels": "Sky Sport 1",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-19"
-  },
-  {
-    "time": "20:30",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
     "title": "Singolare: Sessione Serale",
-    "channels": "Sky Sport Tennis",
+    "channels": "Sky Sport Tennis, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -345,19 +268,8 @@
     "time": "14:00",
     "sport": "Tennis",
     "competition": "ATP Finals Torino 2026",
-    "title": "Singles R.R Sess. Serale",
-    "channels": "Sky Sport 1",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-20"
-  },
-  {
-    "time": "14:00",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
     "title": "Singolare: Sessione Diurna",
-    "channels": "Sky Sport Tennis",
+    "channels": "Sky Sport Tennis, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -379,18 +291,7 @@
     "sport": "Tennis",
     "competition": "ATP Finals Torino 2026",
     "title": "Doppio: Sessione Serale",
-    "channels": "Sky Sport Tennis",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-20"
-  },
-  {
-    "time": "18:00",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
-    "title": "Doubles R.R Sess. Serale",
-    "channels": "Sky Sport 1",
+    "channels": "Sky Sport Tennis, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -477,19 +378,8 @@
     "time": "20:30",
     "sport": "Tennis",
     "competition": "ATP Finals Torino 2026",
-    "title": "Singles R.R Sess. Serale",
-    "channels": "Sky Sport 1",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-20"
-  },
-  {
-    "time": "20:30",
-    "sport": "Tennis",
-    "competition": "ATP Finals Torino 2026",
     "title": "Singolare: Sessione Serale",
-    "channels": "Sky Sport Tennis",
+    "channels": "Sky Sport Tennis, Sky Sport 1",
     "sources": [
       "Virgilio"
     ],
@@ -918,18 +808,7 @@
     "sport": "Sci alpino",
     "competition": "Coppa del Mondo – Gurgl",
     "title": "Slalom M (1a manche): 1a manche",
-    "channels": "Eurosport",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-22"
-  },
-  {
-    "time": "11:00",
-    "sport": "Sci alpino",
-    "competition": "Coppa del Mondo – Gurgl",
-    "title": "Slalom M (1a manche): 1a manche",
-    "channels": "Rai 2",
+    "channels": "Eurosport, Rai 2",
     "sources": [
       "Virgilio"
     ],
@@ -950,7 +829,7 @@
     "time": "12:30",
     "sport": "Calcio",
     "competition": "Serie A",
-    "title": "Sassuolo-Genoa",
+    "title": "Juventus-Venezia",
     "channels": "Dazn",
     "sources": [
       "Virgilio"
@@ -995,7 +874,7 @@
     "sport": "Sci alpino",
     "competition": "Coppa del Mondo – Gurgl",
     "title": "Slalom M (2a manche): 2a manche",
-    "channels": "Eurosport",
+    "channels": "Eurosport, Rai Sport",
     "sources": [
       "Virgilio"
     ],
@@ -1017,6 +896,17 @@
     "sport": "Calcio",
     "competition": "Serie B",
     "title": "Avellino-Mantova",
+    "channels": "Dazn",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-22"
+  },
+  {
+    "time": "15:00",
+    "sport": "Calcio",
+    "competition": "Serie A",
+    "title": "Bologna-Udinese",
     "channels": "Dazn",
     "sources": [
       "Virgilio"
@@ -1071,7 +961,7 @@
     "time": "15:00",
     "sport": "Calcio",
     "competition": "Serie A",
-    "title": "Milan-Frosinone",
+    "title": "Sassuolo-Genoa",
     "channels": "Dazn",
     "sources": [
       "Virgilio"
@@ -1159,8 +1049,8 @@
     "time": "18:00",
     "sport": "Calcio",
     "competition": "Serie A",
-    "title": "Bologna-Udinese",
-    "channels": "Sky, Dazn",
+    "title": "Milan-Frosinone",
+    "channels": "Sky, Dazn, Sky Sport Calcio",
     "sources": [
       "Virgilio"
     ],
@@ -1168,10 +1058,10 @@
   },
   {
     "time": "18:00",
-    "sport": "Calcio",
-    "competition": "Serie A",
-    "title": "Milan-Frosinone",
-    "channels": "Sky Sport Calcio",
+    "sport": "Pallavolo maschile",
+    "competition": "SuperLega",
+    "title": "Piacenza-Perugia",
+    "channels": "Rai Sport",
     "sources": [
       "Virgilio"
     ],
@@ -1211,6 +1101,17 @@
     "date": "2026-11-22"
   },
   {
+    "time": "20:45",
+    "sport": "Basket",
+    "competition": "Serie A2",
+    "title": "Livorno-Sassari",
+    "channels": "Rai Sport",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-22"
+  },
+  {
     "time": "00:00",
     "sport": "Basket",
     "competition": "NBA",
@@ -1222,22 +1123,11 @@
     "date": "2026-11-23"
   },
   {
-    "time": "18:30",
+    "time": "15:30",
     "sport": "Calcio",
-    "competition": "Serie A",
-    "title": "Monza-Fiorentina",
-    "channels": "Dazn",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-23"
-  },
-  {
-    "time": "20:45",
-    "sport": "Calcio",
-    "competition": "Serie A",
-    "title": "Juventus-Venezia",
-    "channels": "Sky, Dazn",
+    "competition": "Mondiali U17 Qatar 2026",
+    "title": "Italia-Costa d’Avorio",
+    "channels": "Rai Sport",
     "sources": [
       "Virgilio"
     ],
@@ -1259,7 +1149,7 @@
     "sport": "Calcio",
     "competition": "Serie A",
     "title": "Monza-Fiorentina",
-    "channels": "Sky Sport Calcio",
+    "channels": "Sky, Dazn, Sky Sport Calcio",
     "sources": [
       "Virgilio"
     ],
