@@ -3,6 +3,61 @@
   "stale": true,
   "missing_channels": [],
   "epg_gaps": [
+    "Rai 1 HD · 1: nessun programma futuro importato",
+    "Rai 2 HD · 2: nessun programma futuro importato",
+    "Rai 3 HD · 3: nessun programma futuro importato",
+    "Rete 4 HD · 4: nessun programma futuro importato",
+    "Canale 5 HD · 5: nessun programma futuro importato",
+    "Italia 1 HD · 6: nessun programma futuro importato",
+    "La 7 HD · 7: nessun programma futuro importato",
+    "TV8 HD · 8: nessun programma futuro importato",
+    "Nove · 9: nessun programma futuro importato",
+    "20 HD · 20: nessun programma futuro importato",
+    "Rai 4 HD · 21: nessun programma futuro importato",
+    "Iris HD · 22: nessun programma futuro importato",
+    "Rai 5 HD · 23: nessun programma futuro importato",
+    "Rai Movie HD · 24: nessun programma futuro importato",
+    "Rai Premium HD · 25: nessun programma futuro importato",
+    "Cielo HD · 26: nessun programma futuro importato",
+    "27 TwentySeven HD · 27: nessun programma futuro importato",
+    "La 5 HD · 30: nessun programma futuro importato",
+    "Real Time · 31: nessun programma futuro importato",
+    "Food Network · 33: nessun programma futuro importato",
+    "Cine34 HD · 34: nessun programma futuro importato",
+    "Focus HD · 35: nessun programma futuro importato",
+    "Giallo · 38: nessun programma futuro importato",
+    "Top Crime HD · 39: nessun programma futuro importato",
+    "Boing HD · 40: nessun programma futuro importato",
+    "Rai Gulp HD · 42: nessun programma futuro importato",
+    "Rai YoYo HD · 43: nessun programma futuro importato",
+    "Cartoonito HD · 45: nessun programma futuro importato",
+    "Super! · 46: nessun programma futuro importato",
+    "Rai News 24 HD · 48: nessun programma futuro importato",
+    "Mediaset Italia 2 HD · 49: nessun programma futuro importato",
+    "TGCOM24 HD · 51: nessun programma futuro importato",
+    "DMAX · 52: nessun programma futuro importato",
+    "HGTV · 53: nessun programma futuro importato",
+    "Rai Storia HD · 54: nessun programma futuro importato",
+    "Deejay TV (IT) · 107: nessun programma futuro importato",
+    "RTL 102.5 TV (IT) · 108: nessun programma futuro importato",
+    "Sky Sport24 (IT) · 200: nessun programma futuro importato",
+    "Sky Sport 1 HD · 201: nessun programma futuro importato",
+    "Sky Sport Calcio · 202: nessun programma futuro importato",
+    "Sky Sport Tennis · 203: nessun programma futuro importato",
+    "Sky Sport Arena · 204: nessun programma futuro importato",
+    "Sky Sport Basket · 205: nessun programma futuro importato",
+    "Sky Sport Max · 206: nessun programma futuro importato",
+    "Sky Sport F1 (IT) · 207: nessun programma futuro importato",
+    "Sky Sport MotoGP (IT) · 208: nessun programma futuro importato",
+    "Sky Sport Mix · 211: nessun programma futuro importato",
+    "SuperTennis (IT) · 212: nessun programma futuro importato",
+    "DAZN 1 · 214: nessun programma futuro importato",
+    "DAZN 2 · 215: nessun programma futuro importato",
+    "Eurosport 1 · 216: nessun programma futuro importato",
+    "Eurosport 2 · 217: nessun programma futuro importato",
+    "Sportitalia HD · 225: nessun programma futuro importato",
+    "Rai Sport HD · 227: nessun programma futuro importato",
+    "ACI Sport TV (IT) · 228: nessun programma futuro importato",
     "Sky Sport 251 · 251: nessun programma futuro importato",
     "Sky Sport 252 · 252: nessun programma futuro importato",
     "Sky Sport 253 · 253: nessun programma futuro importato",
@@ -47,96 +102,12 @@
     "NFL Network (US) · 1402: nessun programma futuro importato"
   ],
   "unresolved_broadcasters": [
-    "DAZN Italy",
+    "Amazon Prime Video",
     "Dazn",
     "Eurosport",
     "Sky"
   ],
   "unmatched_events": [
-    {
-      "date": "2026-11-18",
-      "time": "05:00",
-      "title": "LA Clippers-Utah Jazz",
-      "broadcasters": [
-        "Sky Sport Basket"
-      ]
-    },
-    {
-      "date": "2026-11-18",
-      "time": "11:30",
-      "title": "Doppio: Sessione Diurna",
-      "broadcasters": [
-        "Sky Sport Tennis",
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-18",
-      "time": "14:00",
-      "title": "Singolare: Sessione Diurna",
-      "broadcasters": [
-        "Sky Sport Tennis",
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-18",
-      "time": "18:00",
-      "title": "AEK BC-Falco KC",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-18",
-      "time": "18:00",
-      "title": "Besiktas-Real Madrid",
-      "broadcasters": [
-        "Sky Sport Arena"
-      ]
-    },
-    {
-      "date": "2026-11-18",
-      "time": "18:00",
-      "title": "Doppio: Sessione Serale",
-      "broadcasters": [
-        "Sky Sport Tennis",
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-18",
-      "time": "20:00",
-      "title": "Cibona Zagreb-Strasbourg",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-18",
-      "time": "20:30",
-      "title": "Cobolli-Tiafoe",
-      "broadcasters": [
-        "Sky Sport Tennis",
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-18",
-      "time": "20:30",
-      "title": "Cobolli-Tiafoe: Cobolli-Tiafoe",
-      "broadcasters": [
-        "Italia 1"
-      ]
-    },
-    {
-      "date": "2026-11-19",
-      "time": "00:30",
-      "title": "Penn State-IUPUI",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
     {
       "date": "2026-11-19",
       "time": "11:30",
@@ -175,10 +146,18 @@
     {
       "date": "2026-11-19",
       "time": "20:30",
-      "title": "Singolare: Sessione Serale",
+      "title": "Zverev-Fils",
       "broadcasters": [
         "Sky Sport Tennis",
         "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-19",
+      "time": "20:30",
+      "title": "Zverev-Fils: Zverev-Fils",
+      "broadcasters": [
+        "Italia 1"
       ]
     },
     {
@@ -857,6 +836,7 @@
       "time": "20:45",
       "title": "Lecco-Lumezzane",
       "broadcasters": [
+        "Rai Sport",
         "Sky Sport Max"
       ]
     },
@@ -945,6 +925,14 @@
     },
     {
       "date": "2026-11-24",
+      "time": "20:30",
+      "title": "Torino-Caserta",
+      "broadcasters": [
+        "Rai Sport"
+      ]
+    },
+    {
+      "date": "2026-11-24",
       "time": "21:00",
       "title": "Arsenal-Borussia Dortmund",
       "broadcasters": [
@@ -996,6 +984,145 @@
       "date": "2026-11-24",
       "time": "21:00",
       "title": "Slovan-Real Betis",
+      "broadcasters": [
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "16:00",
+      "title": "PSG-Roma",
+      "broadcasters": [
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "18:00",
+      "title": "Atalanta U23-Pineto",
+      "broadcasters": [
+        "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "18:45",
+      "title": "Sabah-Barcellona",
+      "broadcasters": [
+        "Sky",
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "18:45",
+      "title": "Slavia Praga-Villarreal",
+      "broadcasters": [
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "19:00",
+      "title": "Cremonese-Avellino",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "20:00",
+      "title": "Mantova-Arezzo",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "20:00",
+      "title": "Milano-Levalloois Paris",
+      "broadcasters": [
+        "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "20:00",
+      "title": "Padova-Sampdoria",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "20:00",
+      "title": "Pisa-Modena",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "20:00",
+      "title": "Savona-Brescia",
+      "broadcasters": [
+        "Rai Sport"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "21:00",
+      "title": "Atletico Madrid-Viking",
+      "broadcasters": [
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "21:00",
+      "title": "Bruges-Liverpool",
+      "broadcasters": [
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "21:00",
+      "title": "Inter-Stoccarda",
+      "broadcasters": [
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "21:00",
+      "title": "Lille-Bayern Monaco",
+      "broadcasters": [
+        "Sky",
+        "Sky Sport Calcio",
+        "TV8"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "21:00",
+      "title": "PSG-Roma",
+      "broadcasters": [
+        "Amazon Prime Video"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "21:00",
+      "title": "Shakhtar Donetsk-Fenerbahce",
+      "broadcasters": [
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "21:00",
+      "title": "Sporting-Manchester United",
       "broadcasters": [
         "Sky"
       ]
