@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T18:07:18.249322+00:00",
+  "generated_at": "2026-11-19T19:07:18.534884+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -571,15 +571,6 @@
       "title": "Torino-Caserta",
       "broadcasters": [
         "Rai Sport"
-      ]
-    },
-    {
-      "date": "2026-11-24",
-      "time": "21:00",
-      "title": "Arsenal-Borussia Dortmund",
-      "broadcasters": [
-        "Sky",
-        "Sky Sport Calcio"
       ]
     },
     {
