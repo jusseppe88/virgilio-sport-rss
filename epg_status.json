@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T14:07:18.232514+00:00",
+  "generated_at": "2026-11-20T15:07:18.585925+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -655,14 +655,6 @@
       "date": "2026-11-24",
       "time": "21:00",
       "title": "Como-AEK Atene",
-      "broadcasters": [
-        "Sky"
-      ]
-    },
-    {
-      "date": "2026-11-24",
-      "time": "21:00",
-      "title": "Feyenoord-Porto",
       "broadcasters": [
         "Sky"
       ]
