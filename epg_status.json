@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T22:07:18.992327+00:00",
+  "generated_at": "2026-11-20T23:07:18.248921+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -17,105 +17,6 @@
     "Sky Go IT"
   ],
   "unmatched_events": [
-    {
-      "date": "2026-11-20",
-      "time": "02:15",
-      "title": "Houston Texans-Indianapolis Colts",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-20",
-      "time": "03:00",
-      "title": "Oregon-Oregon State",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-20",
-      "time": "11:30",
-      "title": "Doppio: Sessione Diurna",
-      "broadcasters": [
-        "Sky Sport Tennis"
-      ]
-    },
-    {
-      "date": "2026-11-20",
-      "time": "14:00",
-      "title": "Singolare: Sessione Diurna",
-      "broadcasters": [
-        "Sky Sport Tennis",
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-20",
-      "time": "18:00",
-      "title": "Doppio: Sessione Serale",
-      "broadcasters": [
-        "Sky Sport Tennis",
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-20",
-      "time": "20:00",
-      "title": "Chorale Roanne Basket-Limoges",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-20",
-      "time": "20:30",
-      "title": "Bayern Munich-Köln",
-      "broadcasters": [
-        "Sky Sport Arena"
-      ]
-    },
-    {
-      "date": "2026-11-20",
-      "time": "20:30",
-      "title": "Hellas Verona-Cesena",
-      "broadcasters": [
-        "Dazn"
-      ]
-    },
-    {
-      "date": "2026-11-20",
-      "time": "20:30",
-      "title": "Medvedev-Tiafoe: Medvedev-Tiafoe",
-      "broadcasters": [
-        "Italia 1"
-      ]
-    },
-    {
-      "date": "2026-11-20",
-      "time": "20:30",
-      "title": "Singolare: Sessione Serale",
-      "broadcasters": [
-        "Sky Sport Tennis",
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-20",
-      "time": "20:45",
-      "title": "Southend United-Boreham Wood",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-20",
-      "time": "23:00",
-      "title": "Amari Jones-DeAundre Pettus",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
     {
       "date": "2026-11-21",
       "time": "10:30",
@@ -805,14 +706,6 @@
       "date": "2026-11-25",
       "time": "22:00",
       "title": "Philadelphia 76ers-Miami Heat",
-      "broadcasters": [
-        "Sky Sport Basket"
-      ]
-    },
-    {
-      "date": "2026-11-26",
-      "time": "01:30",
-      "title": "Oklahoma City Thunder-Minnesota Timberwolves",
       "broadcasters": [
         "Sky Sport Basket"
       ]
