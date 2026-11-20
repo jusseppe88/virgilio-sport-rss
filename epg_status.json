@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-20T19:07:18.310419+00:00",
+  "generated_at": "2026-11-20T20:07:18.316937+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
-    "Sky Sport 258 · 258: nessun programma futuro importato",
+    "Sky Sport 258 · 258: soltanto voci generiche o finestre troppo lunghe",
     "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe",
     "DAZN 2 (DE) · 501: nessun programma futuro importato",
     "beIN SPORTS 2 (TR) · 1500: nessun programma futuro importato"
@@ -48,14 +48,6 @@
       "broadcasters": [
         "Sky Sport Tennis",
         "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-20",
-      "time": "16:00",
-      "title": "Italia-Giamaica",
-      "broadcasters": [
-        "Rai Sport"
       ]
     },
     {
@@ -106,14 +98,6 @@
       "broadcasters": [
         "Sky Sport Tennis",
         "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-20",
-      "time": "20:45",
-      "title": "Cuneo-Verona",
-      "broadcasters": [
-        "Rai Sport"
       ]
     },
     {
@@ -307,44 +291,12 @@
     },
     {
       "date": "2026-11-22",
-      "time": "11:00",
-      "title": "Lazio-Milan",
-      "broadcasters": [
-        "Sportitalia"
-      ]
-    },
-    {
-      "date": "2026-11-22",
       "time": "12:15",
       "title": "GP Portogallo",
       "broadcasters": [
         "Sky Sport MotoGP",
         "Sky Sport 1",
         "TV8"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "12:30",
-      "title": "Scafatese-Foggia",
-      "broadcasters": [
-        "Sky Sport Max"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "12:30",
-      "title": "Union Brescia-Renate",
-      "broadcasters": [
-        "Sky Sport Calcio"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "13:30",
-      "title": "1. FC Kaiserslautern-Dynamo Dresden",
-      "broadcasters": [
-        "Sky Sport Mix"
       ]
     },
     {
@@ -377,14 +329,6 @@
     {
       "date": "2026-11-22",
       "time": "15:00",
-      "title": "Catania-Bari",
-      "broadcasters": [
-        "Sky Sport Calcio"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "15:00",
       "title": "Doubles Finale",
       "broadcasters": [
         "Sky Sport Tennis"
@@ -396,14 +340,6 @@
       "title": "Fiorentina-Como",
       "broadcasters": [
         "Rai 2"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "15:00",
-      "title": "Sassuolo-Genoa",
-      "broadcasters": [
-        "Dazn"
       ]
     },
     {
@@ -442,22 +378,6 @@
     },
     {
       "date": "2026-11-22",
-      "time": "17:30",
-      "title": "Sambenedettese-Perugia",
-      "broadcasters": [
-        "Sky Sport Max"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "17:30",
-      "title": "Werder Brema-Amburgo SV",
-      "broadcasters": [
-        "Sky Sport Mix"
-      ]
-    },
-    {
-      "date": "2026-11-22",
       "time": "18:00",
       "title": "Piacenza-Perugia",
       "broadcasters": [
@@ -478,14 +398,6 @@
       "title": "Singolare: Finale",
       "broadcasters": [
         "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "18:15",
-      "title": "Verona-Udine",
-      "broadcasters": [
-        "Sky Sport Basket"
       ]
     },
     {
