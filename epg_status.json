@@ -10,11 +10,29 @@
   ],
   "unresolved_broadcasters": [
     "Amazon Prime Video",
+    "DAZN Italy",
     "Dazn",
     "Eurosport",
-    "Sky"
+    "Sky",
+    "Sky Go IT"
   ],
   "unmatched_events": [
+    {
+      "date": "2026-11-20",
+      "time": "02:15",
+      "title": "Houston Texans-Indianapolis Colts",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "time": "03:00",
+      "title": "Oregon-Oregon State",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
     {
       "date": "2026-11-20",
       "time": "11:30",
@@ -51,10 +69,34 @@
     },
     {
       "date": "2026-11-20",
+      "time": "20:00",
+      "title": "Chorale Roanne Basket-Limoges",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "time": "20:30",
+      "title": "Bayern Munich-Köln",
+      "broadcasters": [
+        "Sky Sport Arena"
+      ]
+    },
+    {
+      "date": "2026-11-20",
       "time": "20:30",
       "title": "Hellas Verona-Cesena",
       "broadcasters": [
         "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "time": "20:30",
+      "title": "Medvedev-Tiafoe: Medvedev-Tiafoe",
+      "broadcasters": [
+        "Italia 1"
       ]
     },
     {
@@ -72,6 +114,22 @@
       "title": "Cuneo-Verona",
       "broadcasters": [
         "Rai Sport"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "time": "20:45",
+      "title": "Southend United-Boreham Wood",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "time": "23:00",
+      "title": "Amari Jones-DeAundre Pettus",
+      "broadcasters": [
+        "DAZN Italy"
       ]
     },
     {
@@ -223,19 +281,11 @@
     },
     {
       "date": "2026-11-22",
-      "time": "00:00",
-      "title": "Miami Heat-Oklahoma City Thunder",
-      "broadcasters": [
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-22",
       "time": "05:00",
       "title": "GP Las Vegas",
       "broadcasters": [
-        "Sky Sport F1",
-        "Sky Sport 1"
+        "Sky Sport 1",
+        "Sky Sport F1"
       ]
     },
     {
@@ -249,12 +299,28 @@
     },
     {
       "date": "2026-11-22",
+      "time": "11:00",
+      "title": "GP Portogallo",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "11:00",
+      "title": "Lazio-Milan",
+      "broadcasters": [
+        "Sportitalia"
+      ]
+    },
+    {
+      "date": "2026-11-22",
       "time": "12:15",
       "title": "GP Portogallo",
       "broadcasters": [
         "Sky Sport MotoGP",
-        "TV8",
-        "Sky Sport 1"
+        "Sky Sport 1",
+        "TV8"
       ]
     },
     {
@@ -296,8 +362,8 @@
       "title": "GP Portogallo",
       "broadcasters": [
         "Sky Sport MotoGP",
-        "TV8",
-        "Sky Sport 1"
+        "Sky Sport 1",
+        "TV8"
       ]
     },
     {
@@ -346,8 +412,7 @@
       "title": "GP Portogallo",
       "broadcasters": [
         "Sky Sport MotoGP",
-        "TV8",
-        "Sky Sport 1"
+        "TV8"
       ]
     },
     {
@@ -355,6 +420,7 @@
       "time": "16:00",
       "title": "Derthona Tortona-Olimpia Milano",
       "broadcasters": [
+        "Sky Sport 1",
         "Sky Sport Basket"
       ]
     },
@@ -403,7 +469,14 @@
       "time": "18:00",
       "title": "Singles Finale",
       "broadcasters": [
-        "Sky Sport Tennis",
+        "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "18:00",
+      "title": "Singolare: Finale",
+      "broadcasters": [
         "Sky Sport 1"
       ]
     },
@@ -425,10 +498,34 @@
     },
     {
       "date": "2026-11-23",
+      "time": "15:00",
+      "title": "Albinoleffe-Genoa",
+      "broadcasters": [
+        "Sportitalia"
+      ]
+    },
+    {
+      "date": "2026-11-23",
       "time": "15:30",
       "title": "Italia-Costa d’Avorio",
       "broadcasters": [
         "Rai Sport"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "time": "17:00",
+      "title": "Torino-Bologna",
+      "broadcasters": [
+        "Sportitalia"
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "time": "20:30",
+      "title": "Grosseto-Guidonia Montecelio",
+      "broadcasters": [
+        "Sky Sport 1"
       ]
     },
     {
@@ -452,10 +549,26 @@
     },
     {
       "date": "2026-11-24",
+      "time": "01:30",
+      "title": "Minnesota Timberwolves-Brooklyn Nets",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-24",
       "time": "18:45",
       "title": "Bodo Glimt-LASK",
       "broadcasters": [
         "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "time": "18:45",
+      "title": "Diretta Gol Ucl",
+      "broadcasters": [
+        "Sky Sport 1"
       ]
     },
     {
@@ -533,6 +646,14 @@
     },
     {
       "date": "2026-11-24",
+      "time": "20:45",
+      "title": "Lyon Villeurbanne-Olimpia Milano",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-24",
       "time": "21:00",
       "title": "Como-AEK Atene",
       "broadcasters": [
@@ -560,7 +681,16 @@
       "time": "21:00",
       "title": "Manchester City-Napoli",
       "broadcasters": [
+        "Sky Sport 1",
         "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "time": "21:00",
+      "title": "Real Madrid-PSV Eindhoven",
+      "broadcasters": [
+        "Sky Sport Mix"
       ]
     },
     {
@@ -581,6 +711,30 @@
     },
     {
       "date": "2026-11-25",
+      "time": "02:00",
+      "title": "Washington Wizards-Boston Celtics",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "04:00",
+      "title": "Denver Nuggets-Dallas Mavericks",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "14:30",
+      "title": "Audace Cerignola-Inter U23",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-25",
       "time": "16:00",
       "title": "PSG-Roma",
       "broadcasters": [
@@ -589,10 +743,26 @@
     },
     {
       "date": "2026-11-25",
+      "time": "17:00",
+      "title": "Dubai Basketball-Partizan Belgrado",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-25",
       "time": "18:00",
       "title": "Atalanta U23-Pineto",
       "broadcasters": [
         "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "18:45",
+      "title": "Diretta Gol Ucl",
+      "broadcasters": [
+        "Sky Sport 1"
       ]
     },
     {
@@ -662,6 +832,14 @@
     },
     {
       "date": "2026-11-25",
+      "time": "20:15",
+      "title": "Olympiacos-Hapoel Tel Aviv",
+      "broadcasters": [
+        "Sky Sport Mix"
+      ]
+    },
+    {
+      "date": "2026-11-25",
       "time": "21:00",
       "title": "Atletico Madrid-Viking",
       "broadcasters": [
@@ -681,7 +859,8 @@
       "time": "21:00",
       "title": "Inter-Stoccarda",
       "broadcasters": [
-        "Sky"
+        "Sky",
+        "Sky Sport 1"
       ]
     },
     {
@@ -714,6 +893,237 @@
       "date": "2026-11-25",
       "time": "21:00",
       "title": "Sporting-Manchester United",
+      "broadcasters": [
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "22:00",
+      "title": "Philadelphia 76ers-Miami Heat",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "01:00",
+      "title": "Boca Juniors-Independiente Rivadavia",
+      "broadcasters": [
+        "Sportitalia"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "01:30",
+      "title": "Oklahoma City Thunder-Minnesota Timberwolves",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "15:00",
+      "title": "Uzbekistan-Italia",
+      "broadcasters": [
+        "Rai Sport"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "16:30",
+      "title": "Kairat Almaty-Mjallby",
+      "broadcasters": [
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "17:30",
+      "title": "Lituania-Serbia",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "18:45",
+      "title": "Besiktas-Hapoel Beer Sheva",
+      "broadcasters": [
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "18:45",
+      "title": "Celta Vigo-Bournemouth",
+      "broadcasters": [
+        "Sky Sport Mix",
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "18:45",
+      "title": "Dinamo Zagabria-Bayer Leverkusen",
+      "broadcasters": [
+        "Sky",
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "18:45",
+      "title": "Diretta Gol Uel-Uecl",
+      "broadcasters": [
+        "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "18:45",
+      "title": "Marsiglia-Levski Sofia",
+      "broadcasters": [
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "18:45",
+      "title": "Olympiacos-Milan",
+      "broadcasters": [
+        "Sky",
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "18:45",
+      "title": "Salisburgo-Ararat Armenia",
+      "broadcasters": [
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "18:45",
+      "title": "Union Saint Gilloise-Lech Poznan",
+      "broadcasters": [
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "18:45",
+      "title": "Viktoria Plzen-Benfica",
+      "broadcasters": [
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "20:00",
+      "title": "Italia-Turchia",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "20:30",
+      "title": "Perugia-Civitanova",
+      "broadcasters": [
+        "Rai Sport"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "21:00",
+      "title": "Borac-Atalanta",
+      "broadcasters": [
+        "Sky",
+        "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "21:00",
+      "title": "Crystal Palace-Real Sociedad",
+      "broadcasters": [
+        "Sky",
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "21:00",
+      "title": "Ferencvaros-Celje",
+      "broadcasters": [
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "21:00",
+      "title": "Hoffenheim-Sturm Graz",
+      "broadcasters": [
+        "Sky Sport Mix",
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "21:00",
+      "title": "Juventus-Omonia Nicosia",
+      "broadcasters": [
+        "Sky",
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "21:00",
+      "title": "Lione-Lillestrom",
+      "broadcasters": [
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "21:00",
+      "title": "NEC-Rennes",
+      "broadcasters": [
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "21:00",
+      "title": "OFI-Anderlecht",
+      "broadcasters": [
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "21:00",
+      "title": "Sparta Praga-AZ Alkmaar",
+      "broadcasters": [
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "21:00",
+      "title": "Sunderland-Jagiellonia Bialystok",
+      "broadcasters": [
+        "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "time": "21:00",
+      "title": "Torreense-Celtic",
       "broadcasters": [
         "Sky"
       ]
