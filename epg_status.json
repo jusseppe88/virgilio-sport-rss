@@ -19,10 +19,19 @@
   "unmatched_events": [
     {
       "date": "2026-11-21",
+      "time": "01:00",
+      "title": "BKFC Fight Night Myrtle Beach Richardson-Oxendine",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-21",
       "time": "10:30",
       "title": "Slalom F (1a manche): 1a manche",
       "broadcasters": [
-        "Eurosport"
+        "Eurosport",
+        "Rai 2"
       ]
     },
     {
@@ -31,6 +40,14 @@
       "title": "Doubles 1a Semifinale",
       "broadcasters": [
         "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "time": "12:00",
+      "title": "Eintracht Frankfurt Women-Hamburg Women",
+      "broadcasters": [
+        "DAZN Italy"
       ]
     },
     {
@@ -52,10 +69,50 @@
     },
     {
       "date": "2026-11-21",
+      "time": "13:30",
+      "title": "Solihull Moors-Altrincham",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "time": "13:30",
+      "title": "Tamworth-Eastleigh",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "time": "13:30",
+      "title": "Türk Telekom BK-Tofaş SK",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "time": "14:30",
+      "title": "Alcaraz-Shelton",
+      "broadcasters": [
+        "Italia 1"
+      ]
+    },
+    {
+      "date": "2026-11-21",
       "time": "14:30",
       "title": "Singles 1a Semifinale",
       "broadcasters": [
         "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "time": "15:00",
+      "title": "AC Milan Women-Sassuolo Women",
+      "broadcasters": [
+        "DAZN Italy"
       ]
     },
     {
@@ -100,6 +157,14 @@
     },
     {
       "date": "2026-11-21",
+      "time": "15:10",
+      "title": "England Rugby-New Zealand Rugby",
+      "broadcasters": [
+        "Sky Sport Arena"
+      ]
+    },
+    {
+      "date": "2026-11-21",
       "time": "15:30",
       "title": "Borussia Moenchengladbach-Borussia Dortmund",
       "broadcasters": [
@@ -109,11 +174,42 @@
     {
       "date": "2026-11-21",
       "time": "16:00",
+      "title": "Charleroi-Sint-Truiden",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "time": "16:00",
       "title": "GP Portogallo",
       "broadcasters": [
         "Sky Sport MotoGP",
-        "TV8",
         "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "time": "16:00",
+      "title": "Gateshead-Hartlepool United",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "time": "16:00",
+      "title": "Halifax Town-Woking",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "time": "16:00",
+      "title": "Worthing-Harrogate Town",
+      "broadcasters": [
+        "DAZN Italy"
       ]
     },
     {
@@ -126,10 +222,66 @@
     },
     {
       "date": "2026-11-21",
+      "time": "17:30",
+      "title": "Campobasso-Vis Pesaro",
+      "broadcasters": [
+        "Sky Go IT"
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "time": "17:30",
+      "title": "Crotone-Cosenza",
+      "broadcasters": [
+        "Sky Go IT"
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "time": "17:30",
+      "title": "Folgore Caratese-Arzignano Valchiampo",
+      "broadcasters": [
+        "Sky Go IT"
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "time": "17:30",
+      "title": "Giana Erminio-Juventus Next Gen",
+      "broadcasters": [
+        "Sky Go IT"
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "time": "17:30",
+      "title": "Savoia-Sorrento",
+      "broadcasters": [
+        "Sky Go IT"
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "time": "17:40",
+      "title": "Ireland Rugby-South Africa Rugby",
+      "broadcasters": [
+        "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-21",
       "time": "18:00",
       "title": "Doubles 2a Semifinale",
       "broadcasters": [
         "Sky Sport Tennis"
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "time": "18:00",
+      "title": "Oktagon 98 Legierski-Buchinger",
+      "broadcasters": [
+        "DAZN Italy"
       ]
     },
     {
@@ -169,8 +321,8 @@
       "time": "05:00",
       "title": "GP Las Vegas",
       "broadcasters": [
-        "Sky Sport 1",
-        "Sky Sport F1"
+        "Sky Sport F1",
+        "Sky Sport 1"
       ]
     },
     {
@@ -187,7 +339,8 @@
       "time": "11:00",
       "title": "GP Portogallo",
       "broadcasters": [
-        "Sky Sport 1"
+        "Sky Sport 1",
+        "TV8"
       ]
     },
     {
@@ -215,8 +368,8 @@
       "title": "GP Portogallo",
       "broadcasters": [
         "Sky Sport MotoGP",
-        "Sky Sport 1",
-        "TV8"
+        "TV8",
+        "Sky Sport 1"
       ]
     },
     {
@@ -248,8 +401,7 @@
       "time": "15:30",
       "title": "GP Portogallo",
       "broadcasters": [
-        "Sky Sport MotoGP",
-        "TV8"
+        "Sky Sport MotoGP"
       ]
     },
     {
@@ -280,17 +432,18 @@
     {
       "date": "2026-11-22",
       "time": "18:00",
-      "title": "Piacenza-Perugia",
+      "title": "Finale",
       "broadcasters": [
-        "Rai Sport"
+        "Sky Sport Tennis",
+        "Italia 1"
       ]
     },
     {
       "date": "2026-11-22",
       "time": "18:00",
-      "title": "Singles Finale",
+      "title": "Piacenza-Perugia",
       "broadcasters": [
-        "Sky Sport Tennis"
+        "Rai Sport"
       ]
     },
     {
@@ -915,6 +1068,80 @@
       "title": "Torreense-Celtic",
       "broadcasters": [
         "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "time": "15:00",
+      "title": "Bologna-Albinoleffe",
+      "broadcasters": [
+        "Sportitalia"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "time": "17:00",
+      "title": "Atalanta-Monza",
+      "broadcasters": [
+        "Sportitalia"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "time": "18:30",
+      "title": "Heidenheim-Norimberga",
+      "broadcasters": [
+        "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "time": "20:00",
+      "title": "Slovenia-Finlandia",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "time": "20:30",
+      "title": "Foggia-Casertana",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "time": "20:45",
+      "title": "Polonia-Croazia",
+      "broadcasters": [
+        "Sky Sport Mix"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "time": "20:45",
+      "title": "Rimini-Pesaro",
+      "broadcasters": [
+        "Rai Sport"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "time": "20:45",
+      "title": "Venezia-Bologna",
+      "broadcasters": [
+        "Dazn",
+        "Sky",
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "time": "21:00",
+      "title": "Nottingham Forest-Chelsea",
+      "broadcasters": [
+        "Sky Sport Max"
       ]
     }
   ]
