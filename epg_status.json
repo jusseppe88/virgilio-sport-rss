@@ -1,8 +1,9 @@
 {
-  "generated_at": "2026-11-21T14:07:18.363689+00:00",
+  "generated_at": "2026-11-21T15:07:18.260565+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
+    "Sky Sport 257 · 257: soltanto voci generiche o finestre troppo lunghe",
     "Sky Sport 258 · 258: soltanto voci generiche o finestre troppo lunghe",
     "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe",
     "DAZN 2 (DE) · 501: nessun programma futuro importato"
@@ -503,16 +504,6 @@
       ]
     },
     {
-      "date": "2026-11-23",
-      "time": "20:45",
-      "title": "Monza-Fiorentina",
-      "broadcasters": [
-        "Sky",
-        "Dazn",
-        "Sky Sport Calcio"
-      ]
-    },
-    {
       "date": "2026-11-24",
       "time": "01:30",
       "title": "Minnesota Timberwolves-Brooklyn Nets",
@@ -809,15 +800,6 @@
       "title": "Bruges-Liverpool",
       "broadcasters": [
         "Sky"
-      ]
-    },
-    {
-      "date": "2026-11-25",
-      "time": "21:00",
-      "title": "Inter-Stoccarda",
-      "broadcasters": [
-        "Sky",
-        "Sky Sport 1"
       ]
     },
     {
