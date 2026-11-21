@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T21:07:18.412052+00:00",
+  "generated_at": "2026-11-21T22:07:18.308629+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -303,14 +303,6 @@
     {
       "date": "2026-11-21",
       "time": "20:30",
-      "title": "Novara-Chieri",
-      "broadcasters": [
-        "Rai Sport"
-      ]
-    },
-    {
-      "date": "2026-11-21",
-      "time": "20:30",
       "title": "Singles 2a Semifinale",
       "broadcasters": [
         "Sky Sport Tennis"
@@ -484,31 +476,6 @@
       "title": "Torino-Bologna",
       "broadcasters": [
         "Sportitalia"
-      ]
-    },
-    {
-      "date": "2026-11-23",
-      "time": "20:30",
-      "title": "Grosseto-Guidonia Montecelio",
-      "broadcasters": [
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-23",
-      "time": "20:45",
-      "title": "Lecco-Lumezzane",
-      "broadcasters": [
-        "Rai Sport",
-        "Sky Sport Max"
-      ]
-    },
-    {
-      "date": "2026-11-24",
-      "time": "01:30",
-      "title": "Minnesota Timberwolves-Brooklyn Nets",
-      "broadcasters": [
-        "Sky Sport Basket"
       ]
     },
     {
