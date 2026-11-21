@@ -1,12 +1,13 @@
 {
-  "generated_at": "2026-11-21T16:07:06.719119+00:00",
+  "generated_at": "2026-11-21T17:07:18.691186+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
     "Sky Sport 257 · 257: soltanto voci generiche o finestre troppo lunghe",
     "Sky Sport 258 · 258: soltanto voci generiche o finestre troppo lunghe",
     "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe",
-    "DAZN 2 (DE) · 501: nessun programma futuro importato"
+    "DAZN 2 (DE) · 501: nessun programma futuro importato",
+    "beIN SPORTS 2 (TR) · 1500: nessun programma futuro importato"
   ],
   "unresolved_broadcasters": [
     "Amazon Prime Video",
