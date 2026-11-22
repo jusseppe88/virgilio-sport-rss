@@ -1,13 +1,11 @@
 {
-  "generated_at": "2026-11-22T07:07:13.538353+00:00",
+  "generated_at": "2026-11-22T08:07:18.499773+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
     "Sky Sport 257 · 257: soltanto voci generiche o finestre troppo lunghe",
     "Sky Sport 258 · 258: soltanto voci generiche o finestre troppo lunghe",
-    "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe",
-    "beIN SPORTS 2 (TR) · 1500: nessun programma futuro importato",
-    "S Sport 2 (TR) · 1501: soltanto voci generiche o finestre troppo lunghe"
+    "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe"
   ],
   "unresolved_broadcasters": [
     "Amazon Prime Video",
