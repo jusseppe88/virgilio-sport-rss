@@ -9,7 +9,6 @@
   ],
   "unresolved_broadcasters": [
     "Amazon Prime Video",
-    "DAZN Italy",
     "Dazn",
     "Eurosport",
     "Sky",
@@ -55,6 +54,14 @@
     },
     {
       "date": "2026-11-22",
+      "time": "12:30",
+      "title": "Pro Vercelli-Novara",
+      "broadcasters": [
+        "Sky Go IT"
+      ]
+    },
+    {
+      "date": "2026-11-22",
       "time": "13:30",
       "title": "Slalom M (2a manche): 2a manche",
       "broadcasters": [
@@ -94,6 +101,14 @@
       "title": "Fiorentina-Como",
       "broadcasters": [
         "Rai 2"
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "time": "15:00",
+      "title": "Hull City-Brighton and Hove Albion",
+      "broadcasters": [
+        "Sky Sport Arena"
       ]
     },
     {
@@ -780,6 +795,204 @@
       "title": "Nottingham Forest-Chelsea",
       "broadcasters": [
         "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "11:00",
+      "title": "Milan-Lecce",
+      "broadcasters": [
+        "Sportitalia"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "13:00",
+      "title": "Hertha-Karlsruhe",
+      "broadcasters": [
+        "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "13:00",
+      "title": "Juventus-Hellas Verona",
+      "broadcasters": [
+        "Sportitalia"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "14:55",
+      "title": "GP Valencia",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "15:00",
+      "title": "Ascoli-Virtus Entella",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "15:00",
+      "title": "Carrarese-Juve Stabia",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "15:00",
+      "title": "Empoli-Hellas Verona",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "15:00",
+      "title": "Frosinone-Parma",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "15:00",
+      "title": "GP Valencia",
+      "broadcasters": [
+        "Sky Sport MotoGP",
+        "TV8"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "15:20",
+      "title": "Al Ettifaq-Al Hilal",
+      "broadcasters": [
+        "Sportitalia"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "15:30",
+      "title": "Amburgo-Bayern Monaco",
+      "broadcasters": [
+        "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "15:30",
+      "title": "Slalom Gigante F (1a manche): 1a manche",
+      "broadcasters": [
+        "Rai Sport"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "16:00",
+      "title": "Leeds United-Coventry City",
+      "broadcasters": [
+        "Sky Sport Mix"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "16:00",
+      "title": "Manchester United-Brentford",
+      "broadcasters": [
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "16:45",
+      "title": "Napoli-Posillipo",
+      "broadcasters": [
+        "Rai Sport"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "17:15",
+      "title": "Vicenza-Cesena",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "18:00",
+      "title": "Torino-Lazio",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "18:30",
+      "title": "Ipswich-Aston Villa",
+      "broadcasters": [
+        "Sky Sport Max"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "18:30",
+      "title": "Slalom Gigante F (2a manche): 2a manche",
+      "broadcasters": [
+        "Eurosport",
+        "Rai Sport"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "18:30",
+      "title": "Stoccarda-Eintracht Francoforte",
+      "broadcasters": [
+        "Sky Sport Mix"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "19:30",
+      "title": "Palermo-Benevento",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "19:45",
+      "title": "Copper Mountain. Super G M",
+      "broadcasters": [
+        "Eurosport",
+        "Rai Sport"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "20:45",
+      "title": "Inter-Genoa",
+      "broadcasters": [
+        "Sky",
+        "Dazn",
+        "Sky Sport 1",
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "time": "21:00",
+      "title": "Cuneo-Scandicci",
+      "broadcasters": [
+        "Rai Sport"
       ]
     }
   ]
