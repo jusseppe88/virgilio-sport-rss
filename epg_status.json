@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T22:07:12.818364+00:00",
+  "generated_at": "2026-11-22T23:07:18.265891+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -10,7 +10,8 @@
     "Sky Sport 258 · 258: soltanto voci generiche o finestre troppo lunghe",
     "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe",
     "Okko Спорт (RU) · 1201: nessun programma futuro importato",
-    "beIN SPORTS 2 (TR) · 1500: nessun programma futuro importato"
+    "beIN SPORTS 2 (TR) · 1500: nessun programma futuro importato",
+    "S Sport 2 (TR) · 1501: soltanto voci generiche o finestre troppo lunghe"
   ],
   "unresolved_broadcasters": [
     "Amazon Prime Video",
@@ -20,152 +21,6 @@
     "Sky Go IT"
   ],
   "unmatched_events": [
-    {
-      "date": "2026-11-22",
-      "time": "05:00",
-      "title": "GP Las Vegas",
-      "broadcasters": [
-        "Sky Sport F1",
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "05:00",
-      "title": "Las Vegas Grand Prix",
-      "broadcasters": [
-        "Sky Sport NBA"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "10:30",
-      "title": "Slalom M (1a manche): 1a manche",
-      "broadcasters": [
-        "Eurosport",
-        "Rai 2"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "11:00",
-      "title": "GP Portogallo",
-      "broadcasters": [
-        "Sky Sport 1",
-        "TV8"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "12:15",
-      "title": "GP Portogallo",
-      "broadcasters": [
-        "Sky Sport MotoGP",
-        "Sky Sport 1",
-        "TV8"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "12:30",
-      "title": "Pro Vercelli-Novara",
-      "broadcasters": [
-        "Sky Go IT"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "13:30",
-      "title": "Slalom M (2a manche): 2a manche",
-      "broadcasters": [
-        "Eurosport",
-        "Rai Sport"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "14:00",
-      "title": "GP Portogallo",
-      "broadcasters": [
-        "Sky Sport MotoGP",
-        "TV8",
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "15:00",
-      "title": "Avellino-Mantova",
-      "broadcasters": [
-        "Dazn"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "15:00",
-      "title": "Doubles Finale",
-      "broadcasters": [
-        "Sky Sport Tennis"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "15:00",
-      "title": "Fiorentina-Como",
-      "broadcasters": [
-        "Rai 2"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "15:00",
-      "title": "Hull City-Brighton and Hove Albion",
-      "broadcasters": [
-        "Sky Sport Arena"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "15:30",
-      "title": "GP Portogallo",
-      "broadcasters": [
-        "Sky Sport MotoGP"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "16:00",
-      "title": "Derthona Tortona-Olimpia Milano",
-      "broadcasters": [
-        "Sky Sport 1",
-        "Sky Sport Basket"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "17:15",
-      "title": "Arezzo-Padova",
-      "broadcasters": [
-        "Dazn"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "18:00",
-      "title": "Finale",
-      "broadcasters": [
-        "Sky Sport Tennis",
-        "Italia 1"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "18:00",
-      "title": "Singolare: Finale",
-      "broadcasters": [
-        "Sky Sport 1"
-      ]
-    },
     {
       "date": "2026-11-24",
       "time": "18:45",
@@ -672,16 +527,6 @@
     },
     {
       "date": "2026-11-27",
-      "time": "20:45",
-      "title": "Venezia-Bologna",
-      "broadcasters": [
-        "Dazn",
-        "Sky",
-        "Sky Sport Calcio"
-      ]
-    },
-    {
-      "date": "2026-11-27",
       "time": "21:00",
       "title": "Nottingham Forest-Chelsea",
       "broadcasters": [
@@ -740,14 +585,6 @@
       "date": "2026-11-28",
       "time": "15:00",
       "title": "Empoli-Hellas Verona",
-      "broadcasters": [
-        "Dazn"
-      ]
-    },
-    {
-      "date": "2026-11-28",
-      "time": "15:00",
-      "title": "Frosinone-Parma",
       "broadcasters": [
         "Dazn"
       ]
