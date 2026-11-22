@@ -1,17 +1,15 @@
 {
-  "generated_at": "2026-11-22T20:07:18.586189+00:00",
+  "generated_at": "2026-11-22T21:07:18.219245+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
-    "Sky Sport 251 · 251: soltanto voci generiche o finestre troppo lunghe",
     "Sky Sport 252 · 252: soltanto voci generiche o finestre troppo lunghe",
     "Sky Sport 253 · 253: soltanto voci generiche o finestre troppo lunghe",
-    "Sky Sport 254 · 254: nessun programma futuro importato",
-    "Sky Sport 255 · 255: nessun programma futuro importato",
-    "Sky Sport 256 · 256: nessun programma futuro importato",
-    "Sky Sport 257 · 257: nessun programma futuro importato",
-    "Sky Sport 258 · 258: nessun programma futuro importato",
+    "Sky Sport 256 · 256: soltanto voci generiche o finestre troppo lunghe",
+    "Sky Sport 257 · 257: soltanto voci generiche o finestre troppo lunghe",
+    "Sky Sport 258 · 258: soltanto voci generiche o finestre troppo lunghe",
     "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe",
+    "Okko Спорт (RU) · 1201: nessun programma futuro importato",
     "beIN SPORTS 2 (TR) · 1500: nessun programma futuro importato"
   ],
   "unresolved_broadcasters": [
@@ -163,57 +161,9 @@
     {
       "date": "2026-11-22",
       "time": "18:00",
-      "title": "Piacenza-Perugia",
-      "broadcasters": [
-        "Rai Sport"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "18:00",
       "title": "Singolare: Finale",
       "broadcasters": [
         "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-22",
-      "time": "20:45",
-      "title": "Livorno-Sassari",
-      "broadcasters": [
-        "Rai Sport"
-      ]
-    },
-    {
-      "date": "2026-11-23",
-      "time": "15:00",
-      "title": "Albinoleffe-Genoa",
-      "broadcasters": [
-        "Sportitalia"
-      ]
-    },
-    {
-      "date": "2026-11-23",
-      "time": "15:30",
-      "title": "Italia-Costa d’Avorio",
-      "broadcasters": [
-        "Rai Sport"
-      ]
-    },
-    {
-      "date": "2026-11-23",
-      "time": "17:00",
-      "title": "Torino-Bologna",
-      "broadcasters": [
-        "Sportitalia"
-      ]
-    },
-    {
-      "date": "2026-11-24",
-      "time": "18:45",
-      "title": "Bodo Glimt-LASK",
-      "broadcasters": [
-        "Sky"
       ]
     },
     {
@@ -226,27 +176,10 @@
     },
     {
       "date": "2026-11-24",
-      "time": "18:45",
-      "title": "Galatasaray-Aston Villa",
-      "broadcasters": [
-        "Sky",
-        "Sky Sport Calcio"
-      ]
-    },
-    {
-      "date": "2026-11-24",
       "time": "19:00",
       "title": "Juve Stabia-Catanzaro",
       "broadcasters": [
         "Dazn"
-      ]
-    },
-    {
-      "date": "2026-11-24",
-      "time": "19:00",
-      "title": "Stella Rossa-Virtus Bologna",
-      "broadcasters": [
-        "Sky Sport Max"
       ]
     },
     {
@@ -299,49 +232,8 @@
     },
     {
       "date": "2026-11-24",
-      "time": "20:45",
-      "title": "Lyon Villeurbanne-Olimpia Milano",
-      "broadcasters": [
-        "Sky Sport Basket"
-      ]
-    },
-    {
-      "date": "2026-11-24",
-      "time": "21:00",
-      "title": "Como-AEK Atene",
-      "broadcasters": [
-        "Sky"
-      ]
-    },
-    {
-      "date": "2026-11-24",
       "time": "21:00",
       "title": "Lipsia-Lens",
-      "broadcasters": [
-        "Sky"
-      ]
-    },
-    {
-      "date": "2026-11-24",
-      "time": "21:00",
-      "title": "Manchester City-Napoli",
-      "broadcasters": [
-        "Sky Sport 1",
-        "Sky"
-      ]
-    },
-    {
-      "date": "2026-11-24",
-      "time": "21:00",
-      "title": "Real Madrid-PSV Eindhoven",
-      "broadcasters": [
-        "Sky Sport Mix"
-      ]
-    },
-    {
-      "date": "2026-11-24",
-      "time": "21:00",
-      "title": "Real Madrid-Psv",
       "broadcasters": [
         "Sky"
       ]
@@ -352,14 +244,6 @@
       "title": "Slovan-Real Betis",
       "broadcasters": [
         "Sky"
-      ]
-    },
-    {
-      "date": "2026-11-25",
-      "time": "02:00",
-      "title": "Washington Wizards-Boston Celtics",
-      "broadcasters": [
-        "Sky Sport 1"
       ]
     },
     {
