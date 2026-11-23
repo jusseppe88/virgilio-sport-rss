@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T14:07:13.293322+00:00",
+  "generated_at": "2026-11-23T15:07:18.499260+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -237,14 +237,6 @@
     },
     {
       "date": "2026-11-25",
-      "time": "21:00",
-      "title": "Sporting-Manchester United",
-      "broadcasters": [
-        "Sky"
-      ]
-    },
-    {
-      "date": "2026-11-25",
       "time": "22:00",
       "title": "Philadelphia 76ers-Miami Heat",
       "broadcasters": [
@@ -373,15 +365,6 @@
       "broadcasters": [
         "Sky Sport Mix",
         "Sky"
-      ]
-    },
-    {
-      "date": "2026-11-26",
-      "time": "21:00",
-      "title": "Juventus-Omonia Nicosia",
-      "broadcasters": [
-        "Sky",
-        "Sky Sport 1"
       ]
     },
     {
@@ -551,14 +534,6 @@
       "broadcasters": [
         "Sky Sport MotoGP",
         "TV8"
-      ]
-    },
-    {
-      "date": "2026-11-28",
-      "time": "15:20",
-      "title": "Al Ettifaq-Al Hilal",
-      "broadcasters": [
-        "Sportitalia"
       ]
     },
     {
