@@ -1,16 +1,15 @@
 {
-  "generated_at": "2026-11-23T19:07:18.487414+00:00",
+  "generated_at": "2026-11-23T20:07:18.647361+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
-    "ACI Sport TV (IT) · 228: soltanto voci generiche o finestre troppo lunghe",
     "Sky Sport 252 · 252: soltanto voci generiche o finestre troppo lunghe",
-    "Sky Sport 253 · 253: soltanto voci generiche o finestre troppo lunghe",
     "Sky Sport 256 · 256: soltanto voci generiche o finestre troppo lunghe",
     "Sky Sport 257 · 257: soltanto voci generiche o finestre troppo lunghe",
     "Sky Sport 258 · 258: soltanto voci generiche o finestre troppo lunghe",
     "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe",
-    "beIN SPORTS 1 (TR) · 1503: nessun programma futuro importato"
+    "beIN SPORTS 1 (TR) · 1503: nessun programma futuro importato",
+    "beIN SPORTS 4 (TR) · 1505: nessun programma futuro importato"
   ],
   "unresolved_broadcasters": [
     "Amazon Prime Video",
@@ -111,22 +110,6 @@
     },
     {
       "date": "2026-11-25",
-      "time": "04:00",
-      "title": "Denver Nuggets-Dallas Mavericks",
-      "broadcasters": [
-        "Sky Sport Basket"
-      ]
-    },
-    {
-      "date": "2026-11-25",
-      "time": "14:30",
-      "title": "Audace Cerignola-Inter U23",
-      "broadcasters": [
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-25",
       "time": "16:00",
       "title": "PSG-Roma",
       "broadcasters": [
@@ -135,34 +118,10 @@
     },
     {
       "date": "2026-11-25",
-      "time": "17:00",
-      "title": "Dubai Basketball-Partizan Belgrado",
-      "broadcasters": [
-        "Sky Sport Basket"
-      ]
-    },
-    {
-      "date": "2026-11-25",
-      "time": "18:00",
-      "title": "Atalanta U23-Pineto",
-      "broadcasters": [
-        "Sky Sport Max"
-      ]
-    },
-    {
-      "date": "2026-11-25",
       "time": "18:45",
       "title": "Diretta Gol Ucl",
       "broadcasters": [
         "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-25",
-      "time": "18:45",
-      "title": "Slavia Praga-Villarreal",
-      "broadcasters": [
-        "Sky"
       ]
     },
     {
@@ -243,14 +202,6 @@
       "title": "Shakhtar Donetsk-Fenerbahce",
       "broadcasters": [
         "Sky"
-      ]
-    },
-    {
-      "date": "2026-11-25",
-      "time": "22:00",
-      "title": "Philadelphia 76ers-Miami Heat",
-      "broadcasters": [
-        "Sky Sport Basket"
       ]
     },
     {
