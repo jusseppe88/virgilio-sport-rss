@@ -13,12 +13,21 @@
   ],
   "unresolved_broadcasters": [
     "Amazon Prime Video",
+    "DAZN Italy",
     "Dazn",
     "Eurosport",
     "Sky",
     "Sky Go IT"
   ],
   "unmatched_events": [
+    {
+      "date": "2026-11-23",
+      "time": "20:30",
+      "title": "Ceuta-Almería",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
     {
       "date": "2026-11-24",
       "time": "18:45",
@@ -624,6 +633,165 @@
       "title": "Cuneo-Scandicci",
       "broadcasters": [
         "Rai Sport"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "time": "11:00",
+      "title": "GP Valencia",
+      "broadcasters": [
+        "Sky Sport MotoGP",
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "time": "12:15",
+      "title": "GP Valencia",
+      "broadcasters": [
+        "Sky Sport MotoGP",
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "time": "12:30",
+      "title": "Spezia-Pineto",
+      "broadcasters": [
+        "Sky Sport Mix"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "time": "12:30",
+      "title": "Udinese-Fiorentina",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "time": "14:00",
+      "title": "GP Valencia",
+      "broadcasters": [
+        "Sky Sport MotoGP",
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "time": "15:00",
+      "title": "Modena-Padova",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "time": "15:00",
+      "title": "Sassuolo-Napoli",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "time": "15:00",
+      "title": "Sudtirol-Mantova",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "time": "15:30",
+      "title": "Friburgo-RB Lipsia",
+      "broadcasters": [
+        "Sky Sport Mix"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "time": "17:00",
+      "title": "GP Qatar",
+      "broadcasters": [
+        "Sky Sport F1",
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "time": "17:15",
+      "title": "Sampdoria-Cremonese",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "time": "18:00",
+      "title": "Bosnia ed Erzegovina-Lituania",
+      "broadcasters": [
+        "Sky Sport Mix"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "time": "18:00",
+      "title": "Roma-Monza",
+      "broadcasters": [
+        "Sky",
+        "Dazn",
+        "Sky Sport Calcio"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "time": "18:00",
+      "title": "Slalom Gigante M (1a manche): 1a manche",
+      "broadcasters": [
+        "Eurosport"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "time": "19:00",
+      "title": "Serbia-Italia",
+      "broadcasters": [
+        "Sky Sport Basket",
+        "Sky Sport 1"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "time": "19:30",
+      "title": "Arezzo-Pisa",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "time": "19:30",
+      "title": "Slalom F (2a manche): 2a manche",
+      "broadcasters": [
+        "Eurosport"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "time": "20:45",
+      "title": "Como-Juventus",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "time": "21:00",
+      "title": "Slalom Gigante M (2a manche): 2a manche",
+      "broadcasters": [
+        "Eurosport"
       ]
     }
   ]
