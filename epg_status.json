@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T01:07:18.662764+00:00",
+  "generated_at": "2026-11-23T02:07:18.283327+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -153,15 +153,6 @@
     {
       "date": "2026-11-25",
       "time": "18:45",
-      "title": "Sabah-Barcellona",
-      "broadcasters": [
-        "Sky",
-        "Sky Sport Calcio"
-      ]
-    },
-    {
-      "date": "2026-11-25",
-      "time": "18:45",
       "title": "Slavia Praga-Villarreal",
       "broadcasters": [
         "Sky"
@@ -237,24 +228,6 @@
       "title": "Bruges-Liverpool",
       "broadcasters": [
         "Sky"
-      ]
-    },
-    {
-      "date": "2026-11-25",
-      "time": "21:00",
-      "title": "Lille-Bayern Monaco",
-      "broadcasters": [
-        "Sky",
-        "Sky Sport Calcio",
-        "TV8"
-      ]
-    },
-    {
-      "date": "2026-11-25",
-      "time": "21:00",
-      "title": "PSG-Roma",
-      "broadcasters": [
-        "Amazon Prime Video"
       ]
     },
     {
@@ -351,14 +324,6 @@
       "date": "2026-11-26",
       "time": "18:45",
       "title": "Salisburgo-Ararat Armenia",
-      "broadcasters": [
-        "Sky"
-      ]
-    },
-    {
-      "date": "2026-11-26",
-      "time": "18:45",
-      "title": "Union Saint Gilloise-Lech Poznan",
       "broadcasters": [
         "Sky"
       ]
@@ -527,14 +492,6 @@
       ]
     },
     {
-      "date": "2026-11-27",
-      "time": "21:00",
-      "title": "Nottingham Forest-Chelsea",
-      "broadcasters": [
-        "Sky Sport Max"
-      ]
-    },
-    {
       "date": "2026-11-28",
       "time": "11:00",
       "title": "Milan-Lecce",
@@ -657,22 +614,6 @@
     },
     {
       "date": "2026-11-28",
-      "time": "18:00",
-      "title": "Torino-Lazio",
-      "broadcasters": [
-        "Dazn"
-      ]
-    },
-    {
-      "date": "2026-11-28",
-      "time": "18:30",
-      "title": "Ipswich-Aston Villa",
-      "broadcasters": [
-        "Sky Sport Max"
-      ]
-    },
-    {
-      "date": "2026-11-28",
       "time": "18:30",
       "title": "Slalom Gigante F (2a manche): 2a manche",
       "broadcasters": [
@@ -703,17 +644,6 @@
       "broadcasters": [
         "Eurosport",
         "Rai Sport"
-      ]
-    },
-    {
-      "date": "2026-11-28",
-      "time": "20:45",
-      "title": "Inter-Genoa",
-      "broadcasters": [
-        "Sky",
-        "Dazn",
-        "Sky Sport 1",
-        "Sky Sport Calcio"
       ]
     },
     {
