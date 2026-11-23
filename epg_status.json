@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T22:07:18.711520+00:00",
+  "generated_at": "2026-11-23T23:07:18.709457+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -20,14 +20,6 @@
     "Sky Go IT"
   ],
   "unmatched_events": [
-    {
-      "date": "2026-11-23",
-      "time": "20:30",
-      "title": "Ceuta-Almería",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
     {
       "date": "2026-11-24",
       "time": "18:45",
