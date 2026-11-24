@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T01:07:18.893588+00:00",
+  "generated_at": "2026-11-24T02:07:18.688422+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -8,6 +8,7 @@
     "Sky Sport 257 · 257: soltanto voci generiche o finestre troppo lunghe",
     "Sky Sport 258 · 258: soltanto voci generiche o finestre troppo lunghe",
     "Sky Sport 259 · 259: soltanto voci generiche o finestre troppo lunghe",
+    "S Sport 2 (TR) · 1501: soltanto voci generiche o finestre troppo lunghe",
     "beIN SPORTS 1 (TR) · 1503: nessun programma futuro importato",
     "beIN SPORTS 4 (TR) · 1505: nessun programma futuro importato"
   ],
@@ -582,14 +583,6 @@
     },
     {
       "date": "2026-11-29",
-      "time": "12:30",
-      "title": "Udinese-Fiorentina",
-      "broadcasters": [
-        "Dazn"
-      ]
-    },
-    {
-      "date": "2026-11-29",
       "time": "14:00",
       "title": "GP Valencia",
       "broadcasters": [
@@ -601,14 +594,6 @@
       "date": "2026-11-29",
       "time": "15:00",
       "title": "Modena-Padova",
-      "broadcasters": [
-        "Dazn"
-      ]
-    },
-    {
-      "date": "2026-11-29",
-      "time": "15:00",
-      "title": "Sassuolo-Napoli",
       "broadcasters": [
         "Dazn"
       ]
@@ -657,16 +642,6 @@
     {
       "date": "2026-11-29",
       "time": "18:00",
-      "title": "Roma-Monza",
-      "broadcasters": [
-        "Sky",
-        "Dazn",
-        "Sky Sport Calcio"
-      ]
-    },
-    {
-      "date": "2026-11-29",
-      "time": "18:00",
       "title": "Slalom Gigante M (1a manche): 1a manche",
       "broadcasters": [
         "Eurosport"
@@ -695,14 +670,6 @@
       "title": "Slalom F (2a manche): 2a manche",
       "broadcasters": [
         "Eurosport"
-      ]
-    },
-    {
-      "date": "2026-11-29",
-      "time": "20:45",
-      "title": "Como-Juventus",
-      "broadcasters": [
-        "Dazn"
       ]
     },
     {
