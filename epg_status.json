@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T23:07:18.709457+00:00",
+  "generated_at": "2026-11-24T01:07:18.893588+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -231,15 +231,6 @@
     {
       "date": "2026-11-26",
       "time": "18:45",
-      "title": "Celta Vigo-Bournemouth",
-      "broadcasters": [
-        "Sky Sport Mix",
-        "Sky"
-      ]
-    },
-    {
-      "date": "2026-11-26",
-      "time": "18:45",
       "title": "Dinamo Zagabria-Bayer Leverkusen",
       "broadcasters": [
         "Sky",
@@ -348,22 +339,6 @@
       "date": "2026-11-26",
       "time": "21:00",
       "title": "Sparta Praga-AZ Alkmaar",
-      "broadcasters": [
-        "Sky"
-      ]
-    },
-    {
-      "date": "2026-11-26",
-      "time": "21:00",
-      "title": "Sunderland-Jagiellonia Bialystok",
-      "broadcasters": [
-        "Sky"
-      ]
-    },
-    {
-      "date": "2026-11-26",
-      "time": "21:00",
-      "title": "Torreense-Celtic",
       "broadcasters": [
         "Sky"
       ]
