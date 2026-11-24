@@ -84,6 +84,78 @@
     },
     {
       "date": "2026-11-24",
+      "time": "20:45",
+      "title": "AFC Fylde-Halifax Town",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "time": "20:45",
+      "title": "Altrincham-Wealdstone",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "time": "20:45",
+      "title": "Boston United-Barrow",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "time": "20:45",
+      "title": "Carlisle United-Tamworth",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "time": "20:45",
+      "title": "Eastleigh-Yeovil Town",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "time": "20:45",
+      "title": "Forest Green Rovers-Southend United",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "time": "20:45",
+      "title": "Hornchurch-Sutton United",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "time": "20:45",
+      "title": "Scunthorpe United-Gateshead",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "time": "20:45",
+      "title": "Woking-Worthing",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-24",
       "time": "21:00",
       "title": "Lipsia-Lens",
       "broadcasters": [
@@ -93,9 +165,25 @@
     {
       "date": "2026-11-24",
       "time": "21:00",
+      "title": "Slovan Bratislava-Real Betis",
+      "broadcasters": [
+        "Sky Go IT"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "time": "21:00",
       "title": "Slovan-Real Betis",
       "broadcasters": [
         "Sky"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "16:00",
+      "title": "Italia-Corea del Sud",
+      "broadcasters": [
+        "SuperTennis"
       ]
     },
     {
@@ -423,14 +511,6 @@
     },
     {
       "date": "2026-11-28",
-      "time": "14:55",
-      "title": "GP Valencia",
-      "broadcasters": [
-        "Sky Sport 1"
-      ]
-    },
-    {
-      "date": "2026-11-28",
       "time": "15:00",
       "title": "Ascoli-Virtus Entella",
       "broadcasters": [
@@ -459,6 +539,7 @@
       "title": "GP Valencia",
       "broadcasters": [
         "Sky Sport MotoGP",
+        "Sky Sport 1",
         "TV8"
       ]
     },
@@ -605,6 +686,14 @@
     },
     {
       "date": "2026-11-29",
+      "time": "15:00",
+      "title": "Verona-Trentino",
+      "broadcasters": [
+        "Rai 2"
+      ]
+    },
+    {
+      "date": "2026-11-29",
       "time": "15:30",
       "title": "Friburgo-RB Lipsia",
       "broadcasters": [
@@ -675,6 +764,46 @@
       "title": "Slalom Gigante M (2a manche): 2a manche",
       "broadcasters": [
         "Eurosport"
+      ]
+    },
+    {
+      "date": "2026-11-30",
+      "time": "18:00",
+      "title": "Ungheria-Slovenia",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-30",
+      "time": "18:30",
+      "title": "Lecce-Atalanta",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-30",
+      "time": "20:30",
+      "title": "Catanzaro-Avellino",
+      "broadcasters": [
+        "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-30",
+      "time": "20:30",
+      "title": "Francia-Svezia",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-11-30",
+      "time": "20:45",
+      "title": "Cagliari-Milan",
+      "broadcasters": [
+        "Dazn"
       ]
     }
   ]
