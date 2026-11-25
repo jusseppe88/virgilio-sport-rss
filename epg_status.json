@@ -12,6 +12,7 @@
     "DAZN Italy",
     "Dazn",
     "Eurosport",
+    "Mediaset Infinity",
     "Sky",
     "Sky Go IT"
   ],
@@ -42,10 +43,35 @@
     },
     {
       "date": "2026-11-25",
+      "time": "18:45",
+      "title": "Sabah Baku-Barcelona",
+      "broadcasters": [
+        "Sky Sport Calcio",
+        "Sky Go IT"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "18:45",
+      "title": "Slavia Prague-Villarreal",
+      "broadcasters": [
+        "Sky Go IT"
+      ]
+    },
+    {
+      "date": "2026-11-25",
       "time": "19:00",
       "title": "Cremonese-Avellino",
       "broadcasters": [
         "Dazn"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "20:00",
+      "title": "Boreham Wood-Aldershot Town",
+      "broadcasters": [
+        "DAZN Italy"
       ]
     },
     {
@@ -98,10 +124,27 @@
     },
     {
       "date": "2026-11-25",
+      "time": "20:45",
+      "title": "Harrogate Town-Kidderminster Harriers",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "time": "20:45",
+      "title": "Hartlepool United-Solihull Moors",
+      "broadcasters": [
+        "DAZN Italy"
+      ]
+    },
+    {
+      "date": "2026-11-25",
       "time": "21:00",
       "title": "Atletico Madrid-Viking",
       "broadcasters": [
-        "Sky"
+        "Sky",
+        "Sky Go IT"
       ]
     },
     {
@@ -583,6 +626,31 @@
       "title": "Cagliari-Milan",
       "broadcasters": [
         "Dazn"
+      ]
+    },
+    {
+      "date": "2026-12-01",
+      "time": "01:30",
+      "title": "Houston-L.A. Lakers",
+      "broadcasters": [
+        "Sky Sport Basket"
+      ]
+    },
+    {
+      "date": "2026-12-01",
+      "time": "17:30",
+      "title": "Finlandia-Italia",
+      "broadcasters": [
+        "Rai 2"
+      ]
+    },
+    {
+      "date": "2026-12-01",
+      "time": "21:00",
+      "title": "Inter-Genoa",
+      "broadcasters": [
+        "Mediaset Infinity",
+        "Canale 5"
       ]
     }
   ]
