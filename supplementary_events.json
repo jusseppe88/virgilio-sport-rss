@@ -1,658 +1,36 @@
 [
   {
-    "time": "02:00",
-    "sport": "Basket",
-    "competition": "NBA",
-    "title": "Washington Wizards-Boston Celtics",
-    "channels": "Sky Sport 1, Sky Sport Uno",
-    "sources": [
-      "Virgilio",
-      "TheSportsDB"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "04:00",
-    "sport": "Basket",
-    "competition": "NBA",
-    "title": "Denver Nuggets-Dallas Mavericks",
-    "channels": "Sky Sport Basket, Sky Sport NBA",
-    "sources": [
-      "Virgilio",
-      "TheSportsDB"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "14:30",
-    "sport": "Calcio",
-    "competition": "Serie C",
-    "title": "Audace Cerignola-Inter U23",
-    "channels": "Sky Sport 1, Sky Go IT",
-    "sources": [
-      "Virgilio",
-      "TheSportsDB"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "16:00",
-    "sport": "Tennis",
-    "competition": "Coppa Davis 2026",
-    "title": "Italia-Corea del Sud",
-    "channels": "SuperTennis",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "16:00",
-    "sport": "Calcio",
-    "competition": "UEFA Youth League",
-    "title": "PSG-Roma",
-    "channels": "Sky Sport Calcio",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "17:00",
-    "sport": "Basket",
-    "competition": "Eurolega",
-    "title": "Dubai Basketball-Partizan Belgrado",
-    "channels": "Sky Sport Basket",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "18:00",
-    "sport": "Calcio",
-    "competition": "Serie C",
-    "title": "Atalanta U23-Pineto",
-    "channels": "Sky Sport Max",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "18:45",
-    "sport": "Calcio",
-    "competition": "Diretta Gol Champions League",
-    "title": "Diretta Gol Ucl",
-    "channels": "Sky Sport 1",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "18:45",
-    "channels": "Sky Sport Calcio, Sky Go IT",
-    "sport": "Calcio",
-    "competition": "UEFA Champions League",
-    "title": "Sabah Baku-Barcelona",
-    "sources": [
-      "TheSportsDB"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "18:45",
-    "sport": "Calcio",
-    "competition": "UEFA Champions League",
-    "title": "Sabah-Barcellona",
-    "channels": "Sky, Sky Sport Calcio",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "18:45",
-    "sport": "Calcio",
-    "competition": "UEFA Champions League",
-    "title": "Slavia Praga-Villarreal",
-    "channels": "Sky",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "18:45",
-    "channels": "Sky Go IT",
-    "sport": "Calcio",
-    "competition": "UEFA Champions League",
-    "title": "Slavia Prague-Villarreal",
-    "sources": [
-      "TheSportsDB"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "19:00",
-    "sport": "Calcio",
-    "competition": "Serie B",
-    "title": "Cremonese-Avellino",
-    "channels": "Dazn",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "20:00",
+    "time": "09:45",
     "channels": "DAZN Italy",
-    "sport": "Calcio",
-    "competition": "English National League",
-    "title": "Boreham Wood-Aldershot Town",
+    "sport": "Australian Football",
+    "competition": "AFL Womens",
+    "title": "North Melbourne Kangaroos Women-Melbourne Demons Women",
     "sources": [
       "TheSportsDB"
     ],
-    "date": "2026-11-25"
+    "date": "2026-11-27"
   },
   {
-    "time": "20:00",
-    "sport": "Calcio",
-    "competition": "Serie B",
-    "title": "Mantova-Arezzo",
-    "channels": "Dazn",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "20:00",
-    "sport": "Pallavolo femminile",
-    "competition": "CEV Champions League",
-    "title": "Milano-Levalloois Paris",
-    "channels": "Sky Sport Max",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "20:00",
-    "sport": "Calcio",
-    "competition": "Serie B",
-    "title": "Padova-Sampdoria",
-    "channels": "Dazn",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "20:00",
-    "sport": "Calcio",
-    "competition": "Serie B",
-    "title": "Pisa-Modena",
-    "channels": "Dazn",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "20:00",
-    "sport": "Pallanuoto maschile",
-    "competition": "Serie A1",
-    "title": "Savona-Brescia",
-    "channels": "Rai Sport",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "20:15",
-    "sport": "Basket",
-    "competition": "Eurolega",
-    "title": "Olympiacos-Hapoel Tel Aviv",
-    "channels": "Sky Sport Mix",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "20:45",
+    "time": "10:00",
     "channels": "DAZN Italy",
-    "sport": "Calcio",
-    "competition": "English National League",
-    "title": "Harrogate Town-Kidderminster Harriers",
+    "sport": "Basket",
+    "competition": "FIBA Basketball World Cup",
+    "title": "Iran Basketball-Australia Basketball",
     "sources": [
       "TheSportsDB"
     ],
-    "date": "2026-11-25"
+    "date": "2026-11-27"
   },
   {
-    "time": "20:45",
+    "time": "13:00",
     "channels": "DAZN Italy",
-    "sport": "Calcio",
-    "competition": "English National League",
-    "title": "Hartlepool United-Solihull Moors",
-    "sources": [
-      "TheSportsDB"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "UEFA Champions League",
-    "title": "Atletico Madrid-Viking",
-    "channels": "Sky, Sky Go IT",
-    "sources": [
-      "Virgilio",
-      "TheSportsDB"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "UEFA Champions League",
-    "title": "Bruges-Liverpool",
-    "channels": "Sky",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "21:00",
-    "channels": "Sky Go IT",
-    "sport": "Calcio",
-    "competition": "UEFA Champions League",
-    "title": "Club Brugge-Liverpool",
-    "sources": [
-      "TheSportsDB"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "UEFA Champions League",
-    "title": "Inter-Stoccarda",
-    "channels": "Sky, Sky Sport 1, Sky Sport Uno",
-    "sources": [
-      "Virgilio",
-      "TheSportsDB"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "UEFA Champions League",
-    "title": "Lille-Bayern Monaco",
-    "channels": "TV8, Sky, Sky Sport Calcio",
-    "sources": [
-      "Virgilio",
-      "TheSportsDB"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "UEFA Champions League",
-    "title": "PSG-Roma",
-    "channels": "Amazon Prime Video",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "UEFA Champions League",
-    "title": "Shakhtar Donetsk-Fenerbahce",
-    "channels": "Sky",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "UEFA Champions League",
-    "title": "Sporting-Manchester United",
-    "channels": "Sky",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "22:00",
     "sport": "Basket",
-    "competition": "NBA",
-    "title": "Philadelphia 76ers-Miami Heat",
-    "channels": "Sky Sport Basket",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "23:00",
-    "channels": "Sky Sport NBA",
-    "sport": "Basket",
-    "competition": "NBA",
-    "title": "Philadelphia 76ers-Miami Heat",
+    "competition": "FIBA Basketball World Cup",
+    "title": "Syria Basketball-Philippines Basketball",
     "sources": [
       "TheSportsDB"
     ],
-    "date": "2026-11-25"
-  },
-  {
-    "time": "01:00",
-    "sport": "Calcio",
-    "competition": "Liga Profesional",
-    "title": "Boca Juniors-Independiente Rivadavia",
-    "channels": "Sportitalia",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "01:30",
-    "sport": "Basket",
-    "competition": "NBA",
-    "title": "Oklahoma City Thunder-Minnesota Timberwolves",
-    "channels": "Sky Sport Basket",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "15:00",
-    "sport": "Calcio",
-    "competition": "Mondiali U17 Qatar 2026",
-    "title": "Uzbekistan-Italia",
-    "channels": "Rai Sport",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "16:30",
-    "sport": "Calcio",
-    "competition": "UEFA Conference League",
-    "title": "Kairat Almaty-Mjallby",
-    "channels": "Sky Sport Calcio",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "17:30",
-    "sport": "Basket",
-    "competition": "Qualificazioni FIBA Mondiali 2027",
-    "title": "Lituania-Serbia",
-    "channels": "Sky Sport Basket",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "18:45",
-    "sport": "Calcio",
-    "competition": "UEFA Europa League",
-    "title": "Besiktas-Hapoel Beer Sheva",
-    "channels": "Sky",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "18:45",
-    "sport": "Calcio",
-    "competition": "UEFA Europa League",
-    "title": "Celta Vigo-Bournemouth",
-    "channels": "Sky Sport Mix, Sky",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "18:45",
-    "sport": "Calcio",
-    "competition": "UEFA Europa League",
-    "title": "Dinamo Zagabria-Bayer Leverkusen",
-    "channels": "Sky, Sky Sport Calcio",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "18:45",
-    "sport": "Calcio",
-    "competition": "Diretta Gol Europa e Conference League",
-    "title": "Diretta Gol Uel-Uecl",
-    "channels": "Sky Sport Max",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "18:45",
-    "sport": "Calcio",
-    "competition": "UEFA Europa League",
-    "title": "Marsiglia-Levski Sofia",
-    "channels": "Sky",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "18:45",
-    "sport": "Calcio",
-    "competition": "UEFA Europa League",
-    "title": "Olympiacos-Milan",
-    "channels": "Sky, Sky Sport 1",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "18:45",
-    "sport": "Calcio",
-    "competition": "UEFA Europa League",
-    "title": "Salisburgo-Ararat Armenia",
-    "channels": "Sky",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "18:45",
-    "sport": "Calcio",
-    "competition": "UEFA Europa League",
-    "title": "Union Saint Gilloise-Lech Poznan",
-    "channels": "Sky",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "18:45",
-    "sport": "Calcio",
-    "competition": "UEFA Europa League",
-    "title": "Viktoria Plzen-Benfica",
-    "channels": "Sky",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "20:00",
-    "sport": "Basket",
-    "competition": "Qualificazioni FIBA Mondiali 2027",
-    "title": "Italia-Turchia",
-    "channels": "Sky Sport Basket",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "20:30",
-    "sport": "Pallavolo maschile",
-    "competition": "SuperLega",
-    "title": "Perugia-Civitanova",
-    "channels": "Rai Sport",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "UEFA Conference League",
-    "title": "Borac-Atalanta",
-    "channels": "Sky, Sky Sport Max",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "UEFA Europa League",
-    "title": "Crystal Palace-Real Sociedad",
-    "channels": "Sky, Sky Sport Calcio",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "UEFA Europa League",
-    "title": "Ferencvaros-Celje",
-    "channels": "Sky",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "UEFA Europa League",
-    "title": "Hoffenheim-Sturm Graz",
-    "channels": "Sky Sport Mix, Sky",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "UEFA Europa League",
-    "title": "Juventus-Omonia Nicosia",
-    "channels": "Sky, Sky Sport 1",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "UEFA Europa League",
-    "title": "Lione-Lillestrom",
-    "channels": "Sky",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "UEFA Europa League",
-    "title": "NEC-Rennes",
-    "channels": "Sky",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "UEFA Europa League",
-    "title": "OFI-Anderlecht",
-    "channels": "Sky",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "UEFA Europa League",
-    "title": "Sparta Praga-AZ Alkmaar",
-    "channels": "Sky",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "UEFA Europa League",
-    "title": "Sunderland-Jagiellonia Bialystok",
-    "channels": "Sky",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
-  },
-  {
-    "time": "21:00",
-    "sport": "Calcio",
-    "competition": "UEFA Europa League",
-    "title": "Torreense-Celtic",
-    "channels": "Sky",
-    "sources": [
-      "Virgilio"
-    ],
-    "date": "2026-11-26"
+    "date": "2026-11-27"
   },
   {
     "time": "15:00",
@@ -660,6 +38,17 @@
     "competition": "Primavera 1",
     "title": "Bologna-Albinoleffe",
     "channels": "Sportitalia",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-27"
+  },
+  {
+    "time": "16:00",
+    "sport": "Tennis",
+    "competition": "Coppa Davis 2026",
+    "title": "Italia-Cechia",
+    "channels": "SuperTennis, Rai 1",
     "sources": [
       "Virgilio"
     ],
@@ -677,6 +66,29 @@
     "date": "2026-11-27"
   },
   {
+    "time": "17:40",
+    "sport": "Rugby",
+    "competition": "Nations Championship",
+    "title": "Italia-Fiji",
+    "channels": "TV8, Sky Sport Arena",
+    "sources": [
+      "Virgilio",
+      "TheSportsDB"
+    ],
+    "date": "2026-11-27"
+  },
+  {
+    "time": "18:00",
+    "channels": "DAZN Italy",
+    "sport": "Basket",
+    "competition": "FIBA Basketball World Cup",
+    "title": "Estonia Basketball-France Basketball",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-27"
+  },
+  {
     "time": "18:30",
     "sport": "Calcio",
     "competition": "Bundesliga 2",
@@ -684,6 +96,61 @@
     "channels": "Sky Sport Max",
     "sources": [
       "Virgilio"
+    ],
+    "date": "2026-11-27"
+  },
+  {
+    "time": "18:30",
+    "channels": "Sky Sport Max",
+    "sport": "Calcio",
+    "competition": "German 2. Bundesliga",
+    "title": "Heidenheim-Nürnberg",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-27"
+  },
+  {
+    "time": "18:30",
+    "channels": "DAZN Italy",
+    "sport": "Basket",
+    "competition": "FIBA Basketball World Cup",
+    "title": "Latvia Basketball-Germany Basketball",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-27"
+  },
+  {
+    "time": "19:00",
+    "channels": "DAZN Italy",
+    "sport": "Basket",
+    "competition": "FIBA Basketball World Cup",
+    "title": "Sweden Basketball-Hungary Basketball",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-27"
+  },
+  {
+    "time": "20:00",
+    "channels": "DAZN Italy",
+    "sport": "Basket",
+    "competition": "FIBA Basketball World Cup",
+    "title": "Netherlands Basketball-Israel Basketball",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-27"
+  },
+  {
+    "time": "20:00",
+    "channels": "DAZN Italy",
+    "sport": "Basket",
+    "competition": "FIBA Basketball World Cup",
+    "title": "Slovenia Basketball-Finland Basketball",
+    "sources": [
+      "TheSportsDB"
     ],
     "date": "2026-11-27"
   },
@@ -703,9 +170,10 @@
     "sport": "Calcio",
     "competition": "Serie C",
     "title": "Foggia-Casertana",
-    "channels": "Sky Sport 1",
+    "channels": "Sky Sport 1, Sky Sport Uno",
     "sources": [
-      "Virgilio"
+      "Virgilio",
+      "TheSportsDB"
     ],
     "date": "2026-11-27"
   },
@@ -738,7 +206,8 @@
     "title": "Venezia-Bologna",
     "channels": "Dazn, Sky, Sky Sport Calcio",
     "sources": [
-      "Virgilio"
+      "Virgilio",
+      "TheSportsDB"
     ],
     "date": "2026-11-27"
   },
@@ -748,6 +217,40 @@
     "competition": "Premier League",
     "title": "Nottingham Forest-Chelsea",
     "channels": "Sky Sport Max",
+    "sources": [
+      "Virgilio",
+      "TheSportsDB"
+    ],
+    "date": "2026-11-27"
+  },
+  {
+    "time": "21:00",
+    "channels": "Amazon Prime Video Italy",
+    "sport": "American Football",
+    "competition": "NFL",
+    "title": "Pittsburgh Steelers-Denver Broncos",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-27"
+  },
+  {
+    "time": "21:10",
+    "channels": "Sky Sport Arena",
+    "sport": "Rugby",
+    "competition": "Nations Championship",
+    "title": "Ireland Rugby-Australia Rugby",
+    "sources": [
+      "TheSportsDB"
+    ],
+    "date": "2026-11-27"
+  },
+  {
+    "time": "21:10",
+    "sport": "Rugby",
+    "competition": "Nations Championship",
+    "title": "Irlanda-Australia",
+    "channels": "Sky Sport Arena",
     "sources": [
       "Virgilio"
     ],
@@ -1007,11 +510,44 @@
     "date": "2026-11-28"
   },
   {
+    "time": "00:00",
+    "sport": "Calcio",
+    "competition": "Liga Profesional",
+    "title": "Velez Sarsfield-Independiente",
+    "channels": "Sportitalia",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-29"
+  },
+  {
+    "time": "02:00",
+    "sport": "Calcio",
+    "competition": "Liga Profesional",
+    "title": "Instituto-River Plate",
+    "channels": "Sportitalia",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-29"
+  },
+  {
     "time": "11:00",
     "sport": "Motociclismo",
     "competition": "Moto3",
     "title": "GP Valencia",
     "channels": "Sky Sport MotoGP, Sky Sport 1",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-29"
+  },
+  {
+    "time": "11:00",
+    "sport": "Calcio",
+    "competition": "Primavera 1",
+    "title": "Sassuolo-Inter",
+    "channels": "Sportitalia",
     "sources": [
       "Virgilio"
     ],
@@ -1051,11 +587,33 @@
     "date": "2026-11-29"
   },
   {
+    "time": "13:00",
+    "sport": "Calcio",
+    "competition": "Primavera 1",
+    "title": "Roma-Fiorentina",
+    "channels": "Sportitalia",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-29"
+  },
+  {
     "time": "14:00",
     "sport": "Motociclismo",
     "competition": "MotoGP",
     "title": "GP Valencia",
     "channels": "Sky Sport MotoGP, Sky Sport 1",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-29"
+  },
+  {
+    "time": "14:15",
+    "sport": "Rugby",
+    "competition": "Serie A Elite",
+    "title": "Vicenza-Roma",
+    "channels": "Rai Sport",
     "sources": [
       "Virgilio"
     ],
@@ -1117,6 +675,17 @@
     "date": "2026-11-29"
   },
   {
+    "time": "16:30",
+    "sport": "Sci alpino",
+    "competition": "Coppa del Mondo – Killington",
+    "title": "Slalom F (1a manche): 1a manche",
+    "channels": "Rai Sport",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-29"
+  },
+  {
     "time": "17:00",
     "sport": "Automobilismo",
     "competition": "Formula 1",
@@ -1165,7 +734,7 @@
     "sport": "Sci alpino",
     "competition": "Coppa del Mondo – Copper Mountain",
     "title": "Slalom Gigante M (1a manche): 1a manche",
-    "channels": "Eurosport",
+    "channels": "Eurosport, Rai Sport",
     "sources": [
       "Virgilio"
     ],
@@ -1198,7 +767,7 @@
     "sport": "Sci alpino",
     "competition": "Coppa del Mondo – Killington",
     "title": "Slalom F (2a manche): 2a manche",
-    "channels": "Eurosport",
+    "channels": "Eurosport, Rai Sport",
     "sources": [
       "Virgilio"
     ],
@@ -1220,11 +789,22 @@
     "sport": "Sci alpino",
     "competition": "Coppa del Mondo – Copper Mountain",
     "title": "Slalom Gigante M (2a manche): 2a manche",
-    "channels": "Eurosport",
+    "channels": "Eurosport, Rai Sport",
     "sources": [
       "Virgilio"
     ],
     "date": "2026-11-29"
+  },
+  {
+    "time": "00:30",
+    "sport": "Calcio",
+    "competition": "Liga Profesional",
+    "title": "Boca Juniors-Gymnasia La Plata",
+    "channels": "Sportitalia",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-30"
   },
   {
     "time": "18:00",
@@ -1282,6 +862,17 @@
     "date": "2026-11-30"
   },
   {
+    "time": "20:45",
+    "sport": "Calcio",
+    "competition": "Serie C",
+    "title": "Reggiana-Ostiamare",
+    "channels": "Rai Sport",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-11-30"
+  },
+  {
     "time": "01:30",
     "sport": "Basket",
     "competition": "NBA",
@@ -1313,5 +904,82 @@
       "Virgilio"
     ],
     "date": "2026-12-01"
+  },
+  {
+    "time": "21:00",
+    "sport": "Calcio",
+    "competition": "Coppa Italia",
+    "title": "Como-Cremonese",
+    "channels": "Mediaset Infinity, Italia 1",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-12-02"
+  },
+  {
+    "time": "02:00",
+    "sport": "Basket",
+    "competition": "NBA",
+    "title": "Chicago-New York",
+    "channels": "Sky Sport Basket",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-12-03"
+  },
+  {
+    "time": "05:00",
+    "sport": "Basket",
+    "competition": "NBA",
+    "title": "Golden State Warriors-Utah Jazz",
+    "channels": "Sky Sport Basket",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-12-03"
+  },
+  {
+    "time": "18:30",
+    "sport": "Calcio",
+    "competition": "Saudi League",
+    "title": "Al Hilal-Al Diriyah",
+    "channels": "Sportitalia",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-12-03"
+  },
+  {
+    "time": "19:00",
+    "sport": "Sci alpino",
+    "competition": "Coppa del Mondo",
+    "title": "Beaver Creek. Discesa Libera M",
+    "channels": "Eurosport, Rai 2",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-12-03"
+  },
+  {
+    "time": "21:00",
+    "sport": "Calcio",
+    "competition": "Coppa Italia",
+    "title": "Juventus-Sassuolo",
+    "channels": "Mediaset Infinity, Italia 1",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-12-03"
+  },
+  {
+    "time": "21:00",
+    "sport": "Basket",
+    "competition": "Eurolega",
+    "title": "Virtus Bologna-Partizan",
+    "channels": "Sky Sport Basket",
+    "sources": [
+      "Virgilio"
+    ],
+    "date": "2026-12-03"
   }
 ]
