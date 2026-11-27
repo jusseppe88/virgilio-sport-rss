@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T22:07:18.511797+00:00",
+  "generated_at": "2026-11-27T23:07:18.407339+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -15,95 +15,6 @@
     "Sky"
   ],
   "unmatched_events": [
-    {
-      "date": "2026-11-27",
-      "time": "09:45",
-      "title": "North Melbourne Kangaroos Women-Melbourne Demons Women",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-27",
-      "time": "10:00",
-      "title": "Iran Basketball-Australia Basketball",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-27",
-      "time": "13:00",
-      "title": "Syria Basketball-Philippines Basketball",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-27",
-      "time": "16:00",
-      "title": "Italia-Cechia",
-      "broadcasters": [
-        "SuperTennis",
-        "Rai 1"
-      ]
-    },
-    {
-      "date": "2026-11-27",
-      "time": "18:00",
-      "title": "Estonia Basketball-France Basketball",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-27",
-      "time": "18:30",
-      "title": "Latvia Basketball-Germany Basketball",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-27",
-      "time": "19:00",
-      "title": "Sweden Basketball-Hungary Basketball",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-27",
-      "time": "20:00",
-      "title": "Netherlands Basketball-Israel Basketball",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-27",
-      "time": "20:00",
-      "title": "Slovenia Basketball-Finland Basketball",
-      "broadcasters": [
-        "DAZN Italy"
-      ]
-    },
-    {
-      "date": "2026-11-27",
-      "time": "21:00",
-      "title": "Pittsburgh Steelers-Denver Broncos",
-      "broadcasters": [
-        "Amazon Prime Video Italy"
-      ]
-    },
-    {
-      "date": "2026-11-27",
-      "time": "21:10",
-      "title": "Ireland Rugby-Australia Rugby",
-      "broadcasters": [
-        "Sky Sport Arena"
-      ]
-    },
     {
       "date": "2026-11-28",
       "time": "13:00",
