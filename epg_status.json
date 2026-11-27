@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T21:07:18.678001+00:00",
+  "generated_at": "2026-11-27T22:07:18.511797+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -156,14 +156,6 @@
     },
     {
       "date": "2026-11-28",
-      "time": "16:45",
-      "title": "Napoli-Posillipo",
-      "broadcasters": [
-        "Rai Sport"
-      ]
-    },
-    {
-      "date": "2026-11-28",
       "time": "17:15",
       "title": "Vicenza-Cesena",
       "broadcasters": [
@@ -194,22 +186,6 @@
       "broadcasters": [
         "Eurosport",
         "Rai Sport"
-      ]
-    },
-    {
-      "date": "2026-11-28",
-      "time": "21:00",
-      "title": "Cuneo-Scandicci",
-      "broadcasters": [
-        "Rai Sport"
-      ]
-    },
-    {
-      "date": "2026-11-29",
-      "time": "02:00",
-      "title": "Instituto-River Plate",
-      "broadcasters": [
-        "Sportitalia"
       ]
     },
     {
@@ -349,34 +325,10 @@
     },
     {
       "date": "2026-11-30",
-      "time": "18:00",
-      "title": "Ungheria-Slovenia",
-      "broadcasters": [
-        "Sky Sport Basket"
-      ]
-    },
-    {
-      "date": "2026-11-30",
       "time": "20:30",
       "title": "Catanzaro-Avellino",
       "broadcasters": [
         "Dazn"
-      ]
-    },
-    {
-      "date": "2026-11-30",
-      "time": "20:30",
-      "title": "Francia-Svezia",
-      "broadcasters": [
-        "Sky Sport Basket"
-      ]
-    },
-    {
-      "date": "2026-11-30",
-      "time": "20:45",
-      "title": "Reggiana-Ostiamare",
-      "broadcasters": [
-        "Rai Sport"
       ]
     },
     {
