@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T14:07:18.823070+00:00",
+  "generated_at": "2026-11-27T15:07:18.390601+00:00",
   "stale": false,
   "missing_channels": [],
   "epg_gaps": [
@@ -392,15 +392,6 @@
       "title": "Finlandia-Italia",
       "broadcasters": [
         "Rai 2"
-      ]
-    },
-    {
-      "date": "2026-12-01",
-      "time": "21:00",
-      "title": "Inter-Genoa",
-      "broadcasters": [
-        "Mediaset Infinity",
-        "Canale 5"
       ]
     },
     {
